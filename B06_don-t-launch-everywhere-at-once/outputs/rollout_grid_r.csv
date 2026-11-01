@@ -1,0 +1,5 @@
+"key","n","est","lo","hi","decision"
+"english_novice",440,6.08583544915875,5.06150443268129,7.11016646563621,"Launch now (wave 1)"
+"english_experienced",1293,3.36515430961716,2.90932806273022,3.8209805565041,"Launch now (wave 1)"
+"non_english_novice",165,1.8343097924332,0.598357990117947,3.07026159474845,"Targeted re-test (wave 2 candidate)"
+"non_english_experienced",424,-0.883749941678323,-1.81020818417769,0.0427083008210383,"Hold: fix/localize, then re-test"

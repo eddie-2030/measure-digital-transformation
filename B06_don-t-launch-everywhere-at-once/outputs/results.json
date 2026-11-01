@@ -1,0 +1,1345 @@
+{
+  "meta": {
+    "edition": "B06 - Don't Launch Everywhere at Once: Who Benefits from AI?",
+    "disclaimer": "All data in this folder are synthetic, generated to illustrate the method. They do not come from Meta, any client, or any real organization. The goal is to show how a business question, a measurement strategy, the statistics, and the code connect end to end.",
+    "seed": 20261153,
+    "data_file": "data/ai_pilot_heterogeneity.csv",
+    "outcome": "Weekly quality-adjusted tasks resolved during the pilot (winsorized at 0.5/99.5 pct)",
+    "inference": "OLS, controls = baseline output + region; SEs clustered by team (HC1 / statsmodels cluster); 95% CIs and p-values use t with (teams - 1) df",
+    "novice_definition": "tenure < 12 months (pre-specified); tenure models use complete cases",
+    "pct_definition": "effect / control-group mean x 100 (same denominator for every subgroup)",
+    "min_effect_for_launch_tasks": 1.0,
+    "outcome_values_capped": 26,
+    "how_built": "python/analysis.py writes headline_python.csv and this file; r/analysis.R writes headline_r.csv and ml_r.csv; python/merge_results.py fills every 'r' value and the 'agreement' block."
+  },
+  "headline": {
+    "n_employees": {
+      "python": 2450,
+      "r": 2450,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Employees in the pilot"
+    },
+    "n_teams": {
+      "python": 120,
+      "r": 120,
+      "decimals": 0,
+      "unit": "teams",
+      "meaning": "Teams (randomization happened within each team)"
+    },
+    "n_complete_tenure": {
+      "python": 2322,
+      "r": 2322,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Employees with known tenure (used in tenure models)"
+    },
+    "control_mean_tasks": {
+      "python": 41.49,
+      "r": 41.49,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Average weekly quality-adjusted tasks in the control group (denominator for %)"
+    },
+    "ate_tasks": {
+      "python": 3.0,
+      "r": 3.0,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Overall average effect of AI access (adjusted for baseline and region)"
+    },
+    "ate_ci_low": {
+      "python": 2.51,
+      "r": 2.51,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "ate_ci_high": {
+      "python": 3.49,
+      "r": 3.49,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "ate_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value of the overall effect"
+    },
+    "ate_pct": {
+      "python": 7.2,
+      "r": 7.2,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Overall effect as % of the control mean"
+    },
+    "ate_pct_ci_low": {
+      "python": 6.0,
+      "r": 6.0,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Lower 95% bound in %"
+    },
+    "ate_pct_ci_high": {
+      "python": 8.4,
+      "r": 8.4,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Upper 95% bound in %"
+    },
+    "b1_ai_english_experienced": {
+      "python": 3.35,
+      "r": 3.35,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "AI effect for English-language, experienced employees (b1)"
+    },
+    "b1_ai_english_experienced_ci_low": {
+      "python": 2.91,
+      "r": 2.91,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "b1_ai_english_experienced_ci_high": {
+      "python": 3.78,
+      "r": 3.78,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "b1_ai_english_experienced_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "b3_ai_x_nonenglish": {
+      "python": -4.18,
+      "r": -4.18,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "How much the AI effect differs for non-English teams (b3)"
+    },
+    "b3_ai_x_nonenglish_ci_low": {
+      "python": -5.01,
+      "r": -5.01,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "b3_ai_x_nonenglish_ci_high": {
+      "python": -3.35,
+      "r": -3.35,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "b3_ai_x_nonenglish_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "b5_ai_x_novice": {
+      "python": 2.65,
+      "r": 2.65,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "How much the AI effect differs for novices, tenure < 12 months (b5)"
+    },
+    "b5_ai_x_novice_ci_low": {
+      "python": 1.74,
+      "r": 1.74,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "b5_ai_x_novice_ci_high": {
+      "python": 3.55,
+      "r": 3.55,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "b5_ai_x_novice_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_all_n": {
+      "python": 2450,
+      "r": 2450,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Sample size: All employees"
+    },
+    "sub_all_tasks": {
+      "python": 3.0,
+      "r": 3.0,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Estimated AI effect: All employees"
+    },
+    "sub_all_ci_low": {
+      "python": 2.51,
+      "r": 2.51,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "sub_all_ci_high": {
+      "python": 3.49,
+      "r": 3.49,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "sub_all_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_all_pct": {
+      "python": 7.2,
+      "r": 7.2,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Estimated AI effect as % of control mean: All employees"
+    },
+    "sub_all_true_tasks": {
+      "python": 3.04,
+      "r": 3.04,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "TRUE average effect (synthetic ground truth): All employees"
+    },
+    "sub_english_n": {
+      "python": 1822,
+      "r": 1822,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Sample size: English-language teams"
+    },
+    "sub_english_tasks": {
+      "python": 4.04,
+      "r": 4.04,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Estimated AI effect: English-language teams"
+    },
+    "sub_english_ci_low": {
+      "python": 3.61,
+      "r": 3.61,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "sub_english_ci_high": {
+      "python": 4.47,
+      "r": 4.47,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "sub_english_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_english_pct": {
+      "python": 9.7,
+      "r": 9.7,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Estimated AI effect as % of control mean: English-language teams"
+    },
+    "sub_english_true_tasks": {
+      "python": 3.95,
+      "r": 3.95,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "TRUE average effect (synthetic ground truth): English-language teams"
+    },
+    "sub_non_english_n": {
+      "python": 628,
+      "r": 628,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Sample size: Non-English teams"
+    },
+    "sub_non_english_tasks": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Estimated AI effect: Non-English teams"
+    },
+    "sub_non_english_ci_low": {
+      "python": -0.67,
+      "r": -0.67,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "sub_non_english_ci_high": {
+      "python": 0.67,
+      "r": 0.67,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "sub_non_english_p": {
+      "python": 0.9979,
+      "r": 0.9979,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_non_english_pct": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Estimated AI effect as % of control mean: Non-English teams"
+    },
+    "sub_non_english_true_tasks": {
+      "python": 0.39,
+      "r": 0.39,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "TRUE average effect (synthetic ground truth): Non-English teams"
+    },
+    "sub_novice_n": {
+      "python": 605,
+      "r": 605,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Sample size: Novices (<12 months)"
+    },
+    "sub_novice_tasks": {
+      "python": 4.85,
+      "r": 4.85,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Estimated AI effect: Novices (<12 months)"
+    },
+    "sub_novice_ci_low": {
+      "python": 3.92,
+      "r": 3.92,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "sub_novice_ci_high": {
+      "python": 5.77,
+      "r": 5.77,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "sub_novice_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_novice_pct": {
+      "python": 11.7,
+      "r": 11.7,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Estimated AI effect as % of control mean: Novices (<12 months)"
+    },
+    "sub_novice_true_tasks": {
+      "python": 4.57,
+      "r": 4.57,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "TRUE average effect (synthetic ground truth): Novices (<12 months)"
+    },
+    "sub_experienced_n": {
+      "python": 1717,
+      "r": 1717,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Sample size: Experienced (12+ months)"
+    },
+    "sub_experienced_tasks": {
+      "python": 2.33,
+      "r": 2.33,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Estimated AI effect: Experienced (12+ months)"
+    },
+    "sub_experienced_ci_low": {
+      "python": 1.79,
+      "r": 1.79,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "sub_experienced_ci_high": {
+      "python": 2.86,
+      "r": 2.86,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "sub_experienced_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_experienced_pct": {
+      "python": 5.6,
+      "r": 5.6,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Estimated AI effect as % of control mean: Experienced (12+ months)"
+    },
+    "sub_experienced_true_tasks": {
+      "python": 2.5,
+      "r": 2.5,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "TRUE average effect (synthetic ground truth): Experienced (12+ months)"
+    },
+    "sub_english_novice_n": {
+      "python": 440,
+      "r": 440,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Sample size: English, novice"
+    },
+    "sub_english_novice_tasks": {
+      "python": 6.09,
+      "r": 6.09,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Estimated AI effect: English, novice"
+    },
+    "sub_english_novice_ci_low": {
+      "python": 5.06,
+      "r": 5.06,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "sub_english_novice_ci_high": {
+      "python": 7.11,
+      "r": 7.11,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "sub_english_novice_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_english_novice_pct": {
+      "python": 14.7,
+      "r": 14.7,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Estimated AI effect as % of control mean: English, novice"
+    },
+    "sub_english_novice_true_tasks": {
+      "python": 5.57,
+      "r": 5.57,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "TRUE average effect (synthetic ground truth): English, novice"
+    },
+    "sub_english_experienced_n": {
+      "python": 1293,
+      "r": 1293,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Sample size: English, experienced"
+    },
+    "sub_english_experienced_tasks": {
+      "python": 3.37,
+      "r": 3.37,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Estimated AI effect: English, experienced"
+    },
+    "sub_english_experienced_ci_low": {
+      "python": 2.91,
+      "r": 2.91,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "sub_english_experienced_ci_high": {
+      "python": 3.82,
+      "r": 3.82,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "sub_english_experienced_p": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_english_experienced_pct": {
+      "python": 8.1,
+      "r": 8.1,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Estimated AI effect as % of control mean: English, experienced"
+    },
+    "sub_english_experienced_true_tasks": {
+      "python": 3.39,
+      "r": 3.39,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "TRUE average effect (synthetic ground truth): English, experienced"
+    },
+    "sub_non_english_novice_n": {
+      "python": 165,
+      "r": 165,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Sample size: Non-English, novice"
+    },
+    "sub_non_english_novice_tasks": {
+      "python": 1.83,
+      "r": 1.83,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Estimated AI effect: Non-English, novice"
+    },
+    "sub_non_english_novice_ci_low": {
+      "python": 0.6,
+      "r": 0.6,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "sub_non_english_novice_ci_high": {
+      "python": 3.07,
+      "r": 3.07,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "sub_non_english_novice_p": {
+      "python": 0.0049,
+      "r": 0.0049,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_non_english_novice_pct": {
+      "python": 4.4,
+      "r": 4.4,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Estimated AI effect as % of control mean: Non-English, novice"
+    },
+    "sub_non_english_novice_true_tasks": {
+      "python": 1.93,
+      "r": 1.93,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "TRUE average effect (synthetic ground truth): Non-English, novice"
+    },
+    "sub_non_english_experienced_n": {
+      "python": 424,
+      "r": 424,
+      "decimals": 0,
+      "unit": "people",
+      "meaning": "Sample size: Non-English, experienced"
+    },
+    "sub_non_english_experienced_tasks": {
+      "python": -0.88,
+      "r": -0.88,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Estimated AI effect: Non-English, experienced"
+    },
+    "sub_non_english_experienced_ci_low": {
+      "python": -1.81,
+      "r": -1.81,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Lower 95% bound, team-clustered"
+    },
+    "sub_non_english_experienced_ci_high": {
+      "python": 0.04,
+      "r": 0.04,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Upper 95% bound, team-clustered"
+    },
+    "sub_non_english_experienced_p": {
+      "python": 0.0608,
+      "r": 0.0608,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "p-value"
+    },
+    "sub_non_english_experienced_pct": {
+      "python": -2.1,
+      "r": -2.1,
+      "decimals": 1,
+      "unit": "%",
+      "meaning": "Estimated AI effect as % of control mean: Non-English, experienced"
+    },
+    "sub_non_english_experienced_true_tasks": {
+      "python": -0.21,
+      "r": -0.21,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "TRUE average effect (synthetic ground truth): Non-English, experienced"
+    },
+    "slice_region_americas_diff": {
+      "python": 0.68,
+      "r": 0.68,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Region: Americas' minus rest"
+    },
+    "slice_region_americas_p_raw": {
+      "python": 0.1989,
+      "r": 0.1989,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_region_americas_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_region_emea_diff": {
+      "python": -0.11,
+      "r": -0.11,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Region: EMEA' minus rest"
+    },
+    "slice_region_emea_p_raw": {
+      "python": 0.8405,
+      "r": 0.8405,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_region_emea_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_region_apac_diff": {
+      "python": -0.16,
+      "r": -0.16,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Region: APAC' minus rest"
+    },
+    "slice_region_apac_p_raw": {
+      "python": 0.7708,
+      "r": 0.7708,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_region_apac_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_region_latam_diff": {
+      "python": -0.79,
+      "r": -0.79,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Region: LATAM' minus rest"
+    },
+    "slice_region_latam_p_raw": {
+      "python": 0.3052,
+      "r": 0.3052,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_region_latam_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_language_non_english_diff": {
+      "python": -4.04,
+      "r": -4.04,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Language: non-English' minus rest"
+    },
+    "slice_language_non_english_p_raw": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_language_non_english_p_holm": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_tenure_novice__12_mo_diff": {
+      "python": 2.52,
+      "r": 2.52,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Tenure: novice (<12 mo)' minus rest"
+    },
+    "slice_tenure_novice__12_mo_p_raw": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_tenure_novice__12_mo_p_holm": {
+      "python": 0.0,
+      "r": 0.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_role_tier_1_support_diff": {
+      "python": -0.24,
+      "r": -0.24,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Role: Tier-1 support' minus rest"
+    },
+    "slice_role_tier_1_support_p_raw": {
+      "python": 0.5127,
+      "r": 0.5127,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_role_tier_1_support_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_role_tier_2_support_diff": {
+      "python": 0.37,
+      "r": 0.37,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Role: Tier-2 support' minus rest"
+    },
+    "slice_role_tier_2_support_p_raw": {
+      "python": 0.3935,
+      "r": 0.3935,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_role_tier_2_support_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_role_operations_analyst_diff": {
+      "python": -0.18,
+      "r": -0.18,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Role: Operations analyst' minus rest"
+    },
+    "slice_role_operations_analyst_p_raw": {
+      "python": 0.7066,
+      "r": 0.7066,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_role_operations_analyst_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_role_specialist_diff": {
+      "python": 0.18,
+      "r": 0.18,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Role: Specialist' minus rest"
+    },
+    "slice_role_specialist_p_raw": {
+      "python": 0.7596,
+      "r": 0.7596,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_role_specialist_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_shift_day_diff": {
+      "python": 0.58,
+      "r": 0.58,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Shift: Day' minus rest"
+    },
+    "slice_shift_day_p_raw": {
+      "python": 0.1625,
+      "r": 0.1625,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_shift_day_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_shift_evening_diff": {
+      "python": -0.73,
+      "r": -0.73,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Shift: Evening' minus rest"
+    },
+    "slice_shift_evening_p_raw": {
+      "python": 0.1192,
+      "r": 0.1192,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_shift_evening_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_shift_night_diff": {
+      "python": 0.11,
+      "r": 0.11,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Shift: Night' minus rest"
+    },
+    "slice_shift_night_p_raw": {
+      "python": 0.8495,
+      "r": 0.8495,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_shift_night_p_holm": {
+      "python": 1.0,
+      "r": 1.0,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "slice_remote_worker_diff": {
+      "python": -0.93,
+      "r": -0.93,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Naive slicing: AI effect in 'Remote worker' minus rest"
+    },
+    "slice_remote_worker_p_raw": {
+      "python": 0.0064,
+      "r": 0.0064,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Uncorrected p-value"
+    },
+    "slice_remote_worker_p_holm": {
+      "python": 0.077,
+      "r": 0.077,
+      "decimals": 4,
+      "unit": "p-value",
+      "meaning": "Holm-corrected p-value (14 tests)"
+    },
+    "naive_n_flagged_raw": {
+      "python": 3,
+      "r": 3,
+      "decimals": 0,
+      "unit": "slices",
+      "meaning": "Slices flagged at p<.05 without correction (of 14)"
+    },
+    "naive_n_false_flagged_raw": {
+      "python": 1,
+      "r": 1,
+      "decimals": 0,
+      "unit": "slices",
+      "meaning": "Flagged slices with NO true moderation"
+    },
+    "naive_n_flagged_holm": {
+      "python": 2,
+      "r": 2,
+      "decimals": 0,
+      "unit": "slices",
+      "meaning": "Slices still flagged after Holm correction"
+    },
+    "dr_ate_tasks": {
+      "python": 3.02,
+      "r": 3.02,
+      "decimals": 2,
+      "unit": "tasks/week",
+      "meaning": "Average of the DR pseudo-outcomes (= doubly robust ATE; identical folds in Python and R)"
+    }
+  },
+  "naive_slicing_false_positive_example": {
+    "slice": "Remote worker",
+    "diff_in_effect_tasks": -0.93,
+    "p_raw": 0.0064,
+    "p_holm": 0.077,
+    "meaning": "A covariate with NO true effect modification looks 'significant' when slicing 14 ways without correction; it disappears after Holm correction, while language and tenure survive."
+  },
+  "naive_slicing_table": [
+    {
+      "slice": "Region: Americas",
+      "variable": "region",
+      "true_moderator": false,
+      "n_in_slice": 834,
+      "diff_in_effect": 0.6843,
+      "ci_low": -0.3645,
+      "ci_high": 1.7331,
+      "p_raw": 0.1989,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Region: EMEA",
+      "variable": "region",
+      "true_moderator": false,
+      "n_in_slice": 723,
+      "diff_in_effect": -0.1083,
+      "ci_low": -1.1715,
+      "ci_high": 0.9549,
+      "p_raw": 0.8405,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Region: APAC",
+      "variable": "region",
+      "true_moderator": false,
+      "n_in_slice": 525,
+      "diff_in_effect": -0.1588,
+      "ci_low": -1.2358,
+      "ci_high": 0.9181,
+      "p_raw": 0.7708,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Region: LATAM",
+      "variable": "region",
+      "true_moderator": false,
+      "n_in_slice": 368,
+      "diff_in_effect": -0.7936,
+      "ci_low": -2.3194,
+      "ci_high": 0.7322,
+      "p_raw": 0.3052,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Language: non-English",
+      "variable": "work_language",
+      "true_moderator": true,
+      "n_in_slice": 628,
+      "diff_in_effect": -4.0445,
+      "ci_low": -4.8213,
+      "ci_high": -3.2676,
+      "p_raw": 0.0,
+      "p_holm": 0.0,
+      "flag_raw": true,
+      "flag_holm": true
+    },
+    {
+      "slice": "Tenure: novice (<12 mo)",
+      "variable": "tenure",
+      "true_moderator": true,
+      "n_in_slice": 605,
+      "diff_in_effect": 2.5236,
+      "ci_low": 1.5908,
+      "ci_high": 3.4564,
+      "p_raw": 0.0,
+      "p_holm": 0.0,
+      "flag_raw": true,
+      "flag_holm": true
+    },
+    {
+      "slice": "Role: Tier-1 support",
+      "variable": "role_family",
+      "true_moderator": false,
+      "n_in_slice": 954,
+      "diff_in_effect": -0.2433,
+      "ci_low": -0.977,
+      "ci_high": 0.4904,
+      "p_raw": 0.5127,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Role: Tier-2 support",
+      "variable": "role_family",
+      "true_moderator": false,
+      "n_in_slice": 645,
+      "diff_in_effect": 0.3704,
+      "ci_low": -0.486,
+      "ci_high": 1.2267,
+      "p_raw": 0.3935,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Role: Operations analyst",
+      "variable": "role_family",
+      "true_moderator": false,
+      "n_in_slice": 495,
+      "diff_in_effect": -0.1795,
+      "ci_low": -1.1213,
+      "ci_high": 0.7624,
+      "p_raw": 0.7066,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Role: Specialist",
+      "variable": "role_family",
+      "true_moderator": false,
+      "n_in_slice": 356,
+      "diff_in_effect": 0.1773,
+      "ci_low": -0.9675,
+      "ci_high": 1.3222,
+      "p_raw": 0.7596,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Shift: Day",
+      "variable": "shift",
+      "true_moderator": false,
+      "n_in_slice": 1335,
+      "diff_in_effect": 0.5847,
+      "ci_low": -0.2392,
+      "ci_high": 1.4086,
+      "p_raw": 0.1625,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Shift: Evening",
+      "variable": "shift",
+      "true_moderator": false,
+      "n_in_slice": 764,
+      "diff_in_effect": -0.7323,
+      "ci_low": -1.656,
+      "ci_high": 0.1915,
+      "p_raw": 0.1192,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Shift: Night",
+      "variable": "shift",
+      "true_moderator": false,
+      "n_in_slice": 351,
+      "diff_in_effect": 0.1091,
+      "ci_low": -1.0262,
+      "ci_high": 1.2443,
+      "p_raw": 0.8495,
+      "p_holm": 1.0,
+      "flag_raw": false,
+      "flag_holm": false
+    },
+    {
+      "slice": "Remote worker",
+      "variable": "remote",
+      "true_moderator": false,
+      "n_in_slice": 1108,
+      "diff_in_effect": -0.9304,
+      "ci_low": -1.5944,
+      "ci_high": -0.2665,
+      "p_raw": 0.0064,
+      "p_holm": 0.077,
+      "flag_raw": true,
+      "flag_holm": false
+    }
+  ],
+  "ml_step": {
+    "python": {
+      "learner": "DR-learner (cross-fitted linear outcome models, design propensity) + scikit-learn RandomForestRegressor (500 trees, min_samples_leaf=60), cross-fitted by team",
+      "dr_ate_tasks": 3.02,
+      "variable_importance_share": {
+        "Work language": 0.393,
+        "Tenure": 0.295,
+        "Baseline output": 0.123,
+        "Shift": 0.054,
+        "Region": 0.049,
+        "Role family": 0.048,
+        "Remote": 0.038
+      },
+      "top2_moderators": [
+        "Work language",
+        "Tenure"
+      ],
+      "mean_cate_by_group_tasks": {
+        "english": 3.74,
+        "non_english": 0.96,
+        "novice": 4.26,
+        "experienced": 2.62
+      },
+      "corr_cate_vs_true_effect": 0.87,
+      "calibration_high_half_effect_tasks": [
+        4.13,
+        3.58,
+        4.67
+      ],
+      "calibration_low_half_effect_tasks": [
+        1.88,
+        1.22,
+        2.54
+      ],
+      "share_non_english_in_bottom_quartile_cate": 0.9
+    },
+    "r": {
+      "learner": "DR-learner (same cross-fitted pseudo-outcomes as Python) + bagged rpart regression trees (300 trees, half-subsamples, 5 of 8 variables per tree, minbucket=60), cross-fitted by team; grf not available",
+      "dr_ate_tasks": 3.02,
+      "variable_importance_share": {
+        "Work language": 0.385,
+        "Tenure": 0.303,
+        "Baseline output": 0.134,
+        "Region": 0.054,
+        "Role family": 0.053,
+        "Shift": 0.04,
+        "Remote": 0.031
+      },
+      "top2_moderators": [
+        "Work language",
+        "Tenure"
+      ],
+      "mean_cate_by_group_tasks": {
+        "english": 3.63,
+        "non_english": 1.17,
+        "novice": 4.03,
+        "experienced": 2.66
+      },
+      "corr_cate_vs_true_effect": 0.87,
+      "calibration_high_half_effect_tasks": [
+        3.91,
+        3.37,
+        4.46
+      ],
+      "calibration_low_half_effect_tasks": [
+        2.09,
+        1.4,
+        2.78
+      ],
+      "share_non_english_in_bottom_quartile_cate": 0.95
+    },
+    "qualitative_agreement": {
+      "checks": {
+        "same_top2_moderators": true,
+        "noise_covariates_each_below_10pct_in_both": true,
+        "group_mean_cate_within_0.5_tasks": true,
+        "both_corr_with_truth_above_0.7": true,
+        "high_half_beats_low_half_in_both": true,
+        "dr_ate_identical": true
+      },
+      "all_pass": true,
+      "summary": "Python and R forests agree qualitatively: both rank work language then tenure as the top drivers of heterogeneity, noise covariates (shift, region, role, remote) get small shares, group-average CATEs are close, both correlate ~0.87 with the true individual effect, and the predicted high-benefit half really does benefit more on held-out data. Exact decimals differ because the forest implementations differ."
+    },
+    "note": "ML-step numbers are expected to differ across languages (different forest implementations); compare rankings and group averages, not decimals."
+  },
+  "ground_truth_check": {
+    "true_ate_tasks": 3.02,
+    "true_ate_tasks_all_employees": 3.04,
+    "true_interaction_ai_x_nonenglish": -3.6,
+    "true_interaction_ai_x_novice": 2.2,
+    "interaction_ai_x_nonenglish_ci_covers_truth": true,
+    "interaction_ai_x_novice_ci_covers_truth": true,
+    "subgroups_true_vs_estimated_tasks": {
+      "all": {
+        "true": 3.04,
+        "estimated": 3.0,
+        "ci_covers_truth": true
+      },
+      "english": {
+        "true": 3.95,
+        "estimated": 4.04,
+        "ci_covers_truth": true
+      },
+      "non_english": {
+        "true": 0.39,
+        "estimated": 0.0,
+        "ci_covers_truth": true
+      },
+      "novice": {
+        "true": 4.57,
+        "estimated": 4.85,
+        "ci_covers_truth": true
+      },
+      "experienced": {
+        "true": 2.5,
+        "estimated": 2.33,
+        "ci_covers_truth": true
+      },
+      "english_novice": {
+        "true": 5.57,
+        "estimated": 6.09,
+        "ci_covers_truth": true
+      },
+      "english_experienced": {
+        "true": 3.39,
+        "estimated": 3.37,
+        "ci_covers_truth": true
+      },
+      "non_english_novice": {
+        "true": 1.93,
+        "estimated": 1.83,
+        "ci_covers_truth": true
+      },
+      "non_english_experienced": {
+        "true": -0.21,
+        "estimated": -0.88,
+        "ci_covers_truth": true
+      }
+    },
+    "subgroup_ci_coverage": "9 of 9",
+    "noise_covariates_true_moderation": 0.0
+  },
+  "rollout_decision_grid_python": [
+    {
+      "segment": "English, novice",
+      "n": 440,
+      "effect_tasks": 6.09,
+      "ci_low": 5.06,
+      "ci_high": 7.11,
+      "effect_pct": 14.7,
+      "decision": "Launch now (wave 1)"
+    },
+    {
+      "segment": "English, experienced",
+      "n": 1293,
+      "effect_tasks": 3.37,
+      "ci_low": 2.91,
+      "ci_high": 3.82,
+      "effect_pct": 8.1,
+      "decision": "Launch now (wave 1)"
+    },
+    {
+      "segment": "Non-English, novice",
+      "n": 165,
+      "effect_tasks": 1.83,
+      "ci_low": 0.6,
+      "ci_high": 3.07,
+      "effect_pct": 4.4,
+      "decision": "Targeted re-test (wave 2 candidate)"
+    },
+    {
+      "segment": "Non-English, experienced",
+      "n": 424,
+      "effect_tasks": -0.88,
+      "ci_low": -1.81,
+      "ci_high": 0.04,
+      "effect_pct": -2.1,
+      "decision": "Hold: fix/localize, then re-test"
+    }
+  ],
+  "decision_rule": "Launch if the 95% CI lower bound >= 1.0 task/week (the pre-specified smallest worthwhile gain); hold and fix if the upper bound < 1.0; otherwise targeted re-test.",
+  "simulation_false_alarm_rate": {
+    "n_replications": 200,
+    "share_pilots_with_false_alarm_uncorrected": 0.24,
+    "share_pilots_with_false_alarm_holm": 0.02,
+    "meaning": "Share of simulated pilots (new seeds, same design) where at least one of 8 pure-noise slices looks 'significant' at p<.05 (Holm-corrected within the 8 noise tests in the second line). Python only."
+  },
+  "agreement": {
+    "headline_numbers_checked": 132,
+    "headline_all_match_at_stated_rounding": true,
+    "mismatches": [],
+    "max_unrounded_abs_diff": 4.71e-11,
+    "rollout_decisions_match": true,
+    "ml_step_qualitative_agreement": true
+  },
+  "rollout_decision_grid_r": [
+    {
+      "segment": "english_novice",
+      "decision": "Launch now (wave 1)"
+    },
+    {
+      "segment": "english_experienced",
+      "decision": "Launch now (wave 1)"
+    },
+    {
+      "segment": "non_english_novice",
+      "decision": "Targeted re-test (wave 2 candidate)"
+    },
+    {
+      "segment": "non_english_experienced",
+      "decision": "Hold: fix/localize, then re-test"
+    }
+  ]
+}
