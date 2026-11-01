@@ -1,0 +1,13 @@
+week,period,wave1_mean_tickets_per_agent_hour,comparison_mean_tickets_per_agent_hour,wave1_without_ai_counterfactual,wave1_n_teams,comparison_n_teams
+1,before launch,2.565,2.489,,19,39
+2,before launch,2.495,2.444,,20,40
+3,before launch,2.489,2.497,,20,40
+4,before launch,2.641,2.566,,19,40
+5,before launch,2.692,2.664,,20,38
+6,before launch,2.731,2.706,,20,39
+7,after launch,2.836,2.726,2.768,19,40
+8,after launch,3.047,2.768,2.81,20,39
+9,after launch,3.186,2.797,2.84,20,38
+10,after launch,3.292,2.908,2.951,20,40
+11,after launch,3.378,2.951,2.993,20,40
+12,after launch,3.462,3.003,3.045,20,39
