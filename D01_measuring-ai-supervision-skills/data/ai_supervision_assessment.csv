@@ -1,0 +1,613 @@
+person_id,business_unit,role,completion_minutes,S01,S02,S03,S04,S05,S06,S07,S08,S09,S10,S11,S12,C01,C02,C03,C04,audit_seeded_a,audit_caught_a,audit_seeded_b,audit_caught_b
+P0001,Claims,Claims examiner,5.8,1,1,1,1,1,1,1,1,1,1,1,1,7,7,7,7,21,9,19,8
+P0002,Trust & Safety Review,Policy specialist,22.1,4,4,4,3,0,1,4,3,4,4,0,2,10,10,9,9,19,17,19,18
+P0003,Trust & Safety Review,Team lead,26.4,4,2,1,3,2,2,2,3,2,3,1,2,10,10,10,9,19,16,21,16
+P0004,Customer Support,Support agent,31.0,4,1,1,2,0,2,2,2,3,2,4,2,9,8,8,,20,8,20,5
+P0005,trust & safety review,Content reviewer,29.0,4,3,3,4,4,2,,3,3,1,3,2,4,4,1,2,21,16,20,15
+P0006,Claims,Claims examiner,38.1,2,1,4,2,2,2,2,2,4,3,1,3,3,2,,5,21,16,20,12
+P0007,Trust & Safety Review,Content reviewer,35.5,2,2,1,4,2,0,3,4,3,3,4,2,6,7,7,7,19,7,19,5
+P0008,Operations,Operations analyst,44.6,4,2,2,2,3,3,4,,,,2,4,6,7,5,5,20,15,20,14
+P0009,Trust & Safety Review,Content reviewer,25.9,4,2,2,4,1,,2,1,2,1,2,2,6,5,4,4,20,10,19,11
+P0010,Claims,Claims examiner,19.3,1,2,1,2,3,0,2,1,2,3,1,0,,0,0,0,19,8,20,10
+P0011,Trust & Safety Review,Team lead,44.3,4,4,3,,1,0,3,4,4,4,0,4,8,6,8,7,19,16,19,14
+P0012,Trust & Safety Review,Content reviewer,33.9,4,4,3,1,3,2,3,4,4,4,0,3,7,7,7,7,20,12,19,14
+P0013,Operations,Team lead,19.2,4,3,3,4,1,0,1,1,1,4,1,3,8,9,7,8,19,11,20,5
+P0014,Claims,Claims lead,23.2,1,1,2,4,2,0,2,1,2,3,1,3,7,6,6,5,20,13,20,13
+P0015,Claims,Claims examiner,43.0,2,1,2,0,0,1,0,,1,1,1,1,6,6,8,5,21,13,21,19
+P0016,Claims,Claims examiner,22.2,4,4,4,4,2,2,4,4,4,4,2,4,4,6,5,5,20,16,19,17
+P0017,Trust & Safety Review,Policy specialist,28.4,,4,4,3,3,4,2,3,3,3,0,3,5,4,5,6,20,11,19,9
+P0018,Trust & Safety Review,Content reviewer,35.6,4,3,4,4,4,2,3,4,4,4,2,4,7,,6,5,20,20,21,20
+P0019,Customer Support,Support agent,29.1,2,2,1,2,1,3,2,0,1,,3,2,4,4,2,1,21,13,19,17
+P0020,Claims,Claims lead,35.6,2,2,2,3,1,4,1,1,3,2,3,2,4,2,5,4,21,14,19,10
+P0021,Customer Support,Support agent,33.0,3,1,1,3,2,4,2,1,3,3,1,3,4,4,6,5,,,,
+P0022,Trust & Safety Review,Content reviewer,27.7,3,2,2,2,3,3,3,4,3,2,2,3,10,10,9,9,20,14,20,20
+P0023,Operations,Workflow lead,39.5,2,4,0,4,1,3,2,2,4,2,2,3,6,7,6,,19,17,19,10
+P0024,Customer Support,Support agent,21.1,3,1,2,,3,0,2,1,2,1,1,2,4,2,3,3,21,6,19,11
+P0025,Trust & Safety Review,Team lead,21.4,2,2,0,2,2,2,0,0,3,1,2,3,10,10,10,10,20,7,19,9
+P0026,Operations,Workflow lead,29.1,4,3,2,4,4,2,4,2,,3,3,4,2,5,4,4,20,19,21,20
+P0027,Claims,Claims examiner,45.7,4,3,3,4,2,2,3,1,3,3,1,2,7,7,8,8,21,14,21,9
+P0028,Operations,Operations analyst,36.2,2,0,1,2,0,2,,0,2,2,3,1,1,1,2,1,20,4,19,10
+P0029,Trust & Safety Review,Content reviewer,29.3,2,3,,3,4,3,3,2,2,3,2,1,6,6,7,5,19,11,19,10
+P0030,Customer Support,Support lead,35.6,3,2,1,3,1,0,3,2,2,1,3,0,2,4,4,3,20,16,20,16
+P0031,trust & safety review,Team lead,23.9,2,2,3,3,2,2,3,2,3,3,1,1,2,4,1,,20,6,19,12
+P0032,Operations,Workflow lead,24.0,4,1,1,2,2,2,2,1,3,2,2,2,6,7,7,7,19,15,21,19
+P0033,Customer Support,Team lead,24.7,1,1,0,1,0,2,0,0,2,2,2,1,2,0,0,1,19,11,19,12
+P0034,Operations,Operations analyst,37.0,3,3,3,,1,3,2,3,3,3,2,1,6,6,4,5,21,13,21,12
+P0035,Customer Support,Support lead,33.1,4,1,1,2,0,2,1,3,1,1,1,2,2,0,2,1,21,14,19,13
+P0036,Claims,Claims examiner,30.9,2,3,3,3,0,2,2,1,0,2,2,,2,3,1,4,20,12,20,15
+P0037,Customer Support,Team lead,27.5,3,3,1,4,3,3,2,1,3,3,2,3,3,3,3,4,20,9,21,11
+P0038,Customer Support,Support agent,22.1,4,2,,2,3,0,4,2,3,2,3,2,5,7,6,8,21,19,19,17
+P0039,Customer Support,Support lead,17.6,4,4,1,2,2,0,2,2,3,2,1,3,9,9,7,7,21,20,19,16
+P0040,Operations,Operations analyst,27.7,2,4,3,3,,2,2,2,2,3,2,3,6,5,7,7,19,17,20,19
+P0041,Claims,Claims lead,26.2,,4,2,3,0,2,2,0,1,1,3,,8,8,9,8,19,4,20,7
+P0042,Trust & Safety Review,Policy specialist,30.0,4,4,3,3,2,3,2,4,4,4,1,2,2,2,3,2,19,9,21,12
+P0043,Claims,Team lead,27.4,1,0,0,2,0,2,1,0,1,1,4,1,3,4,1,3,20,2,20,7
+P0044,Claims,Claims examiner,31.6,2,2,1,,4,3,2,2,2,3,3,3,1,2,3,3,19,7,21,11
+P0045,Operations,Operations analyst,48.8,1,0,3,2,0,4,3,0,3,2,1,0,5,5,6,,20,9,20,9
+P0046,Trust & Safety Review,Policy specialist,22.3,3,3,2,3,2,1,3,1,2,2,1,2,5,5,6,6,20,7,20,8
+P0047,Operations,Team lead,26.4,1,2,0,2,1,3,2,1,3,3,0,3,5,7,5,5,21,9,21,9
+P0048,Trust & Safety Review,Policy specialist,37.8,3,4,1,1,1,2,2,1,3,2,4,0,6,7,,8,19,8,19,7
+P0049,Trust & Safety Review,Policy specialist,18.2,3,4,2,2,2,3,2,2,2,3,1,4,4,4,3,6,21,17,21,17
+P0050,Claims,Claims examiner,24.7,1,1,,2,1,2,2,0,2,1,3,2,,6,9,5,19,1,19,4
+P0051,Customer Support,Support agent,30.1,4,3,1,3,4,3,4,1,2,3,0,4,3,3,5,4,19,17,19,15
+P0052,Trust & Safety Review,Team lead,19.5,4,2,2,4,2,4,3,3,,2,3,2,2,2,0,0,19,15,19,14
+P0053,Operations,Operations analyst,48.8,1,1,2,,1,2,3,1,2,1,2,0,1,4,4,2,21,12,19,12
+P0054,Trust & Safety Review,Policy specialist,32.2,2,2,1,,1,2,1,0,2,3,3,0,2,3,4,4,20,0,21,2
+P0055,Claims,Claims examiner,37.4,2,3,1,2,2,4,2,1,2,2,3,1,6,5,8,7,19,5,19,3
+P0056,operations ,Workflow lead,26.6,2,2,1,3,2,1,2,1,1,2,4,2,6,3,5,2,20,10,19,9
+P0057,Customer Support,Team lead,43.0,3,2,3,1,2,2,,1,2,2,1,3,,4,5,6,20,11,19,9
+P0058,Operations,Workflow lead,18.2,4,3,3,3,1,3,3,3,2,3,1,2,7,7,6,6,20,17,20,13
+P0059,Operations,Workflow lead,22.2,3,1,2,4,0,2,4,3,2,3,0,0,5,4,3,2,20,18,20,18
+P0060,Claims,Claims examiner,26.8,2,2,0,1,2,2,1,1,4,3,4,1,2,3,3,3,21,10,20,9
+P0061,Trust & Safety Review,Policy specialist,26.1,4,3,3,4,3,,2,4,2,4,2,3,10,10,10,10,19,18,20,20
+P0062,Trust & Safety Review,Content reviewer,22.7,3,1,1,2,1,2,2,2,1,2,2,4,4,3,2,6,19,8,21,6
+P0063,Claims,Claims examiner,37.5,3,1,2,2,1,4,2,2,2,1,2,4,6,5,,5,19,7,21,7
+P0064,Operations,Operations analyst,19.3,3,3,2,4,2,4,2,2,4,2,,2,0,0,2,1,19,17,20,9
+P0065,Claims,Claims examiner,34.5,2,1,2,3,1,2,2,0,2,3,2,3,2,3,0,3,20,10,20,10
+P0066,Trust & Safety Review,Team lead,25.3,4,3,4,4,2,2,3,4,,4,2,3,8,9,7,10,20,18,21,20
+P0067,Trust & Safety Review,Content reviewer,52.5,2,3,1,1,1,2,2,1,1,1,4,0,5,5,7,7,19,9,20,13
+P0068,Claims,Claims examiner,21.2,3,3,4,1,2,2,2,2,3,3,1,3,5,3,6,4,19,6,19,4
+P0069,Claims,Claims lead,17.9,3,1,1,4,2,2,2,1,2,2,4,2,7,7,6,5,21,18,21,13
+P0070,Operations,Operations analyst,32.5,3,3,3,4,2,,3,3,2,3,1,2,8,9,8,8,20,6,19,2
+P0071,Customer Support,Support agent,24.1,3,2,3,0,4,4,4,3,2,4,2,2,5,6,5,6,,,,
+P0072,Claims,Claims examiner,11.3,2,2,3,2,2,2,1,0,3,2,4,2,10,9,9,10,20,8,19,9
+P0073,Claims,Claims examiner,28.3,4,2,3,3,3,1,4,3,3,3,3,2,7,4,3,6,20,11,20,13
+P0074,Customer Support,Support lead,29.7,4,2,2,2,2,,2,0,2,2,2,2,4,3,3,3,20,6,20,10
+P0075,Customer Support,Support agent,37.6,4,2,2,4,3,2,4,2,3,3,0,1,10,10,8,10,19,15,21,14
+P0076,Claims,Team lead,21.4,,2,1,2,1,1,3,2,4,2,2,0,2,2,4,3,21,18,21,17
+P0077,Operations,Operations analyst,37.0,4,1,0,3,3,2,1,1,3,3,2,1,3,1,2,1,,,,
+P0078,Trust & Safety Review,Policy specialist,26.4,3,1,3,2,4,2,3,2,2,2,2,3,10,8,9,10,20,19,21,17
+P0079,Operations,Operations analyst,34.8,2,1,3,3,3,3,1,0,3,3,2,1,5,2,0,3,20,11,19,7
+P0080,Trust & Safety Review,Content reviewer,25.0,4,2,0,1,2,2,3,2,3,3,,4,9,,7,7,20,15,21,17
+P0081,Trust & Safety Review,Policy specialist,43.1,1,1,2,2,1,2,1,1,3,1,2,2,6,4,5,5,21,9,19,5
+P0082,Operations,Operations analyst,28.2,2,2,2,3,2,3,2,3,4,1,3,1,2,3,3,,21,14,21,9
+P0083,Customer Support,Team lead,25.8,,,2,2,1,1,3,2,3,4,3,3,5,6,4,5,19,2,21,3
+P0084,Operations,Operations analyst,49.2,3,1,1,1,1,3,1,0,3,4,2,2,3,5,6,6,19,7,20,6
+P0085,Customer Support,Support agent,32.8,1,0,1,2,2,1,2,1,2,1,2,1,4,5,6,5,21,5,21,6
+P0086,Customer Support,Support agent,17.6,2,2,0,2,2,1,0,1,3,0,3,0,,0,0,0,19,5,19,12
+P0087,Trust & Safety Review,Content reviewer,24.5,2,1,1,2,1,3,1,1,3,2,3,1,0,0,0,1,21,3,19,3
+P0088,Customer Support,Support lead,31.9,3,3,2,3,,2,3,1,3,2,2,1,10,9,9,9,21,17,20,18
+P0089,Trust & Safety Review,Policy specialist,27.7,2,0,1,0,0,1,1,1,2,0,2,1,3,4,3,3,21,7,19,6
+P0090,Trust & Safety Review,Content reviewer,27.3,2,2,2,2,2,1,2,0,0,1,2,1,4,5,5,5,20,11,21,9
+P0091,Claims,Claims examiner,26.6,4,3,2,1,1,1,2,,2,3,2,2,6,6,6,5,21,18,19,13
+P0092,Trust & Safety Review,Content reviewer,40.6,4,4,,3,4,2,2,4,4,4,2,3,6,6,6,7,21,21,20,18
+P0093,Trust & Safety Review,Content reviewer,45.0,3,1,,4,1,1,1,0,3,2,3,1,5,3,5,4,21,3,20,2
+P0094,Trust & Safety Review,Content reviewer,48.1,0,1,2,2,1,2,0,1,0,1,1,2,5,3,6,3,19,8,20,3
+P0095,Operations,Operations analyst,25.3,3,2,3,3,0,2,2,2,2,2,2,3,7,7,7,6,20,6,19,9
+P0096,Claims,Claims examiner,28.6,4,0,2,1,1,2,1,3,2,2,2,2,6,8,8,8,21,19,21,16
+P0097,Operations,Operations analyst,47.7,4,3,2,3,2,2,2,2,,3,1,2,4,4,3,4,,,,
+P0098,Customer Support,Team lead,33.1,3,2,0,2,0,2,,2,2,0,2,2,0,,0,2,19,8,21,12
+P0099,Trust & Safety Review,Policy specialist,29.7,3,1,1,2,1,3,1,1,2,2,2,1,7,7,7,5,20,6,20,12
+P0100,Trust & Safety Review,Policy specialist,31.4,2,1,,3,1,2,3,4,3,2,2,3,6,6,6,6,20,16,21,21
+P0101,Operations,Operations analyst,41.8,4,2,2,3,3,4,2,3,3,1,1,2,6,5,3,5,21,19,20,20
+P0102,Trust & Safety Review,Content reviewer,22.9,4,3,3,2,4,2,4,2,4,3,4,3,3,4,5,3,20,18,19,17
+P0103,Trust & Safety Review,Content reviewer,19.6,2,2,3,2,3,2,2,1,4,1,1,3,7,7,6,7,20,13,21,11
+P0104,Operations,Operations analyst,24.9,2,2,2,3,2,2,1,1,4,1,1,3,9,8,8,8,19,10,21,14
+P0105,Operations,Team lead,20.9,4,2,4,1,0,2,1,3,4,2,1,1,7,7,8,7,20,2,19,2
+P0106,Operations,Workflow lead,17.7,1,1,2,3,2,3,3,1,3,1,0,1,4,5,5,4,19,5,21,4
+P0107,Customer Support,Team lead,28.7,4,3,2,2,3,,3,3,3,3,1,2,6,7,5,6,21,17,21,16
+P0108,Customer Support,Support agent,22.8,1,0,1,3,0,1,2,0,0,1,3,2,1,1,0,2,20,16,19,15
+P0109,Customer support,Support agent,26.7,2,3,3,3,,1,4,2,2,4,2,,8,9,,9,19,13,21,16
+P0110,Trust & Safety Review,Policy specialist,29.6,4,4,1,3,4,2,4,2,3,2,2,2,6,7,8,7,21,20,21,20
+P0111,Claims,Claims lead,26.8,3,3,1,3,,2,3,2,3,,2,4,,4,5,3,20,9,21,17
+P0112,Operations,Operations analyst,27.3,4,3,4,4,4,3,4,2,3,4,1,3,10,10,10,10,20,16,21,16
+P0113,Operations,Workflow lead,15.7,3,2,4,3,1,1,2,3,2,4,2,3,3,2,3,1,19,8,21,11
+P0114,Trust & Safety Review,Policy specialist,18.0,2,2,2,2,1,1,0,1,1,1,2,2,3,3,2,2,19,2,20,4
+P0115,Trust & Safety Review,Content reviewer,27.8,2,0,1,2,0,1,2,1,2,3,2,0,3,1,3,1,21,6,19,6
+P0116,Claims,Claims examiner,28.7,2,1,0,1,2,1,2,0,2,2,1,0,3,4,5,3,19,7,20,7
+P0117,Trust & Safety Review,Team lead,20.3,3,,1,3,2,3,2,2,3,3,2,3,6,6,3,4,,,,
+P0118,Operations,Operations analyst,25.1,3,2,3,1,1,1,2,1,4,1,2,0,6,6,7,6,19,9,19,8
+P0119,Claims,Claims examiner,26.1,1,2,1,2,0,3,3,0,1,1,2,2,5,6,5,6,21,2,21,5
+P0120,Customer Support,Support agent,24.7,2,3,1,2,3,2,2,2,4,1,1,1,4,4,6,6,20,13,20,11
+P0121,Operations,Operations analyst,15.8,3,3,2,3,2,1,2,3,4,4,2,3,9,9,7,8,19,17,21,17
+P0122,Claims,Team lead,35.8,1,1,0,1,1,2,2,1,2,0,2,3,8,8,8,6,21,2,20,2
+P0123,Customer Support,Support lead,15.5,3,0,0,3,2,,3,1,2,,1,2,6,6,5,5,20,7,20,2
+P0124,Customer support,Support agent,19.5,1,1,0,1,,3,2,1,2,0,4,2,1,1,2,3,21,15,21,11
+P0125,Trust & Safety Review,Content reviewer,39.0,1,2,1,3,1,3,1,0,1,2,1,2,6,6,8,7,21,17,20,15
+P0126,Operations,Operations analyst,33.3,1,1,1,1,1,3,3,1,1,0,3,1,6,7,8,8,21,7,20,5
+P0127,Trust & Safety Review,Policy specialist,33.2,3,1,,2,2,2,3,3,2,2,2,0,0,0,3,0,19,11,20,15
+P0128,Trust & Safety Review,Content reviewer,35.9,1,0,0,1,0,1,1,0,,0,3,0,4,5,3,2,20,6,20,5
+P0129,Trust & Safety Review,Team lead,47.2,1,2,2,0,1,2,2,1,0,0,2,1,2,2,1,2,19,6,19,9
+P0130,Trust & Safety Review,Content reviewer,25.8,4,2,3,4,,2,4,3,0,0,3,1,4,4,3,4,20,20,21,21
+P0131,Trust & Safety Review,Content reviewer,37.1,0,1,1,2,2,4,0,0,1,1,4,1,6,4,,3,20,7,19,8
+P0132,Operations,Team lead,22.9,3,3,4,3,1,1,2,2,3,3,2,4,5,6,5,4,21,17,19,17
+P0133,Trust & Safety Review,Team lead,16.7,2,1,3,2,3,4,1,2,2,1,2,2,5,6,6,6,21,17,21,7
+P0134,Customer Support,Support lead,31.6,3,4,1,3,1,3,2,1,,1,2,2,8,5,4,5,19,10,21,12
+P0135,Trust & Safety Review,Policy specialist,24.3,4,3,2,2,2,3,3,1,4,2,0,3,3,5,5,2,21,14,20,15
+P0136,Operations,Operations analyst,30.7,3,2,3,3,2,4,2,2,4,4,2,2,10,10,8,10,21,4,21,5
+P0137,Trust & Safety Review,Policy specialist,23.4,2,,0,3,,0,2,1,1,,,1,4,3,5,4,21,10,20,6
+P0138,Claims,Claims examiner,17.9,3,2,3,3,4,3,3,3,3,3,1,2,9,4,7,7,20,17,21,18
+P0139,Claims,Claims examiner,21.7,0,2,1,2,1,2,2,0,4,1,2,2,4,5,3,3,,,,
+P0140,Claims,Claims examiner,24.7,3,4,3,4,1,0,2,3,4,3,1,,7,,8,6,20,9,19,13
+P0141,Trust & Safety Review,Content reviewer,27.3,4,3,3,4,0,2,2,2,4,4,2,4,7,9,10,10,21,17,20,13
+P0142,Trust & Safety Review,Policy specialist,15.7,3,2,2,2,0,1,,0,2,2,3,4,6,6,5,5,19,8,21,7
+P0143,Trust & Safety Review,Content reviewer,43.2,2,2,,2,2,2,3,2,2,1,0,1,2,0,1,3,20,14,21,14
+P0144,Customer Support,Team lead,28.8,2,3,2,3,0,4,2,3,3,3,3,,4,4,2,3,19,6,20,6
+P0145,Operations,Workflow lead,24.0,3,2,3,2,2,2,3,2,4,2,1,0,3,4,0,3,19,10,20,12
+P0146,Operations,Operations analyst,36.5,4,4,1,2,0,3,1,1,1,1,1,2,4,5,4,5,21,17,21,17
+P0147,Claims,Claims examiner,36.2,2,3,1,2,3,2,1,0,2,2,1,2,9,8,8,10,19,7,20,6
+P0148,Operations,Operations analyst,22.2,4,3,2,3,2,0,4,2,3,4,3,2,8,6,4,6,,,,
+P0149,Claims,Claims examiner,31.0,1,2,0,,0,1,2,2,2,1,2,1,5,4,7,6,19,12,21,19
+P0150,Customer Support,Team lead,26.2,2,2,2,1,4,2,2,,2,2,1,1,4,2,2,4,21,6,21,7
+P0151,Claims,Claims lead,38.4,3,0,0,2,0,1,1,1,0,1,3,2,0,2,2,1,19,5,21,5
+P0152,Claims,Claims examiner,28.4,,2,2,4,2,2,3,4,2,3,3,4,,4,6,2,19,9,21,11
+P0153,Customer Support,Team lead,34.1,4,3,2,3,1,1,3,3,3,2,2,3,3,5,3,5,21,7,19,9
+P0154,Claims,Claims examiner,29.9,3,2,2,3,3,1,2,2,3,3,0,3,8,9,7,9,20,19,20,11
+P0155,Operations,Operations analyst,39.4,4,4,3,3,0,1,3,2,4,3,2,3,8,8,9,8,20,19,20,17
+P0156,Trust & Safety Review,Content reviewer,24.5,3,3,3,3,1,2,3,3,4,4,2,4,3,,2,4,20,10,19,12
+P0157,Operations,Operations analyst,44.5,2,,2,4,1,2,1,2,3,1,1,0,9,10,5,10,19,16,19,16
+P0158,Customer Support,Support agent,34.3,3,1,1,3,2,1,3,,0,1,2,3,8,7,6,8,21,10,21,12
+P0159,Customer Support,Support agent,38.0,2,1,2,2,,2,2,1,2,3,1,1,1,0,2,0,21,9,20,14
+P0160,Customer Support,Support lead,23.1,3,2,4,3,2,0,3,3,2,2,1,1,5,5,6,3,20,14,21,10
+P0161,Operations,Operations analyst,25.1,2,1,4,2,3,1,2,2,2,4,1,0,6,6,5,5,20,11,19,13
+P0162,Claims,Claims examiner,29.1,2,3,2,2,0,2,1,1,3,4,1,4,6,6,5,6,19,11,21,14
+P0163,Operations,Operations analyst,26.6,1,3,4,2,2,,3,1,3,1,1,1,7,6,6,7,20,10,20,13
+P0164,Operations,Operations analyst,32.7,3,2,3,2,0,4,2,3,2,1,2,2,6,6,,7,20,7,20,10
+P0165,Trust & Safety Review,Content reviewer,40.8,3,1,2,2,2,2,2,1,1,2,3,0,5,5,7,6,20,2,20,3
+P0166,Claims,Team lead,28.9,0,0,0,0,0,2,1,0,1,1,4,0,3,2,3,2,21,0,20,1
+P0167,Claims,Claims examiner,36.6,3,3,1,3,2,4,3,3,4,3,2,3,5,4,5,6,20,16,19,16
+P0168,Claims,Team lead,28.3,2,1,0,1,1,2,2,0,4,0,3,2,0,1,0,0,20,11,19,7
+P0169,Claims,Claims examiner,19.2,0,1,2,1,0,1,0,1,1,0,3,0,6,7,7,5,19,3,20,4
+P0170,Customer Support,Support lead,25.3,3,1,4,3,1,1,3,1,3,1,3,3,7,7,9,5,20,16,21,18
+P0171,Operations,Workflow lead,20.3,2,1,1,2,1,1,1,2,4,2,4,3,2,5,3,,19,7,21,10
+P0172,Operations,Operations analyst,32.3,0,2,1,0,0,1,0,0,1,0,2,0,,3,4,4,21,1,19,4
+P0173,Claims,Claims examiner,29.1,4,1,1,3,2,,4,1,3,3,3,2,1,3,3,1,20,9,20,14
+P0174,Customer Support,Team lead,33.5,4,3,3,4,4,3,3,4,2,2,0,2,5,7,5,8,,,,
+P0175,Trust & Safety Review,Content reviewer,30.3,2,1,2,2,0,0,0,1,1,0,3,0,7,7,6,7,21,4,21,5
+P0176,Customer Support,Team lead,17.9,3,3,3,2,2,2,4,4,3,3,1,4,5,4,6,4,19,17,21,18
+P0177,Customer Support,Support agent,19.3,4,3,2,4,3,2,4,2,3,3,1,2,5,5,4,3,21,15,20,15
+P0178,Operations,Operations analyst,34.6,1,2,0,1,0,2,1,0,1,1,1,1,3,2,2,1,19,16,20,16
+P0179,Trust & Safety Review,Content reviewer,29.2,1,3,3,2,3,2,1,2,2,2,4,3,5,4,4,5,20,15,21,12
+P0180,Customer Support,Support agent,40.7,2,3,3,3,2,2,2,2,1,1,3,1,4,4,5,6,20,13,19,12
+P0181,Trust & Safety Review,Content reviewer,2.8,4,4,4,4,4,4,4,4,4,4,4,4,6,6,6,6,20,5,20,6
+P0182,Trust & Safety Review,Content reviewer,27.6,2,3,2,3,3,2,2,2,4,2,2,2,7,9,5,9,21,19,20,19
+P0183,Claims,Claims examiner,44.0,2,2,0,2,1,4,1,0,1,3,4,0,6,6,7,6,19,9,21,5
+P0184,Claims,Claims examiner,44.2,1,1,2,2,0,3,1,0,3,1,3,1,7,5,4,4,21,6,19,5
+P0185,Operations,Workflow lead,34.2,3,0,0,2,2,3,2,2,2,3,2,2,7,4,8,8,19,13,19,15
+P0186,Operations,Workflow lead,32.7,3,4,4,4,1,2,2,4,3,3,1,4,9,10,,10,21,19,21,17
+P0187,Operations,Operations analyst,30.9,4,3,4,4,3,3,2,1,2,4,3,4,1,3,1,3,20,19,19,19
+P0188,Customer Support,Support agent,25.9,2,2,2,3,2,1,3,3,2,2,2,2,10,10,10,10,19,6,20,9
+P0189,Operations,Operations analyst,26.5,4,4,3,4,0,2,3,2,4,3,4,3,5,6,7,6,19,14,21,17
+P0190,Trust & Safety Review,Policy specialist,25.2,4,3,3,2,2,2,3,4,4,3,3,3,8,8,8,9,21,14,19,14
+P0191,Claims,Claims examiner,23.4,3,1,1,0,1,4,0,3,3,1,4,1,9,8,8,7,19,2,19,3
+P0192,Trust & Safety Review,Policy specialist,39.8,3,3,2,4,,1,2,2,2,2,3,3,5,7,5,7,21,11,19,9
+P0193,Claims,Claims examiner,38.1,1,0,,2,1,2,2,2,1,1,2,3,3,2,3,2,21,11,20,15
+P0194,Operations,Operations analyst,41.8,4,3,4,3,2,1,4,3,4,4,1,4,8,10,10,9,20,20,19,19
+P0195,Trust & Safety Review,Content reviewer,35.9,3,2,1,1,1,2,4,1,3,3,1,2,2,0,1,2,19,6,20,4
+P0196,Trust & Safety Review,Content reviewer,34.6,4,2,2,2,2,2,2,4,,2,1,2,8,9,6,7,19,11,20,8
+P0197,Trust & Safety Review,Content reviewer,30.2,3,2,2,4,3,2,2,3,3,2,4,2,8,9,9,9,20,16,19,15
+P0198,Operations,Operations analyst,30.6,2,2,3,3,4,2,2,1,2,3,1,,8,9,7,8,19,17,21,18
+P0199,Trust & Safety Review,Content reviewer,32.8,1,0,0,2,2,1,0,0,2,1,3,1,4,3,3,3,21,7,19,5
+P0200,Trust & Safety Review,Policy specialist,31.9,4,4,3,3,1,4,4,2,4,4,0,4,4,6,5,6,,,,
+P0201,Operations,Operations analyst,39.2,3,3,4,3,3,1,4,3,4,4,0,4,8,6,7,5,19,16,21,18
+P0202,Customer Support,Support agent,33.7,4,3,2,4,2,2,4,2,,3,2,2,,8,9,8,19,13,20,13
+P0203,Customer Support,Support lead,22.9,4,1,2,1,0,3,2,1,2,2,3,1,3,2,1,1,19,10,20,9
+P0204,Trust & Safety Review,Content reviewer,24.9,0,1,1,1,2,1,2,1,0,1,3,3,4,5,5,5,19,5,21,8
+P0205,Operations,Workflow lead,49.0,3,2,2,3,1,1,3,2,4,1,2,2,5,5,7,4,21,8,20,8
+P0206,Claims,Claims examiner,14.0,0,1,1,0,0,1,0,1,0,1,4,2,6,4,7,4,19,6,19,3
+P0207,Operations,Operations analyst,37.5,3,3,1,4,1,4,2,1,4,1,2,1,6,6,6,3,20,14,19,18
+P0208,Customer Support,Support lead,19.0,3,2,1,2,2,2,2,1,3,2,3,3,6,6,5,7,20,7,20,6
+P0209,Customer Support,Support agent,31.6,2,2,3,3,2,3,2,1,4,1,2,1,9,9,8,8,20,14,19,9
+P0210,Operations,Team lead,39.0,4,3,1,3,3,2,2,2,2,1,2,3,1,4,6,4,21,2,21,10
+P0211,Claims,Claims examiner,20.0,2,1,2,4,3,2,3,2,3,2,1,0,9,7,9,7,21,20,21,20
+P0212,Claims,Claims examiner,34.8,3,3,0,1,0,2,2,0,2,1,3,1,2,1,3,3,19,11,21,10
+P0213,Customer Support,Support agent,23.8,2,2,2,2,2,2,3,0,2,1,3,4,0,3,,2,21,5,21,2
+P0214,Trust & Safety Review,Team lead,24.3,2,2,0,1,1,1,1,1,2,1,1,2,6,6,7,7,20,8,19,6
+P0215,Trust & Safety Review,Content reviewer,43.8,2,1,3,2,3,3,3,1,2,3,1,3,4,4,7,4,21,16,19,15
+P0216,Claims,Team lead,54.0,3,3,0,0,4,4,1,1,3,2,2,3,6,8,7,6,21,19,19,19
+P0217,Trust & Safety Review,Content reviewer,30.3,1,3,1,1,1,3,1,2,1,2,0,2,8,8,7,6,21,12,20,8
+P0218,Customer Support,Support lead,23.7,2,2,1,2,2,1,1,1,1,0,,1,2,1,5,3,,,,
+P0219,Operations,Workflow lead,37.6,2,3,2,3,3,0,3,2,3,3,1,4,4,6,6,4,21,20,19,17
+P0220,Trust & Safety Review,Policy specialist,24.5,2,2,2,3,2,3,1,3,1,0,2,0,5,6,6,6,21,6,21,6
+P0221,Operations,Workflow lead,29.1,3,3,1,1,3,3,2,1,1,3,2,4,5,4,3,2,19,13,19,14
+P0222,Operations,Operations analyst,36.7,3,3,1,4,,3,2,2,3,1,4,1,9,8,9,8,21,16,19,14
+P0223,Operations,Workflow lead,17.0,2,2,1,3,0,0,2,0,2,2,2,2,5,3,3,3,19,10,21,10
+P0224,Claims,Claims lead,41.7,4,1,0,1,1,1,3,3,2,2,2,1,,7,7,7,20,6,21,6
+P0225,Operations,Operations analyst,21.8,3,3,3,3,2,0,3,4,4,1,,3,2,1,4,2,21,14,19,14
+P0226,Claims,Claims examiner,58.5,2,2,1,2,,4,0,0,3,3,3,2,7,6,6,6,,,,
+P0227,Operations,Team lead,38.2,2,0,1,0,0,2,1,3,2,3,2,1,5,3,5,4,20,7,19,9
+P0228,Customer Support,Support agent,32.5,1,2,3,2,1,4,3,2,4,3,3,2,7,7,6,7,21,5,21,7
+P0229,Operations,Operations analyst,27.7,3,3,3,2,1,2,2,1,3,4,1,2,5,6,7,5,20,9,21,7
+P0230,Operations,Operations analyst,16.9,3,3,3,2,1,2,2,3,1,2,,2,8,10,8,9,20,17,21,15
+P0231,Claims,Claims examiner,22.2,,3,3,3,3,0,1,2,2,2,2,2,4,4,5,5,21,17,21,20
+P0232,Operations,Workflow lead,23.8,3,2,3,3,2,2,1,3,4,4,2,1,10,10,10,10,20,19,20,20
+P0233,Customer Support,Support lead,35.3,4,1,1,1,3,2,3,1,3,2,1,3,6,9,7,8,19,14,20,16
+P0234,Trust & Safety Review,Policy specialist,51.7,3,3,2,2,0,2,2,3,4,2,3,1,,4,,2,21,10,19,15
+P0235,Trust & Safety Review,Content reviewer,35.1,4,3,4,,4,3,4,3,3,2,1,3,9,7,8,6,19,15,21,16
+P0236,Trust & Safety Review,Content reviewer,11.5,3,1,2,2,1,2,3,2,3,2,1,1,6,7,7,6,20,13,20,17
+P0237,Operations,Workflow lead,51.4,3,0,2,1,2,2,3,3,3,2,4,3,4,6,6,6,21,8,19,6
+P0238,Trust & Safety Review,Content reviewer,17.1,,3,3,4,4,1,4,3,2,3,,4,8,8,9,7,20,14,20,11
+P0239,Claims,Claims examiner,35.0,1,2,1,2,2,3,0,1,2,2,0,2,6,4,4,4,20,1,21,7
+P0240,Claims,Claims examiner,19.2,2,3,4,2,3,2,4,3,1,3,3,2,7,9,10,10,21,12,21,5
+P0241,Claims,Claims examiner,19.8,2,4,2,4,3,2,3,3,4,1,3,3,7,7,8,8,21,14,20,14
+P0242,Operations,Workflow lead,46.8,2,4,4,2,1,1,2,2,4,2,3,4,7,8,9,8,19,8,19,6
+P0243,Operations,Operations analyst,19.5,1,1,2,1,,1,2,0,0,1,0,1,4,4,4,2,21,8,19,3
+P0244,Trust & Safety Review,Content reviewer,14.3,3,2,3,4,3,4,2,3,2,3,2,3,8,6,6,6,20,14,21,16
+P0245,Customer Support,Support lead,26.3,4,2,3,2,2,0,1,2,4,1,4,3,7,7,5,6,21,18,19,18
+P0246,Operations,Operations analyst,21.0,2,1,1,1,1,1,2,3,2,0,3,2,6,5,6,5,19,5,20,9
+P0247,Customer Support,Support agent,16.7,,3,2,3,4,2,3,2,2,2,4,3,7,5,7,4,19,9,19,12
+P0248,Claims,Claims lead,26.2,3,1,1,2,3,2,2,1,2,3,2,1,7,7,,,21,8,21,6
+P0249,Customer Support,Support lead,27.8,2,4,3,,3,2,1,3,4,3,3,3,7,6,5,7,21,18,21,14
+P0250,Operations,Operations analyst,25.3,1,2,1,3,3,3,2,1,2,4,2,1,6,4,6,2,20,9,21,12
+P0251,trust & safety review,Content reviewer,26.1,4,2,3,4,1,3,3,1,4,3,2,3,8,7,9,7,20,14,20,15
+P0252,Trust & Safety Review,Policy specialist,29.8,3,2,2,1,1,2,2,0,4,2,1,1,6,3,4,5,21,7,20,8
+P0253,Operations,Team lead,31.5,3,4,0,2,2,,,4,1,3,2,3,2,3,1,3,21,13,20,12
+P0254,Claims,Claims examiner,35.4,2,1,2,1,2,2,1,1,2,1,3,1,5,5,5,5,19,5,19,4
+P0255,Claims,Claims lead,21.4,3,3,2,4,2,2,2,3,3,3,1,3,4,,2,5,20,16,20,17
+P0256,Claims,Claims examiner,46.4,3,1,2,2,,2,4,2,2,2,2,2,7,7,,3,21,8,20,11
+P0257,Operations,Operations analyst,26.3,3,1,1,3,2,0,3,1,2,2,2,1,8,6,7,7,21,7,20,7
+P0258,Operations,Operations analyst,39.0,3,3,3,2,2,4,3,1,3,1,3,2,5,5,6,6,20,18,20,19
+P0259,Customer Support,Support lead,29.1,2,1,0,2,1,3,1,0,2,1,2,1,2,3,2,3,21,0,20,2
+P0260,Customer Support,Support agent,41.9,3,2,1,4,2,3,2,2,3,1,3,1,7,7,7,7,21,7,20,8
+P0261,Claims,Claims lead,25.3,4,2,2,3,2,0,3,4,2,3,0,,7,9,8,8,19,12,19,12
+P0262,Claims,Claims examiner,26.7,,4,4,4,1,2,3,2,4,3,2,1,5,6,6,6,21,19,21,17
+P0263,Operations,Operations analyst,22.4,4,3,3,3,3,3,3,3,,4,3,4,7,5,7,6,21,20,20,18
+P0264,Operations,Operations analyst,18.4,3,2,2,4,2,2,2,2,4,0,1,1,8,6,7,7,19,18,21,17
+P0265,Customer Support,Support agent,39.9,4,1,4,4,1,3,1,0,1,1,1,1,3,3,4,3,21,10,21,9
+P0266,Trust & Safety Review,Content reviewer,44.2,4,3,3,4,2,3,4,4,4,4,1,4,3,2,2,1,21,17,21,18
+P0267,Trust & Safety Review,Policy specialist,37.3,2,3,1,2,2,1,2,2,3,1,1,3,8,8,6,7,20,8,20,16
+P0268,Customer Support,Support agent,36.4,4,2,2,2,1,3,2,2,4,,4,3,9,8,10,8,19,15,19,16
+P0269,Customer Support,Support agent,17.1,4,4,2,3,2,2,4,2,4,2,3,2,7,8,10,8,19,19,19,18
+P0270,Customer Support,Support agent,41.5,1,2,0,1,1,0,1,1,2,1,0,2,5,3,4,4,19,5,20,6
+P0271,Trust & Safety Review,Content reviewer,23.4,2,1,3,2,,2,3,0,0,2,3,1,1,3,4,3,21,2,19,4
+P0272,Trust & Safety Review,Content reviewer,26.3,2,1,1,3,2,3,3,0,3,0,3,3,4,5,7,4,21,5,19,5
+P0273,Trust & Safety Review,Team lead,32.3,2,2,3,2,0,1,1,1,2,1,2,0,5,4,5,6,20,2,21,3
+P0274,Trust & Safety Review,Policy specialist,40.4,3,3,2,4,2,3,1,4,4,3,1,3,4,6,5,6,20,16,21,16
+P0275,Trust & Safety Review,Content reviewer,28.3,3,3,2,4,2,2,0,3,4,4,2,,6,5,6,6,19,12,21,16
+P0276,Operations,Workflow lead,43.9,3,3,4,3,2,1,1,2,1,4,2,3,5,6,4,4,19,12,19,10
+P0277,Claims,Claims examiner,27.0,4,3,3,4,1,3,2,2,1,1,3,1,8,8,,9,20,12,20,10
+P0278,Operations,Operations analyst,22.2,2,1,0,0,0,0,1,0,3,0,2,1,6,3,2,3,21,2,19,4
+P0279,Operations,Operations analyst,29.0,2,4,2,3,3,1,2,3,2,2,1,1,4,3,4,6,21,17,21,14
+P0280,Trust & Safety Review,Content reviewer,29.5,2,2,,3,3,1,3,2,4,3,0,3,,9,9,7,20,17,21,17
+P0281,Claims,Claims lead,37.7,0,0,0,1,1,1,2,1,3,1,2,0,6,6,7,7,19,9,20,9
+P0282,Trust & Safety Review,Content reviewer,38.4,3,4,2,4,4,3,3,4,2,4,2,3,5,5,7,6,20,12,19,9
+P0283,Customer Support,Support agent,24.4,2,2,3,2,2,3,2,1,1,3,3,2,7,7,3,4,19,11,19,11
+P0284,Claims,Team lead,25.5,2,3,4,2,1,0,3,4,3,3,2,2,6,8,7,7,20,19,20,18
+P0285,Claims,Claims examiner,29.0,1,1,0,2,1,2,0,0,3,1,1,2,4,2,6,4,20,3,20,1
+P0286,Operations,Operations analyst,28.1,2,2,1,3,1,4,2,2,1,4,2,2,7,4,6,4,21,12,20,12
+P0287,Customer Support,Support agent,20.5,2,3,2,3,2,1,1,2,,3,3,3,4,2,2,4,20,14,20,15
+P0288,Trust & Safety Review,Policy specialist,17.9,3,4,2,3,3,1,3,3,2,3,0,2,5,4,,4,20,18,21,17
+P0289,Claims,Claims examiner,41.4,4,2,2,4,1,4,2,0,,4,0,3,9,10,10,10,21,13,21,12
+P0290,Operations,Workflow lead,39.3,4,3,1,3,3,3,1,3,4,2,1,3,0,0,1,0,21,9,20,8
+P0291,Claims,Claims examiner,29.1,3,3,2,2,2,4,4,4,4,3,0,4,8,6,6,8,19,16,21,15
+P0292,Operations,Operations analyst,21.0,2,4,2,2,0,1,1,0,2,2,2,1,3,3,3,4,21,2,21,5
+P0293,Trust & Safety Review,Content reviewer,34.1,2,1,2,2,2,1,1,1,1,2,2,2,4,1,2,2,19,12,20,14
+P0294,Operations,Operations analyst,33.3,2,,2,,4,3,3,0,1,1,2,3,4,5,4,6,21,8,19,4
+P0295,Trust & Safety Review,Content reviewer,27.8,3,2,2,2,1,4,3,0,2,2,3,2,,5,7,3,21,14,20,11
+P0296,Trust & Safety Review,Team lead,59.1,3,0,2,1,0,3,2,2,4,1,3,2,9,6,7,8,20,7,19,11
+P0297,Trust & Safety Review,Content reviewer,27.8,4,3,4,4,3,2,,3,3,2,0,3,2,0,0,0,20,12,20,10
+P0298,Claims,Claims lead,13.7,3,2,1,3,2,4,4,4,3,3,3,1,7,8,8,5,20,12,20,17
+P0299,Claims,Claims examiner,23.0,1,2,1,0,0,4,1,0,2,2,2,,4,2,3,5,19,3,20,5
+P0300,Customer Support,Support lead,20.4,2,2,1,3,2,1,1,4,2,0,1,1,4,4,5,4,20,9,19,9
+P0301,Operations,Workflow lead,27.2,4,4,4,4,2,2,3,4,4,4,3,3,6,6,6,8,19,14,19,17
+P0302,Trust & Safety Review,Policy specialist,40.0,4,2,2,3,1,3,2,4,3,4,2,2,7,8,,7,20,18,20,17
+P0303,Operations,Operations analyst,20.8,4,3,2,3,1,4,2,2,4,4,0,3,2,1,1,0,21,17,21,18
+P0304,Operations,Team lead,24.8,4,2,2,4,2,2,1,2,4,3,3,2,3,4,5,4,20,14,21,13
+P0305,Claims,Claims examiner,26.0,1,1,0,2,0,1,0,1,2,1,2,1,0,1,1,2,19,0,19,2
+P0306,Trust & Safety Review,Policy specialist,32.3,3,4,,4,2,3,4,3,4,3,0,2,5,4,7,6,20,18,20,20
+P0307,Operations,Operations analyst,27.3,2,3,4,4,2,1,1,2,,2,2,4,1,4,1,1,20,18,19,17
+P0308,Claims,Claims examiner,2.8,2,2,2,2,2,2,2,2,2,2,2,2,8,8,8,8,19,15,20,15
+P0309,Claims,Claims examiner,34.4,2,1,1,2,2,0,0,2,0,1,4,1,6,7,7,5,21,2,21,4
+P0310,Customer Support,Support lead,25.5,3,3,4,2,1,2,3,2,3,4,2,3,6,2,3,3,20,12,21,16
+P0311,Trust & Safety Review,Team lead,37.8,3,1,0,2,3,3,3,3,3,1,3,0,4,5,,5,20,9,20,15
+P0312,Claims,Claims lead,25.7,4,2,1,3,4,2,,2,2,3,3,0,2,4,3,3,20,10,19,9
+P0313,Customer Support,Support agent,25.5,2,3,1,2,2,3,2,1,0,3,1,1,5,3,3,5,19,12,20,13
+P0314,Customer Support,Support lead,30.4,3,1,1,3,3,3,1,2,2,3,1,1,2,1,0,0,21,19,19,17
+P0315,Customer Support,Support lead,41.6,3,2,2,1,2,4,2,2,3,2,3,1,5,5,3,3,21,11,21,12
+P0316,Claims,Team lead,26.0,3,2,1,3,2,1,1,,3,3,1,2,4,5,6,6,,,,
+P0317,trust & safety review,Content reviewer,31.5,3,3,2,3,2,1,2,1,1,1,1,,6,6,7,7,20,14,20,17
+P0318,Customer Support,Support lead,26.3,2,2,1,3,3,4,2,2,1,2,3,2,10,10,10,10,20,6,19,11
+P0319,Claims,Claims lead,21.5,2,3,1,4,2,2,2,1,2,1,3,,7,8,7,7,21,6,19,5
+P0320,Customer Support,Support agent,22.3,3,4,1,2,3,1,2,3,4,,1,3,0,0,0,0,19,17,19,15
+P0321,Operations,Operations analyst,41.8,4,2,2,4,3,3,3,1,2,1,2,0,5,3,3,2,21,5,19,7
+P0322,Operations,Operations analyst,17.3,2,1,1,1,1,2,2,1,1,,1,0,2,1,3,3,21,10,21,9
+P0323,Customer Support,Support lead,23.7,2,1,1,3,0,2,1,0,1,1,3,1,4,1,1,3,19,10,19,4
+P0324,Claims,Claims lead,55.1,3,4,2,2,1,2,3,4,,4,3,2,6,3,4,5,19,15,19,15
+P0325,Operations,Workflow lead,27.7,2,2,0,3,2,0,2,2,0,2,,2,10,10,10,10,20,15,20,7
+P0326,Claims,Claims examiner,21.1,3,3,2,2,1,1,4,1,1,2,3,3,7,6,8,6,21,5,20,5
+P0327,Customer Support,Support agent,23.8,1,,0,2,1,2,1,1,1,1,2,1,1,3,4,5,19,4,19,7
+P0328,Customer Support,Team lead,28.8,2,1,2,2,4,3,4,1,1,2,2,1,5,4,5,5,20,8,20,11
+P0329,Operations,Operations analyst,28.1,4,3,3,2,3,0,4,3,3,2,2,3,10,10,9,9,19,17,21,18
+P0330,Operations,Workflow lead,24.8,1,1,0,,1,1,0,2,0,1,2,1,3,3,2,3,19,6,21,6
+P0331,Operations,Workflow lead,29.6,3,1,1,3,1,1,1,1,3,3,2,2,4,4,4,5,19,19,21,18
+P0332,Trust & Safety Review,Content reviewer,33.8,1,1,0,,3,2,1,1,2,2,3,1,3,,4,3,21,8,19,2
+P0333,Trust & Safety Review,Content reviewer,33.4,4,4,4,4,3,1,2,3,2,4,1,4,,9,8,8,20,19,20,17
+P0334,Customer Support,Support agent,23.7,2,3,,0,3,1,0,0,0,1,2,2,3,2,3,2,20,6,20,10
+P0335,Claims,Claims examiner,40.0,1,1,2,1,2,2,2,1,4,3,2,2,4,3,3,4,19,16,21,13
+P0336,Operations,Workflow lead,29.7,1,2,1,0,2,2,1,1,2,3,4,0,3,3,2,3,20,2,21,3
+P0337,Claims,Team lead,22.5,3,,4,2,1,4,0,3,1,1,3,1,5,5,3,3,19,7,21,12
+P0338,Claims,Claims examiner,25.6,2,4,3,4,4,,2,2,3,1,2,2,7,8,7,7,21,18,20,17
+P0339,Claims,Team lead,26.9,1,3,1,1,2,0,1,1,2,,4,4,3,4,4,3,19,4,21,3
+P0340,Claims,Team lead,22.9,3,1,3,2,2,1,2,2,2,2,2,0,7,5,5,,20,6,21,10
+P0341,Trust & Safety Review,Content reviewer,33.5,4,3,1,2,2,3,2,4,4,1,0,3,6,7,8,7,20,1,20,4
+P0342,Customer Support,Support agent,5.8,3,3,3,3,3,3,3,3,3,3,3,3,10,10,10,10,21,14,21,12
+P0343,Customer Support,Team lead,30.3,2,2,3,2,0,3,2,0,1,3,1,1,,6,5,7,21,13,20,14
+P0344,Trust & Safety Review,Policy specialist,27.0,4,3,2,2,2,,1,1,3,3,2,3,6,7,5,7,21,11,21,10
+P0345,Customer Support,Team lead,50.0,3,1,1,4,,2,3,2,4,3,2,3,7,7,8,7,20,9,21,11
+P0346,Customer Support,Support agent,24.7,2,1,1,1,0,4,1,0,3,2,3,1,2,2,0,6,21,3,19,1
+P0347,Customer Support,Support agent,32.2,2,3,2,2,1,1,2,1,1,3,1,2,8,8,7,10,,,,
+P0348,Customer Support,Support agent,37.8,4,1,0,3,1,2,1,1,2,2,3,2,7,4,6,6,20,10,19,8
+P0349,Claims,Claims examiner,31.8,3,2,2,2,,4,1,1,2,2,2,2,0,0,0,0,21,9,20,12
+P0350,Claims,Team lead,20.3,4,3,2,3,2,1,1,1,,2,4,2,9,10,10,8,20,3,20,5
+P0351,Trust & Safety Review,Content reviewer,31.6,3,4,3,4,3,3,3,2,3,4,1,3,7,7,8,7,19,18,21,17
+P0352,Customer Support,Support agent,25.4,3,1,2,2,2,3,1,1,2,0,4,2,4,6,,6,19,10,20,10
+P0353,Operations,Workflow lead,20.2,2,3,2,3,1,1,3,3,4,4,1,2,9,8,8,9,,,,
+P0354,Customer Support,Support agent,25.2,2,1,3,2,2,4,2,2,1,1,2,0,,,9,7,19,6,19,5
+P0355,Trust & Safety Review,Content reviewer,18.9,3,4,4,4,2,4,4,4,4,3,0,3,5,8,8,7,21,15,21,9
+P0356,Trust & Safety Review,Content reviewer,22.9,3,0,1,2,1,2,1,3,3,2,2,4,,8,7,6,21,15,19,14
+P0357,Operations,Workflow lead,27.4,3,1,,2,1,2,,2,2,1,4,4,4,5,5,7,19,10,19,10
+P0358,Trust & Safety Review,Content reviewer,22.2,1,3,4,,1,2,2,0,3,2,,2,4,6,5,3,19,19,20,19
+P0359,Trust & Safety Review,Content reviewer,26.1,1,2,2,3,2,1,1,2,4,2,0,2,6,5,6,,19,9,19,11
+P0360,Operations,Team lead,30.2,2,2,2,4,1,,3,2,,3,3,3,6,8,7,8,20,17,20,16
+P0361,Customer Support,Support agent,20.4,1,,1,0,2,3,1,,1,2,3,0,4,3,2,3,19,4,20,9
+P0362,Trust & Safety Review,Content reviewer,23.7,4,,4,4,2,2,3,2,4,4,3,3,4,4,5,5,20,17,19,11
+P0363,Claims,Claims examiner,47.2,4,4,3,2,3,3,3,2,3,1,2,2,4,4,2,3,19,5,21,5
+P0364,Operations,Operations analyst,46.2,1,1,2,3,2,1,3,1,2,3,2,2,1,1,0,0,20,10,19,11
+P0365,Trust & Safety Review,Content reviewer,23.5,4,4,2,4,3,2,2,1,3,1,3,3,2,4,3,2,19,15,19,17
+P0366,Operations,Operations analyst,120.0,3,,1,0,1,2,2,0,2,2,2,2,3,4,4,4,20,9,19,10
+P0367,Trust & Safety Review,Policy specialist,20.7,2,2,2,1,2,1,0,1,2,0,2,1,4,2,1,2,19,11,21,5
+P0368,Trust & Safety Review,Content reviewer,23.5,,1,1,1,1,1,1,3,2,1,1,1,0,0,0,2,19,9,21,11
+P0369,Claims,Claims examiner,23.3,4,3,2,2,4,1,3,3,3,3,1,3,7,,10,9,20,12,21,13
+P0370,Customer Support,Support agent,19.9,2,1,2,3,3,2,1,2,2,2,1,1,7,8,8,6,21,19,21,16
+P0371,Customer Support,Support lead,35.2,2,1,0,2,2,3,0,2,2,,1,2,4,4,6,7,21,2,21,7
+P0372,Customer Support,Support agent,18.5,0,1,0,0,1,4,1,0,2,0,2,2,4,4,6,4,19,2,21,0
+P0373,Operations,Operations analyst,20.6,2,0,2,,1,2,0,1,2,2,1,2,4,6,5,6,19,9,19,5
+P0374,Claims,Claims lead,29.7,4,4,2,1,3,3,3,3,3,3,0,2,4,5,3,4,20,16,19,15
+P0375,Operations,Workflow lead,20.0,1,2,0,4,0,2,2,1,1,2,4,1,4,4,5,3,20,12,20,12
+P0376,Claims,Claims lead,17.8,0,0,0,2,0,4,0,1,1,,2,3,1,1,3,0,20,16,20,14
+P0377,Customer Support,Support agent,37.5,2,2,2,2,2,2,4,2,2,3,0,2,4,3,5,5,20,16,19,12
+P0378,Trust & Safety Review,Team lead,36.3,,1,3,3,2,3,2,2,4,3,0,2,5,5,5,4,,,,
+P0379,Operations,Workflow lead,19.7,2,1,2,2,1,1,2,1,2,1,2,1,4,2,3,6,21,7,19,7
+P0380,Trust & Safety Review,Policy specialist,36.0,4,3,3,3,2,2,3,3,3,3,0,3,8,7,9,4,19,17,21,16
+P0381,Operations,Operations analyst,39.5,4,3,3,2,2,1,3,2,3,2,3,4,1,2,2,1,21,11,21,10
+P0382,Customer Support,Support lead,27.7,4,2,2,2,2,2,3,0,2,4,2,3,4,2,,5,21,11,19,8
+P0383,Operations,Team lead,38.2,2,4,1,2,2,1,3,3,3,4,2,4,5,6,6,7,19,14,19,5
+P0384,Claims,Claims examiner,26.3,3,2,2,1,1,4,1,,2,1,3,1,1,1,2,2,20,16,21,16
+P0385,Operations,Workflow lead,41.2,3,2,1,3,0,3,3,2,1,3,2,4,3,3,3,3,20,4,20,6
+P0386,Trust & Safety Review,Team lead,29.9,2,,2,2,1,0,1,2,2,,1,1,2,5,4,2,20,6,21,4
+P0387,Operations,Operations analyst,29.3,0,0,1,2,1,1,1,0,1,0,2,1,8,8,6,8,19,5,21,4
+P0388,Customer Support,Support agent,34.4,3,2,3,1,3,2,2,2,2,2,2,1,4,6,4,6,20,16,21,15
+P0389,Operations,Workflow lead,31.5,3,1,1,3,2,3,2,3,4,3,4,1,7,6,7,6,19,15,20,20
+P0390,Trust & Safety Review,Team lead,22.9,,2,2,4,0,1,2,0,3,2,2,3,6,5,,6,,,,
+P0391,Claims,Claims examiner,41.8,3,2,3,2,2,4,2,1,,3,3,3,7,5,6,7,21,4,20,7
+P0392,Operations,Operations analyst,27.2,1,0,1,,1,2,0,1,1,2,1,2,2,2,2,4,21,11,21,8
+P0393,Claims,Claims examiner,22.7,1,1,1,1,1,1,2,1,1,1,3,1,6,6,4,5,21,12,19,8
+P0394,Trust & Safety Review,Content reviewer,35.6,4,2,4,2,0,1,2,2,3,3,2,4,5,5,4,4,21,14,20,13
+P0395,Trust & Safety Review,Content reviewer,25.1,1,2,1,1,3,3,0,0,3,1,1,1,3,3,2,3,20,0,20,2
+P0396,Claims,Team lead,34.3,,1,3,1,0,2,1,1,2,1,3,2,7,9,8,8,19,10,21,15
+P0397,Operations,Workflow lead,33.1,3,3,2,2,4,4,3,3,3,1,4,3,1,2,0,3,21,20,21,20
+P0398,Operations,Operations analyst,37.2,3,2,1,3,,1,3,1,1,1,3,1,8,7,6,6,21,13,21,12
+P0399,Claims,Claims examiner,29.1,2,3,2,3,2,0,4,2,2,4,0,2,0,1,4,2,19,17,20,15
+P0400,Customer Support,Support agent,36.8,3,2,2,4,1,,2,3,4,3,1,0,10,9,10,10,19,13,19,12
+P0401,Trust & Safety Review,Content reviewer,18.3,1,2,3,4,4,2,2,2,2,4,2,0,4,4,6,6,21,6,20,9
+P0402,Claims,Claims examiner,24.4,4,3,3,3,2,3,4,2,2,4,3,,,7,9,8,21,19,19,17
+P0403,Customer Support,Support lead,25.4,3,3,1,2,2,2,2,2,2,2,2,2,7,9,8,9,21,19,20,17
+P0404,Claims,Claims examiner,3.5,3,3,3,3,3,3,3,3,3,3,3,3,6,6,6,6,21,12,20,8
+P0405,Customer Support,Support lead,32.1,2,1,3,1,3,3,1,1,2,3,,1,7,6,8,5,21,18,20,19
+P0406,Trust & Safety Review,Policy specialist,24.3,2,2,3,3,3,4,1,1,3,,2,4,0,1,1,1,20,2,21,3
+P0407,Operations,Operations analyst,19.2,2,2,1,4,3,1,1,2,3,1,1,1,5,4,4,4,20,13,20,6
+P0408,Trust & Safety Review,Policy specialist,20.6,3,3,2,4,1,1,2,2,4,3,3,1,7,8,8,7,21,19,19,15
+P0409,Trust & Safety Review,Policy specialist,37.7,3,2,1,2,4,0,1,1,2,3,0,4,8,8,9,9,21,10,19,10
+P0410,Claims,Claims examiner,35.8,2,2,0,3,1,2,0,0,2,0,0,2,5,4,5,5,19,13,21,13
+P0411,Customer Support,Support lead,28.0,1,2,1,3,1,1,2,0,2,2,2,2,2,2,3,1,20,4,21,5
+P0412,Trust & Safety Review,Policy specialist,33.9,2,2,2,3,3,0,3,1,2,3,1,3,7,5,,4,21,17,19,19
+P0413,Trust & Safety Review,Content reviewer,17.1,1,1,3,1,1,2,1,0,3,3,0,,0,2,0,2,21,4,20,10
+P0414,Trust & Safety Review,Policy specialist,33.5,2,3,1,3,3,0,1,2,3,1,3,2,3,4,5,2,19,11,21,15
+P0415,Trust & Safety Review,Policy specialist,40.2,1,3,2,3,2,1,3,3,3,1,4,4,1,4,5,4,19,12,19,11
+P0416,Operations,Workflow lead,14.1,4,4,2,3,1,0,2,3,2,3,1,3,1,0,0,0,,,,
+P0417,Operations,Workflow lead,23.5,4,4,2,3,0,2,4,2,4,4,1,2,5,7,6,7,19,19,20,13
+P0418,Claims,Claims lead,32.4,3,2,2,3,3,1,4,4,2,3,2,4,8,7,8,7,20,18,21,18
+P0419,Trust & Safety Review,Content reviewer,35.4,2,0,2,3,3,3,3,1,3,2,1,2,5,5,5,7,21,9,21,10
+P0420,Trust & Safety Review,Content reviewer,25.6,4,3,2,3,3,3,4,3,2,2,2,2,7,8,7,6,21,16,20,12
+P0421,Operations,Team lead,25.1,2,1,2,2,0,1,,1,1,0,0,1,7,5,3,6,21,2,20,6
+P0422,Claims,Claims lead,17.8,2,3,1,4,2,3,2,3,4,4,2,2,5,6,6,4,21,16,20,19
+P0423,Customer Support,Support agent,21.5,1,2,4,2,1,2,4,3,3,2,1,4,6,6,2,5,20,10,19,10
+P0424,Customer Support,Support lead,22.5,2,2,1,2,1,2,2,1,1,4,1,2,,6,6,6,20,10,21,8
+P0425,Operations,Workflow lead,24.5,2,3,3,2,1,1,1,2,2,3,1,2,4,5,1,4,19,13,19,17
+P0426,Operations,Operations analyst,33.4,2,1,2,1,1,2,3,2,1,3,1,2,7,8,7,8,20,11,20,10
+P0427,Trust & Safety Review,Content reviewer,5.8,2,2,2,2,2,2,2,2,2,2,2,2,10,10,10,10,21,13,19,9
+P0428,Trust & Safety Review,Policy specialist,21.0,2,1,2,2,1,1,2,3,4,3,2,1,7,5,6,5,20,10,21,8
+P0429,Customer Support,Support agent,14.0,2,2,2,3,2,2,1,0,2,1,2,2,8,9,8,7,19,12,19,9
+P0430,Operations,Team lead,25.9,3,1,0,0,1,1,2,2,3,0,3,1,7,7,6,7,20,4,21,3
+P0431,Operations,Operations analyst,35.8,3,2,2,3,2,2,1,2,1,2,2,2,8,8,10,9,21,13,19,9
+P0432,Operations,Operations analyst,32.9,2,1,4,1,2,2,2,4,2,1,1,1,1,1,4,0,20,6,20,9
+P0433,Trust & Safety Review,Content reviewer,22.0,2,2,1,3,2,2,0,1,2,1,2,1,4,4,5,4,21,7,19,4
+P0434,CLAIMS,Claims examiner,19.0,4,0,1,2,2,2,1,1,1,2,2,1,2,4,4,4,19,15,20,17
+P0435,Claims,Claims examiner,26.6,4,2,,4,2,1,3,3,2,2,2,2,5,5,3,4,,,,
+P0436,Claims,Claims examiner,25.0,2,2,3,4,3,2,3,1,3,3,0,2,2,3,2,4,21,14,19,14
+P0437,Trust & Safety Review,Content reviewer,24.7,2,1,1,1,0,2,2,0,1,0,1,0,3,,3,3,19,9,21,10
+P0438,Operations,Operations analyst,26.3,4,2,1,4,2,1,2,2,3,3,2,1,1,0,3,0,19,16,20,18
+P0439,Trust & Safety Review,Team lead,30.7,3,4,3,4,3,2,4,2,4,4,2,,6,6,7,8,19,17,21,20
+P0440,Customer Support,Support lead,41.4,2,2,0,4,2,1,2,0,3,2,2,1,4,4,3,5,20,8,21,10
+P0441,Operations,Operations analyst,22.5,2,3,0,3,1,3,0,3,3,1,2,0,,8,9,,21,13,19,11
+P0442,Claims,Team lead,64.6,3,4,2,3,2,,2,3,3,2,2,2,9,10,9,9,21,16,21,12
+P0443,Claims,Claims lead,30.2,3,2,1,1,1,2,0,1,3,2,3,2,2,1,0,2,20,2,20,5
+P0444,Customer Support,Support agent,23.9,3,3,1,3,2,1,4,3,3,2,3,3,,10,10,10,20,14,20,17
+P0445,Operations,Operations analyst,31.8,2,3,1,2,1,3,2,0,3,2,4,2,6,5,7,6,19,11,21,10
+P0446,Trust & Safety Review,Content reviewer,30.9,2,0,2,2,0,2,2,2,3,1,4,1,6,7,6,6,19,13,20,15
+P0447,Claims,Claims examiner,5.6,0,0,0,0,0,0,0,0,0,0,0,0,9,9,9,9,19,9,21,10
+P0448,Operations,Team lead,28.1,2,1,1,4,,2,2,3,4,2,1,,4,4,5,3,,,,
+P0449,Customer Support,Support lead,31.9,2,1,3,0,2,2,3,0,2,2,2,2,3,3,3,2,20,7,19,9
+P0450,Customer Support,Support agent,28.8,3,2,2,3,1,2,3,2,2,2,0,2,4,4,4,5,19,15,20,14
+P0451,Operations,Operations analyst,32.1,2,3,1,1,2,,2,1,3,2,2,1,4,3,,4,21,12,20,10
+P0452,Trust & Safety Review,Content reviewer,18.6,2,3,2,4,1,3,0,3,3,3,1,2,3,2,2,2,19,11,20,10
+P0453,Trust & Safety Review,Content reviewer,38.0,4,2,2,4,1,4,3,1,3,1,2,4,10,9,9,8,20,10,20,10
+P0454,Customer Support,Support lead,30.0,4,3,3,2,1,0,3,2,1,2,3,2,1,1,0,0,21,17,19,10
+P0455,Trust & Safety Review,Content reviewer,35.4,1,2,1,1,1,2,0,0,3,1,2,1,5,4,,4,20,8,19,9
+P0456,Operations,Operations analyst,23.1,1,2,3,2,1,1,1,1,2,2,1,3,4,,6,3,20,14,20,11
+P0457,Trust & Safety Review,Content reviewer,27.6,2,2,1,2,2,2,3,2,3,1,3,1,1,4,,2,20,13,19,11
+P0458,Claims,Claims examiner,3.7,2,2,2,2,2,2,2,2,2,2,2,2,6,6,6,6,19,9,19,9
+P0459,Customer Support,Support agent,42.7,2,1,2,1,1,4,0,2,2,1,3,2,7,6,7,6,20,9,19,8
+P0460,Trust & Safety Review,Content reviewer,24.8,2,2,3,2,1,3,3,2,1,2,2,2,3,3,6,2,21,13,19,11
+P0461,Claims,Claims examiner,27.2,2,2,2,3,3,2,2,1,4,1,2,3,7,6,6,5,19,11,19,9
+P0462,Operations,Operations analyst,28.7,2,1,1,3,1,4,1,2,2,2,1,1,5,5,5,5,21,15,20,15
+P0463,Operations,Workflow lead,26.8,2,1,2,2,4,3,2,0,3,1,4,2,6,4,8,6,20,12,21,15
+P0464,Claims,Claims lead,25.4,3,1,2,2,1,2,1,,3,3,0,3,5,4,5,5,20,7,21,6
+P0465,Trust & Safety Review,Content reviewer,31.9,,2,2,2,2,1,1,,3,2,3,2,8,8,7,7,21,6,20,4
+P0466,Operations,Operations analyst,21.6,2,2,3,4,3,1,3,1,4,2,2,4,10,10,9,10,21,17,19,17
+P0467,Trust & Safety Review,Team lead,30.2,3,3,3,4,1,4,1,2,2,1,2,2,5,3,6,4,19,16,20,18
+P0468,Claims,Claims examiner,21.8,,4,1,4,1,1,4,2,4,3,4,3,8,9,8,9,19,15,20,13
+P0469,Claims,Claims examiner,33.8,1,1,1,1,1,2,1,0,1,1,3,,8,7,6,8,20,6,20,3
+P0470,Claims,Claims lead,23.7,1,1,0,1,0,4,2,0,1,1,4,0,2,2,4,4,20,2,20,5
+P0471,Trust & Safety Review,Policy specialist,28.5,3,0,3,2,2,2,3,2,2,4,2,1,10,9,8,8,19,15,20,15
+P0472,Claims,Claims lead,39.7,1,1,0,1,1,1,2,0,2,2,2,1,5,4,5,4,21,12,19,11
+P0473,Customer Support,Support agent,38.8,1,2,1,2,3,0,1,2,2,1,3,1,6,4,7,6,19,18,19,17
+P0474,Operations,Workflow lead,20.1,2,2,4,2,1,1,2,1,1,2,3,1,8,7,7,7,21,10,21,6
+P0475,Claims,Claims examiner,30.6,,1,1,4,4,4,3,2,4,2,4,2,4,4,2,6,20,12,21,9
+P0476,Customer Support,Support lead,24.8,4,3,1,2,3,3,2,3,1,2,3,4,3,2,1,1,21,4,19,6
+P0477,Claims,Claims examiner,27.2,4,1,1,1,3,3,0,1,2,1,2,,7,7,7,9,21,2,20,2
+P0478,Claims,Claims examiner,33.5,4,1,1,3,1,3,2,1,4,,4,2,8,5,4,5,20,14,20,17
+P0479,Trust & Safety Review,Policy specialist,54.8,3,4,2,2,2,2,3,2,1,3,1,1,7,5,7,5,19,11,20,7
+P0480,Operations,Operations analyst,34.0,1,1,2,0,1,3,0,0,2,1,2,0,1,2,1,4,19,1,20,0
+P0481,Trust & Safety Review,Content reviewer,26.9,3,1,1,3,2,4,4,2,3,2,3,3,4,4,6,6,,,,
+P0482,Trust & Safety Review,Content reviewer,18.9,3,3,1,2,2,2,,1,3,3,3,1,3,4,4,4,19,15,20,17
+P0483,Trust & Safety Review,Content reviewer,23.9,4,3,,2,2,3,2,2,4,3,2,3,4,5,7,6,20,15,20,18
+P0484,Trust & Safety Review,Content reviewer,20.3,,0,1,0,0,0,1,0,2,2,2,0,0,0,0,0,21,4,19,6
+P0485,Operations,Operations analyst,25.0,3,3,2,3,1,,1,3,4,2,2,3,6,5,,7,20,10,19,10
+P0486,Trust & Safety Review,Content reviewer,33.3,,4,0,2,1,,3,,4,0,1,3,5,6,7,6,20,17,21,18
+P0487,Claims,Claims examiner,18.0,3,1,3,1,0,2,2,0,1,1,4,0,9,5,7,6,,,,
+P0488,Customer Support,Support lead,42.5,1,3,3,2,4,2,2,1,2,2,1,2,7,5,6,8,21,13,21,13
+P0489,Customer Support,Support agent,22.7,2,1,2,3,1,3,1,1,3,3,4,1,7,5,4,5,20,7,21,6
+P0490,Customer Support,Support agent,31.1,1,,3,3,4,3,3,2,4,1,4,1,1,0,0,2,20,15,19,14
+P0491,Trust & Safety Review,Content reviewer,16.4,2,2,2,1,1,0,0,0,2,1,3,2,1,2,1,3,19,6,20,6
+P0492,Claims,Claims examiner,41.9,4,3,1,2,2,0,1,3,3,2,2,4,8,6,7,7,20,17,20,17
+P0493,Claims,Team lead,32.0,1,4,2,0,2,2,1,0,2,2,3,4,4,6,6,6,19,9,21,10
+P0494,Customer Support,Support agent,21.8,4,4,3,2,4,3,,0,3,2,4,2,10,8,8,10,20,7,20,7
+P0495,Operations,Operations analyst,13.9,1,4,1,1,2,1,1,1,2,2,3,3,6,7,7,5,21,6,21,9
+P0496,Operations,Operations analyst,22.7,2,,1,2,2,2,3,3,4,1,,2,5,7,7,7,19,3,19,7
+P0497,Operations,Operations analyst,18.5,,0,0,0,2,2,0,0,2,0,1,0,3,2,1,3,21,8,19,5
+P0498,Trust & Safety Review,Policy specialist,24.6,3,3,1,2,3,3,1,3,2,2,2,4,6,3,6,4,20,10,19,11
+P0499,Customer Support,Support agent,28.7,1,2,2,2,2,0,1,0,4,1,3,2,3,,3,1,20,4,19,3
+P0500,Customer Support,Support agent,43.9,3,3,3,3,2,1,2,3,4,4,2,4,6,,4,4,21,17,21,16
+P0501,Operations,Operations analyst,31.8,2,1,1,1,0,4,1,0,,1,2,1,5,6,4,5,19,17,20,9
+P0502,Customer Support,Support agent,28.2,3,1,2,2,2,4,2,0,1,2,1,1,7,7,8,7,20,13,19,10
+P0503,Trust & Safety Review,Policy specialist,25.3,2,2,2,1,2,4,2,2,2,2,4,2,3,4,3,1,21,11,19,10
+P0504,Trust & Safety Review,Content reviewer,18.4,2,2,1,3,2,1,2,2,4,4,3,2,9,8,6,8,19,14,21,12
+P0505,Operations,Operations analyst,21.9,4,3,3,3,3,0,2,4,4,2,3,2,7,4,3,7,,,,
+P0506,Trust & Safety Review,Content reviewer,36.2,2,2,2,1,1,1,4,3,3,3,1,1,1,2,4,2,19,6,19,8
+P0507,Customer Support,Support agent,27.9,3,4,3,4,4,4,3,3,2,3,1,1,5,3,,4,19,12,21,10
+P0508,Claims,Claims examiner,27.0,2,2,0,1,3,,2,1,3,,3,1,4,,4,2,20,10,20,14
+P0509,Customer Support,Support agent,37.7,3,2,2,2,2,3,1,3,3,1,2,2,4,3,4,2,20,9,19,15
+P0510,Operations,Operations analyst,25.8,1,1,2,3,2,3,1,2,3,1,0,3,8,9,,8,21,11,21,7
+P0511,Claims,Team lead,35.1,2,2,1,2,2,0,1,0,2,1,2,1,9,6,6,6,19,6,19,6
+P0512,Claims,Claims lead,14.0,2,2,3,3,1,3,1,4,3,3,3,2,8,8,8,9,20,13,20,11
+P0513,Operations,Workflow lead,17.9,4,3,3,4,1,3,3,2,3,2,3,1,4,1,3,4,21,6,19,6
+P0514,Trust & Safety Review,Content reviewer,29.5,3,4,2,3,3,2,0,2,4,3,3,2,2,4,2,1,21,18,20,15
+P0515,Trust & Safety Review,Content reviewer,32.7,3,3,2,2,2,2,2,2,2,3,2,1,7,8,9,7,20,1,20,0
+P0516,Trust & Safety Review,Content reviewer,24.5,2,2,3,1,2,0,1,1,3,2,1,2,7,5,6,5,19,5,20,7
+P0517,Trust & Safety Review,Policy specialist,40.4,4,4,4,1,3,3,2,,,2,2,4,10,10,10,10,21,21,21,20
+P0518,Claims,Claims lead,29.8,2,2,4,1,2,3,2,0,0,2,3,0,7,6,6,6,19,12,20,9
+P0519,Trust & Safety Review,Content reviewer,24.5,1,0,0,1,1,3,0,0,1,1,3,1,3,3,3,5,21,7,21,2
+P0520,Claims,Claims examiner,31.2,1,2,1,1,1,4,3,1,1,2,2,3,5,4,3,4,21,14,20,10
+P0521,Customer Support,Team lead,33.2,4,4,2,3,2,1,2,3,4,3,2,3,10,10,10,9,21,18,21,20
+P0522,Claims,Claims examiner,23.9,4,3,2,3,4,1,3,4,4,1,3,2,7,6,6,7,19,15,20,17
+P0523,Trust & Safety Review,Content reviewer,48.5,1,,2,2,1,2,1,1,2,2,2,3,0,0,0,1,20,6,19,4
+P0524,Trust & Safety Review,Content reviewer,32.8,2,2,2,2,1,2,2,1,2,1,4,1,7,7,10,7,21,15,21,12
+P0525,Customer Support,Support lead,23.0,4,3,4,3,2,3,2,2,3,3,2,1,4,4,4,6,20,6,20,7
+P0526,Trust & Safety Review,Policy specialist,23.4,,4,4,3,1,2,2,2,4,,2,2,3,4,6,7,19,16,20,18
+P0527,Trust & Safety Review,Policy specialist,27.1,1,4,0,2,2,1,2,1,2,3,3,2,9,8,8,10,21,15,21,12
+P0528,Operations,Operations analyst,33.9,3,3,0,3,3,2,2,0,2,3,3,3,5,3,3,5,19,16,21,15
+P0529,Operations,Operations analyst,21.9,4,3,,2,3,3,4,3,4,2,0,2,10,10,10,10,20,19,20,20
+P0530,Trust & Safety Review,Content reviewer,23.3,2,2,2,0,1,1,2,0,1,0,3,0,4,4,3,5,20,1,19,1
+P0531,Trust & Safety Review,Content reviewer,19.3,2,2,3,4,3,3,4,2,4,4,1,4,7,7,5,8,21,20,20,16
+P0532,Trust & Safety Review,Policy specialist,33.4,,4,3,4,3,2,,4,2,2,2,2,4,4,6,4,21,19,19,17
+P0533,Trust & Safety Review,Policy specialist,43.5,2,2,3,4,4,3,3,3,1,3,1,2,6,4,5,3,19,13,20,15
+P0534,Trust & Safety Review,Content reviewer,50.8,3,,3,4,3,1,1,2,4,4,0,3,5,5,4,3,19,4,19,7
+P0535,Trust & Safety Review,Policy specialist,29.1,3,2,3,3,3,2,,0,2,3,2,1,9,7,9,9,21,14,20,14
+P0536,Customer Support,Support lead,38.4,2,4,2,3,2,4,2,3,3,,1,2,5,6,5,6,20,6,20,9
+P0537,Claims,Claims examiner,25.7,2,2,2,1,2,3,2,1,4,3,2,1,2,3,3,1,21,1,19,1
+P0538,Operations,Operations analyst,21.5,1,3,3,,,3,1,2,0,1,2,3,3,2,2,4,21,18,19,13
+P0539,Trust & Safety Review,Team lead,31.9,1,2,4,3,2,2,4,2,1,0,1,2,3,3,6,3,20,5,20,10
+P0540,Claims,Claims examiner,28.9,2,3,3,2,2,4,3,3,2,3,3,3,6,8,5,7,20,17,19,15
+P0541,Customer Support,Support agent,22.8,4,3,2,3,3,2,3,0,1,3,0,3,,2,3,4,20,16,21,15
+P0542,Customer Support,Support lead,27.9,2,1,0,4,0,1,3,2,2,3,1,,6,7,5,4,19,19,19,18
+P0543,Claims,Claims lead,25.7,1,2,1,2,0,2,3,1,0,1,1,1,,10,10,10,20,5,21,5
+P0544,Operations,Operations analyst,16.4,4,3,0,4,2,1,4,2,2,3,0,0,7,7,6,7,19,4,21,6
+P0545,Customer Support,Support agent,28.6,3,1,1,1,1,4,2,3,0,1,3,0,7,4,5,6,19,5,19,6
+P0546,Operations,Operations analyst,23.9,2,1,2,3,4,0,3,2,2,2,0,4,2,5,0,2,19,4,19,8
+P0547,Claims,Claims examiner,28.2,4,3,2,3,3,1,0,3,1,3,4,3,5,6,6,3,,,,
+P0548,Customer Support,Support agent,36.4,3,4,1,1,2,3,3,2,3,1,1,0,7,8,6,7,20,12,20,15
+P0549,Customer Support,Support agent,17.4,2,3,2,3,2,1,2,1,3,1,1,1,4,5,5,5,19,6,19,13
+P0550,Customer Support,Support agent,2.7,1,1,1,1,1,1,1,1,1,1,1,1,10,10,10,10,19,10,19,10
+P0551,Operations,Operations analyst,22.8,0,0,1,2,1,3,3,1,,1,2,1,7,8,10,8,19,7,21,2
+P0552,Trust & Safety Review,Policy specialist,24.9,4,4,4,2,4,4,4,2,3,4,3,3,9,10,10,9,19,17,21,14
+P0553,Claims,Team lead,33.0,3,3,2,4,3,1,4,3,3,4,1,2,10,10,10,10,20,11,19,11
+P0554,Claims,Claims lead,37.9,3,2,3,4,3,4,3,1,4,2,0,,7,7,7,8,19,16,19,15
+P0555,Operations,Operations analyst,16.1,4,3,3,4,3,0,4,3,3,4,2,4,10,10,9,,19,14,21,16
+P0556,Operations,Operations analyst,121.0,3,3,3,3,2,3,0,2,3,2,4,3,2,2,0,1,21,15,19,17
+P0557,Customer Support,Support agent,45.9,1,1,3,3,3,3,1,0,1,3,3,2,4,2,5,3,,,,
+P0558,Claims,Claims lead,18.3,3,4,2,4,4,1,3,2,4,3,2,3,6,7,7,4,21,20,21,19
+P0559,Customer Support,Support agent,26.2,3,3,3,3,2,3,2,2,3,2,1,,3,5,6,4,19,10,19,10
+P0560,Customer Support,Support agent,28.4,2,1,,3,2,2,2,2,2,2,3,2,7,6,7,9,20,11,21,13
+P0561,Customer Support,Support agent,22.2,3,2,3,3,0,2,1,3,3,2,2,2,2,1,3,1,21,18,20,17
+P0562,Customer Support,Support lead,24.1,2,3,2,0,3,1,2,2,1,2,1,2,3,1,1,0,20,9,20,11
+P0563,Customer Support,Support agent,19.8,3,1,3,4,3,2,0,2,1,2,1,2,2,4,5,4,20,16,19,11
+P0564,Claims,Claims lead,39.6,1,2,0,1,0,3,1,1,1,1,2,1,0,3,4,1,21,5,21,3
+P0565,Trust & Safety Review,Content reviewer,21.9,4,1,2,3,4,1,2,3,2,2,2,4,10,10,10,10,19,17,21,11
+P0566,Operations,Operations analyst,13.3,3,4,3,4,0,2,3,3,3,4,1,3,6,5,8,6,20,19,19,16
+P0567,Trust & Safety Review,Policy specialist,25.1,4,1,2,2,,0,2,0,1,3,1,2,5,2,3,3,21,6,19,4
+P0568,Trust & Safety Review,Content reviewer,42.1,4,,1,3,3,3,4,2,3,3,0,3,2,3,3,3,21,18,20,17
+P0569,Claims,Team lead,26.9,4,4,1,3,4,0,1,1,2,2,2,2,8,9,7,7,19,16,21,21
+P0570,Trust & Safety Review,Content reviewer,3.0,1,1,1,1,1,1,1,1,1,1,1,1,10,10,10,10,19,15,19,12
+P0571,Trust & Safety Review,Content reviewer,18.7,1,1,0,2,1,4,1,1,2,1,1,1,4,3,0,2,20,14,19,9
+P0572,Trust & Safety Review,Content reviewer,42.2,4,2,2,1,1,,2,0,2,2,4,2,4,6,5,3,21,8,21,3
+P0573,Customer Support,Support agent,34.2,2,2,1,2,2,3,1,1,3,,1,1,5,5,2,6,21,4,21,3
+P0574,Trust & Safety Review,Policy specialist,21.8,4,3,,2,2,4,2,2,1,2,2,,7,5,6,7,21,6,21,7
+P0575,Operations,Workflow lead,27.3,2,1,1,3,0,2,1,2,3,2,3,2,8,8,6,7,21,3,19,3
+P0576,Claims,Claims examiner,36.9,4,1,2,3,0,2,2,1,3,3,2,2,6,5,5,5,21,17,20,19
+P0577,Claims,Claims lead,21.4,1,2,0,0,2,,2,0,0,0,3,0,4,4,7,5,19,9,20,10
+P0578,Claims,Team lead,28.4,3,4,3,4,1,1,4,2,4,3,4,4,10,10,10,10,21,20,20,15
+P0579,Trust & Safety Review,Policy specialist,27.5,3,1,1,,2,3,3,2,4,4,3,2,2,1,3,1,19,17,19,16
+P0580,Trust & Safety Review,Content reviewer,39.2,3,4,3,1,1,2,2,2,3,4,0,2,4,3,5,4,20,9,19,9
+P0581,Trust & Safety Review,Content reviewer,17.6,3,2,3,4,2,3,2,3,4,2,1,1,7,7,7,7,20,16,21,14
+P0582,Claims,Claims examiner,31.9,1,1,0,1,1,3,0,0,0,1,1,0,7,7,8,5,21,7,21,6
+P0583,Trust & Safety Review,Content reviewer,38.1,3,3,1,1,1,1,3,2,1,3,2,0,7,8,8,8,20,12,19,9
+P0584,Operations,Operations analyst,26.7,0,1,2,1,3,3,2,2,4,0,1,,,1,2,2,19,6,21,9
+P0585,Claims,Team lead,21.2,3,2,2,,1,1,2,1,1,1,4,2,2,0,1,,20,4,21,9
+P0586,Claims,Claims examiner,27.2,2,1,0,1,2,2,1,1,4,2,3,3,0,0,0,0,20,16,21,17
+P0587,Operations,Operations analyst,23.4,1,0,1,3,,2,1,1,1,3,4,2,4,4,3,5,20,11,19,14
+P0588,Trust & Safety Review,Content reviewer,13.8,2,2,3,1,1,4,2,3,1,3,0,1,8,8,6,7,20,14,21,16
+P0589,Operations,Operations analyst,18.5,1,1,1,1,0,3,2,0,3,1,3,1,7,8,7,8,19,16,21,13
+P0590,Trust & Safety Review,Content reviewer,34.2,,0,3,2,4,2,0,2,1,2,4,0,3,5,4,6,20,2,20,1
+P0591,Operations,Operations analyst,29.7,2,1,3,1,1,0,3,1,2,3,4,2,6,6,5,8,,,,
+P0592,Claims,Claims examiner,2.8,1,1,1,1,1,1,1,1,1,1,1,1,9,9,9,9,19,10,19,15
+P0593,Customer Support,Support agent,38.0,3,1,1,4,3,3,2,1,3,1,2,1,7,6,7,6,20,13,19,8
+P0594,Customer Support,Support agent,38.8,4,4,3,3,0,3,2,3,4,2,4,3,10,10,10,9,21,7,19,9
+P0595,Claims,Team lead,16.4,2,2,0,1,0,0,0,,3,0,2,1,2,2,1,1,20,10,20,6
+P0596,Customer Support,Support agent,28.8,2,,2,2,2,1,3,2,3,1,,2,5,6,7,5,20,14,19,8
+P0597,Operations,Operations analyst,27.1,3,2,1,2,3,4,2,2,2,2,0,2,3,5,4,5,19,9,20,10
+P0598,Trust & Safety Review,Content reviewer,22.2,2,2,2,2,1,1,1,1,2,2,2,2,3,4,4,4,19,7,21,11
+P0599,Customer Support,Support lead,25.1,0,1,0,1,2,2,1,,2,2,2,2,8,7,7,7,19,4,20,14
+P0600,Claims,Team lead,16.4,4,1,4,2,2,1,1,0,4,2,3,1,6,5,7,6,19,8,21,8
+P0601,Claims,Claims examiner,4.2,3,3,3,3,3,3,3,3,3,3,3,3,6,6,6,6,19,14,21,17
+P0602,Trust & Safety Review,Policy specialist,25.3,2,4,1,3,2,2,2,,1,1,2,2,2,3,4,6,20,3,21,6
+P0603,Customer Support,Support agent,25.8,3,2,0,2,3,0,3,1,2,4,2,0,8,6,6,7,21,5,19,4
+P0604,trust & safety review,Team lead,35.9,3,3,2,2,2,1,3,1,2,1,2,2,7,6,6,5,20,11,20,11
+P0605,Claims,Claims lead,24.7,2,1,,1,1,2,0,0,0,0,4,1,3,1,1,1,19,6,21,6
+P0606,Customer Support,Support agent,45.2,2,2,2,3,2,3,3,3,3,4,1,2,3,6,5,6,20,10,19,9
+P0607,Customer Support,Team lead,35.1,2,1,1,1,2,0,2,2,3,0,3,1,5,4,5,3,21,6,19,4
+P0608,Claims,Team lead,19.1,2,2,4,1,2,2,1,3,2,1,1,1,,9,8,8,20,18,19,16
+P0609,Claims,Claims lead,29.6,1,1,3,1,,1,1,0,0,0,2,0,3,4,4,4,21,3,19,5
+P0610,Customer Support,Team lead,19.8,2,0,1,0,0,3,2,1,2,1,2,2,4,7,6,6,21,7,20,6
+P0611,Trust & Safety Review,Content reviewer,35.2,2,0,2,2,1,1,0,2,1,2,,2,7,8,8,7,21,10,19,6
+P0612,Claims,Claims examiner,20.4,2,4,1,2,1,4,3,2,2,2,2,1,6,5,6,7,19,12,20,11

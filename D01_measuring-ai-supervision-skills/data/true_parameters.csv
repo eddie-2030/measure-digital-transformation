@@ -1,0 +1,36 @@
+parameter,value,meaning
+seed,20261104,Random seed for the sample
+rho_skill_confidence,0.35,True correlation between standardized skill z and confidence A
+loading_S01,0.67,Generating loading of scenario item on skill
+loading_S02,0.6,Generating loading of scenario item on skill
+loading_S03,0.53,Generating loading of scenario item on skill
+loading_S04,0.63,Generating loading of scenario item on skill
+loading_S05,0.48,Generating loading of scenario item on skill
+loading_S06,0.05,Generating loading of scenario item on skill (FLAWED: ambiguous)
+loading_S07,0.58,Generating loading of scenario item on skill
+loading_S08,0.65,Generating loading of scenario item on skill
+loading_S09,0.5,Generating loading of scenario item on skill
+loading_S10,0.61,Generating loading of scenario item on skill
+loading_S11,-0.22,Generating loading of scenario item on skill (FLAWED: mis-keyed)
+loading_S12,0.56,Generating loading of scenario item on skill
+loading_C01,0.92,Generating loading of confidence item on confidence A
+loading_C02,0.94,Generating loading of confidence item on confidence A
+loading_C03,0.9,Generating loading of confidence item on confidence A
+loading_C04,0.93,Generating loading of confidence item on confidence A
+criterion_b0,0.3,Audit model intercept (logit)
+criterion_b1,0.85,Audit model slope on theta (logit)
+criterion_noise_sd,0.9,SD of person-level noise in the audit (logit)
+flawed_items,S06;S11,Items that are flawed by design
+true_reliability_naive16,0.9113,Population reliability of the naive16 sum score: Var(true score)/Var(observed)
+true_validity_naive16,0.4355,Population correlation of the naive16 sum score with the 40-error audit score
+true_reliability_scenario12,0.7525,Population reliability of the scenario12 sum score: Var(true score)/Var(observed)
+true_validity_scenario12,0.551,Population correlation of the scenario12 sum score with the 40-error audit score
+true_reliability_scenario10,0.8056,Population reliability of the scenario10 sum score: Var(true score)/Var(observed)
+true_validity_scenario10,0.5704,Population correlation of the scenario10 sum score with the 40-error audit score
+true_reliability_conf4,0.9536,Population reliability of the conf4 sum score: Var(true score)/Var(observed)
+true_validity_conf4,0.2129,Population correlation of the conf4 sum score with the 40-error audit score
+true_corr_theta_criterion,0.6342,Correlation of true skill with the audit score
+true_corr_confidence_criterion,0.2191,Correlation of true confidence with the audit score
+true_corr_truescore10_truecriterion,0.663,Correlation of the scenario10 true score with the true catch rate (target of the attenuation correction)
+true_reliability_audit_score,0.9208,Population reliability of the 40-error audit score
+pop_sd_scenario10,6.6287,Population SD of the scenario10 sum score

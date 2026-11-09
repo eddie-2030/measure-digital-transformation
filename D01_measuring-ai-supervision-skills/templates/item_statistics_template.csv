@@ -1,0 +1,4 @@
+item,n,mean,sd,item_rest_r,alpha_if_deleted,decision,content_area,note
+S01,,,,,,,Spot the AI's factual error,
+S02,,,,,,,Decide whether to escalate,
+S03,,,,,,,Verify a claim against a source,
