@@ -1,0 +1,939 @@
+{
+  "edition": "J01_the-ai-native-people-analytics-team",
+  "note": "Synthetic data. Point estimates must match the R script exactly at the stated rounding; bootstrap CIs depend on each language's RNG and may differ slightly. Run python/check_agreement.py after r/analysis.R to add the 'r' values.",
+  "assumptions": [
+    "Per-type corrected accuracy uses POOLED judge sensitivity/specificity: no question type has >= 30 truly-correct and >= 30 truly-wrong human grades, so per-type sens/spec would be too noisy. This assumes the judge's error rates do not differ by question type (true by construction here; check it in real data as the human sample grows).",
+    "Corrected values are clipped to [0, 1].",
+    "Missing judge verdicts (timeouts) are treated as missing at random and excluded.",
+    "Bootstrap resamples question clusters (near-duplicates share a cluster), B = 2000, percentile CI.",
+    "Failure causes use observable traces (gold vs. retrieved docs, claim support); correctness from human grades."
+  ],
+  "results": {
+    "naive_thumbs_up_rate": {
+      "value": 0.903,
+      "rounding": "3 decimals",
+      "meaning": "Share of rated answers with a thumbs-up (satisfaction, not correctness)",
+      "python": 0.903,
+      "r": 0.903
+    },
+    "naive_n_rated": {
+      "value": 330.0,
+      "rounding": "0 decimals",
+      "meaning": "Number of answers users rated",
+      "python": 330.0,
+      "r": 330.0
+    },
+    "naive_judge_accuracy": {
+      "value": 0.843,
+      "rounding": "3 decimals",
+      "meaning": "Raw LLM-judge 'accuracy': share of judged answers the judge called correct",
+      "python": 0.843,
+      "r": 0.843
+    },
+    "naive_n_judged": {
+      "value": 573.0,
+      "rounding": "0 decimals",
+      "meaning": "Answers with a judge verdict (others timed out)",
+      "python": 573.0,
+      "r": 573.0
+    },
+    "naive_judge_accuracy_policy_lookup": {
+      "value": 0.924,
+      "rounding": "3 decimals",
+      "meaning": "Raw judge accuracy, policy_lookup",
+      "python": 0.924,
+      "r": 0.924
+    },
+    "naive_thumbs_up_rate_policy_lookup": {
+      "value": 0.916,
+      "rounding": "3 decimals",
+      "meaning": "Thumbs-up rate, policy_lookup",
+      "python": 0.916,
+      "r": 0.916
+    },
+    "naive_judge_accuracy_computed_metric": {
+      "value": 0.817,
+      "rounding": "3 decimals",
+      "meaning": "Raw judge accuracy, computed_metric",
+      "python": 0.817,
+      "r": 0.817
+    },
+    "naive_thumbs_up_rate_computed_metric": {
+      "value": 0.866,
+      "rounding": "3 decimals",
+      "meaning": "Thumbs-up rate, computed_metric",
+      "python": 0.866,
+      "r": 0.866
+    },
+    "naive_judge_accuracy_multi_hop": {
+      "value": 0.675,
+      "rounding": "3 decimals",
+      "meaning": "Raw judge accuracy, multi_hop",
+      "python": 0.675,
+      "r": 0.675
+    },
+    "naive_thumbs_up_rate_multi_hop": {
+      "value": 0.938,
+      "rounding": "3 decimals",
+      "meaning": "Thumbs-up rate, multi_hop",
+      "python": 0.938,
+      "r": 0.938
+    },
+    "thumbs_up_rate_when_correct_human": {
+      "value": 0.955,
+      "rounding": "3 decimals",
+      "meaning": "Thumbs-up rate among human-graded CORRECT answers",
+      "python": 0.955,
+      "r": 0.955
+    },
+    "thumbs_up_rate_when_wrong_human": {
+      "value": 0.684,
+      "rounding": "3 decimals",
+      "meaning": "Thumbs-up rate among human-graded WRONG answers (users like fluent wrong answers too)",
+      "python": 0.684,
+      "r": 0.684
+    },
+    "recall_at5_policy_lookup": {
+      "value": 0.942,
+      "rounding": "3 decimals",
+      "meaning": "Mean recall@5 (share of gold docs retrieved), policy_lookup",
+      "python": 0.942,
+      "r": 0.942
+    },
+    "hit_rate_policy_lookup": {
+      "value": 0.942,
+      "rounding": "3 decimals",
+      "meaning": "Share of questions with ALL gold docs in top 5, policy_lookup",
+      "python": 0.942,
+      "r": 0.942
+    },
+    "mrr_policy_lookup": {
+      "value": 0.651,
+      "rounding": "3 decimals",
+      "meaning": "Mean reciprocal rank of first gold doc, policy_lookup",
+      "python": 0.651,
+      "r": 0.651
+    },
+    "recall_at5_computed_metric": {
+      "value": 0.889,
+      "rounding": "3 decimals",
+      "meaning": "Mean recall@5 (share of gold docs retrieved), computed_metric",
+      "python": 0.889,
+      "r": 0.889
+    },
+    "hit_rate_computed_metric": {
+      "value": 0.795,
+      "rounding": "3 decimals",
+      "meaning": "Share of questions with ALL gold docs in top 5, computed_metric",
+      "python": 0.795,
+      "r": 0.795
+    },
+    "mrr_computed_metric": {
+      "value": 0.83,
+      "rounding": "3 decimals",
+      "meaning": "Mean reciprocal rank of first gold doc, computed_metric",
+      "python": 0.83,
+      "r": 0.83
+    },
+    "recall_at5_multi_hop": {
+      "value": 0.777,
+      "rounding": "3 decimals",
+      "meaning": "Mean recall@5 (share of gold docs retrieved), multi_hop",
+      "python": 0.777,
+      "r": 0.777
+    },
+    "hit_rate_multi_hop": {
+      "value": 0.542,
+      "rounding": "3 decimals",
+      "meaning": "Share of questions with ALL gold docs in top 5, multi_hop",
+      "python": 0.542,
+      "r": 0.542
+    },
+    "mrr_multi_hop": {
+      "value": 0.772,
+      "rounding": "3 decimals",
+      "meaning": "Mean reciprocal rank of first gold doc, multi_hop",
+      "python": 0.772,
+      "r": 0.772
+    },
+    "recall_at5_overall": {
+      "value": 0.893,
+      "rounding": "3 decimals",
+      "meaning": "Mean recall@5 (share of gold docs retrieved), overall",
+      "python": 0.893,
+      "r": 0.893
+    },
+    "hit_rate_overall": {
+      "value": 0.818,
+      "rounding": "3 decimals",
+      "meaning": "Share of questions with ALL gold docs in top 5, overall",
+      "python": 0.818,
+      "r": 0.818
+    },
+    "mrr_overall": {
+      "value": 0.729,
+      "rounding": "3 decimals",
+      "meaning": "Mean reciprocal rank of first gold doc, overall",
+      "python": 0.729,
+      "r": 0.729
+    },
+    "groundedness_policy_lookup": {
+      "value": 0.875,
+      "rounding": "3 decimals",
+      "meaning": "Mean share of answer claims supported by retrieved text, policy_lookup",
+      "python": 0.875,
+      "r": 0.875
+    },
+    "share_grounded_policy_lookup": {
+      "value": 0.786,
+      "rounding": "3 decimals",
+      "meaning": "Share of answers with >= 80% of claims supported, policy_lookup",
+      "python": 0.786,
+      "r": 0.786
+    },
+    "groundedness_computed_metric": {
+      "value": 0.793,
+      "rounding": "3 decimals",
+      "meaning": "Mean share of answer claims supported by retrieved text, computed_metric",
+      "python": 0.793,
+      "r": 0.793
+    },
+    "share_grounded_computed_metric": {
+      "value": 0.649,
+      "rounding": "3 decimals",
+      "meaning": "Share of answers with >= 80% of claims supported, computed_metric",
+      "python": 0.649,
+      "r": 0.649
+    },
+    "groundedness_multi_hop": {
+      "value": 0.698,
+      "rounding": "3 decimals",
+      "meaning": "Mean share of answer claims supported by retrieved text, multi_hop",
+      "python": 0.698,
+      "r": 0.698
+    },
+    "share_grounded_multi_hop": {
+      "value": 0.542,
+      "rounding": "3 decimals",
+      "meaning": "Share of answers with >= 80% of claims supported, multi_hop",
+      "python": 0.542,
+      "r": 0.542
+    },
+    "groundedness_overall": {
+      "value": 0.818,
+      "rounding": "3 decimals",
+      "meaning": "Mean share of answer claims supported by retrieved text, overall",
+      "python": 0.818,
+      "r": 0.818
+    },
+    "share_grounded_overall": {
+      "value": 0.7,
+      "rounding": "3 decimals",
+      "meaning": "Share of answers with >= 80% of claims supported, overall",
+      "python": 0.7,
+      "r": 0.7
+    },
+    "abstain_rate_unanswerable": {
+      "value": 0.583,
+      "rounding": "3 decimals",
+      "meaning": "Share of no-source questions where the assistant correctly said 'I don't know'",
+      "python": 0.583,
+      "r": 0.583
+    },
+    "n_unanswerable": {
+      "value": 12.0,
+      "rounding": "0 decimals",
+      "meaning": "Questions with no relevant document in the corpus",
+      "python": 12.0,
+      "r": 12.0
+    },
+    "n_human_graded": {
+      "value": 150.0,
+      "rounding": "0 decimals",
+      "meaning": "Questions in the random human-graded subsample",
+      "python": 150.0,
+      "r": 150.0
+    },
+    "n_human_graded_with_judge": {
+      "value": 144.0,
+      "rounding": "0 decimals",
+      "meaning": "Human-graded questions that also have a judge verdict",
+      "python": 144.0,
+      "r": 144.0
+    },
+    "judge_sensitivity": {
+      "value": 0.971,
+      "rounding": "3 decimals",
+      "meaning": "P(judge says correct | human says correct)",
+      "python": 0.971,
+      "r": 0.971
+    },
+    "judge_specificity": {
+      "value": 0.513,
+      "rounding": "3 decimals",
+      "meaning": "P(judge says wrong | human says wrong); low = lenient judge",
+      "python": 0.513,
+      "r": 0.513
+    },
+    "n_human_correct": {
+      "value": 105.0,
+      "rounding": "0 decimals",
+      "meaning": "Human-graded answers that were truly correct",
+      "python": 105.0,
+      "r": 105.0
+    },
+    "n_human_wrong": {
+      "value": 39.0,
+      "rounding": "0 decimals",
+      "meaning": "Human-graded answers that were truly wrong",
+      "python": 39.0,
+      "r": 39.0
+    },
+    "n_human_correct_policy_lookup": {
+      "value": 55.0,
+      "rounding": "0 decimals",
+      "meaning": "Human-graded truly correct, policy_lookup",
+      "python": 55.0,
+      "r": 55.0
+    },
+    "n_human_wrong_policy_lookup": {
+      "value": 6.0,
+      "rounding": "0 decimals",
+      "meaning": "Human-graded truly wrong, policy_lookup",
+      "python": 6.0,
+      "r": 6.0
+    },
+    "n_human_correct_computed_metric": {
+      "value": 31.0,
+      "rounding": "0 decimals",
+      "meaning": "Human-graded truly correct, computed_metric",
+      "python": 31.0,
+      "r": 31.0
+    },
+    "n_human_wrong_computed_metric": {
+      "value": 17.0,
+      "rounding": "0 decimals",
+      "meaning": "Human-graded truly wrong, computed_metric",
+      "python": 17.0,
+      "r": 17.0
+    },
+    "n_human_correct_multi_hop": {
+      "value": 19.0,
+      "rounding": "0 decimals",
+      "meaning": "Human-graded truly correct, multi_hop",
+      "python": 19.0,
+      "r": 19.0
+    },
+    "n_human_wrong_multi_hop": {
+      "value": 16.0,
+      "rounding": "0 decimals",
+      "meaning": "Human-graded truly wrong, multi_hop",
+      "python": 16.0,
+      "r": 16.0
+    },
+    "human_only_accuracy": {
+      "value": 0.733,
+      "rounding": "3 decimals",
+      "meaning": "Accuracy in the random human-graded subsample alone",
+      "python": 0.733,
+      "r": 0.733
+    },
+    "human_only_ci_low": {
+      "value": 0.663,
+      "rounding": "3 decimals",
+      "meaning": "95% Wald CI lower bound, human-only accuracy",
+      "python": 0.663,
+      "r": 0.663
+    },
+    "human_only_ci_high": {
+      "value": 0.804,
+      "rounding": "3 decimals",
+      "meaning": "95% Wald CI upper bound, human-only accuracy",
+      "python": 0.804,
+      "r": 0.804
+    },
+    "corrected_accuracy_policy_lookup": {
+      "value": 0.902,
+      "rounding": "3 decimals",
+      "meaning": "Rogan-Gladen corrected accuracy, policy_lookup (pooled sens/spec)",
+      "python": 0.902,
+      "r": 0.902
+    },
+    "corrected_accuracy_computed_metric": {
+      "value": 0.68,
+      "rounding": "3 decimals",
+      "meaning": "Rogan-Gladen corrected accuracy, computed_metric (pooled sens/spec)",
+      "python": 0.68,
+      "r": 0.68
+    },
+    "corrected_accuracy_multi_hop": {
+      "value": 0.389,
+      "rounding": "3 decimals",
+      "meaning": "Rogan-Gladen corrected accuracy, multi_hop (pooled sens/spec)",
+      "python": 0.389,
+      "r": 0.389
+    },
+    "corrected_accuracy_overall": {
+      "value": 0.735,
+      "rounding": "3 decimals",
+      "meaning": "Rogan-Gladen corrected accuracy, overall (pooled sens/spec)",
+      "python": 0.735,
+      "r": 0.735
+    },
+    "corrected_ci_low_policy_lookup": {
+      "value": 0.8,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI lower bound, corrected accuracy, policy_lookup (B=2000; RNG-dependent)",
+      "python": 0.8,
+      "r": 0.8
+    },
+    "corrected_ci_high_policy_lookup": {
+      "value": 1.0,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI upper bound, corrected accuracy, policy_lookup (B=2000; RNG-dependent)",
+      "python": 1.0,
+      "r": 0.99
+    },
+    "corrected_ci_low_computed_metric": {
+      "value": 0.5,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI lower bound, corrected accuracy, computed_metric (B=2000; RNG-dependent)",
+      "python": 0.5,
+      "r": 0.5
+    },
+    "corrected_ci_high_computed_metric": {
+      "value": 0.8,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI upper bound, corrected accuracy, computed_metric (B=2000; RNG-dependent)",
+      "python": 0.8,
+      "r": 0.8
+    },
+    "corrected_ci_low_multi_hop": {
+      "value": 0.09,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI lower bound, corrected accuracy, multi_hop (B=2000; RNG-dependent)",
+      "python": 0.09,
+      "r": 0.1
+    },
+    "corrected_ci_high_multi_hop": {
+      "value": 0.58,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI upper bound, corrected accuracy, multi_hop (B=2000; RNG-dependent)",
+      "python": 0.58,
+      "r": 0.58
+    },
+    "corrected_ci_low_overall": {
+      "value": 0.62,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI lower bound, corrected accuracy, overall (B=2000; RNG-dependent)",
+      "python": 0.62,
+      "r": 0.61
+    },
+    "corrected_ci_high_overall": {
+      "value": 0.82,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI upper bound, corrected accuracy, overall (B=2000; RNG-dependent)",
+      "python": 0.82,
+      "r": 0.82
+    },
+    "human_only_boot_ci_low": {
+      "value": 0.66,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI lower bound, human-only accuracy (B=2000; RNG-dependent)",
+      "python": 0.66,
+      "r": 0.67
+    },
+    "human_only_boot_ci_high": {
+      "value": 0.81,
+      "rounding": "2 decimals",
+      "meaning": "95% cluster-bootstrap CI upper bound, human-only accuracy (B=2000; RNG-dependent)",
+      "python": 0.81,
+      "r": 0.8
+    },
+    "n_wrong_human": {
+      "value": 40.0,
+      "rounding": "0 decimals",
+      "meaning": "Wrong answers in the human-graded subsample",
+      "python": 40.0,
+      "r": 40.0
+    },
+    "n_wrong_human_policy_lookup": {
+      "value": 6.0,
+      "rounding": "0 decimals",
+      "meaning": "Wrong human-graded answers, policy_lookup",
+      "python": 6.0,
+      "r": 6.0
+    },
+    "fail_share_retrieval_miss_policy_lookup": {
+      "value": 0.167,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by retrieval_miss, policy_lookup (human-graded)",
+      "python": 0.167,
+      "r": 0.167
+    },
+    "fail_share_ungrounded_gen_policy_lookup": {
+      "value": 0.333,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by ungrounded_gen, policy_lookup (human-graded)",
+      "python": 0.333,
+      "r": 0.333
+    },
+    "fail_share_grounded_but_wrong_policy_lookup": {
+      "value": 0.333,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by grounded_but_wrong, policy_lookup (human-graded)",
+      "python": 0.333,
+      "r": 0.333
+    },
+    "fail_share_no_source_policy_lookup": {
+      "value": 0.167,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by no_source, policy_lookup (human-graded)",
+      "python": 0.167,
+      "r": 0.167
+    },
+    "n_wrong_human_computed_metric": {
+      "value": 17.0,
+      "rounding": "0 decimals",
+      "meaning": "Wrong human-graded answers, computed_metric",
+      "python": 17.0,
+      "r": 17.0
+    },
+    "fail_share_retrieval_miss_computed_metric": {
+      "value": 0.353,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by retrieval_miss, computed_metric (human-graded)",
+      "python": 0.353,
+      "r": 0.353
+    },
+    "fail_share_ungrounded_gen_computed_metric": {
+      "value": 0.353,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by ungrounded_gen, computed_metric (human-graded)",
+      "python": 0.353,
+      "r": 0.353
+    },
+    "fail_share_grounded_but_wrong_computed_metric": {
+      "value": 0.294,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by grounded_but_wrong, computed_metric (human-graded)",
+      "python": 0.294,
+      "r": 0.294
+    },
+    "fail_share_no_source_computed_metric": {
+      "value": 0.0,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by no_source, computed_metric (human-graded)",
+      "python": 0.0,
+      "r": 0.0
+    },
+    "n_wrong_human_multi_hop": {
+      "value": 17.0,
+      "rounding": "0 decimals",
+      "meaning": "Wrong human-graded answers, multi_hop",
+      "python": 17.0,
+      "r": 17.0
+    },
+    "fail_share_retrieval_miss_multi_hop": {
+      "value": 0.765,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by retrieval_miss, multi_hop (human-graded)",
+      "python": 0.765,
+      "r": 0.765
+    },
+    "fail_share_ungrounded_gen_multi_hop": {
+      "value": 0.176,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by ungrounded_gen, multi_hop (human-graded)",
+      "python": 0.176,
+      "r": 0.176
+    },
+    "fail_share_grounded_but_wrong_multi_hop": {
+      "value": 0.059,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by grounded_but_wrong, multi_hop (human-graded)",
+      "python": 0.059,
+      "r": 0.059
+    },
+    "fail_share_no_source_multi_hop": {
+      "value": 0.0,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by no_source, multi_hop (human-graded)",
+      "python": 0.0,
+      "r": 0.0
+    },
+    "n_wrong_human_overall": {
+      "value": 40.0,
+      "rounding": "0 decimals",
+      "meaning": "Wrong human-graded answers, overall",
+      "python": 40.0,
+      "r": 40.0
+    },
+    "fail_share_retrieval_miss_overall": {
+      "value": 0.5,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by retrieval_miss, overall (human-graded)",
+      "python": 0.5,
+      "r": 0.5
+    },
+    "fail_share_ungrounded_gen_overall": {
+      "value": 0.275,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by ungrounded_gen, overall (human-graded)",
+      "python": 0.275,
+      "r": 0.275
+    },
+    "fail_share_grounded_but_wrong_overall": {
+      "value": 0.2,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by grounded_but_wrong, overall (human-graded)",
+      "python": 0.2,
+      "r": 0.2
+    },
+    "fail_share_no_source_overall": {
+      "value": 0.025,
+      "rounding": "3 decimals",
+      "meaning": "Share of wrong answers caused by no_source, overall (human-graded)",
+      "python": 0.025,
+      "r": 0.025
+    },
+    "retrieval_miss_rate_policy_lookup": {
+      "value": 0.058,
+      "rounding": "3 decimals",
+      "meaning": "Share of answerable questions with a retrieval miss, policy_lookup",
+      "python": 0.058,
+      "r": 0.058
+    },
+    "retrieval_miss_rate_computed_metric": {
+      "value": 0.205,
+      "rounding": "3 decimals",
+      "meaning": "Share of answerable questions with a retrieval miss, computed_metric",
+      "python": 0.205,
+      "r": 0.205
+    },
+    "retrieval_miss_rate_multi_hop": {
+      "value": 0.458,
+      "rounding": "3 decimals",
+      "meaning": "Share of answerable questions with a retrieval miss, multi_hop",
+      "python": 0.458,
+      "r": 0.458
+    },
+    "true_accuracy_sample_overall": {
+      "value": 0.728,
+      "rounding": "3 decimals",
+      "meaning": "TRUE accuracy of the 600 test questions (oracle)",
+      "python": 0.728,
+      "r": 0.728
+    },
+    "true_accuracy_sample_policy_lookup": {
+      "value": 0.86,
+      "rounding": "3 decimals",
+      "meaning": "TRUE accuracy in the test set, policy_lookup (oracle)",
+      "python": 0.86,
+      "r": 0.86
+    },
+    "true_accuracy_sample_computed_metric": {
+      "value": 0.656,
+      "rounding": "3 decimals",
+      "meaning": "TRUE accuracy in the test set, computed_metric (oracle)",
+      "python": 0.656,
+      "r": 0.656
+    },
+    "true_accuracy_sample_multi_hop": {
+      "value": 0.508,
+      "rounding": "3 decimals",
+      "meaning": "TRUE accuracy in the test set, multi_hop (oracle)",
+      "python": 0.508,
+      "r": 0.508
+    },
+    "population_true_accuracy_overall": {
+      "value": 0.71,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): true_accuracy_overall",
+      "python": 0.71,
+      "r": 0.71
+    },
+    "population_true_accuracy_policy_lookup": {
+      "value": 0.841,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): true_accuracy_policy_lookup",
+      "python": 0.841,
+      "r": 0.841
+    },
+    "population_true_accuracy_computed_metric": {
+      "value": 0.659,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): true_accuracy_computed_metric",
+      "python": 0.659,
+      "r": 0.659
+    },
+    "population_true_accuracy_multi_hop": {
+      "value": 0.46,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): true_accuracy_multi_hop",
+      "python": 0.46,
+      "r": 0.46
+    },
+    "population_true_recall_at5_overall": {
+      "value": 0.882,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): true_recall_at5_overall",
+      "python": 0.882,
+      "r": 0.882
+    },
+    "population_true_groundedness_overall": {
+      "value": 0.801,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): true_groundedness_overall",
+      "python": 0.801,
+      "r": 0.801
+    },
+    "population_true_recall_at5_multi_hop": {
+      "value": 0.777,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): true_recall_at5_multi_hop",
+      "python": 0.777,
+      "r": 0.777
+    },
+    "population_true_groundedness_multi_hop": {
+      "value": 0.652,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): true_groundedness_multi_hop",
+      "python": 0.652,
+      "r": 0.652
+    },
+    "population_judge_sensitivity": {
+      "value": 0.96,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): judge_sensitivity",
+      "python": 0.96,
+      "r": 0.96
+    },
+    "population_judge_specificity": {
+      "value": 0.5,
+      "rounding": "3 decimals",
+      "meaning": "Generator's expected value (100k-question simulation): judge_specificity",
+      "python": 0.5,
+      "r": 0.5
+    },
+    "true_fail_share_retrieval_miss_overall": {
+      "value": 0.577,
+      "rounding": "3 decimals",
+      "meaning": "Share of ALL truly wrong answers caused by retrieval_miss (oracle, 600 questions)",
+      "python": 0.577,
+      "r": 0.577
+    },
+    "true_fail_share_retrieval_miss_multi_hop": {
+      "value": 0.763,
+      "rounding": "3 decimals",
+      "meaning": "Share of truly wrong multi-hop answers caused by retrieval_miss (oracle)",
+      "python": 0.763,
+      "r": 0.763
+    },
+    "true_fail_share_ungrounded_gen_overall": {
+      "value": 0.227,
+      "rounding": "3 decimals",
+      "meaning": "Share of ALL truly wrong answers caused by ungrounded_gen (oracle, 600 questions)",
+      "python": 0.227,
+      "r": 0.227
+    },
+    "true_fail_share_ungrounded_gen_multi_hop": {
+      "value": 0.169,
+      "rounding": "3 decimals",
+      "meaning": "Share of truly wrong multi-hop answers caused by ungrounded_gen (oracle)",
+      "python": 0.169,
+      "r": 0.169
+    },
+    "true_fail_share_grounded_but_wrong_overall": {
+      "value": 0.166,
+      "rounding": "3 decimals",
+      "meaning": "Share of ALL truly wrong answers caused by grounded_but_wrong (oracle, 600 questions)",
+      "python": 0.166,
+      "r": 0.166
+    },
+    "true_fail_share_grounded_but_wrong_multi_hop": {
+      "value": 0.068,
+      "rounding": "3 decimals",
+      "meaning": "Share of truly wrong multi-hop answers caused by grounded_but_wrong (oracle)",
+      "python": 0.068,
+      "r": 0.068
+    },
+    "true_fail_share_no_source_overall": {
+      "value": 0.031,
+      "rounding": "3 decimals",
+      "meaning": "Share of ALL truly wrong answers caused by no_source (oracle, 600 questions)",
+      "python": 0.031,
+      "r": 0.031
+    },
+    "true_fail_share_no_source_multi_hop": {
+      "value": 0.0,
+      "rounding": "3 decimals",
+      "meaning": "Share of truly wrong multi-hop answers caused by no_source (oracle)",
+      "python": 0.0,
+      "r": 0.0
+    },
+    "ci_covers_true_overall": {
+      "value": true,
+      "rounding": "boolean",
+      "meaning": "Does the corrected-accuracy CI contain the true test-set accuracy?"
+    },
+    "ci_covers_true_policy_lookup": {
+      "value": true,
+      "rounding": "boolean",
+      "meaning": "Does the corrected CI contain the true test-set accuracy, policy_lookup?"
+    },
+    "corrected_error_pp_policy_lookup": {
+      "value": 4.2,
+      "rounding": "1 decimals",
+      "meaning": "Corrected minus true accuracy, policy_lookup, percentage points",
+      "python": 4.2,
+      "r": 4.2
+    },
+    "ci_covers_true_computed_metric": {
+      "value": true,
+      "rounding": "boolean",
+      "meaning": "Does the corrected CI contain the true test-set accuracy, computed_metric?"
+    },
+    "corrected_error_pp_computed_metric": {
+      "value": 2.5,
+      "rounding": "1 decimals",
+      "meaning": "Corrected minus true accuracy, computed_metric, percentage points",
+      "python": 2.5,
+      "r": 2.5
+    },
+    "ci_covers_true_multi_hop": {
+      "value": true,
+      "rounding": "boolean",
+      "meaning": "Does the corrected CI contain the true test-set accuracy, multi_hop?"
+    },
+    "corrected_error_pp_multi_hop": {
+      "value": -12.0,
+      "rounding": "1 decimals",
+      "meaning": "Corrected minus true accuracy, multi_hop, percentage points",
+      "python": -12.0,
+      "r": -12.0
+    },
+    "naive_judge_error_pp": {
+      "value": 11.5,
+      "rounding": "1 decimals",
+      "meaning": "Raw judge accuracy minus true accuracy, percentage points",
+      "python": 11.5,
+      "r": 11.5
+    },
+    "corrected_error_pp": {
+      "value": 0.6,
+      "rounding": "1 decimals",
+      "meaning": "Corrected accuracy minus true accuracy, percentage points",
+      "python": 0.6,
+      "r": 0.6
+    },
+    "decision_policy_lookup": {
+      "value": "deploy with citations shown",
+      "rounding": "text",
+      "meaning": "Rule: corrected >= 0.8 deploy; >= 0.6 route; else hold"
+    },
+    "decision_computed_metric": {
+      "value": "route through governed metric definitions / analytics team",
+      "rounding": "text",
+      "meaning": "Rule: corrected >= 0.8 deploy; >= 0.6 route; else hold"
+    },
+    "decision_multi_hop": {
+      "value": "hold until retrieval improves",
+      "rounding": "text",
+      "meaning": "Rule: corrected >= 0.8 deploy; >= 0.6 route; else hold"
+    }
+  },
+  "headline": {
+    "naive_thumbs_up_rate": {
+      "python": 0.903,
+      "r": 0.903,
+      "meaning": "Share of rated answers with a thumbs-up (satisfaction, not correctness)"
+    },
+    "naive_judge_accuracy": {
+      "python": 0.843,
+      "r": 0.843,
+      "meaning": "Raw LLM-judge 'accuracy': share of judged answers the judge called correct"
+    },
+    "judge_sensitivity": {
+      "python": 0.971,
+      "r": 0.971,
+      "meaning": "P(judge says correct | human says correct)"
+    },
+    "judge_specificity": {
+      "python": 0.513,
+      "r": 0.513,
+      "meaning": "P(judge says wrong | human says wrong); low = lenient judge"
+    },
+    "corrected_accuracy_overall": {
+      "python": 0.735,
+      "r": 0.735,
+      "meaning": "Rogan-Gladen corrected accuracy, overall (pooled sens/spec)"
+    },
+    "corrected_ci_low_overall": {
+      "python": 0.62,
+      "r": 0.61,
+      "meaning": "95% cluster-bootstrap CI lower bound, corrected accuracy, overall (B=2000; RNG-dependent)"
+    },
+    "corrected_ci_high_overall": {
+      "python": 0.82,
+      "r": 0.82,
+      "meaning": "95% cluster-bootstrap CI upper bound, corrected accuracy, overall (B=2000; RNG-dependent)"
+    },
+    "human_only_accuracy": {
+      "python": 0.733,
+      "r": 0.733,
+      "meaning": "Accuracy in the random human-graded subsample alone"
+    },
+    "human_only_boot_ci_low": {
+      "python": 0.66,
+      "r": 0.67,
+      "meaning": "95% cluster-bootstrap CI lower bound, human-only accuracy (B=2000; RNG-dependent)"
+    },
+    "human_only_boot_ci_high": {
+      "python": 0.81,
+      "r": 0.8,
+      "meaning": "95% cluster-bootstrap CI upper bound, human-only accuracy (B=2000; RNG-dependent)"
+    },
+    "corrected_accuracy_policy_lookup": {
+      "python": 0.902,
+      "r": 0.902,
+      "meaning": "Rogan-Gladen corrected accuracy, policy_lookup (pooled sens/spec)"
+    },
+    "corrected_accuracy_computed_metric": {
+      "python": 0.68,
+      "r": 0.68,
+      "meaning": "Rogan-Gladen corrected accuracy, computed_metric (pooled sens/spec)"
+    },
+    "corrected_accuracy_multi_hop": {
+      "python": 0.389,
+      "r": 0.389,
+      "meaning": "Rogan-Gladen corrected accuracy, multi_hop (pooled sens/spec)"
+    },
+    "recall_at5_multi_hop": {
+      "python": 0.777,
+      "r": 0.777,
+      "meaning": "Mean recall@5 (share of gold docs retrieved), multi_hop"
+    },
+    "groundedness_multi_hop": {
+      "python": 0.698,
+      "r": 0.698,
+      "meaning": "Mean share of answer claims supported by retrieved text, multi_hop"
+    },
+    "fail_share_retrieval_miss_multi_hop": {
+      "python": 0.765,
+      "r": 0.765,
+      "meaning": "Share of wrong answers caused by retrieval_miss, multi_hop (human-graded)"
+    },
+    "true_accuracy_sample_overall": {
+      "python": 0.728,
+      "r": 0.728,
+      "meaning": "TRUE accuracy of the 600 test questions (oracle)"
+    }
+  },
+  "agreement": {
+    "point_estimates_compared": 104,
+    "point_estimate_mismatches": [],
+    "ci_bounds_differing_by_more_than_0.02": [],
+    "note": "Point estimates identical in Python and R; CI bounds differ only through RNG."
+  }
+}

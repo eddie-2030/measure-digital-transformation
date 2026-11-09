@@ -1,0 +1,527 @@
+{
+  "edition": "B01",
+  "data": "synthetic",
+  "units": "cases resolved per employee per week unless noted",
+  "results": [
+    {
+      "name": "n_rows_raw",
+      "value": 1201,
+      "rounding": 0,
+      "meaning": "Rows in randomized_pilot.csv before cleaning",
+      "python": 1201,
+      "r": 1201
+    },
+    {
+      "name": "n_duplicates_removed",
+      "value": 1,
+      "rounding": 0,
+      "meaning": "Exact duplicate rows removed",
+      "python": 1,
+      "r": 1
+    },
+    {
+      "name": "n_outage_cells_set_missing",
+      "value": 36,
+      "rounding": 0,
+      "meaning": "Employee-weeks set to missing because a team's data feed was out (all zeros)",
+      "python": 36,
+      "r": 36
+    },
+    {
+      "name": "n_leavers",
+      "value": 31,
+      "rounding": 0,
+      "meaning": "Employees who left during the 8-week pilot",
+      "python": 31,
+      "r": 31
+    },
+    {
+      "name": "n_excluded_short_post",
+      "value": 17,
+      "rounding": 0,
+      "meaning": "Employees excluded for having fewer than 4 valid post weeks",
+      "python": 17,
+      "r": 17
+    },
+    {
+      "name": "n_analysis",
+      "value": 1183,
+      "rounding": 0,
+      "meaning": "Employees in the randomized analysis sample",
+      "python": 1183,
+      "r": 1183
+    },
+    {
+      "name": "n_analysis_treated",
+      "value": 590,
+      "rounding": 0,
+      "meaning": "Analyzed employees assigned to the tool",
+      "python": 590,
+      "r": 590
+    },
+    {
+      "name": "n_analysis_control",
+      "value": 593,
+      "rounding": 0,
+      "meaning": "Analyzed employees assigned to control (waitlist)",
+      "python": 593,
+      "r": 593
+    },
+    {
+      "name": "attrition_treated_pct",
+      "value": 1.5,
+      "rounding": 1,
+      "meaning": "Percent of the tool arm with no usable outcome",
+      "python": 1.5,
+      "r": 1.5
+    },
+    {
+      "name": "attrition_control_pct",
+      "value": 1.3,
+      "rounding": 1,
+      "meaning": "Percent of the control arm with no usable outcome",
+      "python": 1.3,
+      "r": 1.3
+    },
+    {
+      "name": "vol_share_volunteered_pct",
+      "value": 28.6,
+      "rounding": 1,
+      "meaning": "Percent of employees who opted in to the volunteer pilot",
+      "python": 28.6,
+      "r": 28.6
+    },
+    {
+      "name": "vol_baseline_gap",
+      "value": 3.64,
+      "rounding": 2,
+      "meaning": "Volunteers' pre-period lead over non-volunteers (cases/week), before any tool",
+      "python": 3.64,
+      "r": 3.64
+    },
+    {
+      "name": "vol_naive_estimate",
+      "value": 7.04,
+      "rounding": 2,
+      "meaning": "Naive volunteer comparison: post-period cases/week, opt-in minus non-opt-in",
+      "python": 7.04,
+      "r": 7.04
+    },
+    {
+      "name": "vol_naive_ci_lo",
+      "value": 6.03,
+      "rounding": 2,
+      "meaning": "Lower 95% CI bound of the naive volunteer comparison",
+      "python": 6.03,
+      "r": 6.03
+    },
+    {
+      "name": "vol_naive_ci_hi",
+      "value": 8.05,
+      "rounding": 2,
+      "meaning": "Upper 95% CI bound of the naive volunteer comparison",
+      "python": 8.05,
+      "r": 8.05
+    },
+    {
+      "name": "vol_ancova_estimate",
+      "value": 4.34,
+      "rounding": 2,
+      "meaning": "Volunteer comparison adjusted for baseline and site: still biased (motivation unobserved)",
+      "python": 4.34,
+      "r": 4.34
+    },
+    {
+      "name": "vol_true_effect",
+      "value": 2.31,
+      "rounding": 2,
+      "meaning": "True average effect of the tool on the volunteers (cases/week)",
+      "python": 2.31,
+      "r": 2.31
+    },
+    {
+      "name": "vol_overstatement_ratio",
+      "value": 3.1,
+      "rounding": 1,
+      "meaning": "Naive volunteer estimate divided by the volunteers' true effect",
+      "python": 3.1,
+      "r": 3.1
+    },
+    {
+      "name": "balance_pre_diff",
+      "value": -0.21,
+      "rounding": 2,
+      "meaning": "Randomized arms: baseline difference in cases/week (tool minus control)",
+      "python": -0.21,
+      "r": -0.21
+    },
+    {
+      "name": "balance_pre_std_diff",
+      "value": -0.027,
+      "rounding": 3,
+      "meaning": "Randomized arms: standardized baseline difference",
+      "python": -0.027,
+      "r": -0.027
+    },
+    {
+      "name": "control_pre_mean",
+      "value": 40.1,
+      "rounding": 1,
+      "meaning": "Control arm mean cases/week in the pre-period",
+      "python": 40.1,
+      "r": 40.1
+    },
+    {
+      "name": "control_post_mean",
+      "value": 41.3,
+      "rounding": 1,
+      "meaning": "Control arm mean cases/week in the pilot period",
+      "python": 41.3,
+      "r": 41.3
+    },
+    {
+      "name": "rho_pre_post",
+      "value": 0.68,
+      "rounding": 2,
+      "meaning": "Correlation of pre- and post-period cases/week (control arm)",
+      "python": 0.68,
+      "r": 0.68
+    },
+    {
+      "name": "simple_estimate",
+      "value": 1.5,
+      "rounding": 2,
+      "meaning": "Randomized pilot, simple difference in post means (ITT, cases/week)",
+      "python": 1.5,
+      "r": 1.5
+    },
+    {
+      "name": "simple_se",
+      "value": 0.49,
+      "rounding": 2,
+      "meaning": "Standard error of the simple difference",
+      "python": 0.49,
+      "r": 0.49
+    },
+    {
+      "name": "simple_ci_lo",
+      "value": 0.53,
+      "rounding": 2,
+      "meaning": "Lower 95% CI bound, simple difference",
+      "python": 0.53,
+      "r": 0.53
+    },
+    {
+      "name": "simple_ci_hi",
+      "value": 2.46,
+      "rounding": 2,
+      "meaning": "Upper 95% CI bound, simple difference",
+      "python": 2.46,
+      "r": 2.46
+    },
+    {
+      "name": "simple_ci_width",
+      "value": 1.94,
+      "rounding": 2,
+      "meaning": "Width of the 95% CI, simple difference",
+      "python": 1.94,
+      "r": 1.94
+    },
+    {
+      "name": "ancova_estimate",
+      "value": 1.66,
+      "rounding": 2,
+      "meaning": "HEADLINE: randomized pilot, ANCOVA (pre-period + strata) ITT effect, cases/week",
+      "python": 1.66,
+      "r": 1.66
+    },
+    {
+      "name": "ancova_se",
+      "value": 0.36,
+      "rounding": 2,
+      "meaning": "Standard error of the ANCOVA estimate",
+      "python": 0.36,
+      "r": 0.36
+    },
+    {
+      "name": "ancova_ci_lo",
+      "value": 0.96,
+      "rounding": 2,
+      "meaning": "Lower 95% CI bound, ANCOVA",
+      "python": 0.96,
+      "r": 0.96
+    },
+    {
+      "name": "ancova_ci_hi",
+      "value": 2.36,
+      "rounding": 2,
+      "meaning": "Upper 95% CI bound, ANCOVA",
+      "python": 2.36,
+      "r": 2.36
+    },
+    {
+      "name": "ancova_ci_width",
+      "value": 1.4,
+      "rounding": 2,
+      "meaning": "Width of the 95% CI, ANCOVA",
+      "python": 1.4,
+      "r": 1.4
+    },
+    {
+      "name": "se_reduction_pct",
+      "value": 28,
+      "rounding": 0,
+      "meaning": "Percent smaller standard error from ANCOVA vs simple difference",
+      "python": 28,
+      "r": 28
+    },
+    {
+      "name": "variance_ratio",
+      "value": 0.53,
+      "rounding": 2,
+      "meaning": "Variance of ANCOVA estimate relative to simple difference",
+      "python": 0.53,
+      "r": 0.53
+    },
+    {
+      "name": "theory_variance_factor",
+      "value": 0.53,
+      "rounding": 2,
+      "meaning": "Theory: 1 - rho^2, the expected variance ratio",
+      "python": 0.53,
+      "r": 0.53
+    },
+    {
+      "name": "equivalent_n_unadjusted",
+      "value": 2250,
+      "rounding": -1,
+      "meaning": "Employees an unadjusted analysis would need to match ANCOVA's precision (to nearest 10)",
+      "python": 2250,
+      "r": 2250
+    },
+    {
+      "name": "itt_pct_lift",
+      "value": 4,
+      "rounding": 1,
+      "meaning": "ANCOVA ITT as percent of control post-period mean",
+      "python": 4,
+      "r": 4
+    },
+    {
+      "name": "uptake_pct",
+      "value": 80.3,
+      "rounding": 1,
+      "meaning": "Percent of employees given access who actually used the tool",
+      "python": 80.3,
+      "r": 80.3
+    },
+    {
+      "name": "effect_among_users",
+      "value": 2.06,
+      "rounding": 2,
+      "meaning": "Effect among users = ITT / uptake (cases/week)",
+      "python": 2.06,
+      "r": 2.06
+    },
+    {
+      "name": "as_treated_estimate",
+      "value": 2.96,
+      "rounding": 2,
+      "meaning": "Pitfall: users vs everyone else (ANCOVA) - biased by self-selection into use",
+      "python": 2.96,
+      "r": 2.96
+    },
+    {
+      "name": "posttreat_adjusted_estimate",
+      "value": -1.63,
+      "rounding": 2,
+      "meaning": "Pitfall: ANCOVA that also adjusts for AI hours (post-treatment) - biased",
+      "python": -1.63,
+      "r": -1.63
+    },
+    {
+      "name": "posttreat_adjusted_ci_lo",
+      "value": -2.61,
+      "rounding": 2,
+      "meaning": "Lower 95% CI bound of the post-treatment-adjusted estimate",
+      "python": -2.61,
+      "r": -2.61
+    },
+    {
+      "name": "posttreat_adjusted_ci_hi",
+      "value": -0.65,
+      "rounding": 2,
+      "meaning": "Upper 95% CI bound of the post-treatment-adjusted estimate",
+      "python": -0.65,
+      "r": -0.65
+    },
+    {
+      "name": "quality_estimate",
+      "value": 0.1,
+      "rounding": 2,
+      "meaning": "Guardrail: ANCOVA effect on QA quality score (points, 0-100)",
+      "python": 0.1,
+      "r": 0.1
+    },
+    {
+      "name": "quality_ci_lo",
+      "value": -0.21,
+      "rounding": 2,
+      "meaning": "Lower 95% CI bound, quality",
+      "python": -0.21,
+      "r": -0.21
+    },
+    {
+      "name": "quality_ci_hi",
+      "value": 0.41,
+      "rounding": 2,
+      "meaning": "Upper 95% CI bound, quality",
+      "python": 0.41,
+      "r": 0.41
+    },
+    {
+      "name": "quality_noninferior",
+      "value": 1,
+      "rounding": 0,
+      "meaning": "1 if the quality CI lower bound is above the -1 point margin",
+      "python": 1,
+      "r": 1
+    },
+    {
+      "name": "true_effect_if_used",
+      "value": 2.5,
+      "rounding": 2,
+      "meaning": "TRUTH: effect of the tool on an employee who uses it (cases/week)",
+      "python": 2.5,
+      "r": 2.5
+    },
+    {
+      "name": "true_itt_design",
+      "value": 2,
+      "rounding": 2,
+      "meaning": "TRUTH: effect of giving access = 2.5 x 80% uptake",
+      "python": 2,
+      "r": 2
+    },
+    {
+      "name": "true_itt_sample",
+      "value": 2,
+      "rounding": 2,
+      "meaning": "TRUTH: effect of giving access for the analyzed employees",
+      "python": 2,
+      "r": 2
+    },
+    {
+      "name": "sim_n_reps",
+      "value": 500,
+      "rounding": 0,
+      "meaning": "Number of re-randomizations in the simulation check",
+      "python": 500,
+      "r": 500
+    },
+    {
+      "name": "sim_simple_mean_estimate",
+      "value": 2,
+      "rounding": 2,
+      "meaning": "Simulation: average simple-difference estimate",
+      "python": 2,
+      "r": 2
+    },
+    {
+      "name": "sim_simple_bias",
+      "value": 0,
+      "rounding": 2,
+      "meaning": "Simulation: bias of the simple difference",
+      "python": 0,
+      "r": 0
+    },
+    {
+      "name": "sim_simple_empirical_sd",
+      "value": 0.48,
+      "rounding": 2,
+      "meaning": "Simulation: spread (SD) of the simple-difference estimates",
+      "python": 0.48,
+      "r": 0.48
+    },
+    {
+      "name": "sim_simple_mean_se",
+      "value": 0.49,
+      "rounding": 2,
+      "meaning": "Simulation: average reported SE, simple difference",
+      "python": 0.49,
+      "r": 0.49
+    },
+    {
+      "name": "sim_simple_coverage_pct",
+      "value": 96,
+      "rounding": 1,
+      "meaning": "Simulation: percent of 95% CIs covering the truth, simple difference",
+      "python": 96,
+      "r": 96
+    },
+    {
+      "name": "sim_ancova_mean_estimate",
+      "value": 1.99,
+      "rounding": 2,
+      "meaning": "Simulation: average ANCOVA estimate",
+      "python": 1.99,
+      "r": 1.99
+    },
+    {
+      "name": "sim_ancova_bias",
+      "value": -0.01,
+      "rounding": 2,
+      "meaning": "Simulation: bias of ANCOVA",
+      "python": -0.01,
+      "r": -0.01
+    },
+    {
+      "name": "sim_ancova_empirical_sd",
+      "value": 0.35,
+      "rounding": 2,
+      "meaning": "Simulation: spread (SD) of the ANCOVA estimates",
+      "python": 0.35,
+      "r": 0.35
+    },
+    {
+      "name": "sim_ancova_mean_se",
+      "value": 0.36,
+      "rounding": 2,
+      "meaning": "Simulation: average reported SE, ANCOVA",
+      "python": 0.36,
+      "r": 0.36
+    },
+    {
+      "name": "sim_ancova_coverage_pct",
+      "value": 94.8,
+      "rounding": 1,
+      "meaning": "Simulation: percent of 95% CIs covering the truth, ANCOVA",
+      "python": 94.8,
+      "r": 94.8
+    },
+    {
+      "name": "sim_sd_ratio",
+      "value": 0.73,
+      "rounding": 2,
+      "meaning": "Simulation: ANCOVA spread relative to simple-difference spread",
+      "python": 0.73,
+      "r": 0.73
+    },
+    {
+      "name": "decision_rollout",
+      "value": 1,
+      "rounding": 0,
+      "meaning": "1 = pre-registered rule says roll out (ITT CI above 0 and quality non-inferior)",
+      "python": 1,
+      "r": 1
+    },
+    {
+      "name": "weekly_cases_gain_1200",
+      "value": 1990,
+      "rounding": -1,
+      "meaning": "ITT x 1,200 employees: extra cases/week if everyone is given access (to nearest 10)",
+      "python": 1990,
+      "r": 1990
+    }
+  ]
+}

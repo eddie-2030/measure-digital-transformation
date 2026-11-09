@@ -1,0 +1,9 @@
+parameter,low,most_likely,high,unit,distribution,source,notes
+license_fee_per_month,8000.0,8000.0,8000.0,USD/month,fixed,Vendor contract,Known exactly; contract price
+build_cost,20000.0,28000.0,45000.0,USD one-off,triangular,IT integration estimate,"Integration, SSO, knowledge-base prep; overruns skew high"
+monitoring_cost_per_month,600.0,1000.0,1800.0,USD/month,triangular,Platform team,"Prompt/knowledge upkeep, dashboards, incident triage"
+loaded_hourly_cost,50.0,54.0,58.0,USD/hour,triangular,Finance (HR/IT service desk),Salary + benefits + overhead for help-desk staff
+remediation_cost_per_error,40.0,80.0,250.0,USD/error,triangular,HR/IT ops leads,"Fixing a wrong answer: rework, follow-up, occasional compliance case"
+review_share,0.1,0.2,0.5,share of agent tickets,triangular,Oversight policy (draft),Share of agent tickets a human reviews; compliance may push it up
+review_minutes,3.0,4.0,7.0,minutes/review,triangular,QA team time study,Minutes per human review of an agent answer
+steady_state_routing_share,0.35,0.72,0.85,share of all tickets,triangular,Product owner + log trend,Average share routed to the agent in months 7-12; low = adoption stalls
