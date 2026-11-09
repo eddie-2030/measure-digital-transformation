@@ -17,5 +17,6 @@ All data in this repository are synthetic, generated to illustrate the methods. 
 | The Broken Bottom Rung: Entry-Level Work in the AI Era | [F01_the-broken-bottom-rung](F01_the-broken-bottom-rung) | Cohort comparison and career sequence analysis |
 | AI Tutors in Practice: What Interaction Data Reveals | [E03_ai-tutors-in-practice](E03_ai-tutors-in-practice) | Sequence models: Markov chains, then recurrent and transformer models |
 | The Full ROI Equation for AI Agents | [A02_the-full-roi-equation-for-ai](A02_the-full-roi-equation-for-ai) | Cost-benefit model with Monte Carlo uncertainty |
+| Running a Fair A/B Test Inside Your Company | [B01_running-a-fair-a-b-test](B01_running-a-fair-a-b-test) | Randomized trial design; regression-adjusted analysis |
 
 Each folder's README explains how to run it: generate the data with `python3 data/generate_data.py`, then run the Python and R analysis scripts.
