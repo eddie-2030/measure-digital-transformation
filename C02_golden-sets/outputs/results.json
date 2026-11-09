@@ -1,0 +1,388 @@
+{
+  "package": "C02_golden-sets",
+  "seed": 20261109,
+  "note": "pct values are proportions; quote them as percentages with 'digits' decimals. pp = percentage points. 'value' is the Python value; 'python' and 'r' are the rounded values from each language.",
+  "results": [
+    {
+      "name": "true_prevalence",
+      "value": 0.195,
+      "unit": "pct",
+      "digits": 1,
+      "display": "19.5%",
+      "meaning": "True share of the 1,000 AI replies that contain an error (hidden truth)",
+      "python": 19.5,
+      "r": 19.5
+    },
+    {
+      "name": "n_true_errors",
+      "value": 195,
+      "unit": "count",
+      "digits": 0,
+      "display": "195",
+      "meaning": "Number of truly erroneous replies",
+      "python": 195,
+      "r": 195
+    },
+    {
+      "name": "lenient_share_of_labels",
+      "value": 0.391121618071973,
+      "unit": "pct",
+      "digits": 0,
+      "display": "39%",
+      "meaning": "Share of all labels given by the 3 lenient rubber-stampers",
+      "python": 39,
+      "r": 39
+    },
+    {
+      "name": "pairwise_agreement",
+      "value": 0.776389866291344,
+      "unit": "pct",
+      "digits": 0,
+      "display": "78%",
+      "meaning": "Raw agreement between pairs of labelers on the same item (looks reassuring)",
+      "python": 78,
+      "r": 78
+    },
+    {
+      "name": "mv_prevalence",
+      "value": 0.143,
+      "unit": "pct",
+      "digits": 1,
+      "display": "14.3%",
+      "meaning": "Error rate according to the majority-vote answer key",
+      "python": 14.3,
+      "r": 14.3
+    },
+    {
+      "name": "mv_sensitivity",
+      "value": 0.615384615384615,
+      "unit": "pct",
+      "digits": 0,
+      "display": "62%",
+      "meaning": "Share of real errors the majority-vote key labels as errors",
+      "python": 62,
+      "r": 62
+    },
+    {
+      "name": "mv_wrong",
+      "value": 98,
+      "unit": "count",
+      "digits": 0,
+      "display": "98",
+      "meaning": "Golden-set labels that are wrong under majority vote (of 1,000)",
+      "python": 98,
+      "r": 98
+    },
+    {
+      "name": "mv_missed_errors",
+      "value": 75,
+      "unit": "count",
+      "digits": 0,
+      "display": "75",
+      "meaning": "Real errors the majority-vote key calls OK",
+      "python": 75,
+      "r": 75
+    },
+    {
+      "name": "mv_accuracy",
+      "value": 0.902,
+      "unit": "pct",
+      "digits": 1,
+      "display": "90.2%",
+      "meaning": "Majority-vote key accuracy against the truth",
+      "python": 90.2,
+      "r": 90.2
+    },
+    {
+      "name": "ds_prevalence",
+      "value": 0.179,
+      "unit": "pct",
+      "digits": 1,
+      "display": "17.9%",
+      "meaning": "Error rate according to the Dawid-Skene answer key",
+      "python": 17.9,
+      "r": 17.9
+    },
+    {
+      "name": "ds_sensitivity",
+      "value": 0.758974358974359,
+      "unit": "pct",
+      "digits": 0,
+      "display": "76%",
+      "meaning": "Share of real errors the Dawid-Skene key labels as errors",
+      "python": 76,
+      "r": 76
+    },
+    {
+      "name": "ds_expected_prevalence",
+      "value": 0.201460937030578,
+      "unit": "pct",
+      "digits": 1,
+      "display": "20.1%",
+      "meaning": "Dawid-Skene expected error rate (average posterior probability, no 0.5 cut-off)",
+      "python": 20.1,
+      "r": 20.1
+    },
+    {
+      "name": "ds_wrong",
+      "value": 78,
+      "unit": "count",
+      "digits": 0,
+      "display": "78",
+      "meaning": "Golden-set labels that are wrong under Dawid-Skene (of 1,000)",
+      "python": 78,
+      "r": 78
+    },
+    {
+      "name": "ds_missed_errors",
+      "value": 47,
+      "unit": "count",
+      "digits": 0,
+      "display": "47",
+      "meaning": "Real errors the Dawid-Skene key calls OK",
+      "python": 47,
+      "r": 47
+    },
+    {
+      "name": "ds_accuracy",
+      "value": 0.922,
+      "unit": "pct",
+      "digits": 1,
+      "display": "92.2%",
+      "meaning": "Dawid-Skene key accuracy against the truth",
+      "python": 92.2,
+      "r": 92.2
+    },
+    {
+      "name": "ds_iterations",
+      "value": 81,
+      "unit": "count",
+      "digits": 0,
+      "display": "81",
+      "meaning": "EM iterations to converge (tolerance 1e-9 on posteriors)",
+      "python": 81,
+      "r": 81
+    },
+    {
+      "name": "mae_sens_ds",
+      "value": 0.0261417389399025,
+      "unit": "pp",
+      "digits": 0,
+      "display": "3 pp",
+      "meaning": "Mean absolute gap between DS-estimated and true (realized) labeler sensitivity, 14 labelers with 30+ labels, percentage points",
+      "python": 3,
+      "r": 3
+    },
+    {
+      "name": "mae_sens_mv_referenced",
+      "value": 0.135275890780769,
+      "unit": "pp",
+      "digits": 0,
+      "display": "14 pp",
+      "meaning": "Same gap when each labeler is scored against the majority-vote key, percentage points",
+      "python": 14,
+      "r": 14
+    },
+    {
+      "name": "corr_sens_ds",
+      "value": 0.977383492239723,
+      "unit": "num",
+      "digits": 2,
+      "display": "0.98",
+      "meaning": "Correlation between DS-estimated and true (realized) labeler sensitivity",
+      "python": 0.98,
+      "r": 0.98
+    },
+    {
+      "name": "ds_targeted_wrong",
+      "value": 41,
+      "unit": "count",
+      "digits": 0,
+      "display": "41",
+      "meaning": "Wrong labels after DS + adjudicating the 100 most uncertain items",
+      "python": 41,
+      "r": 41
+    },
+    {
+      "name": "ds_random_wrong",
+      "value": 76,
+      "unit": "count",
+      "digits": 0,
+      "display": "76",
+      "meaning": "Wrong labels after DS + adjudicating 100 random items",
+      "python": 76,
+      "r": 76
+    },
+    {
+      "name": "random_expected_net_fixed",
+      "value": 5.8,
+      "unit": "count",
+      "digits": 0,
+      "display": "6",
+      "meaning": "Expected net labels fixed by a random 100-item expert budget (exact: 100 x (7.8% x 0.98 - 92.2% x 0.02)); display 'about 6'",
+      "python": 6,
+      "r": 6
+    },
+    {
+      "name": "random_net_fixed_lo95",
+      "value": 0,
+      "unit": "count",
+      "digits": 0,
+      "display": "0",
+      "meaning": "Lower end of the 95% range of net fixes from a random 100 (exact hypergeometric x binomial distribution)",
+      "python": 0,
+      "r": 0
+    },
+    {
+      "name": "random_net_fixed_hi95",
+      "value": 12,
+      "unit": "count",
+      "digits": 0,
+      "display": "12",
+      "meaning": "Upper end of the same 95% range",
+      "python": 12,
+      "r": 12
+    },
+    {
+      "name": "random_p_net_le_2",
+      "value": 0.124852498468482,
+      "unit": "pct",
+      "digits": 0,
+      "display": "12%",
+      "meaning": "Probability that a random 100 nets 2 or fewer fixes (how unlucky this draw was)",
+      "python": 12,
+      "r": 12
+    },
+    {
+      "name": "targeted_expected_net_fixed",
+      "value": 35,
+      "unit": "count",
+      "digits": 0,
+      "display": "35",
+      "meaning": "Expected net fixes for the targeted 100 with a fresh 98% expert (37 x 0.98 - 63 x 0.02); realized was 37",
+      "python": 35,
+      "r": 35
+    },
+    {
+      "name": "mv_margin_wrong",
+      "value": 52,
+      "unit": "count",
+      "digits": 0,
+      "display": "52",
+      "meaning": "Wrong labels after MV + adjudicating the 100 narrowest-margin items",
+      "python": 52,
+      "r": 52
+    },
+    {
+      "name": "mv_random_wrong",
+      "value": 95,
+      "unit": "count",
+      "digits": 0,
+      "display": "95",
+      "meaning": "Wrong labels after MV + adjudicating 100 random items",
+      "python": 95,
+      "r": 95
+    },
+    {
+      "name": "targeted_items_wrong_before",
+      "value": 37,
+      "unit": "count",
+      "digits": 0,
+      "display": "37",
+      "meaning": "Of the 100 targeted items, how many the DS key had wrong (the budget's hit rate)",
+      "python": 37,
+      "r": 37
+    },
+    {
+      "name": "random_items_wrong_before",
+      "value": 3,
+      "unit": "count",
+      "digits": 0,
+      "display": "3",
+      "meaning": "Of the 100 random items, how many the DS key had wrong",
+      "python": 3,
+      "r": 3
+    },
+    {
+      "name": "ds_targeted_sensitivity",
+      "value": 0.882051282051282,
+      "unit": "pct",
+      "digits": 0,
+      "display": "88%",
+      "meaning": "Share of real errors the final key (DS + targeted) labels as errors",
+      "python": 88,
+      "r": 88
+    },
+    {
+      "name": "ds_targeted_prevalence",
+      "value": 0.19,
+      "unit": "pct",
+      "digits": 1,
+      "display": "19.0%",
+      "meaning": "Error rate according to the final key (DS + targeted)",
+      "python": 19,
+      "r": 19
+    },
+    {
+      "name": "final_wrong_ambiguous_share",
+      "value": 0.634146341463415,
+      "unit": "pct",
+      "digits": 0,
+      "display": "63%",
+      "meaning": "Share of the final key's remaining wrong labels that sit on the 10% ambiguous items",
+      "python": 63,
+      "r": 63
+    },
+    {
+      "name": "mv_ties",
+      "value": 38,
+      "unit": "count",
+      "digits": 0,
+      "display": "38",
+      "meaning": "Items with a tied majority vote (2-2), assigned 'OK' by the tie rule",
+      "python": 38,
+      "r": 38
+    },
+    {
+      "name": "n_items_under_3_labels",
+      "value": 18,
+      "unit": "count",
+      "digits": 0,
+      "display": "18",
+      "meaning": "Items left with fewer than 3 valid labels after skips",
+      "python": 18,
+      "r": 18
+    },
+    {
+      "name": "judge_precision_mv",
+      "value": 0.484848484848485,
+      "unit": "pct",
+      "digits": 0,
+      "display": "48%",
+      "meaning": "AI judge's measured precision when scored against the majority-vote key",
+      "python": 48,
+      "r": 48
+    },
+    {
+      "name": "judge_precision_ds_targeted",
+      "value": 0.686868686868687,
+      "unit": "pct",
+      "digits": 0,
+      "display": "69%",
+      "meaning": "AI judge's measured precision against the final key (DS + targeted)",
+      "python": 69,
+      "r": 69
+    },
+    {
+      "name": "judge_precision_truth",
+      "value": 0.777777777777778,
+      "unit": "pct",
+      "digits": 0,
+      "display": "78%",
+      "meaning": "AI judge's precision against the hidden truth",
+      "python": 78,
+      "r": 78
+    }
+  ],
+  "r_check": "R reproduced all 38 headline numbers at the stated rounding; max abs difference on 165 full-precision values 2.3e-13"
+}

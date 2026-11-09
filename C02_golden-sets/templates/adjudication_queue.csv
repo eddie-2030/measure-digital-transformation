@@ -1,0 +1,13 @@
+item_id,posterior_error_prob,n_labels,labels_summary,reason,adjudicator,final_label,notes
+I0236,0.517,3,1 error / 2 OK: L03=OK R01=OK T04=E,DS posterior near 0.5 (most uncertain),,,
+I0218,0.526,3,2 error / 1 OK: L02=OK R01=E T05=E,DS posterior near 0.5 (most uncertain),,,
+I0885,0.473,4,2 error / 2 OK: L02=E S01=OK S02=OK T04=E,DS posterior near 0.5 (most uncertain),,,
+I0517,0.527,5,2 error / 3 OK: L02=OK L03=E T03=OK T04=OK T07=E,DS posterior near 0.5 (most uncertain),,,
+I0089,0.468,3,1 error / 2 OK: L02=OK L03=OK S03=E,DS posterior near 0.5 (most uncertain),,,
+I0817,0.463,5,2 error / 3 OK: L01=OK L02=E T03=OK T05=OK T07=E,DS posterior near 0.5 (most uncertain),,,
+I0416,0.54,3,1 error / 2 OK: L01=OK L02=OK S01=E,DS posterior near 0.5 (most uncertain),,,
+I0238,0.453,3,1 error / 2 OK: L01=OK L02=OK S03=E,DS posterior near 0.5 (most uncertain),,,
+I0019,0.451,5,2 error / 3 OK: L01=OK L03=E T02=OK T03=OK T07=E,DS posterior near 0.5 (most uncertain),,,
+I0648,0.551,5,2 error / 3 OK: L01=E L02=OK L03=OK T02=OK T03=E,DS posterior near 0.5 (most uncertain),,,
+I0920,0.551,2,1 error / 1 OK: R01=OK T03=E,DS posterior near 0.5 (most uncertain),,,
+I0700,0.431,4,1 error / 3 OK: L01=OK L02=OK R01=OK T01=E,DS posterior near 0.5 (most uncertain),,,
