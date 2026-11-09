@@ -13,5 +13,6 @@ All data in this repository are synthetic, generated to illustrate the methods. 
 | Don't Launch Everywhere at Once: Who Benefits from AI? | [B06_don-t-launch-everywhere-at-once](B06_don-t-launch-everywhere-at-once) | Heterogeneous effects: pre-specified interactions, DR-learner with random forest, Holm correction |
 | The AI-Native People Analytics Team | [J01_the-ai-native-people-analytics-team](J01_the-ai-native-people-analytics-team) | RAG evaluation: retrieval accuracy and groundedness |
 | Defensible by Design: Measuring AI Used in People Decisions | [G01_defensible-by-design](G01_defensible-by-design) | Adverse impact analysis (four-fifths rule, significance tests) |
+| Measuring AI Supervision Skills: A Psychometric Playbook | [D01_measuring-ai-supervision-skills](D01_measuring-ai-supervision-skills) | Reliability and validity; Cronbach's alpha |
 
 Each folder's README explains how to run it: generate the data with `python3 data/generate_data.py`, then run the Python and R analysis scripts.
