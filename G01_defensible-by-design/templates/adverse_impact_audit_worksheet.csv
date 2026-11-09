@@ -1,0 +1,37 @@
+stage,job_family,group_variable,group,applicants,selected
+ai_screen,Software Engineering,age_band,40+,422,114
+ai_screen,Software Engineering,age_band,Under 40,1379,586
+ai_screen,Software Engineering,sex,Woman,571,222
+ai_screen,Software Engineering,sex,Man,1261,493
+ai_screen,Customer Operations,age_band,40+,1200,669
+ai_screen,Customer Operations,age_band,Under 40,2117,1317
+ai_screen,Customer Operations,sex,Woman,1507,902
+ai_screen,Customer Operations,sex,Man,1882,1121
+ai_screen,Finance,age_band,40+,159,49
+ai_screen,Finance,age_band,Under 40,260,70
+ai_screen,Finance,sex,Woman,55,12
+ai_screen,Finance,sex,Man,361,109
+interview,Software Engineering,age_band,40+,110,55
+interview,Software Engineering,age_band,Under 40,553,246
+interview,Software Engineering,sex,Woman,211,98
+interview,Software Engineering,sex,Man,463,213
+interview,Customer Operations,age_band,40+,635,318
+interview,Customer Operations,age_band,Under 40,1264,617
+interview,Customer Operations,sex,Woman,857,389
+interview,Customer Operations,sex,Man,1076,553
+interview,Finance,age_band,40+,47,26
+interview,Finance,age_band,Under 40,66,26
+interview,Finance,sex,Woman,11,7
+interview,Finance,sex,Man,104,43
+offer,Software Engineering,age_band,40+,51,29
+offer,Software Engineering,age_band,Under 40,242,115
+offer,Software Engineering,sex,Woman,96,53
+offer,Software Engineering,sex,Man,207,96
+offer,Customer Operations,age_band,40+,304,168
+offer,Customer Operations,age_band,Under 40,589,347
+offer,Customer Operations,sex,Woman,372,217
+offer,Customer Operations,sex,Man,531,296
+offer,Finance,age_band,40+,25,10
+offer,Finance,age_band,Under 40,25,13
+offer,Finance,sex,Woman,7,3
+offer,Finance,sex,Man,41,17
