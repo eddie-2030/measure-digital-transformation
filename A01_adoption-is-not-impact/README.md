@@ -63,6 +63,7 @@ Run R before Python so `results.json` records both languages' numbers (`python` 
 | `outputs/fig_1_pilot_vs_comparison.png` | Wave 1 vs. comparison teams: before-after gain vs. DiD effect |
 | `outputs/fig_2_event_study_vs_truth.png` | Effect by weeks since launch, group-time estimator vs. truth vs. naive TWFE |
 | `templates/ladder_scorecard.csv` | Ladder Scorecard: 4 rungs x a primary (volume or speed) metric and its paired quality metric, data source, targets, evidence needed |
+| `templates/ladder_scorecard.pdf` | One-page printable Ladder Scorecard for leaders: one metric and its quality pair per rung, the evidence each rung needs, and three questions to ask your analysts |
 
 ## What to look for in the output
 
