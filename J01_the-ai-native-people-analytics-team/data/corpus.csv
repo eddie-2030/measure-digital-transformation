@@ -1,0 +1,301 @@
+doc_id,doc_type,region,business_unit,title
+D001,policy,LATAM,Operations,Overtime - LATAM - Operations
+D002,policy,EMEA,Sales,Learning budget - EMEA - Sales
+D003,policy,AMER,Operations,Learning budget - AMER - Operations
+D004,policy,LATAM,Operations,Remote work - LATAM - Operations
+D005,policy,LATAM,Operations,Relocation - LATAM - Operations
+D006,policy,APAC,Sales,Sick leave - APAC - Sales
+D007,policy,AMER,Corporate,Overtime - AMER - Corporate
+D008,policy,APAC,Sales,Overtime - APAC - Sales
+D009,policy,EMEA,Operations,Sick leave - EMEA - Operations
+D010,policy,AMER,Engineering,Sick leave - AMER - Engineering
+D011,policy,APAC,Engineering,Remote work - APAC - Engineering
+D012,policy,APAC,Sales,Relocation - APAC - Sales
+D013,policy,AMER,Corporate,Learning budget - AMER - Corporate
+D014,policy,EMEA,Corporate,Remote work - EMEA - Corporate
+D015,policy,EMEA,Engineering,Relocation - EMEA - Engineering
+D016,policy,APAC,Corporate,Sick leave - APAC - Corporate
+D017,policy,EMEA,Corporate,Promotion cycle - EMEA - Corporate
+D018,policy,EMEA,Corporate,Parental leave - EMEA - Corporate
+D019,policy,APAC,Corporate,Promotion cycle - APAC - Corporate
+D020,policy,LATAM,Operations,Remote work - LATAM - Operations
+D021,policy,EMEA,Operations,Sick leave - EMEA - Operations
+D022,policy,AMER,Sales,Relocation - AMER - Sales
+D023,policy,AMER,Operations,Promotion cycle - AMER - Operations
+D024,policy,AMER,Sales,Relocation - AMER - Sales
+D025,policy,EMEA,Engineering,Sick leave - EMEA - Engineering
+D026,policy,AMER,Corporate,Parental leave - AMER - Corporate
+D027,policy,EMEA,Operations,Learning budget - EMEA - Operations
+D028,policy,AMER,Engineering,Learning budget - AMER - Engineering
+D029,policy,AMER,Corporate,Learning budget - AMER - Corporate
+D030,policy,EMEA,Engineering,Parental leave - EMEA - Engineering
+D031,policy,AMER,Operations,Parental leave - AMER - Operations
+D032,policy,EMEA,Engineering,Promotion cycle - EMEA - Engineering
+D033,policy,EMEA,Operations,Parental leave - EMEA - Operations
+D034,policy,AMER,Operations,Overtime - AMER - Operations
+D035,policy,EMEA,Sales,Learning budget - EMEA - Sales
+D036,policy,LATAM,Sales,Relocation - LATAM - Sales
+D037,policy,APAC,Sales,Relocation - APAC - Sales
+D038,policy,EMEA,Sales,Parental leave - EMEA - Sales
+D039,policy,AMER,Engineering,Learning budget - AMER - Engineering
+D040,policy,AMER,Corporate,Remote work - AMER - Corporate
+D041,policy,LATAM,Engineering,Overtime - LATAM - Engineering
+D042,policy,AMER,Corporate,Sick leave - AMER - Corporate
+D043,policy,EMEA,Engineering,Promotion cycle - EMEA - Engineering
+D044,policy,EMEA,Operations,Sick leave - EMEA - Operations
+D045,policy,AMER,Sales,Overtime - AMER - Sales
+D046,policy,APAC,Operations,Relocation - APAC - Operations
+D047,policy,APAC,Sales,Relocation - APAC - Sales
+D048,policy,APAC,Sales,Code of conduct - APAC - Sales
+D049,policy,APAC,Engineering,Parental leave - APAC - Engineering
+D050,policy,APAC,Sales,Sick leave - APAC - Sales
+D051,policy,AMER,Operations,Learning budget - AMER - Operations
+D052,policy,AMER,Operations,Learning budget - AMER - Operations
+D053,policy,AMER,Corporate,Remote work - AMER - Corporate
+D054,policy,APAC,Engineering,Relocation - APAC - Engineering
+D055,policy,EMEA,Engineering,Overtime - EMEA - Engineering
+D056,policy,EMEA,Engineering,Parental leave - EMEA - Engineering
+D057,policy,AMER,Sales,Parental leave - AMER - Sales
+D058,policy,LATAM,Operations,Remote work - LATAM - Operations
+D059,policy,EMEA,Sales,Overtime - EMEA - Sales
+D060,policy,AMER,Corporate,Parental leave - AMER - Corporate
+D061,policy,EMEA,Engineering,Parental leave - EMEA - Engineering
+D062,policy,APAC,Sales,Remote work - APAC - Sales
+D063,policy,AMER,Operations,Promotion cycle - AMER - Operations
+D064,policy,LATAM,Corporate,Sick leave - LATAM - Corporate
+D065,policy,AMER,Engineering,Code of conduct - AMER - Engineering
+D066,policy,LATAM,Engineering,Overtime - LATAM - Engineering
+D067,policy,APAC,Sales,Promotion cycle - APAC - Sales
+D068,policy,APAC,Engineering,Sick leave - APAC - Engineering
+D069,policy,AMER,Sales,Code of conduct - AMER - Sales
+D070,policy,AMER,Operations,Remote work - AMER - Operations
+D071,policy,APAC,Sales,Code of conduct - APAC - Sales
+D072,policy,EMEA,Engineering,Overtime - EMEA - Engineering
+D073,policy,EMEA,Sales,Promotion cycle - EMEA - Sales
+D074,policy,EMEA,Corporate,Promotion cycle - EMEA - Corporate
+D075,policy,EMEA,Corporate,Parental leave - EMEA - Corporate
+D076,policy,AMER,Corporate,Promotion cycle - AMER - Corporate
+D077,policy,AMER,Corporate,Promotion cycle - AMER - Corporate
+D078,policy,AMER,Corporate,Code of conduct - AMER - Corporate
+D079,policy,LATAM,Sales,Sick leave - LATAM - Sales
+D080,policy,AMER,Sales,Remote work - AMER - Sales
+D081,policy,EMEA,Sales,Code of conduct - EMEA - Sales
+D082,policy,EMEA,Sales,Parental leave - EMEA - Sales
+D083,policy,AMER,Operations,Remote work - AMER - Operations
+D084,policy,APAC,Sales,Parental leave - APAC - Sales
+D085,policy,APAC,Engineering,Relocation - APAC - Engineering
+D086,policy,APAC,Corporate,Parental leave - APAC - Corporate
+D087,policy,APAC,Sales,Code of conduct - APAC - Sales
+D088,policy,AMER,Corporate,Promotion cycle - AMER - Corporate
+D089,policy,EMEA,Corporate,Remote work - EMEA - Corporate
+D090,policy,AMER,Operations,Learning budget - AMER - Operations
+D091,policy,APAC,Engineering,Relocation - APAC - Engineering
+D092,policy,EMEA,Operations,Overtime - EMEA - Operations
+D093,policy,AMER,Operations,Promotion cycle - AMER - Operations
+D094,policy,AMER,Corporate,Remote work - AMER - Corporate
+D095,policy,LATAM,Operations,Parental leave - LATAM - Operations
+D096,policy,AMER,Corporate,Learning budget - AMER - Corporate
+D097,policy,APAC,Sales,Overtime - APAC - Sales
+D098,policy,AMER,Sales,Sick leave - AMER - Sales
+D099,policy,AMER,Corporate,Overtime - AMER - Corporate
+D100,policy,LATAM,Sales,Promotion cycle - LATAM - Sales
+D101,policy,EMEA,Sales,Overtime - EMEA - Sales
+D102,policy,APAC,Sales,Relocation - APAC - Sales
+D103,policy,LATAM,Operations,Promotion cycle - LATAM - Operations
+D104,policy,APAC,Operations,Code of conduct - APAC - Operations
+D105,policy,EMEA,Corporate,Learning budget - EMEA - Corporate
+D106,policy,EMEA,Operations,Remote work - EMEA - Operations
+D107,policy,APAC,Sales,Learning budget - APAC - Sales
+D108,policy,APAC,Sales,Overtime - APAC - Sales
+D109,policy,EMEA,Corporate,Relocation - EMEA - Corporate
+D110,policy,APAC,Operations,Code of conduct - APAC - Operations
+D111,policy,APAC,Sales,Remote work - APAC - Sales
+D112,policy,APAC,Sales,Sick leave - APAC - Sales
+D113,policy,AMER,Corporate,Promotion cycle - AMER - Corporate
+D114,policy,APAC,Sales,Sick leave - APAC - Sales
+D115,policy,AMER,Corporate,Code of conduct - AMER - Corporate
+D116,policy,AMER,Corporate,Parental leave - AMER - Corporate
+D117,policy,AMER,Sales,Overtime - AMER - Sales
+D118,policy,APAC,Engineering,Relocation - APAC - Engineering
+D119,policy,APAC,Corporate,Learning budget - APAC - Corporate
+D120,policy,AMER,Sales,Sick leave - AMER - Sales
+D121,policy,APAC,Corporate,Relocation - APAC - Corporate
+D122,policy,LATAM,Sales,Learning budget - LATAM - Sales
+D123,policy,EMEA,Operations,Promotion cycle - EMEA - Operations
+D124,policy,EMEA,Corporate,Promotion cycle - EMEA - Corporate
+D125,policy,APAC,Engineering,Learning budget - APAC - Engineering
+D126,policy,AMER,Engineering,Overtime - AMER - Engineering
+D127,policy,APAC,Sales,Sick leave - APAC - Sales
+D128,policy,AMER,Engineering,Sick leave - AMER - Engineering
+D129,policy,AMER,Operations,Parental leave - AMER - Operations
+D130,policy,AMER,Engineering,Remote work - AMER - Engineering
+D131,policy,AMER,Sales,Code of conduct - AMER - Sales
+D132,policy,AMER,Engineering,Learning budget - AMER - Engineering
+D133,policy,AMER,Engineering,Sick leave - AMER - Engineering
+D134,policy,AMER,Sales,Parental leave - AMER - Sales
+D135,policy,AMER,Engineering,Remote work - AMER - Engineering
+D136,policy,AMER,Sales,Promotion cycle - AMER - Sales
+D137,policy,EMEA,Engineering,Learning budget - EMEA - Engineering
+D138,policy,EMEA,Engineering,Overtime - EMEA - Engineering
+D139,policy,APAC,Corporate,Sick leave - APAC - Corporate
+D140,policy,AMER,Corporate,Relocation - AMER - Corporate
+D141,policy,EMEA,Engineering,Promotion cycle - EMEA - Engineering
+D142,policy,LATAM,Corporate,Overtime - LATAM - Corporate
+D143,policy,EMEA,Sales,Overtime - EMEA - Sales
+D144,policy,AMER,Sales,Remote work - AMER - Sales
+D145,policy,EMEA,Sales,Relocation - EMEA - Sales
+D146,policy,APAC,Corporate,Learning budget - APAC - Corporate
+D147,policy,EMEA,Engineering,Parental leave - EMEA - Engineering
+D148,policy,EMEA,Engineering,Sick leave - EMEA - Engineering
+D149,policy,AMER,Operations,Code of conduct - AMER - Operations
+D150,policy,EMEA,Sales,Parental leave - EMEA - Sales
+D151,metric_definition,GLOBAL,Sales,Time to fill - GLOBAL - Sales
+D152,metric_definition,GLOBAL,Engineering,Internal mobility rate - GLOBAL - Engineering
+D153,metric_definition,GLOBAL,Engineering,Internal mobility rate - GLOBAL - Engineering
+D154,metric_definition,GLOBAL,Sales,Regretted attrition - GLOBAL - Sales
+D155,metric_definition,GLOBAL,Sales,Internal mobility rate - GLOBAL - Sales
+D156,metric_definition,GLOBAL,Operations,Span of control - GLOBAL - Operations
+D157,metric_definition,GLOBAL,Corporate,Regretted attrition - GLOBAL - Corporate
+D158,metric_definition,GLOBAL,Operations,Internal mobility rate - GLOBAL - Operations
+D159,metric_definition,GLOBAL,Engineering,Span of control - GLOBAL - Engineering
+D160,metric_definition,GLOBAL,Engineering,Time to fill - GLOBAL - Engineering
+D161,metric_definition,GLOBAL,Sales,Internal mobility rate - GLOBAL - Sales
+D162,metric_definition,GLOBAL,Engineering,Span of control - GLOBAL - Engineering
+D163,metric_definition,GLOBAL,Sales,Regretted attrition - GLOBAL - Sales
+D164,metric_definition,GLOBAL,Sales,Attrition rate - GLOBAL - Sales
+D165,metric_definition,GLOBAL,Operations,Span of control - GLOBAL - Operations
+D166,metric_definition,GLOBAL,Engineering,Absence rate - GLOBAL - Engineering
+D167,metric_definition,GLOBAL,Sales,Span of control - GLOBAL - Sales
+D168,metric_definition,GLOBAL,Sales,Regretted attrition - GLOBAL - Sales
+D169,metric_definition,GLOBAL,Corporate,Internal mobility rate - GLOBAL - Corporate
+D170,metric_definition,GLOBAL,Sales,Absence rate - GLOBAL - Sales
+D171,metric_definition,GLOBAL,Operations,Internal mobility rate - GLOBAL - Operations
+D172,metric_definition,GLOBAL,Corporate,Absence rate - GLOBAL - Corporate
+D173,metric_definition,GLOBAL,Operations,Time to fill - GLOBAL - Operations
+D174,metric_definition,GLOBAL,Engineering,Regretted attrition - GLOBAL - Engineering
+D175,metric_definition,GLOBAL,Operations,Regretted attrition - GLOBAL - Operations
+D176,metric_definition,GLOBAL,Corporate,Regretted attrition - GLOBAL - Corporate
+D177,metric_definition,GLOBAL,Engineering,Absence rate - GLOBAL - Engineering
+D178,metric_definition,GLOBAL,Sales,Span of control - GLOBAL - Sales
+D179,metric_definition,GLOBAL,Corporate,Time to fill - GLOBAL - Corporate
+D180,metric_definition,GLOBAL,Operations,Span of control - GLOBAL - Operations
+D181,metric_definition,GLOBAL,Corporate,Attrition rate - GLOBAL - Corporate
+D182,metric_definition,GLOBAL,Operations,Internal mobility rate - GLOBAL - Operations
+D183,metric_definition,GLOBAL,Operations,Time to fill - GLOBAL - Operations
+D184,metric_definition,GLOBAL,Operations,Span of control - GLOBAL - Operations
+D185,metric_definition,GLOBAL,Operations,Regretted attrition - GLOBAL - Operations
+D186,metric_definition,GLOBAL,Operations,Span of control - GLOBAL - Operations
+D187,metric_definition,GLOBAL,Engineering,Internal mobility rate - GLOBAL - Engineering
+D188,metric_definition,GLOBAL,Engineering,Time to fill - GLOBAL - Engineering
+D189,metric_definition,GLOBAL,Engineering,Span of control - GLOBAL - Engineering
+D190,metric_definition,GLOBAL,Sales,Attrition rate - GLOBAL - Sales
+D191,metric_definition,GLOBAL,Sales,Time to fill - GLOBAL - Sales
+D192,metric_definition,GLOBAL,Engineering,Span of control - GLOBAL - Engineering
+D193,metric_definition,GLOBAL,Engineering,Absence rate - GLOBAL - Engineering
+D194,metric_definition,GLOBAL,Sales,Regretted attrition - GLOBAL - Sales
+D195,metric_definition,GLOBAL,Sales,Attrition rate - GLOBAL - Sales
+D196,metric_definition,GLOBAL,Operations,Internal mobility rate - GLOBAL - Operations
+D197,metric_definition,GLOBAL,Operations,Span of control - GLOBAL - Operations
+D198,metric_definition,GLOBAL,Operations,Span of control - GLOBAL - Operations
+D199,metric_definition,GLOBAL,Engineering,Attrition rate - GLOBAL - Engineering
+D200,metric_definition,GLOBAL,Engineering,Span of control - GLOBAL - Engineering
+D201,metric_definition,GLOBAL,Engineering,Absence rate - GLOBAL - Engineering
+D202,metric_definition,GLOBAL,Corporate,Time to fill - GLOBAL - Corporate
+D203,metric_definition,GLOBAL,Corporate,Attrition rate - GLOBAL - Corporate
+D204,metric_definition,GLOBAL,Sales,Internal mobility rate - GLOBAL - Sales
+D205,metric_definition,GLOBAL,Corporate,Time to fill - GLOBAL - Corporate
+D206,metric_definition,GLOBAL,Sales,Span of control - GLOBAL - Sales
+D207,metric_definition,GLOBAL,Sales,Time to fill - GLOBAL - Sales
+D208,metric_definition,GLOBAL,Corporate,Regretted attrition - GLOBAL - Corporate
+D209,metric_definition,GLOBAL,Engineering,Attrition rate - GLOBAL - Engineering
+D210,metric_definition,GLOBAL,Engineering,Internal mobility rate - GLOBAL - Engineering
+D211,dashboard_extract,EMEA,Operations,Engagement - EMEA - Operations
+D212,dashboard_extract,AMER,Engineering,Engagement - AMER - Engineering
+D213,dashboard_extract,LATAM,Operations,Absence - LATAM - Operations
+D214,dashboard_extract,AMER,Engineering,Engagement - AMER - Engineering
+D215,dashboard_extract,LATAM,Sales,Headcount - LATAM - Sales
+D216,dashboard_extract,LATAM,Engineering,Attrition - LATAM - Engineering
+D217,dashboard_extract,AMER,Engineering,Hiring funnel - AMER - Engineering
+D218,dashboard_extract,EMEA,Corporate,Hiring funnel - EMEA - Corporate
+D219,dashboard_extract,LATAM,Engineering,Engagement - LATAM - Engineering
+D220,dashboard_extract,APAC,Operations,Engagement - APAC - Operations
+D221,dashboard_extract,EMEA,Operations,Attrition - EMEA - Operations
+D222,dashboard_extract,EMEA,Corporate,Mobility - EMEA - Corporate
+D223,dashboard_extract,LATAM,Corporate,Headcount - LATAM - Corporate
+D224,dashboard_extract,AMER,Engineering,Engagement - AMER - Engineering
+D225,dashboard_extract,EMEA,Corporate,Absence - EMEA - Corporate
+D226,dashboard_extract,EMEA,Engineering,Attrition - EMEA - Engineering
+D227,dashboard_extract,AMER,Engineering,Attrition - AMER - Engineering
+D228,dashboard_extract,EMEA,Corporate,Headcount - EMEA - Corporate
+D229,dashboard_extract,EMEA,Sales,Headcount - EMEA - Sales
+D230,dashboard_extract,AMER,Sales,Hiring funnel - AMER - Sales
+D231,dashboard_extract,EMEA,Corporate,Headcount - EMEA - Corporate
+D232,dashboard_extract,AMER,Corporate,Mobility - AMER - Corporate
+D233,dashboard_extract,LATAM,Corporate,Attrition - LATAM - Corporate
+D234,dashboard_extract,EMEA,Sales,Mobility - EMEA - Sales
+D235,dashboard_extract,LATAM,Engineering,Headcount - LATAM - Engineering
+D236,dashboard_extract,LATAM,Engineering,Mobility - LATAM - Engineering
+D237,dashboard_extract,APAC,Engineering,Mobility - APAC - Engineering
+D238,dashboard_extract,LATAM,Corporate,Headcount - LATAM - Corporate
+D239,dashboard_extract,APAC,Engineering,Mobility - APAC - Engineering
+D240,dashboard_extract,AMER,Operations,Engagement - AMER - Operations
+D241,dashboard_extract,AMER,Engineering,Mobility - AMER - Engineering
+D242,dashboard_extract,AMER,Operations,Hiring funnel - AMER - Operations
+D243,dashboard_extract,AMER,Operations,Mobility - AMER - Operations
+D244,dashboard_extract,EMEA,Operations,Absence - EMEA - Operations
+D245,dashboard_extract,EMEA,Engineering,Absence - EMEA - Engineering
+D246,dashboard_extract,APAC,Corporate,Headcount - APAC - Corporate
+D247,dashboard_extract,EMEA,Engineering,Engagement - EMEA - Engineering
+D248,dashboard_extract,EMEA,Engineering,Hiring funnel - EMEA - Engineering
+D249,dashboard_extract,EMEA,Operations,Headcount - EMEA - Operations
+D250,dashboard_extract,LATAM,Engineering,Mobility - LATAM - Engineering
+D251,dashboard_extract,EMEA,Sales,Absence - EMEA - Sales
+D252,dashboard_extract,AMER,Sales,Hiring funnel - AMER - Sales
+D253,dashboard_extract,APAC,Corporate,Absence - APAC - Corporate
+D254,dashboard_extract,APAC,Engineering,Hiring funnel - APAC - Engineering
+D255,dashboard_extract,EMEA,Sales,Absence - EMEA - Sales
+D256,dashboard_extract,EMEA,Operations,Hiring funnel - EMEA - Operations
+D257,dashboard_extract,EMEA,Engineering,Engagement - EMEA - Engineering
+D258,dashboard_extract,APAC,Corporate,Attrition - APAC - Corporate
+D259,dashboard_extract,APAC,Engineering,Attrition - APAC - Engineering
+D260,dashboard_extract,AMER,Operations,Headcount - AMER - Operations
+D261,dashboard_extract,AMER,Sales,Attrition - AMER - Sales
+D262,dashboard_extract,EMEA,Operations,Engagement - EMEA - Operations
+D263,dashboard_extract,EMEA,Engineering,Engagement - EMEA - Engineering
+D264,dashboard_extract,LATAM,Engineering,Attrition - LATAM - Engineering
+D265,dashboard_extract,APAC,Sales,Mobility - APAC - Sales
+D266,dashboard_extract,APAC,Corporate,Headcount - APAC - Corporate
+D267,dashboard_extract,AMER,Sales,Headcount - AMER - Sales
+D268,dashboard_extract,AMER,Corporate,Attrition - AMER - Corporate
+D269,dashboard_extract,APAC,Operations,Engagement - APAC - Operations
+D270,dashboard_extract,APAC,Engineering,Headcount - APAC - Engineering
+D271,dashboard_extract,APAC,Operations,Attrition - APAC - Operations
+D272,dashboard_extract,EMEA,Corporate,Mobility - EMEA - Corporate
+D273,dashboard_extract,EMEA,Operations,Hiring funnel - EMEA - Operations
+D274,dashboard_extract,LATAM,Operations,Headcount - LATAM - Operations
+D275,dashboard_extract,APAC,Engineering,Engagement - APAC - Engineering
+D276,dashboard_extract,EMEA,Engineering,Headcount - EMEA - Engineering
+D277,dashboard_extract,APAC,Engineering,Engagement - APAC - Engineering
+D278,dashboard_extract,LATAM,Corporate,Engagement - LATAM - Corporate
+D279,dashboard_extract,AMER,Corporate,Hiring funnel - AMER - Corporate
+D280,dashboard_extract,AMER,Engineering,Attrition - AMER - Engineering
+D281,dashboard_extract,EMEA,Operations,Attrition - EMEA - Operations
+D282,dashboard_extract,APAC,Operations,Attrition - APAC - Operations
+D283,dashboard_extract,AMER,Corporate,Headcount - AMER - Corporate
+D284,dashboard_extract,AMER,Engineering,Engagement - AMER - Engineering
+D285,dashboard_extract,EMEA,Operations,Attrition - EMEA - Operations
+D286,dashboard_extract,AMER,Engineering,Hiring funnel - AMER - Engineering
+D287,dashboard_extract,AMER,Operations,Hiring funnel - AMER - Operations
+D288,dashboard_extract,EMEA,Corporate,Attrition - EMEA - Corporate
+D289,dashboard_extract,AMER,Engineering,Hiring funnel - AMER - Engineering
+D290,dashboard_extract,AMER,Sales,Mobility - AMER - Sales
+D291,dashboard_extract,APAC,Corporate,Engagement - APAC - Corporate
+D292,dashboard_extract,AMER,Operations,Absence - AMER - Operations
+D293,dashboard_extract,APAC,Corporate,Headcount - APAC - Corporate
+D294,dashboard_extract,AMER,Sales,Attrition - AMER - Sales
+D295,dashboard_extract,APAC,Sales,Attrition - APAC - Sales
+D296,dashboard_extract,AMER,Operations,Headcount - AMER - Operations
+D297,dashboard_extract,EMEA,Operations,Engagement - EMEA - Operations
+D298,dashboard_extract,EMEA,Corporate,Mobility - EMEA - Corporate
+D299,dashboard_extract,AMER,Corporate,Hiring funnel - AMER - Corporate
+D300,dashboard_extract,EMEA,Sales,Mobility - EMEA - Sales

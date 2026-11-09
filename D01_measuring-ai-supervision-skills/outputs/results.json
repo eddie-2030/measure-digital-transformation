@@ -1,0 +1,764 @@
+{
+  "edition": "D01 Measuring AI Supervision Skills",
+  "seed": 20261104,
+  "note": "value = the number to quote; 'python' and 'r' are each language's value at the stated rounding",
+  "headline": [
+    "alpha_naive16",
+    "alpha_scenario12",
+    "alpha_scenario10",
+    "omega_scenario10",
+    "alpha_conf4",
+    "omega_conf4",
+    "item_rest_r_S06",
+    "item_rest_r_S11",
+    "item_rest_r_min_kept",
+    "item_rest_r_conf_min_in16",
+    "mean_r_within_conf4",
+    "mean_r_between_blocks",
+    "validity_naive16",
+    "validity_naive16_ci_low",
+    "validity_naive16_ci_high",
+    "validity_scenario12",
+    "validity_scenario10",
+    "validity_scenario10_ci_low",
+    "validity_scenario10_ci_high",
+    "validity_conf4",
+    "validity_conf4_ci_low",
+    "validity_conf4_ci_high",
+    "validity_gain_scenario10_vs_naive16",
+    "validity_gain_ci_low",
+    "validity_gain_ci_high",
+    "sem_scenario10",
+    "pct_within_band",
+    "pct_misclassified",
+    "sb_items_needed_090",
+    "sb_items_to_add_090"
+  ],
+  "numbers": {
+    "n_records": {
+      "value": 612,
+      "rounding": 0,
+      "meaning": "Rows in the raw file",
+      "python": 612,
+      "python_unrounded": 612.0,
+      "r": 612,
+      "agree": true
+    },
+    "n_unit_labels_fixed": {
+      "value": 9,
+      "rounding": 0,
+      "meaning": "Business-unit labels corrected (case or spaces)",
+      "python": 9,
+      "python_unrounded": 9.0,
+      "r": 9,
+      "agree": true
+    },
+    "n_speeders_flagged": {
+      "value": 12,
+      "rounding": 0,
+      "meaning": "Records excluded as speeders (<8 min or straight-lined)",
+      "python": 12,
+      "python_unrounded": 12.0,
+      "r": 12,
+      "agree": true
+    },
+    "n_analyzed": {
+      "value": 600,
+      "rounding": 0,
+      "meaning": "Test takers kept for analysis",
+      "python": 600,
+      "python_unrounded": 600.0,
+      "r": 600,
+      "agree": true
+    },
+    "pct_item_responses_missing": {
+      "value": 3.1,
+      "rounding": 1,
+      "meaning": "Percent of item responses left blank (handled pairwise / by prorating)",
+      "python": 3.1,
+      "python_unrounded": 3.0729166666666665,
+      "r": 3.1,
+      "agree": true
+    },
+    "n_with_audit": {
+      "value": 575,
+      "rounding": 0,
+      "meaning": "Test takers with the audit (criterion) score",
+      "python": 575,
+      "python_unrounded": 575.0,
+      "r": 575,
+      "agree": true
+    },
+    "alpha_naive16": {
+      "value": 0.82,
+      "rounding": 2,
+      "meaning": "Cronbach's alpha of all 16 items (the naive 'the test is reliable' number)",
+      "python": 0.82,
+      "python_unrounded": 0.8193867878514217,
+      "r": 0.82,
+      "agree": true
+    },
+    "alpha_scenario12": {
+      "value": 0.74,
+      "rounding": 2,
+      "meaning": "Alpha of the 12 scenario items alone, before fixing anything",
+      "python": 0.74,
+      "python_unrounded": 0.7427043268967654,
+      "r": 0.74,
+      "agree": true
+    },
+    "n_items_flagged": {
+      "value": 2,
+      "rounding": 0,
+      "meaning": "Scenario items with item-rest r < 0.20",
+      "python": 2,
+      "python_unrounded": 2.0,
+      "r": 2,
+      "agree": true
+    },
+    "items_flagged": {
+      "value": "S06;S11",
+      "rounding": null,
+      "meaning": "Which items were flagged",
+      "python": "S06;S11",
+      "python_unrounded": "S06;S11",
+      "r": "S06;S11",
+      "agree": true
+    },
+    "item_rest_r_S06": {
+      "value": 0.03,
+      "rounding": 2,
+      "meaning": "Item-rest correlation of S06 within the 12 scenario items",
+      "python": 0.03,
+      "python_unrounded": 0.034786283539931136,
+      "r": 0.03,
+      "agree": true
+    },
+    "alpha_if_deleted_S06": {
+      "value": 0.77,
+      "rounding": 2,
+      "meaning": "Alpha of the 12-item scenario scale if S06 is deleted",
+      "python": 0.77,
+      "python_unrounded": 0.7660596164164708,
+      "r": 0.77,
+      "agree": true
+    },
+    "item_rest_r_S11": {
+      "value": -0.2,
+      "rounding": 2,
+      "meaning": "Item-rest correlation of S11 within the 12 scenario items",
+      "python": -0.2,
+      "python_unrounded": -0.19661921662650386,
+      "r": -0.2,
+      "agree": true
+    },
+    "alpha_if_deleted_S11": {
+      "value": 0.79,
+      "rounding": 2,
+      "meaning": "Alpha of the 12-item scenario scale if S11 is deleted",
+      "python": 0.79,
+      "python_unrounded": 0.7899007306061295,
+      "r": 0.79,
+      "agree": true
+    },
+    "item_rest_r_min_kept": {
+      "value": 0.35,
+      "rounding": 2,
+      "meaning": "Lowest item-rest r among the 10 kept scenario items",
+      "python": 0.35,
+      "python_unrounded": 0.3537137381065523,
+      "r": 0.35,
+      "agree": true
+    },
+    "item_rest_r_max_kept": {
+      "value": 0.55,
+      "rounding": 2,
+      "meaning": "Highest item-rest r among the 10 kept scenario items",
+      "python": 0.55,
+      "python_unrounded": 0.552972904168755,
+      "r": 0.55,
+      "agree": true
+    },
+    "item_rest_r_conf_min_in16": {
+      "value": 0.72,
+      "rounding": 2,
+      "meaning": "Lowest item-rest r of a confidence item inside the 16-item total (they pass the usual screen)",
+      "python": 0.72,
+      "python_unrounded": 0.7153493017512697,
+      "r": 0.72,
+      "agree": true
+    },
+    "mean_r_within_scenario10": {
+      "value": 0.31,
+      "rounding": 2,
+      "meaning": "Average correlation between two kept scenario items",
+      "python": 0.31,
+      "python_unrounded": 0.3080457690711758,
+      "r": 0.31,
+      "agree": true
+    },
+    "mean_r_within_conf4": {
+      "value": 0.83,
+      "rounding": 2,
+      "meaning": "Average correlation between two confidence items (near-duplicates)",
+      "python": 0.83,
+      "python_unrounded": 0.8324420451884559,
+      "r": 0.83,
+      "agree": true
+    },
+    "mean_r_between_blocks": {
+      "value": 0.17,
+      "rounding": 2,
+      "meaning": "Average correlation between a scenario item and a confidence item",
+      "python": 0.17,
+      "python_unrounded": 0.17494949462059636,
+      "r": 0.17,
+      "agree": true
+    },
+    "omega_scenario12": {
+      "value": 0.76,
+      "rounding": 2,
+      "meaning": "McDonald's omega (one-factor ML) of the scenario12 scale",
+      "python": 0.76,
+      "python_unrounded": 0.7648444305240453,
+      "r": 0.76,
+      "agree": true
+    },
+    "alpha_scenario10": {
+      "value": 0.82,
+      "rounding": 2,
+      "meaning": "Cronbach's alpha of the scenario10 scale",
+      "python": 0.82,
+      "python_unrounded": 0.8164284445636467,
+      "r": 0.82,
+      "agree": true
+    },
+    "omega_scenario10": {
+      "value": 0.82,
+      "rounding": 2,
+      "meaning": "McDonald's omega (one-factor ML) of the scenario10 scale",
+      "python": 0.82,
+      "python_unrounded": 0.8179978736101383,
+      "r": 0.82,
+      "agree": true
+    },
+    "alpha_conf4": {
+      "value": 0.95,
+      "rounding": 2,
+      "meaning": "Cronbach's alpha of the conf4 scale",
+      "python": 0.95,
+      "python_unrounded": 0.9520084668009521,
+      "r": 0.95,
+      "agree": true
+    },
+    "omega_conf4": {
+      "value": 0.95,
+      "rounding": 2,
+      "meaning": "McDonald's omega (one-factor ML) of the conf4 scale",
+      "python": 0.95,
+      "python_unrounded": 0.9521703251263941,
+      "r": 0.95,
+      "agree": true
+    },
+    "loading_min_scenario10": {
+      "value": 0.4,
+      "rounding": 2,
+      "meaning": "Smallest standardized loading among the kept scenario items",
+      "python": 0.4,
+      "python_unrounded": 0.40420651086174986,
+      "r": 0.4,
+      "agree": true
+    },
+    "loading_max_scenario10": {
+      "value": 0.63,
+      "rounding": 2,
+      "meaning": "Largest standardized loading among the kept scenario items",
+      "python": 0.63,
+      "python_unrounded": 0.6338095605687205,
+      "r": 0.63,
+      "agree": true
+    },
+    "n_validity_sample": {
+      "value": 569,
+      "rounding": 0,
+      "meaning": "People with all scale scores and the audit (validity sample)",
+      "python": 569,
+      "python_unrounded": 569.0,
+      "r": 569,
+      "agree": true
+    },
+    "validity_naive16": {
+      "value": 0.44,
+      "rounding": 2,
+      "meaning": "Correlation of the naive16 score with % of seeded errors caught",
+      "python": 0.44,
+      "python_unrounded": 0.4395461689837853,
+      "r": 0.44,
+      "agree": true
+    },
+    "validity_naive16_ci_low": {
+      "value": 0.37,
+      "rounding": 2,
+      "meaning": "95% CI lower bound (Fisher z)",
+      "python": 0.37,
+      "python_unrounded": 0.37074212678791324,
+      "r": 0.37,
+      "agree": true
+    },
+    "validity_naive16_ci_high": {
+      "value": 0.5,
+      "rounding": 2,
+      "meaning": "95% CI upper bound (Fisher z)",
+      "python": 0.5,
+      "python_unrounded": 0.5035517616479309,
+      "r": 0.5,
+      "agree": true
+    },
+    "validity_scenario12": {
+      "value": 0.55,
+      "rounding": 2,
+      "meaning": "Correlation of the scenario12 score with % of seeded errors caught",
+      "python": 0.55,
+      "python_unrounded": 0.5545976570582469,
+      "r": 0.55,
+      "agree": true
+    },
+    "validity_scenario12_ci_low": {
+      "value": 0.49,
+      "rounding": 2,
+      "meaning": "95% CI lower bound (Fisher z)",
+      "python": 0.49,
+      "python_unrounded": 0.4949626611005597,
+      "r": 0.49,
+      "agree": true
+    },
+    "validity_scenario12_ci_high": {
+      "value": 0.61,
+      "rounding": 2,
+      "meaning": "95% CI upper bound (Fisher z)",
+      "python": 0.61,
+      "python_unrounded": 0.6090325047495655,
+      "r": 0.61,
+      "agree": true
+    },
+    "validity_scenario10": {
+      "value": 0.58,
+      "rounding": 2,
+      "meaning": "Correlation of the scenario10 score with % of seeded errors caught",
+      "python": 0.58,
+      "python_unrounded": 0.5752570774044765,
+      "r": 0.58,
+      "agree": true
+    },
+    "validity_scenario10_ci_low": {
+      "value": 0.52,
+      "rounding": 2,
+      "meaning": "95% CI lower bound (Fisher z)",
+      "python": 0.52,
+      "python_unrounded": 0.5175297161068629,
+      "r": 0.52,
+      "agree": true
+    },
+    "validity_scenario10_ci_high": {
+      "value": 0.63,
+      "rounding": 2,
+      "meaning": "95% CI upper bound (Fisher z)",
+      "python": 0.63,
+      "python_unrounded": 0.6277715867137273,
+      "r": 0.63,
+      "agree": true
+    },
+    "validity_conf4": {
+      "value": 0.22,
+      "rounding": 2,
+      "meaning": "Correlation of the conf4 score with % of seeded errors caught",
+      "python": 0.22,
+      "python_unrounded": 0.22087749421101138,
+      "r": 0.22,
+      "agree": true
+    },
+    "validity_conf4_ci_low": {
+      "value": 0.14,
+      "rounding": 2,
+      "meaning": "95% CI lower bound (Fisher z)",
+      "python": 0.14,
+      "python_unrounded": 0.14124282832480772,
+      "r": 0.14,
+      "agree": true
+    },
+    "validity_conf4_ci_high": {
+      "value": 0.3,
+      "rounding": 2,
+      "meaning": "95% CI upper bound (Fisher z)",
+      "python": 0.3,
+      "python_unrounded": 0.29767204341711834,
+      "r": 0.3,
+      "agree": true
+    },
+    "validity_gain_scenario10_vs_naive16": {
+      "value": 0.14,
+      "rounding": 2,
+      "meaning": "Validity of the cleaned scale minus validity of the naive total",
+      "python": 0.14,
+      "python_unrounded": 0.13571090842069122,
+      "r": 0.14,
+      "agree": true
+    },
+    "validity_gain_ci_low": {
+      "value": 0.08,
+      "rounding": 2,
+      "meaning": "95% CI lower bound of the gain (Zou 2007, overlapping correlations)",
+      "python": 0.08,
+      "python_unrounded": 0.08414383918716378,
+      "r": 0.08,
+      "agree": true
+    },
+    "validity_gain_ci_high": {
+      "value": 0.19,
+      "rounding": 2,
+      "meaning": "95% CI upper bound of the gain",
+      "python": 0.19,
+      "python_unrounded": 0.18888227425071985,
+      "r": 0.19,
+      "agree": true
+    },
+    "criterion_reliability": {
+      "value": 0.92,
+      "rounding": 2,
+      "meaning": "Split-half reliability of the audit score (Spearman-Brown corrected)",
+      "python": 0.92,
+      "python_unrounded": 0.9166244111802858,
+      "r": 0.92,
+      "agree": true
+    },
+    "validity_scenario10_corrected": {
+      "value": 0.66,
+      "rounding": 2,
+      "meaning": "Validity corrected for unreliability in both the test and the audit (side note, not for decisions)",
+      "python": 0.66,
+      "python_unrounded": 0.6635281230985285,
+      "r": 0.66,
+      "agree": true
+    },
+    "mean_scenario10": {
+      "value": 20.9,
+      "rounding": 1,
+      "meaning": "Mean cleaned scenario score (0-40)",
+      "python": 20.9,
+      "python_unrounded": 20.941146413972504,
+      "r": 20.9,
+      "agree": true
+    },
+    "sd_scenario10": {
+      "value": 6.8,
+      "rounding": 1,
+      "meaning": "SD of the cleaned scenario score (0-40)",
+      "python": 6.8,
+      "python_unrounded": 6.817655576699095,
+      "r": 6.8,
+      "agree": true
+    },
+    "sem_scenario10": {
+      "value": 2.9,
+      "rounding": 1,
+      "meaning": "Standard error of measurement = SD x sqrt(1 - omega), in score points",
+      "python": 2.9,
+      "python_unrounded": 2.8924862940469276,
+      "r": 2.9,
+      "agree": true
+    },
+    "cutoff_scenario10": {
+      "value": 26,
+      "rounding": 0,
+      "meaning": "Proposed certification cutoff (pass if score >= 26 of 40)",
+      "python": 26,
+      "python_unrounded": 26.0,
+      "r": 26,
+      "agree": true
+    },
+    "band_low": {
+      "value": 20.3,
+      "rounding": 1,
+      "meaning": "Lower edge of the cutoff +/- 1.96 SEM band",
+      "python": 20.3,
+      "python_unrounded": 20.330726863668023,
+      "r": 20.3,
+      "agree": true
+    },
+    "band_high": {
+      "value": 31.7,
+      "rounding": 1,
+      "meaning": "Upper edge of the cutoff +/- 1.96 SEM band",
+      "python": 31.7,
+      "python_unrounded": 31.669273136331977,
+      "r": 31.7,
+      "agree": true
+    },
+    "pct_pass": {
+      "value": 27,
+      "rounding": 0,
+      "meaning": "Percent who pass at the cutoff",
+      "python": 27,
+      "python_unrounded": 27.09030100334448,
+      "r": 27,
+      "agree": true
+    },
+    "pct_within_band": {
+      "value": 46,
+      "rounding": 0,
+      "meaning": "Percent whose score is within 1.96 SEM of the cutoff (cannot be confidently classified)",
+      "python": 46,
+      "python_unrounded": 46.48829431438127,
+      "r": 46,
+      "agree": true
+    },
+    "pct_within_1sem": {
+      "value": 26,
+      "rounding": 0,
+      "meaning": "Percent within 1 SEM of the cutoff",
+      "python": 26,
+      "python_unrounded": 26.08695652173913,
+      "r": 26,
+      "agree": true
+    },
+    "sb_items_needed_090": {
+      "value": 20,
+      "rounding": 0,
+      "meaning": "Scenario items needed for reliability 0.90 (Spearman-Brown, items as good as the kept ones)",
+      "python": 20,
+      "python_unrounded": 20.0,
+      "r": 20,
+      "agree": true
+    },
+    "sb_items_to_add_090": {
+      "value": 10,
+      "rounding": 0,
+      "meaning": "Good scenario items to add to reach 0.90",
+      "python": 10,
+      "python_unrounded": 10.0,
+      "r": 10,
+      "agree": true
+    },
+    "sb_reliability_if_two_good_items": {
+      "value": 0.85,
+      "rounding": 2,
+      "meaning": "Projected reliability if S06 and S11 were rewritten as good items (12 items)",
+      "python": 0.85,
+      "python_unrounded": 0.845360824742268,
+      "r": 0.85,
+      "agree": true
+    },
+    "alpha_scenario10_trust_safety_review": {
+      "value": 0.84,
+      "rounding": 2,
+      "meaning": "Alpha of the cleaned scale in Trust & Safety Review",
+      "python": 0.84,
+      "python_unrounded": 0.8384471021653073,
+      "r": 0.84,
+      "agree": true
+    },
+    "sd_scenario10_trust_safety_review": {
+      "value": 7.2,
+      "rounding": 1,
+      "meaning": "Score SD in Trust & Safety Review",
+      "python": 7.2,
+      "python_unrounded": 7.155705138131879,
+      "r": 7.2,
+      "agree": true
+    },
+    "alpha_scenario10_operations": {
+      "value": 0.8,
+      "rounding": 2,
+      "meaning": "Alpha of the cleaned scale in Operations",
+      "python": 0.8,
+      "python_unrounded": 0.7969776942533044,
+      "r": 0.8,
+      "agree": true
+    },
+    "sd_scenario10_operations": {
+      "value": 6.7,
+      "rounding": 1,
+      "meaning": "Score SD in Operations",
+      "python": 6.7,
+      "python_unrounded": 6.698821793363053,
+      "r": 6.7,
+      "agree": true
+    },
+    "alpha_scenario10_claims": {
+      "value": 0.84,
+      "rounding": 2,
+      "meaning": "Alpha of the cleaned scale in Claims",
+      "python": 0.84,
+      "python_unrounded": 0.8420152775526727,
+      "r": 0.84,
+      "agree": true
+    },
+    "sd_scenario10_claims": {
+      "value": 7.3,
+      "rounding": 1,
+      "meaning": "Score SD in Claims",
+      "python": 7.3,
+      "python_unrounded": 7.295268755790639,
+      "r": 7.3,
+      "agree": true
+    },
+    "alpha_scenario10_customer_support": {
+      "value": 0.73,
+      "rounding": 2,
+      "meaning": "Alpha of the cleaned scale in Customer Support",
+      "python": 0.73,
+      "python_unrounded": 0.7323041188562883,
+      "r": 0.73,
+      "agree": true
+    },
+    "sd_scenario10_customer_support": {
+      "value": 5.6,
+      "rounding": 1,
+      "meaning": "Score SD in Customer Support",
+      "python": 5.6,
+      "python_unrounded": 5.5619886269901,
+      "r": 5.6,
+      "agree": true
+    },
+    "flagged_items_match_truth": {
+      "value": 1,
+      "rounding": 0,
+      "meaning": "1 = flagged items are exactly the flawed ones",
+      "python": 1,
+      "python_unrounded": 1.0,
+      "r": 1,
+      "agree": true
+    },
+    "speeders_match_truth": {
+      "value": 1,
+      "rounding": 0,
+      "meaning": "1 = the screening rule found exactly the speeders",
+      "python": 1,
+      "python_unrounded": 1.0,
+      "r": 1,
+      "agree": true
+    },
+    "true_reliability_naive16": {
+      "value": 0.91,
+      "rounding": 2,
+      "meaning": "TRUE population reliability of naive16",
+      "python": 0.91,
+      "python_unrounded": 0.9113,
+      "r": 0.91,
+      "agree": true
+    },
+    "true_validity_naive16": {
+      "value": 0.44,
+      "rounding": 2,
+      "meaning": "TRUE population validity of naive16",
+      "python": 0.44,
+      "python_unrounded": 0.4355,
+      "r": 0.44,
+      "agree": true
+    },
+    "true_reliability_scenario12": {
+      "value": 0.75,
+      "rounding": 2,
+      "meaning": "TRUE population reliability of scenario12",
+      "python": 0.75,
+      "python_unrounded": 0.7525,
+      "r": 0.75,
+      "agree": true
+    },
+    "true_validity_scenario12": {
+      "value": 0.55,
+      "rounding": 2,
+      "meaning": "TRUE population validity of scenario12",
+      "python": 0.55,
+      "python_unrounded": 0.551,
+      "r": 0.55,
+      "agree": true
+    },
+    "true_reliability_scenario10": {
+      "value": 0.81,
+      "rounding": 2,
+      "meaning": "TRUE population reliability of scenario10",
+      "python": 0.81,
+      "python_unrounded": 0.8056,
+      "r": 0.81,
+      "agree": true
+    },
+    "true_validity_scenario10": {
+      "value": 0.57,
+      "rounding": 2,
+      "meaning": "TRUE population validity of scenario10",
+      "python": 0.57,
+      "python_unrounded": 0.5704,
+      "r": 0.57,
+      "agree": true
+    },
+    "true_reliability_conf4": {
+      "value": 0.95,
+      "rounding": 2,
+      "meaning": "TRUE population reliability of conf4",
+      "python": 0.95,
+      "python_unrounded": 0.9536,
+      "r": 0.95,
+      "agree": true
+    },
+    "true_validity_conf4": {
+      "value": 0.21,
+      "rounding": 2,
+      "meaning": "TRUE population validity of conf4",
+      "python": 0.21,
+      "python_unrounded": 0.2129,
+      "r": 0.21,
+      "agree": true
+    },
+    "true_corr_truescore10_truecriterion": {
+      "value": 0.66,
+      "rounding": 2,
+      "meaning": "TRUE correlation the attenuation-corrected validity estimates",
+      "python": 0.66,
+      "python_unrounded": 0.663,
+      "r": 0.66,
+      "agree": true
+    },
+    "pct_misclassified": {
+      "value": 13,
+      "rounding": 0,
+      "meaning": "Percent whose pass/fail differs from their TRUE-score pass/fail",
+      "python": 13,
+      "python_unrounded": 12.709030100334449,
+      "r": 13,
+      "agree": true
+    },
+    "pct_misclassified_in_band": {
+      "value": 26,
+      "rounding": 0,
+      "meaning": "Misclassification rate inside the SEM band",
+      "python": 26,
+      "python_unrounded": 26.258992805755394,
+      "r": 26,
+      "agree": true
+    },
+    "pct_misclassified_outside_band": {
+      "value": 1,
+      "rounding": 0,
+      "meaning": "Misclassification rate outside the SEM band",
+      "python": 1,
+      "python_unrounded": 0.9375,
+      "r": 1,
+      "agree": true
+    },
+    "pct_of_misclassified_inside_band": {
+      "value": 96,
+      "rounding": 0,
+      "meaning": "Share of all misclassified people who sit inside the band",
+      "python": 96,
+      "python_unrounded": 96.05263157894737,
+      "r": 96,
+      "agree": true
+    }
+  },
+  "agreement": {
+    "numbers_compared": 80,
+    "mismatches": 0,
+    "max_abs_difference_unrounded": 5.551012118298893e-07
+  }
+}
