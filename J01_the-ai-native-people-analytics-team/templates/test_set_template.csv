@@ -1,0 +1,5 @@
+question_id,question_type,gold_doc_ids,gold_answer,retrieved_doc_ids,answer,judge_label,human_label
+Q0001,policy_lookup,POL-017,"Eligible employees in EMEA receive 16 weeks of paid parental leave (policy POL-017, section 2).",POL-017;POL-044;POL-102;MET-003;DSH-021,"EMEA employees get 16 weeks of paid parental leave [POL-017].",1,1
+Q0002,computed_metric,MET-003;DSH-021,"Voluntary attrition, APAC Sales, Q3 = leavers / average headcount per MET-003 definition = <value from governed table>",<top-5 retrieved IDs separated by ;>,,,
+Q0003,multi_hop,POL-044;MET-008;DSH-030,"<answer requiring all three sources>",,,,
+Q0004,policy_lookup,,"I don't know - no source in the corpus (correct behavior is to abstain)",,,,
