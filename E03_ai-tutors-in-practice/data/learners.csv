@@ -1,0 +1,1201 @@
+learner_id,team_id,business_unit,pre_score,post_score,split
+L0001,TM15,Finance & Risk,57,80,test
+L0002,TM06,Finance & Risk,58,78,test
+L0003,TM49,Sales & Marketing,70,68,train
+L0004,TM14,Finance & Risk,64,73,train
+L0005,TM45,Sales & Marketing,52,64,train
+L0006,TM29,Operations,55,60,train
+L0007,TM10,Finance & Risk,58,63,train
+L0008,TM18,Finance & Risk,70,90,train
+L0009,TM31,Operations,46,66,train
+L0010,TM30,Operations,60,86,train
+L0011,TM12,Finance & Risk,61,65,train
+L0012,TM16,Finance & Risk,74,88,train
+L0013,TM26,Operations,36,53,test
+L0014,TM26,Operations,49,76,train
+L0015,TM44,Sales & Marketing,51,74,train
+L0016,TM18,Finance & Risk,40,58,train
+L0017,TM38,Operations,79,100,test
+L0018,TM49,Sales & Marketing,44,27,train
+L0019,TM15,Finance & Risk,54,75,train
+L0020,TM12,Finance & Risk,45,42,test
+L0021,TM13,Finance & Risk,72,78,test
+L0022,TM30,Operations,40,73,test
+L0023,TM50,Sales & Marketing,59,82,train
+L0024,TM45,Sales & Marketing,33,29,train
+L0025,TM26,Operations,72,67,train
+L0026,TM48,Sales & Marketing,47,59,train
+L0027,TM30,Operations,68,77,train
+L0028,TM25,Operations,34,49,train
+L0029,TM06,Finance & Risk,59,72,train
+L0030,TM42,Sales & Marketing,59,83,train
+L0031,TM44,Sales & Marketing,69,82,train
+L0032,TM35,Operations,45,57,train
+L0033,TM52,Sales & Marketing,63,76,test
+L0034,TM29,Operations,59,69,train
+L0035,TM40,Operations,61,67,train
+L0036,TM48,Sales & Marketing,73,100,test
+L0037,TM44,Sales & Marketing,51,66,train
+L0038,TM45,Sales & Marketing,39,60,test
+L0039,TM22,Operations,44,54,test
+L0040,TM44,Sales & Marketing,83,84,test
+L0041,TM33,Operations,28,36,train
+L0042,TM31,Operations,66,78,train
+L0043,TM27,Operations,33,50,train
+L0044,TM04,Finance & Risk,41,54,train
+L0045,TM11,Finance & Risk,46,49,test
+L0046,TM23,Operations,46,56,train
+L0047,TM31,Operations,59,73,train
+L0048,TM03,Finance & Risk,43,48,train
+L0049,TM25,Operations,67,75,test
+L0050,TM40,Operations,45,49,train
+L0051,TM20,Finance & Risk,62,53,train
+L0052,TM23,Operations,64,77,train
+L0053,TM49,Sales & Marketing,49,55,train
+L0054,TM31,Operations,38,61,train
+L0055,TM18,Finance & Risk,50,74,train
+L0056,TM08,Finance & Risk,58,67,train
+L0057,TM40,Operations,41,41,train
+L0058,TM50,Sales & Marketing,77,92,train
+L0059,TM06,Finance & Risk,37,41,test
+L0060,TM52,Sales & Marketing,71,93,train
+L0061,TM18,Finance & Risk,50,64,test
+L0062,TM51,Sales & Marketing,30,34,test
+L0063,TM10,Finance & Risk,61,74,train
+L0064,TM34,Operations,49,47,train
+L0065,TM37,Operations,52,66,train
+L0066,TM23,Operations,54,65,train
+L0067,TM59,Sales & Marketing,50,57,train
+L0068,TM48,Sales & Marketing,71,92,train
+L0069,TM13,Finance & Risk,49,55,train
+L0070,TM04,Finance & Risk,54,56,train
+L0071,TM30,Operations,70,78,train
+L0072,TM59,Sales & Marketing,76,74,train
+L0073,TM40,Operations,62,64,train
+L0074,TM04,Finance & Risk,52,65,test
+L0075,TM01,Finance & Risk,72,79,test
+L0076,TM23,Operations,33,37,train
+L0077,TM57,Sales & Marketing,65,70,test
+L0078,TM12,Finance & Risk,90,94,train
+L0079,TM52,Sales & Marketing,33,64,train
+L0080,TM33,Operations,65,78,train
+L0081,TM32,Operations,74,83,train
+L0082,TM57,Sales & Marketing,30,37,test
+L0083,TM27,Operations,52,76,train
+L0084,TM06,Finance & Risk,51,58,train
+L0085,TM50,Sales & Marketing,60,68,train
+L0086,TM33,Operations,75,89,test
+L0087,TM56,Sales & Marketing,72,74,test
+L0088,TM40,Operations,41,45,train
+L0089,TM02,Finance & Risk,66,82,train
+L0090,TM09,Finance & Risk,6,24,test
+L0091,TM60,Sales & Marketing,71,63,test
+L0092,TM05,Finance & Risk,49,66,test
+L0093,TM36,Operations,52,57,train
+L0094,TM53,Sales & Marketing,56,78,train
+L0095,TM48,Sales & Marketing,53,77,train
+L0096,TM21,Operations,62,68,train
+L0097,TM58,Sales & Marketing,42,47,test
+L0098,TM06,Finance & Risk,55,52,train
+L0099,TM31,Operations,41,63,test
+L0100,TM30,Operations,33,44,train
+L0101,TM57,Sales & Marketing,50,58,train
+L0102,TM04,Finance & Risk,51,57,test
+L0103,TM08,Finance & Risk,38,52,train
+L0104,TM56,Sales & Marketing,56,71,train
+L0105,TM39,Operations,54,71,test
+L0106,TM60,Sales & Marketing,59,65,train
+L0107,TM26,Operations,57,75,test
+L0108,TM45,Sales & Marketing,79,78,test
+L0109,TM03,Finance & Risk,61,66,train
+L0110,TM34,Operations,57,65,train
+L0111,TM07,Finance & Risk,58,77,train
+L0112,TM47,Sales & Marketing,37,45,test
+L0113,TM07,Finance & Risk,54,49,test
+L0114,TM01,Finance & Risk,24,37,train
+L0115,TM35,Operations,52,54,train
+L0116,TM31,Operations,38,58,train
+L0117,TM56,Sales & Marketing,59,60,test
+L0118,TM15,Finance & Risk,42,61,test
+L0119,TM48,Sales & Marketing,64,88,train
+L0120,TM03,Finance & Risk,62,78,test
+L0121,TM09,Finance & Risk,62,61,train
+L0122,TM09,Finance & Risk,49,57,train
+L0123,TM28,Operations,56,70,test
+L0124,TM26,Operations,71,95,train
+L0125,TM34,Operations,48,57,test
+L0126,TM30,Operations,64,80,test
+L0127,TM28,Operations,51,62,test
+L0128,TM44,Sales & Marketing,47,65,train
+L0129,TM09,Finance & Risk,33,51,train
+L0130,TM21,Operations,46,63,train
+L0131,TM28,Operations,48,67,train
+L0132,TM29,Operations,41,46,train
+L0133,TM59,Sales & Marketing,45,59,test
+L0134,TM53,Sales & Marketing,50,64,test
+L0135,TM44,Sales & Marketing,29,35,train
+L0136,TM26,Operations,83,96,train
+L0137,TM03,Finance & Risk,63,72,train
+L0138,TM38,Operations,67,83,train
+L0139,TM48,Sales & Marketing,66,77,test
+L0140,TM02,Finance & Risk,61,69,train
+L0141,TM35,Operations,58,68,test
+L0142,TM12,Finance & Risk,75,74,train
+L0143,TM52,Sales & Marketing,36,42,test
+L0144,TM22,Operations,57,79,train
+L0145,TM35,Operations,40,60,train
+L0146,TM12,Finance & Risk,46,58,train
+L0147,TM16,Finance & Risk,50,64,train
+L0148,TM41,Sales & Marketing,70,81,test
+L0149,TM13,Finance & Risk,73,88,train
+L0150,TM07,Finance & Risk,56,68,test
+L0151,TM24,Operations,62,75,train
+L0152,TM17,Finance & Risk,49,61,test
+L0153,TM50,Sales & Marketing,64,82,train
+L0154,TM08,Finance & Risk,60,,test
+L0155,TM38,Operations,49,57,test
+L0156,TM52,Sales & Marketing,51,71,train
+L0157,TM58,Sales & Marketing,47,46,test
+L0158,TM52,Sales & Marketing,78,93,train
+L0159,TM52,Sales & Marketing,61,68,train
+L0160,TM08,Finance & Risk,51,52,train
+L0161,TM32,Operations,48,73,train
+L0162,TM26,Operations,53,55,train
+L0163,TM12,Finance & Risk,40,46,train
+L0164,TM53,Sales & Marketing,42,60,train
+L0165,TM07,Finance & Risk,46,49,test
+L0166,TM30,Operations,39,39,test
+L0167,TM55,Sales & Marketing,56,57,train
+L0168,TM14,Finance & Risk,45,52,train
+L0169,TM53,Sales & Marketing,33,54,test
+L0170,TM57,Sales & Marketing,49,72,train
+L0171,TM02,Finance & Risk,57,70,test
+L0172,TM48,Sales & Marketing,79,97,train
+L0173,TM30,Operations,60,85,train
+L0174,TM09,Finance & Risk,32,54,test
+L0175,TM41,Sales & Marketing,64,76,train
+L0176,TM32,Operations,42,51,train
+L0177,TM18,Finance & Risk,38,48,train
+L0178,TM29,Operations,50,65,train
+L0179,TM05,Finance & Risk,64,63,test
+L0180,TM22,Operations,67,78,train
+L0181,TM39,Operations,65,87,train
+L0182,TM26,Operations,50,58,train
+L0183,TM29,Operations,29,41,train
+L0184,TM55,Sales & Marketing,66,81,test
+L0185,TM20,Finance & Risk,53,63,test
+L0186,TM27,Operations,50,59,test
+L0187,TM02,Finance & Risk,58,61,test
+L0188,TM48,Sales & Marketing,61,89,train
+L0189,TM21,Operations,60,74,test
+L0190,TM06,Finance & Risk,57,66,train
+L0191,TM20,Finance & Risk,84,100,train
+L0192,TM29,Operations,53,48,train
+L0193,TM12,Finance & Risk,55,62,train
+L0194,TM26,Operations,49,62,train
+L0195,TM14,Finance & Risk,53,57,test
+L0196,TM30,Operations,73,83,train
+L0197,TM23,Operations,52,51,test
+L0198,TM04,Finance & Risk,34,45,test
+L0199,TM52,Sales & Marketing,61,76,test
+L0200,TM10,Finance & Risk,45,54,train
+L0201,TM54,Sales & Marketing,62,80,train
+L0202,TM18,Finance & Risk,68,86,train
+L0203,TM12,Finance & Risk,59,59,train
+L0204,TM57,Sales & Marketing,56,89,test
+L0205,TM29,Operations,64,83,train
+L0206,TM43,Sales & Marketing,71,92,test
+L0207,TM41,Sales & Marketing,68,85,train
+L0208,TM48,Sales & Marketing,39,53,train
+L0209,TM07,Finance & Risk,48,71,test
+L0210,TM55,Sales & Marketing,62,77,test
+L0211,TM30,Operations,71,90,train
+L0212,TM45,Sales & Marketing,54,58,train
+L0213,TM02,Finance & Risk,56,49,train
+L0214,TM29,Operations,79,86,test
+L0215,TM14,Finance & Risk,48,57,train
+L0216,TM27,Operations,71,89,test
+L0217,TM55,Sales & Marketing,83,91,train
+L0218,TM60,Sales & Marketing,63,61,train
+L0219,TM01,Finance & Risk,43,52,train
+L0220,TM01,Finance & Risk,50,62,test
+L0221,TM55,Sales & Marketing,65,73,train
+L0222,TM14,Finance & Risk,49,64,test
+L0223,TM38,Operations,78,100,train
+L0224,TM12,Finance & Risk,50,60,train
+L0225,TM26,Operations,38,54,test
+L0226,TM42,Sales & Marketing,54,72,train
+L0227,TM29,Operations,41,47,train
+L0228,TM15,Finance & Risk,50,51,train
+L0229,TM20,Finance & Risk,46,51,train
+L0230,TM38,Operations,72,100,test
+L0231,TM42,Sales & Marketing,69,85,train
+L0232,TM23,Operations,52,62,train
+L0233,TM45,Sales & Marketing,66,66,train
+L0234,TM36,Operations,48,54,train
+L0235,TM27,Operations,41,48,test
+L0236,TM36,Operations,61,79,train
+L0237,TM58,Sales & Marketing,42,47,train
+L0238,TM09,Finance & Risk,52,66,test
+L0239,TM38,Operations,66,73,train
+L0240,TM44,Sales & Marketing,42,43,train
+L0241,TM15,Finance & Risk,43,55,train
+L0242,TM52,Sales & Marketing,55,61,test
+L0243,TM19,Finance & Risk,54,75,test
+L0244,TM45,Sales & Marketing,57,63,train
+L0245,TM23,Operations,59,58,train
+L0246,TM11,Finance & Risk,82,94,test
+L0247,TM57,Sales & Marketing,69,88,train
+L0248,TM08,Finance & Risk,48,66,train
+L0249,TM27,Operations,55,55,test
+L0250,TM07,Finance & Risk,54,60,train
+L0251,TM32,Operations,55,,train
+L0252,TM07,Finance & Risk,51,50,train
+L0253,TM31,Operations,31,38,train
+L0254,TM10,Finance & Risk,62,74,test
+L0255,TM41,Sales & Marketing,86,92,train
+L0256,TM30,Operations,64,,train
+L0257,TM29,Operations,45,35,train
+L0258,TM28,Operations,47,72,train
+L0259,TM28,Operations,60,62,train
+L0260,TM41,Sales & Marketing,27,43,train
+L0261,TM22,Operations,39,73,train
+L0262,TM43,Sales & Marketing,71,81,test
+L0263,TM06,Finance & Risk,41,47,train
+L0264,TM07,Finance & Risk,47,54,test
+L0265,TM60,Sales & Marketing,77,75,train
+L0266,TM23,Operations,47,55,train
+L0267,TM42,Sales & Marketing,50,68,train
+L0268,TM36,Operations,40,46,train
+L0269,TM47,Sales & Marketing,75,91,test
+L0270,TM16,Finance & Risk,57,61,train
+L0271,TM40,Operations,72,80,train
+L0272,TM36,Operations,27,33,train
+L0273,TM51,Sales & Marketing,55,64,test
+L0274,TM54,Sales & Marketing,69,85,test
+L0275,TM30,Operations,68,78,train
+L0276,TM42,Sales & Marketing,41,45,test
+L0277,TM48,Sales & Marketing,65,90,test
+L0278,TM39,Operations,39,48,test
+L0279,TM50,Sales & Marketing,54,66,test
+L0280,TM35,Operations,77,97,test
+L0281,TM09,Finance & Risk,48,65,train
+L0282,TM16,Finance & Risk,45,59,train
+L0283,TM37,Operations,46,57,test
+L0284,TM52,Sales & Marketing,60,64,test
+L0285,TM38,Operations,58,59,test
+L0286,TM48,Sales & Marketing,64,72,train
+L0287,TM41,Sales & Marketing,53,62,test
+L0288,TM07,Finance & Risk,40,48,train
+L0289,TM18,Finance & Risk,62,84,test
+L0290,TM23,Operations,57,60,train
+L0291,TM15,Finance & Risk,39,42,train
+L0292,TM36,Operations,79,96,train
+L0293,TM48,Sales & Marketing,63,64,test
+L0294,TM15,Finance & Risk,49,49,train
+L0295,TM50,Sales & Marketing,52,73,train
+L0296,TM15,Finance & Risk,54,67,train
+L0297,TM52,Sales & Marketing,76,95,test
+L0298,TM54,Sales & Marketing,66,80,train
+L0299,TM09,Finance & Risk,61,70,train
+L0300,TM02,Finance & Risk,44,63,train
+L0301,TM46,Sales & Marketing,67,74,train
+L0302,TM25,Operations,61,62,train
+L0303,TM19,Finance & Risk,52,73,test
+L0304,TM56,Sales & Marketing,80,88,test
+L0305,TM42,Sales & Marketing,64,76,train
+L0306,TM23,Operations,28,36,train
+L0307,TM27,Operations,59,73,train
+L0308,TM50,Sales & Marketing,68,86,train
+L0309,TM12,Finance & Risk,63,74,train
+L0310,TM14,Finance & Risk,57,64,train
+L0311,TM33,Operations,39,52,train
+L0312,TM50,Sales & Marketing,42,59,test
+L0313,TM35,Operations,51,56,train
+L0314,TM50,Sales & Marketing,68,81,train
+L0315,TM18,Finance & Risk,71,81,train
+L0316,TM05,Finance & Risk,41,46,train
+L0317,TM30,Operations,60,75,test
+L0318,TM22,Operations,66,78,train
+L0319,TM01,Finance & Risk,33,52,train
+L0320,TM15,Finance & Risk,47,59,train
+L0321,TM38,Operations,68,77,test
+L0322,TM01,Finance & Risk,38,48,train
+L0323,TM37,Operations,44,37,train
+L0324,TM48,Sales & Marketing,50,68,train
+L0325,TM03,Finance & Risk,42,64,test
+L0326,TM02,Finance & Risk,37,35,test
+L0327,TM55,Sales & Marketing,53,,train
+L0328,TM32,Operations,49,58,test
+L0329,TM43,Sales & Marketing,36,55,train
+L0330,TM09,Finance & Risk,83,89,test
+L0331,TM04,Finance & Risk,43,50,test
+L0332,TM12,Finance & Risk,41,48,test
+L0333,TM42,Sales & Marketing,56,86,train
+L0334,TM23,Operations,69,75,train
+L0335,TM58,Sales & Marketing,46,60,train
+L0336,TM33,Operations,50,67,train
+L0337,TM17,Finance & Risk,61,63,test
+L0338,TM51,Sales & Marketing,47,71,train
+L0339,TM42,Sales & Marketing,55,77,train
+L0340,TM02,Finance & Risk,63,82,train
+L0341,TM14,Finance & Risk,55,70,train
+L0342,TM41,Sales & Marketing,39,57,test
+L0343,TM29,Operations,26,34,train
+L0344,TM09,Finance & Risk,61,77,train
+L0345,TM09,Finance & Risk,58,54,train
+L0346,TM17,Finance & Risk,40,67,test
+L0347,TM43,Sales & Marketing,54,74,train
+L0348,TM24,Operations,64,60,test
+L0349,TM11,Finance & Risk,54,69,test
+L0350,TM01,Finance & Risk,58,64,train
+L0351,TM01,Finance & Risk,43,51,train
+L0352,TM42,Sales & Marketing,51,56,train
+L0353,TM52,Sales & Marketing,53,65,test
+L0354,TM53,Sales & Marketing,62,82,train
+L0355,TM06,Finance & Risk,54,69,train
+L0356,TM50,Sales & Marketing,41,44,train
+L0357,TM18,Finance & Risk,64,69,train
+L0358,TM52,Sales & Marketing,62,89,test
+L0359,TM20,Finance & Risk,45,58,test
+L0360,TM06,Finance & Risk,41,43,train
+L0361,TM36,Operations,48,57,test
+L0362,TM50,Sales & Marketing,58,71,train
+L0363,TM13,Finance & Risk,63,80,train
+L0364,TM22,Operations,73,92,train
+L0365,TM15,Finance & Risk,76,92,train
+L0366,TM60,Sales & Marketing,64,84,train
+L0367,TM21,Operations,60,59,test
+L0368,TM17,Finance & Risk,32,48,test
+L0369,TM44,Sales & Marketing,77,74,train
+L0370,TM04,Finance & Risk,50,59,test
+L0371,TM48,Sales & Marketing,57,58,train
+L0372,TM09,Finance & Risk,56,59,train
+L0373,TM29,Operations,65,84,train
+L0374,TM48,Sales & Marketing,62,88,train
+L0375,TM29,Operations,46,58,train
+L0376,TM26,Operations,50,63,train
+L0377,TM44,Sales & Marketing,53,62,test
+L0378,TM30,Operations,58,84,train
+L0379,TM40,Operations,57,66,train
+L0380,TM56,Sales & Marketing,51,57,train
+L0381,TM29,Operations,34,56,train
+L0382,TM33,Operations,77,89,train
+L0383,TM38,Operations,74,87,train
+L0384,TM58,Sales & Marketing,47,39,test
+L0385,TM22,Operations,45,66,train
+L0386,TM18,Finance & Risk,43,51,train
+L0387,TM40,Operations,34,30,train
+L0388,TM10,Finance & Risk,84,88,train
+L0389,TM34,Operations,50,67,train
+L0390,TM40,Operations,50,59,train
+L0391,TM09,Finance & Risk,63,78,train
+L0392,TM08,Finance & Risk,55,52,train
+L0393,TM59,Sales & Marketing,61,58,test
+L0394,TM29,Operations,84,88,train
+L0395,TM23,Operations,65,69,train
+L0396,TM13,Finance & Risk,54,,train
+L0397,TM53,Sales & Marketing,37,37,train
+L0398,TM59,Sales & Marketing,41,56,train
+L0399,TM12,Finance & Risk,87,91,train
+L0400,TM53,Sales & Marketing,62,80,train
+L0401,TM27,Operations,50,58,test
+L0402,TM53,Sales & Marketing,46,76,train
+L0403,TM29,Operations,63,79,train
+L0404,TM43,Sales & Marketing,66,84,test
+L0405,TM21,Operations,92,100,train
+L0406,TM15,Finance & Risk,74,85,train
+L0407,TM11,Finance & Risk,42,58,train
+L0408,TM38,Operations,68,93,train
+L0409,TM10,Finance & Risk,83,80,train
+L0410,TM03,Finance & Risk,54,71,test
+L0411,TM39,Operations,73,86,test
+L0412,TM22,Operations,42,64,train
+L0413,TM01,Finance & Risk,59,61,train
+L0414,TM59,Sales & Marketing,50,60,test
+L0415,TM25,Operations,65,77,train
+L0416,TM38,Operations,53,85,train
+L0417,TM41,Sales & Marketing,47,65,train
+L0418,TM34,Operations,66,83,test
+L0419,TM39,Operations,60,75,train
+L0420,TM59,Sales & Marketing,55,50,test
+L0421,TM18,Finance & Risk,53,71,test
+L0422,TM16,Finance & Risk,56,73,train
+L0423,TM16,Finance & Risk,52,67,train
+L0424,TM48,Sales & Marketing,34,61,test
+L0425,TM10,Finance & Risk,59,,train
+L0426,TM31,Operations,48,60,train
+L0427,TM21,Operations,51,75,test
+L0428,TM50,Sales & Marketing,57,65,test
+L0429,TM10,Finance & Risk,52,52,train
+L0430,TM53,Sales & Marketing,58,67,train
+L0431,TM36,Operations,26,40,train
+L0432,TM56,Sales & Marketing,68,69,train
+L0433,TM17,Finance & Risk,46,53,train
+L0434,TM14,Finance & Risk,66,92,test
+L0435,TM43,Sales & Marketing,69,78,train
+L0436,TM50,Sales & Marketing,58,79,train
+L0437,TM29,Operations,53,62,test
+L0438,TM43,Sales & Marketing,46,61,train
+L0439,TM06,Finance & Risk,45,42,train
+L0440,TM03,Finance & Risk,56,76,train
+L0441,TM23,Operations,91,100,train
+L0442,TM44,Sales & Marketing,54,67,train
+L0443,TM34,Operations,51,,train
+L0444,TM01,Finance & Risk,76,89,test
+L0445,TM26,Operations,53,70,train
+L0446,TM27,Operations,58,52,test
+L0447,TM56,Sales & Marketing,63,79,test
+L0448,TM04,Finance & Risk,41,45,train
+L0449,TM23,Operations,67,81,train
+L0450,TM31,Operations,71,94,train
+L0451,TM23,Operations,38,40,train
+L0452,TM12,Finance & Risk,34,39,train
+L0453,TM14,Finance & Risk,46,60,test
+L0454,TM04,Finance & Risk,52,56,train
+L0455,TM29,Operations,28,39,train
+L0456,TM43,Sales & Marketing,39,52,train
+L0457,TM30,Operations,60,,train
+L0458,TM32,Operations,60,84,train
+L0459,TM21,Operations,36,40,train
+L0460,TM18,Finance & Risk,65,95,test
+L0461,TM22,Operations,59,82,train
+L0462,TM48,Sales & Marketing,61,88,train
+L0463,TM48,Sales & Marketing,72,79,test
+L0464,TM30,Operations,26,42,train
+L0465,TM41,Sales & Marketing,47,82,train
+L0466,TM11,Finance & Risk,59,62,train
+L0467,TM11,Finance & Risk,49,53,train
+L0468,TM10,Finance & Risk,25,36,test
+L0469,TM53,Sales & Marketing,44,69,train
+L0470,TM48,Sales & Marketing,95,100,train
+L0471,TM33,Operations,60,,train
+L0472,TM03,Finance & Risk,73,72,train
+L0473,TM53,Sales & Marketing,69,92,test
+L0474,TM14,Finance & Risk,62,86,train
+L0475,TM07,Finance & Risk,59,71,train
+L0476,TM49,Sales & Marketing,37,42,train
+L0477,TM09,Finance & Risk,77,100,test
+L0478,TM50,Sales & Marketing,52,64,train
+L0479,TM47,Sales & Marketing,73,83,test
+L0480,TM53,Sales & Marketing,69,87,test
+L0481,TM23,Operations,56,69,test
+L0482,TM09,Finance & Risk,55,56,train
+L0483,TM29,Operations,47,59,train
+L0484,TM23,Operations,55,52,train
+L0485,TM30,Operations,46,67,train
+L0486,TM27,Operations,64,76,train
+L0487,TM37,Operations,45,57,train
+L0488,TM35,Operations,53,74,train
+L0489,TM34,Operations,30,58,train
+L0490,TM32,Operations,72,66,train
+L0491,TM17,Finance & Risk,32,34,train
+L0492,TM17,Finance & Risk,66,83,train
+L0493,TM31,Operations,73,82,train
+L0494,TM31,Operations,82,90,train
+L0495,TM45,Sales & Marketing,45,58,test
+L0496,TM35,Operations,47,53,test
+L0497,TM40,Operations,74,97,train
+L0498,TM46,Sales & Marketing,57,74,test
+L0499,TM14,Finance & Risk,15,31,train
+L0500,TM18,Finance & Risk,22,36,train
+L0501,TM55,Sales & Marketing,51,67,train
+L0502,TM45,Sales & Marketing,66,84,test
+L0503,TM47,Sales & Marketing,75,71,train
+L0504,TM15,Finance & Risk,44,67,train
+L0505,TM29,Operations,73,74,test
+L0506,TM31,Operations,53,67,test
+L0507,TM26,Operations,62,92,train
+L0508,TM57,Sales & Marketing,68,92,train
+L0509,TM31,Operations,57,77,train
+L0510,TM01,Finance & Risk,38,56,test
+L0511,TM50,Sales & Marketing,66,84,train
+L0512,TM15,Finance & Risk,78,88,test
+L0513,TM45,Sales & Marketing,75,78,train
+L0514,TM50,Sales & Marketing,55,72,train
+L0515,TM43,Sales & Marketing,55,72,train
+L0516,TM56,Sales & Marketing,55,53,train
+L0517,TM03,Finance & Risk,50,59,train
+L0518,TM03,Finance & Risk,42,63,train
+L0519,TM07,Finance & Risk,36,37,train
+L0520,TM29,Operations,51,61,test
+L0521,TM27,Operations,37,38,train
+L0522,TM05,Finance & Risk,59,77,train
+L0523,TM40,Operations,67,85,test
+L0524,TM21,Operations,69,92,train
+L0525,TM14,Finance & Risk,56,65,train
+L0526,TM43,Sales & Marketing,46,49,train
+L0527,TM27,Operations,30,43,train
+L0528,TM58,Sales & Marketing,62,68,test
+L0529,TM36,Operations,54,66,train
+L0530,TM22,Operations,28,34,train
+L0531,TM58,Sales & Marketing,64,79,train
+L0532,TM28,Operations,55,73,train
+L0533,TM23,Operations,71,81,test
+L0534,TM07,Finance & Risk,49,52,train
+L0535,TM22,Operations,57,88,train
+L0536,TM45,Sales & Marketing,54,65,train
+L0537,TM40,Operations,44,45,train
+L0538,TM01,Finance & Risk,44,67,train
+L0539,TM59,Sales & Marketing,40,42,train
+L0540,TM20,Finance & Risk,56,75,train
+L0541,TM44,Sales & Marketing,33,57,train
+L0542,TM40,Operations,71,80,train
+L0543,TM41,Sales & Marketing,35,41,train
+L0544,TM42,Sales & Marketing,52,74,test
+L0545,TM39,Operations,71,85,train
+L0546,TM02,Finance & Risk,53,54,train
+L0547,TM43,Sales & Marketing,45,57,test
+L0548,TM51,Sales & Marketing,72,78,train
+L0549,TM11,Finance & Risk,49,52,train
+L0550,TM50,Sales & Marketing,72,92,test
+L0551,TM07,Finance & Risk,68,74,train
+L0552,TM01,Finance & Risk,43,,test
+L0553,TM16,Finance & Risk,42,49,train
+L0554,TM14,Finance & Risk,79,87,train
+L0555,TM31,Operations,57,84,test
+L0556,TM22,Operations,64,84,train
+L0557,TM58,Sales & Marketing,68,63,train
+L0558,TM49,Sales & Marketing,56,69,train
+L0559,TM29,Operations,44,58,train
+L0560,TM54,Sales & Marketing,56,76,train
+L0561,TM05,Finance & Risk,63,56,train
+L0562,TM38,Operations,52,67,test
+L0563,TM14,Finance & Risk,80,90,test
+L0564,TM50,Sales & Marketing,32,44,test
+L0565,TM58,Sales & Marketing,81,95,test
+L0566,TM33,Operations,70,73,test
+L0567,TM45,Sales & Marketing,69,79,test
+L0568,TM02,Finance & Risk,75,73,train
+L0569,TM33,Operations,68,69,test
+L0570,TM08,Finance & Risk,60,59,train
+L0571,TM54,Sales & Marketing,28,45,train
+L0572,TM12,Finance & Risk,49,56,train
+L0573,TM24,Operations,37,44,train
+L0574,TM52,Sales & Marketing,32,48,train
+L0575,TM48,Sales & Marketing,60,64,train
+L0576,TM21,Operations,53,68,test
+L0577,TM36,Operations,66,79,test
+L0578,TM30,Operations,49,60,test
+L0579,TM25,Operations,50,54,train
+L0580,TM38,Operations,53,69,train
+L0581,TM15,Finance & Risk,40,47,train
+L0582,TM17,Finance & Risk,53,65,test
+L0583,TM06,Finance & Risk,60,59,test
+L0584,TM40,Operations,56,62,train
+L0585,TM32,Operations,75,82,test
+L0586,TM01,Finance & Risk,53,53,train
+L0587,TM30,Operations,64,70,train
+L0588,TM22,Operations,51,66,test
+L0589,TM44,Sales & Marketing,74,73,train
+L0590,TM29,Operations,56,69,train
+L0591,TM58,Sales & Marketing,72,67,train
+L0592,TM18,Finance & Risk,47,50,train
+L0593,TM14,Finance & Risk,58,60,train
+L0594,TM38,Operations,66,85,train
+L0595,TM27,Operations,71,92,train
+L0596,TM26,Operations,63,,train
+L0597,TM45,Sales & Marketing,40,47,train
+L0598,TM07,Finance & Risk,56,74,test
+L0599,TM27,Operations,49,52,train
+L0600,TM38,Operations,53,59,test
+L0601,TM19,Finance & Risk,73,82,test
+L0602,TM45,Sales & Marketing,67,74,train
+L0603,TM40,Operations,56,63,train
+L0604,TM55,Sales & Marketing,85,87,train
+L0605,TM14,Finance & Risk,59,61,train
+L0606,TM38,Operations,49,70,train
+L0607,TM12,Finance & Risk,54,70,train
+L0608,TM43,Sales & Marketing,41,51,train
+L0609,TM29,Operations,34,54,train
+L0610,TM55,Sales & Marketing,61,70,train
+L0611,TM33,Operations,51,56,train
+L0612,TM04,Finance & Risk,44,54,train
+L0613,TM09,Finance & Risk,67,87,test
+L0614,TM11,Finance & Risk,55,63,test
+L0615,TM01,Finance & Risk,41,41,test
+L0616,TM29,Operations,55,46,train
+L0617,TM49,Sales & Marketing,46,61,test
+L0618,TM58,Sales & Marketing,39,38,train
+L0619,TM25,Operations,62,77,train
+L0620,TM12,Finance & Risk,47,42,train
+L0621,TM51,Sales & Marketing,45,40,test
+L0622,TM37,Operations,52,50,test
+L0623,TM56,Sales & Marketing,58,75,train
+L0624,TM42,Sales & Marketing,73,75,train
+L0625,TM18,Finance & Risk,56,73,train
+L0626,TM38,Operations,53,62,train
+L0627,TM44,Sales & Marketing,42,41,train
+L0628,TM47,Sales & Marketing,37,39,train
+L0629,TM23,Operations,43,67,test
+L0630,TM60,Sales & Marketing,76,82,test
+L0631,TM07,Finance & Risk,53,74,test
+L0632,TM07,Finance & Risk,46,,train
+L0633,TM37,Operations,57,68,train
+L0634,TM45,Sales & Marketing,38,58,train
+L0635,TM35,Operations,54,62,train
+L0636,TM57,Sales & Marketing,69,82,train
+L0637,TM22,Operations,58,56,train
+L0638,TM21,Operations,56,70,train
+L0639,TM15,Finance & Risk,60,68,train
+L0640,TM30,Operations,56,86,test
+L0641,TM44,Sales & Marketing,79,82,test
+L0642,TM21,Operations,45,43,train
+L0643,TM44,Sales & Marketing,52,59,train
+L0644,TM20,Finance & Risk,41,54,train
+L0645,TM01,Finance & Risk,39,48,train
+L0646,TM51,Sales & Marketing,38,53,test
+L0647,TM51,Sales & Marketing,66,71,train
+L0648,TM26,Operations,58,74,train
+L0649,TM38,Operations,55,59,train
+L0650,TM46,Sales & Marketing,54,74,train
+L0651,TM48,Sales & Marketing,60,71,train
+L0652,TM50,Sales & Marketing,60,70,train
+L0653,TM04,Finance & Risk,59,64,train
+L0654,TM15,Finance & Risk,45,50,test
+L0655,TM03,Finance & Risk,58,72,train
+L0656,TM31,Operations,49,75,test
+L0657,TM52,Sales & Marketing,66,80,test
+L0658,TM39,Operations,37,49,train
+L0659,TM59,Sales & Marketing,77,95,test
+L0660,TM07,Finance & Risk,65,66,train
+L0661,TM01,Finance & Risk,59,75,train
+L0662,TM42,Sales & Marketing,89,100,train
+L0663,TM35,Operations,42,42,train
+L0664,TM51,Sales & Marketing,73,92,train
+L0665,TM02,Finance & Risk,61,67,train
+L0666,TM30,Operations,49,67,train
+L0667,TM53,Sales & Marketing,35,50,train
+L0668,TM32,Operations,50,64,train
+L0669,TM15,Finance & Risk,56,75,train
+L0670,TM48,Sales & Marketing,81,85,train
+L0671,TM48,Sales & Marketing,55,63,train
+L0672,TM50,Sales & Marketing,65,83,train
+L0673,TM18,Finance & Risk,52,91,train
+L0674,TM57,Sales & Marketing,44,55,train
+L0675,TM48,Sales & Marketing,44,66,train
+L0676,TM06,Finance & Risk,40,60,train
+L0677,TM40,Operations,31,50,test
+L0678,TM11,Finance & Risk,71,75,test
+L0679,TM26,Operations,43,58,train
+L0680,TM34,Operations,73,78,train
+L0681,TM27,Operations,50,56,train
+L0682,TM12,Finance & Risk,40,42,test
+L0683,TM12,Finance & Risk,36,46,train
+L0684,TM08,Finance & Risk,67,83,train
+L0685,TM20,Finance & Risk,50,45,train
+L0686,TM42,Sales & Marketing,66,77,train
+L0687,TM51,Sales & Marketing,49,60,test
+L0688,TM60,Sales & Marketing,53,67,train
+L0689,TM35,Operations,65,85,test
+L0690,TM41,Sales & Marketing,60,65,test
+L0691,TM18,Finance & Risk,38,71,train
+L0692,TM52,Sales & Marketing,58,,train
+L0693,TM21,Operations,49,53,train
+L0694,TM48,Sales & Marketing,48,62,test
+L0695,TM07,Finance & Risk,58,79,train
+L0696,TM32,Operations,62,77,train
+L0697,TM57,Sales & Marketing,32,39,train
+L0698,TM23,Operations,65,79,train
+L0699,TM50,Sales & Marketing,66,78,test
+L0700,TM21,Operations,57,53,train
+L0701,TM56,Sales & Marketing,41,49,train
+L0702,TM07,Finance & Risk,72,81,train
+L0703,TM18,Finance & Risk,67,88,train
+L0704,TM24,Operations,53,71,test
+L0705,TM19,Finance & Risk,47,65,train
+L0706,TM32,Operations,80,88,train
+L0707,TM39,Operations,54,66,train
+L0708,TM08,Finance & Risk,52,58,train
+L0709,TM52,Sales & Marketing,67,79,train
+L0710,TM38,Operations,53,79,test
+L0711,TM15,Finance & Risk,46,51,test
+L0712,TM39,Operations,57,68,train
+L0713,TM55,Sales & Marketing,53,60,train
+L0714,TM04,Finance & Risk,41,48,train
+L0715,TM36,Operations,57,70,test
+L0716,TM02,Finance & Risk,59,80,train
+L0717,TM48,Sales & Marketing,47,52,train
+L0718,TM14,Finance & Risk,68,74,train
+L0719,TM34,Operations,81,93,train
+L0720,TM15,Finance & Risk,38,48,train
+L0721,TM22,Operations,82,99,train
+L0722,TM45,Sales & Marketing,29,53,test
+L0723,TM08,Finance & Risk,62,70,train
+L0724,TM06,Finance & Risk,64,76,train
+L0725,TM50,Sales & Marketing,61,71,test
+L0726,TM18,Finance & Risk,76,93,train
+L0727,TM40,Operations,52,58,test
+L0728,TM52,Sales & Marketing,62,61,train
+L0729,TM10,Finance & Risk,45,65,train
+L0730,TM47,Sales & Marketing,39,34,test
+L0731,TM45,Sales & Marketing,34,52,train
+L0732,TM06,Finance & Risk,46,62,train
+L0733,TM41,Sales & Marketing,56,59,train
+L0734,TM08,Finance & Risk,42,51,train
+L0735,TM52,Sales & Marketing,51,57,train
+L0736,TM43,Sales & Marketing,67,81,train
+L0737,TM47,Sales & Marketing,53,56,test
+L0738,TM60,Sales & Marketing,44,45,train
+L0739,TM30,Operations,39,45,train
+L0740,TM57,Sales & Marketing,55,72,train
+L0741,TM32,Operations,63,61,train
+L0742,TM56,Sales & Marketing,52,56,train
+L0743,TM52,Sales & Marketing,53,64,train
+L0744,TM08,Finance & Risk,48,55,train
+L0745,TM04,Finance & Risk,61,72,train
+L0746,TM30,Operations,83,100,train
+L0747,TM27,Operations,41,45,test
+L0748,TM41,Sales & Marketing,67,78,train
+L0749,TM33,Operations,41,61,test
+L0750,TM35,Operations,63,67,test
+L0751,TM48,Sales & Marketing,53,64,train
+L0752,TM35,Operations,67,66,test
+L0753,TM50,Sales & Marketing,61,79,train
+L0754,TM27,Operations,61,66,train
+L0755,TM40,Operations,41,55,train
+L0756,TM06,Finance & Risk,57,64,train
+L0757,TM42,Sales & Marketing,52,51,test
+L0758,TM33,Operations,32,39,test
+L0759,TM39,Operations,60,70,test
+L0760,TM18,Finance & Risk,46,60,test
+L0761,TM39,Operations,75,86,train
+L0762,TM22,Operations,69,90,train
+L0763,TM11,Finance & Risk,50,63,train
+L0764,TM29,Operations,64,71,test
+L0765,TM54,Sales & Marketing,70,74,train
+L0766,TM31,Operations,72,87,train
+L0767,TM10,Finance & Risk,64,68,test
+L0768,TM58,Sales & Marketing,61,61,train
+L0769,TM54,Sales & Marketing,40,51,train
+L0770,TM12,Finance & Risk,41,48,test
+L0771,TM43,Sales & Marketing,26,43,test
+L0772,TM53,Sales & Marketing,22,30,train
+L0773,TM01,Finance & Risk,72,87,train
+L0774,TM03,Finance & Risk,70,92,train
+L0775,TM28,Operations,48,69,test
+L0776,TM22,Operations,62,83,train
+L0777,TM52,Sales & Marketing,58,73,train
+L0778,TM42,Sales & Marketing,48,64,train
+L0779,TM56,Sales & Marketing,48,55,train
+L0780,TM24,Operations,55,54,train
+L0781,TM29,Operations,66,78,train
+L0782,TM25,Operations,34,43,train
+L0783,TM21,Operations,44,61,test
+L0784,TM43,Sales & Marketing,82,99,test
+L0785,TM12,Finance & Risk,51,47,train
+L0786,TM38,Operations,57,77,train
+L0787,TM40,Operations,28,34,train
+L0788,TM52,Sales & Marketing,61,82,test
+L0789,TM36,Operations,69,90,train
+L0790,TM12,Finance & Risk,41,55,train
+L0791,TM44,Sales & Marketing,58,57,test
+L0792,TM45,Sales & Marketing,41,46,train
+L0793,TM49,Sales & Marketing,55,61,test
+L0794,TM02,Finance & Risk,48,49,test
+L0795,TM32,Operations,86,90,train
+L0796,TM47,Sales & Marketing,59,63,train
+L0797,TM49,Sales & Marketing,54,56,test
+L0798,TM53,Sales & Marketing,61,61,train
+L0799,TM10,Finance & Risk,63,68,train
+L0800,TM50,Sales & Marketing,40,53,test
+L0801,TM49,Sales & Marketing,56,62,test
+L0802,TM48,Sales & Marketing,51,59,train
+L0803,TM54,Sales & Marketing,61,91,test
+L0804,TM26,Operations,24,36,train
+L0805,TM45,Sales & Marketing,29,29,test
+L0806,TM48,Sales & Marketing,50,55,test
+L0807,TM07,Finance & Risk,38,55,test
+L0808,TM10,Finance & Risk,68,76,train
+L0809,TM23,Operations,68,79,train
+L0810,TM47,Sales & Marketing,48,54,train
+L0811,TM26,Operations,46,62,train
+L0812,TM07,Finance & Risk,48,44,train
+L0813,TM40,Operations,66,54,test
+L0814,TM44,Sales & Marketing,54,53,train
+L0815,TM12,Finance & Risk,55,69,train
+L0816,TM49,Sales & Marketing,39,42,train
+L0817,TM26,Operations,36,57,train
+L0818,TM30,Operations,23,44,test
+L0819,TM39,Operations,68,86,train
+L0820,TM54,Sales & Marketing,41,51,train
+L0821,TM22,Operations,68,89,test
+L0822,TM53,Sales & Marketing,47,57,test
+L0823,TM43,Sales & Marketing,65,95,test
+L0824,TM15,Finance & Risk,66,83,train
+L0825,TM40,Operations,56,73,train
+L0826,TM28,Operations,64,83,train
+L0827,TM45,Sales & Marketing,45,55,train
+L0828,TM14,Finance & Risk,48,52,train
+L0829,TM14,Finance & Risk,46,65,train
+L0830,TM32,Operations,65,80,test
+L0831,TM55,Sales & Marketing,66,75,test
+L0832,TM36,Operations,55,69,train
+L0833,TM23,Operations,61,72,train
+L0834,TM33,Operations,67,79,train
+L0835,TM22,Operations,36,49,train
+L0836,TM29,Operations,52,65,train
+L0837,TM03,Finance & Risk,32,40,test
+L0838,TM15,Finance & Risk,48,58,test
+L0839,TM29,Operations,77,91,train
+L0840,TM25,Operations,81,100,train
+L0841,TM14,Finance & Risk,45,57,test
+L0842,TM27,Operations,65,87,train
+L0843,TM39,Operations,63,66,train
+L0844,TM40,Operations,42,50,train
+L0845,TM45,Sales & Marketing,60,62,train
+L0846,TM14,Finance & Risk,65,66,train
+L0847,TM39,Operations,49,63,train
+L0848,TM01,Finance & Risk,46,62,test
+L0849,TM48,Sales & Marketing,51,74,train
+L0850,TM17,Finance & Risk,46,43,test
+L0851,TM17,Finance & Risk,34,42,train
+L0852,TM40,Operations,43,49,train
+L0853,TM04,Finance & Risk,47,55,test
+L0854,TM38,Operations,73,95,train
+L0855,TM51,Sales & Marketing,61,66,test
+L0856,TM51,Sales & Marketing,66,65,train
+L0857,TM34,Operations,25,41,train
+L0858,TM02,Finance & Risk,51,63,test
+L0859,TM12,Finance & Risk,57,71,train
+L0860,TM54,Sales & Marketing,54,63,train
+L0861,TM33,Operations,72,,train
+L0862,TM56,Sales & Marketing,53,57,train
+L0863,TM03,Finance & Risk,49,62,train
+L0864,TM08,Finance & Risk,66,79,train
+L0865,TM43,Sales & Marketing,74,93,test
+L0866,TM19,Finance & Risk,70,84,train
+L0867,TM54,Sales & Marketing,55,73,train
+L0868,TM26,Operations,61,80,train
+L0869,TM19,Finance & Risk,32,34,train
+L0870,TM45,Sales & Marketing,54,63,train
+L0871,TM12,Finance & Risk,22,35,test
+L0872,TM30,Operations,50,64,train
+L0873,TM51,Sales & Marketing,67,82,test
+L0874,TM26,Operations,49,65,train
+L0875,TM02,Finance & Risk,58,65,train
+L0876,TM43,Sales & Marketing,57,67,test
+L0877,TM38,Operations,51,70,test
+L0878,TM44,Sales & Marketing,73,90,train
+L0879,TM02,Finance & Risk,60,60,test
+L0880,TM24,Operations,47,66,train
+L0881,TM44,Sales & Marketing,49,63,train
+L0882,TM01,Finance & Risk,66,79,test
+L0883,TM56,Sales & Marketing,43,43,train
+L0884,TM26,Operations,41,60,test
+L0885,TM40,Operations,47,43,test
+L0886,TM33,Operations,55,59,test
+L0887,TM53,Sales & Marketing,81,100,train
+L0888,TM55,Sales & Marketing,82,85,test
+L0889,TM18,Finance & Risk,51,65,train
+L0890,TM27,Operations,42,57,train
+L0891,TM02,Finance & Risk,66,73,train
+L0892,TM02,Finance & Risk,57,69,train
+L0893,TM03,Finance & Risk,58,77,train
+L0894,TM22,Operations,68,93,train
+L0895,TM23,Operations,47,43,train
+L0896,TM21,Operations,65,81,train
+L0897,TM10,Finance & Risk,57,70,test
+L0898,TM18,Finance & Risk,20,40,train
+L0899,TM42,Sales & Marketing,48,64,test
+L0900,TM45,Sales & Marketing,52,53,train
+L0901,TM27,Operations,67,79,train
+L0902,TM53,Sales & Marketing,50,56,test
+L0903,TM22,Operations,47,59,train
+L0904,TM15,Finance & Risk,52,54,test
+L0905,TM52,Sales & Marketing,53,68,train
+L0906,TM52,Sales & Marketing,77,92,train
+L0907,TM53,Sales & Marketing,84,99,train
+L0908,TM30,Operations,49,77,train
+L0909,TM29,Operations,51,60,test
+L0910,TM32,Operations,57,62,train
+L0911,TM23,Operations,49,58,train
+L0912,TM55,Sales & Marketing,47,58,train
+L0913,TM09,Finance & Risk,54,70,train
+L0914,TM10,Finance & Risk,61,64,test
+L0915,TM10,Finance & Risk,48,51,train
+L0916,TM43,Sales & Marketing,81,88,train
+L0917,TM48,Sales & Marketing,61,84,test
+L0918,TM41,Sales & Marketing,61,67,train
+L0919,TM28,Operations,50,55,train
+L0920,TM53,Sales & Marketing,47,55,train
+L0921,TM27,Operations,53,74,train
+L0922,TM51,Sales & Marketing,40,45,train
+L0923,TM31,Operations,56,78,train
+L0924,TM12,Finance & Risk,50,68,test
+L0925,TM30,Operations,57,86,train
+L0926,TM44,Sales & Marketing,52,50,train
+L0927,TM42,Sales & Marketing,45,46,test
+L0928,TM32,Operations,68,78,test
+L0929,TM04,Finance & Risk,24,31,test
+L0930,TM03,Finance & Risk,69,88,test
+L0931,TM30,Operations,41,72,train
+L0932,TM45,Sales & Marketing,45,50,train
+L0933,TM15,Finance & Risk,58,68,train
+L0934,TM47,Sales & Marketing,51,63,train
+L0935,TM18,Finance & Risk,75,96,test
+L0936,TM03,Finance & Risk,72,79,test
+L0937,TM53,Sales & Marketing,40,63,train
+L0938,TM40,Operations,17,31,train
+L0939,TM17,Finance & Risk,66,70,test
+L0940,TM58,Sales & Marketing,63,76,train
+L0941,TM29,Operations,48,52,train
+L0942,TM35,Operations,57,65,test
+L0943,TM38,Operations,83,98,train
+L0944,TM17,Finance & Risk,39,51,train
+L0945,TM56,Sales & Marketing,74,91,test
+L0946,TM10,Finance & Risk,54,78,test
+L0947,TM45,Sales & Marketing,66,73,test
+L0948,TM44,Sales & Marketing,53,56,train
+L0949,TM26,Operations,49,53,train
+L0950,TM21,Operations,40,68,test
+L0951,TM60,Sales & Marketing,5,19,test
+L0952,TM10,Finance & Risk,38,56,train
+L0953,TM04,Finance & Risk,57,,train
+L0954,TM20,Finance & Risk,39,60,test
+L0955,TM60,Sales & Marketing,51,62,train
+L0956,TM41,Sales & Marketing,71,67,train
+L0957,TM60,Sales & Marketing,53,57,train
+L0958,TM14,Finance & Risk,44,50,train
+L0959,TM30,Operations,52,74,test
+L0960,TM50,Sales & Marketing,16,43,train
+L0961,TM04,Finance & Risk,19,24,test
+L0962,TM44,Sales & Marketing,55,63,train
+L0963,TM17,Finance & Risk,55,76,train
+L0964,TM35,Operations,53,62,train
+L0965,TM22,Operations,55,78,train
+L0966,TM05,Finance & Risk,51,62,train
+L0967,TM02,Finance & Risk,67,79,train
+L0968,TM50,Sales & Marketing,82,85,test
+L0969,TM44,Sales & Marketing,62,74,test
+L0970,TM22,Operations,37,60,test
+L0971,TM01,Finance & Risk,53,73,train
+L0972,TM07,Finance & Risk,53,50,train
+L0973,TM46,Sales & Marketing,56,76,train
+L0974,TM45,Sales & Marketing,81,89,test
+L0975,TM14,Finance & Risk,39,43,test
+L0976,TM59,Sales & Marketing,32,34,train
+L0977,TM23,Operations,55,70,train
+L0978,TM13,Finance & Risk,84,97,train
+L0979,TM20,Finance & Risk,60,78,train
+L0980,TM52,Sales & Marketing,53,66,train
+L0981,TM34,Operations,47,69,test
+L0982,TM22,Operations,85,100,test
+L0983,TM46,Sales & Marketing,46,51,train
+L0984,TM35,Operations,71,73,train
+L0985,TM18,Finance & Risk,40,59,train
+L0986,TM04,Finance & Risk,33,30,train
+L0987,TM58,Sales & Marketing,35,37,test
+L0988,TM14,Finance & Risk,51,46,train
+L0989,TM20,Finance & Risk,35,54,train
+L0990,TM09,Finance & Risk,47,75,train
+L0991,TM08,Finance & Risk,80,90,train
+L0992,TM29,Operations,59,61,train
+L0993,TM50,Sales & Marketing,51,65,train
+L0994,TM33,Operations,68,69,train
+L0995,TM17,Finance & Risk,31,59,test
+L0996,TM40,Operations,59,49,train
+L0997,TM17,Finance & Risk,51,64,train
+L0998,TM18,Finance & Risk,40,52,test
+L0999,TM38,Operations,57,80,train
+L1000,TM07,Finance & Risk,57,57,train
+L1001,TM59,Sales & Marketing,52,45,test
+L1002,TM03,Finance & Risk,32,44,train
+L1003,TM32,Operations,67,76,train
+L1004,TM09,Finance & Risk,44,49,train
+L1005,TM01,Finance & Risk,36,45,train
+L1006,TM10,Finance & Risk,41,49,train
+L1007,TM10,Finance & Risk,42,47,test
+L1008,TM19,Finance & Risk,57,57,train
+L1009,TM47,Sales & Marketing,67,57,train
+L1010,TM19,Finance & Risk,43,55,train
+L1011,TM34,Operations,50,53,test
+L1012,TM01,Finance & Risk,31,36,train
+L1013,TM33,Operations,76,81,test
+L1014,TM28,Operations,47,40,train
+L1015,TM40,Operations,52,53,train
+L1016,TM36,Operations,86,96,train
+L1017,TM48,Sales & Marketing,45,78,test
+L1018,TM22,Operations,55,65,train
+L1019,TM46,Sales & Marketing,50,50,train
+L1020,TM35,Operations,46,44,train
+L1021,TM24,Operations,55,48,train
+L1022,TM42,Sales & Marketing,72,84,train
+L1023,TM14,Finance & Risk,67,61,train
+L1024,TM34,Operations,87,92,train
+L1025,TM42,Sales & Marketing,67,72,train
+L1026,TM03,Finance & Risk,51,53,test
+L1027,TM33,Operations,44,49,train
+L1028,TM07,Finance & Risk,51,54,test
+L1029,TM36,Operations,47,71,train
+L1030,TM02,Finance & Risk,29,,train
+L1031,TM51,Sales & Marketing,62,71,train
+L1032,TM58,Sales & Marketing,36,46,train
+L1033,TM48,Sales & Marketing,64,68,train
+L1034,TM31,Operations,70,70,test
+L1035,TM09,Finance & Risk,42,61,train
+L1036,TM03,Finance & Risk,47,62,test
+L1037,TM21,Operations,61,67,train
+L1038,TM56,Sales & Marketing,46,62,train
+L1039,TM30,Operations,62,73,test
+L1040,TM01,Finance & Risk,76,85,train
+L1041,TM33,Operations,62,59,train
+L1042,TM28,Operations,23,24,train
+L1043,TM47,Sales & Marketing,47,53,train
+L1044,TM43,Sales & Marketing,54,85,train
+L1045,TM01,Finance & Risk,45,58,train
+L1046,TM19,Finance & Risk,40,58,train
+L1047,TM14,Finance & Risk,61,76,train
+L1048,TM23,Operations,53,58,train
+L1049,TM08,Finance & Risk,57,67,train
+L1050,TM60,Sales & Marketing,55,67,train
+L1051,TM29,Operations,61,,train
+L1052,TM57,Sales & Marketing,54,79,train
+L1053,TM30,Operations,49,68,train
+L1054,TM47,Sales & Marketing,41,47,train
+L1055,TM35,Operations,45,50,train
+L1056,TM15,Finance & Risk,52,51,train
+L1057,TM27,Operations,66,66,train
+L1058,TM15,Finance & Risk,54,80,train
+L1059,TM10,Finance & Risk,45,65,train
+L1060,TM36,Operations,54,54,train
+L1061,TM26,Operations,68,78,train
+L1062,TM22,Operations,40,57,test
+L1063,TM45,Sales & Marketing,44,68,train
+L1064,TM30,Operations,84,100,test
+L1065,TM35,Operations,56,66,train
+L1066,TM44,Sales & Marketing,44,57,train
+L1067,TM60,Sales & Marketing,63,74,train
+L1068,TM02,Finance & Risk,34,45,train
+L1069,TM25,Operations,46,73,test
+L1070,TM52,Sales & Marketing,53,68,train
+L1071,TM03,Finance & Risk,36,40,test
+L1072,TM14,Finance & Risk,49,68,train
+L1073,TM32,Operations,38,54,train
+L1074,TM35,Operations,72,82,train
+L1075,TM09,Finance & Risk,37,35,train
+L1076,TM12,Finance & Risk,51,47,train
+L1077,TM17,Finance & Risk,61,81,train
+L1078,TM31,Operations,36,53,train
+L1079,TM51,Sales & Marketing,54,68,train
+L1080,TM15,Finance & Risk,57,65,train
+L1081,TM20,Finance & Risk,34,46,train
+L1082,TM38,Operations,95,100,test
+L1083,TM42,Sales & Marketing,42,47,test
+L1084,TM43,Sales & Marketing,32,41,train
+L1085,TM35,Operations,75,84,train
+L1086,TM08,Finance & Risk,42,41,test
+L1087,TM53,Sales & Marketing,72,91,test
+L1088,TM32,Operations,76,94,test
+L1089,TM07,Finance & Risk,41,52,train
+L1090,TM35,Operations,31,45,train
+L1091,TM46,Sales & Marketing,55,74,train
+L1092,TM24,Operations,51,72,test
+L1093,TM52,Sales & Marketing,41,55,train
+L1094,TM52,Sales & Marketing,61,67,test
+L1095,TM60,Sales & Marketing,67,58,train
+L1096,TM39,Operations,59,74,test
+L1097,TM31,Operations,47,,train
+L1098,TM31,Operations,67,77,test
+L1099,TM38,Operations,67,72,train
+L1100,TM51,Sales & Marketing,73,75,train
+L1101,TM07,Finance & Risk,59,81,train
+L1102,TM40,Operations,74,81,train
+L1103,TM01,Finance & Risk,63,65,test
+L1104,TM19,Finance & Risk,48,65,train
+L1105,TM59,Sales & Marketing,69,63,test
+L1106,TM18,Finance & Risk,68,82,train
+L1107,TM21,Operations,57,56,test
+L1108,TM12,Finance & Risk,40,39,train
+L1109,TM57,Sales & Marketing,74,80,train
+L1110,TM44,Sales & Marketing,63,69,test
+L1111,TM57,Sales & Marketing,33,49,train
+L1112,TM38,Operations,66,71,train
+L1113,TM21,Operations,60,78,train
+L1114,TM39,Operations,54,74,train
+L1115,TM48,Sales & Marketing,62,74,test
+L1116,TM48,Sales & Marketing,45,68,train
+L1117,TM21,Operations,54,68,test
+L1118,TM53,Sales & Marketing,40,49,test
+L1119,TM57,Sales & Marketing,75,88,train
+L1120,TM29,Operations,73,85,train
+L1121,TM04,Finance & Risk,47,51,train
+L1122,TM36,Operations,70,86,test
+L1123,TM27,Operations,38,65,test
+L1124,TM38,Operations,82,94,test
+L1125,TM30,Operations,32,54,train
+L1126,TM02,Finance & Risk,34,33,test
+L1127,TM56,Sales & Marketing,57,65,test
+L1128,TM48,Sales & Marketing,63,73,train
+L1129,TM23,Operations,60,68,train
+L1130,TM59,Sales & Marketing,57,66,train
+L1131,TM10,Finance & Risk,53,55,test
+L1132,TM55,Sales & Marketing,37,51,train
+L1133,TM26,Operations,56,94,train
+L1134,TM45,Sales & Marketing,73,79,train
+L1135,TM17,Finance & Risk,42,42,train
+L1136,TM56,Sales & Marketing,54,66,test
+L1137,TM03,Finance & Risk,66,69,train
+L1138,TM22,Operations,71,90,test
+L1139,TM07,Finance & Risk,73,91,train
+L1140,TM23,Operations,56,57,test
+L1141,TM41,Sales & Marketing,72,82,train
+L1142,TM25,Operations,50,64,train
+L1143,TM50,Sales & Marketing,66,80,train
+L1144,TM01,Finance & Risk,60,66,train
+L1145,TM49,Sales & Marketing,66,64,test
+L1146,TM38,Operations,47,52,train
+L1147,TM53,Sales & Marketing,66,70,train
+L1148,TM22,Operations,38,46,train
+L1149,TM49,Sales & Marketing,87,84,train
+L1150,TM38,Operations,59,82,test
+L1151,TM16,Finance & Risk,31,44,train
+L1152,TM16,Finance & Risk,49,65,train
+L1153,TM32,Operations,84,100,train
+L1154,TM59,Sales & Marketing,56,62,train
+L1155,TM47,Sales & Marketing,70,79,train
+L1156,TM46,Sales & Marketing,59,71,train
+L1157,TM46,Sales & Marketing,54,66,train
+L1158,TM42,Sales & Marketing,70,92,train
+L1159,TM21,Operations,62,78,train
+L1160,TM15,Finance & Risk,76,79,test
+L1161,TM01,Finance & Risk,44,47,train
+L1162,TM44,Sales & Marketing,78,86,train
+L1163,TM40,Operations,61,53,train
+L1164,TM44,Sales & Marketing,31,51,train
+L1165,TM25,Operations,73,86,train
+L1166,TM08,Finance & Risk,27,47,test
+L1167,TM45,Sales & Marketing,71,79,train
+L1168,TM15,Finance & Risk,41,60,train
+L1169,TM52,Sales & Marketing,56,77,train
+L1170,TM24,Operations,66,65,test
+L1171,TM59,Sales & Marketing,71,86,train
+L1172,TM31,Operations,64,71,train
+L1173,TM17,Finance & Risk,64,58,test
+L1174,TM35,Operations,59,61,train
+L1175,TM28,Operations,32,55,train
+L1176,TM40,Operations,57,58,test
+L1177,TM42,Sales & Marketing,58,71,train
+L1178,TM44,Sales & Marketing,66,72,train
+L1179,TM51,Sales & Marketing,58,63,train
+L1180,TM09,Finance & Risk,43,35,test
+L1181,TM28,Operations,54,64,test
+L1182,TM19,Finance & Risk,33,35,train
+L1183,TM51,Sales & Marketing,62,83,test
+L1184,TM43,Sales & Marketing,69,82,train
+L1185,TM54,Sales & Marketing,37,48,train
+L1186,TM44,Sales & Marketing,22,40,train
+L1187,TM02,Finance & Risk,63,81,train
+L1188,TM17,Finance & Risk,65,86,train
+L1189,TM04,Finance & Risk,54,56,train
+L1190,TM21,Operations,72,80,train
+L1191,TM04,Finance & Risk,65,71,test
+L1192,TM49,Sales & Marketing,56,55,test
+L1193,TM21,Operations,59,61,test
+L1194,TM23,Operations,34,53,train
+L1195,TM41,Sales & Marketing,45,57,train
+L1196,TM26,Operations,29,41,train
+L1197,TM27,Operations,68,77,test
+L1198,TM48,Sales & Marketing,52,66,train
+L1199,TM52,Sales & Marketing,76,91,test
+L1200,TM07,Finance & Risk,49,46,test

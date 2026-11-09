@@ -1,0 +1,236 @@
+{
+  "seed": 20261106,
+  "n_learners": 1200,
+  "n_teams": 60,
+  "business_units": [
+    "Finance & Risk",
+    "Operations",
+    "Sales & Marketing"
+  ],
+  "styles": [
+    "scaffolded",
+    "answer_seeking",
+    "light_mixed"
+  ],
+  "style_shares_target": {
+    "scaffolded": 0.4,
+    "answer_seeking": 0.35,
+    "light_mixed": 0.25
+  },
+  "style_shares_realized": {
+    "scaffolded": 0.3983,
+    "answer_seeking": 0.3717,
+    "light_mixed": 0.23
+  },
+  "style_logit_vs_scaffolded": {
+    "answer_seeking": {
+      "intercept": -0.18,
+      "slope_on_z_pre": -0.9
+    },
+    "light_mixed": {
+      "intercept": -0.41,
+      "slope_on_z_pre": -0.3
+    }
+  },
+  "transition_rows": [
+    "START",
+    "T",
+    "H",
+    "A",
+    "C",
+    "V"
+  ],
+  "transition_cols": [
+    "T",
+    "H",
+    "A",
+    "C",
+    "V",
+    "Q"
+  ],
+  "true_transition_matrices": {
+    "scaffolded": [
+      [
+        0.55,
+        0.2,
+        0.1,
+        0.03,
+        0.1,
+        0.02
+      ],
+      [
+        0.06,
+        0.28,
+        0.18,
+        0.05,
+        0.31,
+        0.12
+      ],
+      [
+        0.64,
+        0.04,
+        0.15,
+        0.07,
+        0.06,
+        0.04
+      ],
+      [
+        0.48,
+        0.1,
+        0.04,
+        0.16,
+        0.14,
+        0.08
+      ],
+      [
+        0.28,
+        0.12,
+        0.14,
+        0.04,
+        0.12,
+        0.3
+      ],
+      [
+        0.1,
+        0.05,
+        0.32,
+        0.33,
+        0.04,
+        0.16
+      ]
+    ],
+    "answer_seeking": [
+      [
+        0.34,
+        0.32,
+        0.26,
+        0.02,
+        0.04,
+        0.02
+      ],
+      [
+        0.12,
+        0.14,
+        0.18,
+        0.06,
+        0.4,
+        0.1
+      ],
+      [
+        0.12,
+        0.06,
+        0.62,
+        0.1,
+        0.06,
+        0.04
+      ],
+      [
+        0.12,
+        0.06,
+        0.04,
+        0.62,
+        0.08,
+        0.08
+      ],
+      [
+        0.55,
+        0.08,
+        0.16,
+        0.03,
+        0.06,
+        0.12
+      ],
+      [
+        0.25,
+        0.2,
+        0.2,
+        0.06,
+        0.04,
+        0.25
+      ]
+    ],
+    "light_mixed": [
+      [
+        0.45,
+        0.2,
+        0.2,
+        0.05,
+        0.08,
+        0.02
+      ],
+      [
+        0.15,
+        0.2,
+        0.2,
+        0.05,
+        0.15,
+        0.25
+      ],
+      [
+        0.35,
+        0.08,
+        0.25,
+        0.07,
+        0.1,
+        0.15
+      ],
+      [
+        0.25,
+        0.08,
+        0.07,
+        0.25,
+        0.1,
+        0.25
+      ],
+      [
+        0.2,
+        0.08,
+        0.2,
+        0.07,
+        0.1,
+        0.35
+      ],
+      [
+        0.25,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.35
+      ]
+    ]
+  },
+  "sessions_mean": {
+    "scaffolded": 11,
+    "answer_seeking": 11,
+    "light_mixed": 8
+  },
+  "dwell_median_seconds": {
+    "T": 110,
+    "H": 45,
+    "A": 120,
+    "C": 30,
+    "V": 60,
+    "Q": 0
+  },
+  "gain_model": {
+    "formula": "gain = 2 + style_effect + 0.15*(55 - pre) + team_effect + N(0, 6^2)",
+    "style_effect": {
+      "scaffolded": 14.0,
+      "light_mixed": 8.0,
+      "answer_seeking": 3.0
+    },
+    "team_effect_sd": 3.0,
+    "noise_sd": 6.0,
+    "gained_definition": "post - pre >= 10"
+  },
+  "messiness": {
+    "early_dropout_share": 0.02,
+    "truncated_session_share": 0.05,
+    "miscoded_token_share": 0.02,
+    "messy_case_share": 0.005,
+    "unreadable_token_share": 0.003,
+    "n_missing_post_test": 18
+  },
+  "test_share": 0.3
+}
