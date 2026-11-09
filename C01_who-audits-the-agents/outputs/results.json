@@ -1,0 +1,769 @@
+{
+  "topic": "C01 Who Audits the Agents? Human Oversight as a Measurable Capability",
+  "data": "Synthetic. 1,500 live AI refund decisions (true error rate 8%), 3 sites x 4 reviewers, 2 reviewers per decision (3% escalated to 3), plus a golden set of 300 expert-verified cases (25% errors) seeded blind into the queues. Seed 20261101.",
+  "how_to_reproduce": "python3 data/generate_data.py; Rscript r/analysis.R; python3 python/analysis.py",
+  "python_r_all_headline_match": true,
+  "results": [
+    {
+      "name": "percent_agreement_all",
+      "value": 0.912,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Raw share of reviewer pairs on the same decision that gave the same label, all sites.",
+      "python": 0.912,
+      "r": 0.912,
+      "python_r_match": true
+    },
+    {
+      "name": "percent_agreement_site_A",
+      "value": 0.922,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Raw agreement among Site A reviewers.",
+      "python": 0.922,
+      "r": 0.922,
+      "python_r_match": true
+    },
+    {
+      "name": "percent_agreement_site_B",
+      "value": 0.912,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Raw agreement among Site B reviewers.",
+      "python": 0.912,
+      "r": 0.912,
+      "python_r_match": true
+    },
+    {
+      "name": "percent_agreement_site_C",
+      "value": 0.903,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Raw agreement among Site C reviewers.",
+      "python": 0.903,
+      "r": 0.903,
+      "python_r_match": true
+    },
+    {
+      "name": "reviewer_flag_rate_site_A",
+      "value": 0.1,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Share of Site A reviews labelled 'Error'."
+    },
+    {
+      "name": "reviewer_flag_rate_site_B",
+      "value": 0.117,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Share of Site B reviews labelled 'Error'."
+    },
+    {
+      "name": "reviewer_flag_rate_site_C",
+      "value": 0.049,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Share of Site C reviews labelled 'Error'."
+    },
+    {
+      "name": "kappa_top_pair",
+      "value": -0.03,
+      "rounding": 2,
+      "unit": "kappa",
+      "meaning": "Cohen's kappa for the most frequent pair, R10-R11 (Site C, 106 shared decisions).",
+      "python": -0.03,
+      "r": -0.03,
+      "python_r_match": true
+    },
+    {
+      "name": "kappa_top_pair_agreement",
+      "value": 0.896,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Raw agreement of pair R10-R11.",
+      "python": 0.896,
+      "r": 0.896,
+      "python_r_match": true
+    },
+    {
+      "name": "kappa_top_pair_chance_agreement",
+      "value": 0.899,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Agreement pair R10-R11 would reach by chance given their flag rates.",
+      "python": 0.899,
+      "r": 0.899,
+      "python_r_match": true
+    },
+    {
+      "name": "kappa_top_pair_n_shared",
+      "value": 106,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "Decisions shared by the most frequent pair."
+    },
+    {
+      "name": "kappa_mean_pairwise_all",
+      "value": 0.37,
+      "rounding": 2,
+      "unit": "kappa",
+      "meaning": "Average Cohen's kappa over the 18 reviewer pairs that share decisions.",
+      "python": 0.37,
+      "r": 0.37,
+      "python_r_match": true
+    },
+    {
+      "name": "kappa_mean_pairwise_site_A",
+      "value": 0.53,
+      "rounding": 2,
+      "unit": "kappa",
+      "meaning": "Average pairwise kappa within Site A.",
+      "python": 0.53,
+      "r": 0.53,
+      "python_r_match": true
+    },
+    {
+      "name": "kappa_mean_pairwise_site_B",
+      "value": 0.57,
+      "rounding": 2,
+      "unit": "kappa",
+      "meaning": "Average pairwise kappa within Site B.",
+      "python": 0.57,
+      "r": 0.57,
+      "python_r_match": true
+    },
+    {
+      "name": "kappa_mean_pairwise_site_C",
+      "value": 0.0,
+      "rounding": 2,
+      "unit": "kappa",
+      "meaning": "Average pairwise kappa within Site C.",
+      "python": 0.0,
+      "r": 0.0,
+      "python_r_match": true
+    },
+    {
+      "name": "reviewer_pairs_possible",
+      "value": 66,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "Possible reviewer pairs among 12 reviewers."
+    },
+    {
+      "name": "reviewer_pairs_sharing_cases",
+      "value": 18,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "Reviewer pairs that share at least one decision (the rest share none, so pairwise kappa cannot be computed)."
+    },
+    {
+      "name": "alpha_all",
+      "value": 0.46,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Krippendorff's alpha (nominal), all reviewers and sites; 1 = perfect, 0 = chance.",
+      "python": 0.46,
+      "r": 0.46,
+      "python_r_match": true
+    },
+    {
+      "name": "alpha_all_ci_low",
+      "value": 0.37,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Bootstrap 95% CI lower bound for overall alpha (1,000 resamples of decisions). Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.37,
+      "r": 0.37
+    },
+    {
+      "name": "alpha_all_ci_high",
+      "value": 0.53,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Bootstrap 95% CI upper bound for overall alpha. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.53,
+      "r": 0.54
+    },
+    {
+      "name": "alpha_site_A",
+      "value": 0.57,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Krippendorff's alpha within Site A.",
+      "python": 0.57,
+      "r": 0.57,
+      "python_r_match": true
+    },
+    {
+      "name": "alpha_site_A_ci_low",
+      "value": 0.44,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Bootstrap 95% CI lower bound, Site A alpha. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.44,
+      "r": 0.44
+    },
+    {
+      "name": "alpha_site_A_ci_high",
+      "value": 0.7,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Bootstrap 95% CI upper bound, Site A alpha. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.7,
+      "r": 0.69
+    },
+    {
+      "name": "alpha_site_B",
+      "value": 0.58,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Krippendorff's alpha within Site B.",
+      "python": 0.58,
+      "r": 0.58,
+      "python_r_match": true
+    },
+    {
+      "name": "alpha_site_B_ci_low",
+      "value": 0.44,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Bootstrap 95% CI lower bound, Site B alpha. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.44,
+      "r": 0.46
+    },
+    {
+      "name": "alpha_site_B_ci_high",
+      "value": 0.68,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Bootstrap 95% CI upper bound, Site B alpha. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.68,
+      "r": 0.69
+    },
+    {
+      "name": "alpha_site_C",
+      "value": -0.03,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Krippendorff's alpha within Site C.",
+      "python": -0.03,
+      "r": -0.03,
+      "python_r_match": true
+    },
+    {
+      "name": "alpha_site_C_ci_low",
+      "value": -0.06,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Bootstrap 95% CI lower bound, Site C alpha. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": -0.06,
+      "r": -0.06
+    },
+    {
+      "name": "alpha_site_C_ci_high",
+      "value": 0.02,
+      "rounding": 2,
+      "unit": "alpha",
+      "meaning": "Bootstrap 95% CI upper bound, Site C alpha. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.02,
+      "r": 0.02
+    },
+    {
+      "name": "gold_set_cases",
+      "value": 300,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "Expert-adjudicated decisions seeded blind into review queues (100 per site)."
+    },
+    {
+      "name": "gold_set_true_errors",
+      "value": 75,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "True AI errors in the golden set (enriched to 25% by design)."
+    },
+    {
+      "name": "estimated_live_error_rate",
+      "value": 0.105,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Live AI error rate estimated from Sites A+B flag rate corrected for their gold sensitivity/specificity (true value 0.08; realized 0.079). Overestimated in this seed because golden-set specificity (0.98-0.99) runs above the true ~0.95.",
+      "python": 0.105,
+      "r": 0.105,
+      "python_r_match": true
+    },
+    {
+      "name": "estimated_live_error_rate_ci_low",
+      "value": 0.079,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "95% CI lower bound, live error rate: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.079,
+      "r": 0.08
+    },
+    {
+      "name": "estimated_live_error_rate_ci_high",
+      "value": 0.133,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "95% CI upper bound, live error rate: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.133,
+      "r": 0.132
+    },
+    {
+      "name": "approve_everything_accuracy",
+      "value": 0.895,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Share of live decisions a reviewer who says 'Correct' to everything would get right, while catching zero errors.",
+      "python": 0.895,
+      "r": 0.895,
+      "python_r_match": true
+    },
+    {
+      "name": "sensitivity_all",
+      "value": 0.64,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Share of true-error reviews (golden set) labelled 'Error', all sites.",
+      "python": 0.64,
+      "r": 0.64,
+      "python_r_match": true
+    },
+    {
+      "name": "sensitivity_site_A",
+      "value": 0.94,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Site A error-catch rate: share of reviews of true errors labelled 'Error' (47 of 50).",
+      "python": 0.94,
+      "r": 0.94,
+      "python_r_match": true
+    },
+    {
+      "name": "sensitivity_site_A_ci_low",
+      "value": 0.87,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "95% CI lower bound, Site A sensitivity: case-level bootstrap (2,000 resamples of golden cases; reviews are clustered within cases). Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.87,
+      "r": 0.86
+    },
+    {
+      "name": "sensitivity_site_A_ci_high",
+      "value": 1.0,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "95% CI upper bound, Site A sensitivity: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 1.0,
+      "r": 1.0
+    },
+    {
+      "name": "specificity_site_A",
+      "value": 0.99,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Site A: share of reviews of truly correct decisions labelled 'Correct' (144 of 146).",
+      "python": 0.99,
+      "r": 0.99,
+      "python_r_match": true
+    },
+    {
+      "name": "missed_by_both_site_A",
+      "value": 0.0,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Site A: share of golden-set true errors where every reviewer said 'Correct' (0 of 25).",
+      "python": 0.0,
+      "r": 0.0,
+      "python_r_match": true
+    },
+    {
+      "name": "errors_slipping_per_1000_site_A",
+      "value": 0,
+      "rounding": 0,
+      "unit": "per 1,000 decisions",
+      "meaning": "Estimated AI errors per 1,000 decisions that pass Site A review unflagged (estimated live error rate x missed-by-both rate). Biased upward in this seed because the live error rate is overestimated (true value in true_parameters.site_implied_errors_slipping_per_1000).",
+      "python": 0,
+      "r": 0,
+      "python_r_match": true
+    },
+    {
+      "name": "errors_slipping_per_1000_site_A_ci_low",
+      "value": 0,
+      "rounding": 0,
+      "unit": "per 1,000 decisions",
+      "meaning": "95% CI lower bound, Site A errors per 1,000: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0,
+      "r": 0
+    },
+    {
+      "name": "errors_slipping_per_1000_site_A_ci_high",
+      "value": 0,
+      "rounding": 0,
+      "unit": "per 1,000 decisions",
+      "meaning": "95% CI upper bound, Site A errors per 1,000: case-level bootstrap. With 0 golden errors missed by both reviewers, every resample gives 0, so the interval collapses to 0-0; the true rate is small but not zero. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0,
+      "r": 0
+    },
+    {
+      "name": "double_review_rate_site_A",
+      "value": 0.936,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Coverage: share of Site A decisions with 2+ usable reviews."
+    },
+    {
+      "name": "high_value_double_review_rate_site_A",
+      "value": 0.939,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Coverage: share of Site A top-10%-by-amount refunds with 2+ usable reviews."
+    },
+    {
+      "name": "gold_errors_site_A",
+      "value": 25,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "True errors in Site A's golden set (small: precision is limited)."
+    },
+    {
+      "name": "sensitivity_site_B",
+      "value": 0.84,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Site B error-catch rate: share of reviews of true errors labelled 'Error' (42 of 50).",
+      "python": 0.84,
+      "r": 0.84,
+      "python_r_match": true
+    },
+    {
+      "name": "sensitivity_site_B_ci_low",
+      "value": 0.71,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "95% CI lower bound, Site B sensitivity: case-level bootstrap (2,000 resamples of golden cases; reviews are clustered within cases). Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.71,
+      "r": 0.71
+    },
+    {
+      "name": "sensitivity_site_B_ci_high",
+      "value": 0.95,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "95% CI upper bound, Site B sensitivity: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.95,
+      "r": 0.95
+    },
+    {
+      "name": "specificity_site_B",
+      "value": 0.98,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Site B: share of reviews of truly correct decisions labelled 'Correct' (146 of 149).",
+      "python": 0.98,
+      "r": 0.98,
+      "python_r_match": true
+    },
+    {
+      "name": "missed_by_both_site_B",
+      "value": 0.08,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Site B: share of golden-set true errors where every reviewer said 'Correct' (2 of 25).",
+      "python": 0.08,
+      "r": 0.08,
+      "python_r_match": true
+    },
+    {
+      "name": "errors_slipping_per_1000_site_B",
+      "value": 8,
+      "rounding": 0,
+      "unit": "per 1,000 decisions",
+      "meaning": "Estimated AI errors per 1,000 decisions that pass Site B review unflagged (estimated live error rate x missed-by-both rate). Biased upward in this seed because the live error rate is overestimated (true value in true_parameters.site_implied_errors_slipping_per_1000).",
+      "python": 8,
+      "r": 8,
+      "python_r_match": true
+    },
+    {
+      "name": "errors_slipping_per_1000_site_B_ci_low",
+      "value": 0,
+      "rounding": 0,
+      "unit": "per 1,000 decisions",
+      "meaning": "95% CI lower bound, Site B errors per 1,000: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0,
+      "r": 0
+    },
+    {
+      "name": "errors_slipping_per_1000_site_B_ci_high",
+      "value": 23,
+      "rounding": 0,
+      "unit": "per 1,000 decisions",
+      "meaning": "95% CI upper bound, Site B errors per 1,000: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 23,
+      "r": 23
+    },
+    {
+      "name": "double_review_rate_site_B",
+      "value": 0.962,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Coverage: share of Site B decisions with 2+ usable reviews."
+    },
+    {
+      "name": "high_value_double_review_rate_site_B",
+      "value": 0.981,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Coverage: share of Site B top-10%-by-amount refunds with 2+ usable reviews."
+    },
+    {
+      "name": "gold_errors_site_B",
+      "value": 25,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "True errors in Site B's golden set (small: precision is limited)."
+    },
+    {
+      "name": "sensitivity_site_C",
+      "value": 0.14,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Site C error-catch rate: share of reviews of true errors labelled 'Error' (7 of 49).",
+      "python": 0.14,
+      "r": 0.14,
+      "python_r_match": true
+    },
+    {
+      "name": "sensitivity_site_C_ci_low",
+      "value": 0.06,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "95% CI lower bound, Site C sensitivity: case-level bootstrap (2,000 resamples of golden cases; reviews are clustered within cases). Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.06,
+      "r": 0.06
+    },
+    {
+      "name": "sensitivity_site_C_ci_high",
+      "value": 0.24,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "95% CI upper bound, Site C sensitivity: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 0.24,
+      "r": 0.24
+    },
+    {
+      "name": "specificity_site_C",
+      "value": 0.98,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Site C: share of reviews of truly correct decisions labelled 'Correct' (143 of 146).",
+      "python": 0.98,
+      "r": 0.98,
+      "python_r_match": true
+    },
+    {
+      "name": "missed_by_both_site_C",
+      "value": 0.71,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "Site C: share of golden-set true errors where every reviewer said 'Correct' (17 of 24).",
+      "python": 0.71,
+      "r": 0.71,
+      "python_r_match": true
+    },
+    {
+      "name": "errors_slipping_per_1000_site_C",
+      "value": 74,
+      "rounding": 0,
+      "unit": "per 1,000 decisions",
+      "meaning": "Estimated AI errors per 1,000 decisions that pass Site C review unflagged (estimated live error rate x missed-by-both rate). Biased upward in this seed because the live error rate is overestimated (true value in true_parameters.site_implied_errors_slipping_per_1000).",
+      "python": 74,
+      "r": 74,
+      "python_r_match": true
+    },
+    {
+      "name": "errors_slipping_per_1000_site_C_ci_low",
+      "value": 48,
+      "rounding": 0,
+      "unit": "per 1,000 decisions",
+      "meaning": "95% CI lower bound, Site C errors per 1,000: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 48,
+      "r": 49
+    },
+    {
+      "name": "errors_slipping_per_1000_site_C_ci_high",
+      "value": 103,
+      "rounding": 0,
+      "unit": "per 1,000 decisions",
+      "meaning": "95% CI upper bound, Site C errors per 1,000: case-level bootstrap. Python and R bootstrap RNGs differ, so bounds may differ slightly.",
+      "python": 103,
+      "r": 103
+    },
+    {
+      "name": "double_review_rate_site_C",
+      "value": 0.952,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Coverage: share of Site C decisions with 2+ usable reviews."
+    },
+    {
+      "name": "high_value_double_review_rate_site_C",
+      "value": 0.959,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Coverage: share of Site C top-10%-by-amount refunds with 2+ usable reviews."
+    },
+    {
+      "name": "gold_errors_site_C",
+      "value": 25,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "True errors in Site C's golden set (small: precision is limited)."
+    },
+    {
+      "name": "missed_by_both_all",
+      "value": 0.26,
+      "rounding": 2,
+      "unit": "proportion",
+      "meaning": "All sites: share of golden-set true errors missed by every reviewer (19 of 74).",
+      "python": 0.26,
+      "r": 0.26,
+      "python_r_match": true
+    },
+    {
+      "name": "rows_raw",
+      "value": 3655,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "Review rows in the raw log."
+    },
+    {
+      "name": "rows_duplicate_dropped",
+      "value": 8,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "Double-submitted review rows dropped."
+    },
+    {
+      "name": "rows_unusable_label_dropped",
+      "value": 98,
+      "rounding": 0,
+      "unit": "count",
+      "meaning": "Reviews with blank/'Skipped'/'Unsure' labels dropped."
+    }
+  ],
+  "true_parameters": {
+    "prevalence_design": 0.08,
+    "site_design": {
+      "A": {
+        "sensitivity": 0.9,
+        "specificity": 0.96
+      },
+      "B": {
+        "sensitivity": 0.85,
+        "specificity": 0.95
+      },
+      "C": {
+        "sensitivity": 0.15,
+        "specificity": 0.94
+      }
+    },
+    "site_implied": {
+      "A": {
+        "agree": 0.904,
+        "alpha": 0.525,
+        "miss_both": 0.011,
+        "sens": 0.893,
+        "spec": 0.954
+      },
+      "B": {
+        "agree": 0.895,
+        "alpha": 0.473,
+        "miss_both": 0.023,
+        "sens": 0.848,
+        "spec": 0.952
+      },
+      "C": {
+        "agree": 0.891,
+        "alpha": 0.011,
+        "miss_both": 0.736,
+        "sens": 0.142,
+        "spec": 0.949
+      }
+    },
+    "site_implied_errors_slipping_per_1000": {
+      "A": 0.9,
+      "B": 1.8,
+      "C": 58.8
+    },
+    "reviewers": {
+      "R01": {
+        "site": "A",
+        "sensitivity": 0.8403,
+        "specificity": 0.9326
+      },
+      "R02": {
+        "site": "A",
+        "sensitivity": 0.9235,
+        "specificity": 0.967
+      },
+      "R03": {
+        "site": "A",
+        "sensitivity": 0.9018,
+        "specificity": 0.9601
+      },
+      "R04": {
+        "site": "A",
+        "sensitivity": 0.9078,
+        "specificity": 0.9578
+      },
+      "R05": {
+        "site": "B",
+        "sensitivity": 0.8257,
+        "specificity": 0.9615
+      },
+      "R06": {
+        "site": "B",
+        "sensitivity": 0.8692,
+        "specificity": 0.9514
+      },
+      "R07": {
+        "site": "B",
+        "sensitivity": 0.8693,
+        "specificity": 0.9674
+      },
+      "R08": {
+        "site": "B",
+        "sensitivity": 0.8292,
+        "specificity": 0.9276
+      },
+      "R09": {
+        "site": "C",
+        "sensitivity": 0.1641,
+        "specificity": 0.9439
+      },
+      "R10": {
+        "site": "C",
+        "sensitivity": 0.1671,
+        "specificity": 0.9521
+      },
+      "R11": {
+        "site": "C",
+        "sensitivity": 0.1444,
+        "specificity": 0.9462
+      },
+      "R12": {
+        "site": "C",
+        "sensitivity": 0.0931,
+        "specificity": 0.9526
+      }
+    },
+    "note": "site_implied = what an infinitely large sample would show, computed from the 4 reviewers' true sensitivity/specificity and the true 8% error rate (reviewer pairs drawn uniformly within site)."
+  },
+  "krippendorff_package_crosscheck_alpha_all": 0.4596,
+  "figures": [
+    "outputs/fig_1_agreement_vs_alpha.png",
+    "outputs/fig_2_error_catch_by_site.png"
+  ]
+}

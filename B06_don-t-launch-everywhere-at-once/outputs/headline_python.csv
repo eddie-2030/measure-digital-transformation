@@ -1,0 +1,133 @@
+name,value,decimals,unit,meaning
+n_employees,2450.0,0,people,Employees in the pilot
+n_teams,120.0,0,teams,Teams (randomization happened within each team)
+n_complete_tenure,2322.0,0,people,Employees with known tenure (used in tenure models)
+control_mean_tasks,41.48652441008951,2,tasks/week,Average weekly quality-adjusted tasks in the control group (denominator for %)
+ate_tasks,3.001429474705716,2,tasks/week,Overall average effect of AI access (adjusted for baseline and region)
+ate_ci_low,2.508266018105213,2,tasks/week,"Lower 95% bound, team-clustered"
+ate_ci_high,3.4945929313062187,2,tasks/week,"Upper 95% bound, team-clustered"
+ate_p,2.3860665022680217e-22,4,p-value,p-value of the overall effect
+ate_pct,7.23470938427363,1,%,Overall effect as % of the control mean
+ate_pct_ci_low,6.045977709077996,1,%,Lower 95% bound in %
+ate_pct_ci_high,8.423441059469264,1,%,Upper 95% bound in %
+b1_ai_english_experienced,3.345973601543869,2,tasks/week,"AI effect for English-language, experienced employees (b1)"
+b1_ai_english_experienced_ci_low,2.907927133791806,2,tasks/week,"Lower 95% bound, team-clustered"
+b1_ai_english_experienced_ci_high,3.7840200692959316,2,tasks/week,"Upper 95% bound, team-clustered"
+b1_ai_english_experienced_p,1.7430557357281168e-29,4,p-value,p-value
+b3_ai_x_nonenglish,-4.181612635404651,2,tasks/week,How much the AI effect differs for non-English teams (b3)
+b3_ai_x_nonenglish_ci_low,-5.0103905945073866,2,tasks/week,"Lower 95% bound, team-clustered"
+b3_ai_x_nonenglish_ci_high,-3.352834676301915,2,tasks/week,"Upper 95% bound, team-clustered"
+b3_ai_x_nonenglish_p,1.9509989706856623e-17,4,p-value,p-value
+b5_ai_x_novice,2.6476909382032385,2,tasks/week,"How much the AI effect differs for novices, tenure < 12 months (b5)"
+b5_ai_x_novice_ci_low,1.7413607254111745,2,tasks/week,"Lower 95% bound, team-clustered"
+b5_ai_x_novice_ci_high,3.5540211509953026,2,tasks/week,"Upper 95% bound, team-clustered"
+b5_ai_x_novice_p,5.99445902041496e-08,4,p-value,p-value
+sub_all_n,2450.0,0,people,Sample size: All employees
+sub_all_tasks,3.001429474705716,2,tasks/week,Estimated AI effect: All employees
+sub_all_ci_low,2.508266018105213,2,tasks/week,"Lower 95% bound, team-clustered"
+sub_all_ci_high,3.4945929313062187,2,tasks/week,"Upper 95% bound, team-clustered"
+sub_all_p,2.3860665022680217e-22,4,p-value,p-value
+sub_all_pct,7.23470938427363,1,%,Estimated AI effect as % of control mean: All employees
+sub_all_true_tasks,3.037620816326531,2,tasks/week,TRUE average effect (synthetic ground truth): All employees
+sub_english_n,1822.0,0,people,Sample size: English-language teams
+sub_english_tasks,4.040686664165016,2,tasks/week,Estimated AI effect: English-language teams
+sub_english_ci_low,3.614761938237094,2,tasks/week,"Lower 95% bound, team-clustered"
+sub_english_ci_high,4.466611390092939,2,tasks/week,"Upper 95% bound, team-clustered"
+sub_english_p,1.7652571258606275e-32,4,p-value,p-value
+sub_english_pct,9.739756997292169,1,%,Estimated AI effect as % of control mean: English-language teams
+sub_english_true_tasks,3.951444566410538,2,tasks/week,TRUE average effect (synthetic ground truth): English-language teams
+sub_non_english_n,628.0,0,people,Sample size: Non-English teams
+sub_non_english_tasks,-0.0008703578479773988,2,tasks/week,Estimated AI effect: Non-English teams
+sub_non_english_ci_low,-0.674971907408499,2,tasks/week,"Lower 95% bound, team-clustered"
+sub_non_english_ci_high,0.6732311917125442,2,tasks/week,"Upper 95% bound, team-clustered"
+sub_non_english_p,0.9979158120897329,4,p-value,p-value
+sub_non_english_pct,-0.002097929051308352,1,%,Estimated AI effect as % of control mean: Non-English teams
+sub_non_english_true_tasks,0.38636783439490446,2,tasks/week,TRUE average effect (synthetic ground truth): Non-English teams
+sub_novice_n,605.0,0,people,Sample size: Novices (<12 months)
+sub_novice_tasks,4.845273157531364,2,tasks/week,Estimated AI effect: Novices (<12 months)
+sub_novice_ci_low,3.920066181521224,2,tasks/week,"Lower 95% bound, team-clustered"
+sub_novice_ci_high,5.770480133541503,2,tasks/week,"Upper 95% bound, team-clustered"
+sub_novice_p,2.8696122863799268e-18,4,p-value,p-value
+sub_novice_pct,11.679149377847123,1,%,Estimated AI effect as % of control mean: Novices (<12 months)
+sub_novice_true_tasks,4.573462809917355,2,tasks/week,TRUE average effect (synthetic ground truth): Novices (<12 months)
+sub_experienced_n,1717.0,0,people,Sample size: Experienced (12+ months)
+sub_experienced_tasks,2.328477543904185,2,tasks/week,Estimated AI effect: Experienced (12+ months)
+sub_experienced_ci_low,1.7938407553418707,2,tasks/week,"Lower 95% bound, team-clustered"
+sub_experienced_ci_high,2.8631143324664996,2,tasks/week,"Upper 95% bound, team-clustered"
+sub_experienced_p,3.3113814159444205e-14,4,p-value,p-value
+sub_experienced_pct,5.612611750474572,1,%,Estimated AI effect as % of control mean: Experienced (12+ months)
+sub_experienced_true_tasks,2.502465928945836,2,tasks/week,TRUE average effect (synthetic ground truth): Experienced (12+ months)
+sub_english_novice_n,440.0,0,people,"Sample size: English, novice"
+sub_english_novice_tasks,6.085835449158764,2,tasks/week,"Estimated AI effect: English, novice"
+sub_english_novice_ci_low,5.061504432681305,2,tasks/week,"Lower 95% bound, team-clustered"
+sub_english_novice_ci_high,7.1101664656362225,2,tasks/week,"Upper 95% bound, team-clustered"
+sub_english_novice_p,1.277299980558218e-19,4,p-value,p-value
+sub_english_novice_pct,14.6694270867354,1,%,"Estimated AI effect as % of control mean: English, novice"
+sub_english_novice_true_tasks,5.56573409090909,2,tasks/week,"TRUE average effect (synthetic ground truth): English, novice"
+sub_english_experienced_n,1293.0,0,people,"Sample size: English, experienced"
+sub_english_experienced_tasks,3.365154309617175,2,tasks/week,"Estimated AI effect: English, experienced"
+sub_english_experienced_ci_low,2.909328062730233,2,tasks/week,"Lower 95% bound, team-clustered"
+sub_english_experienced_ci_high,3.820980556504117,2,tasks/week,"Upper 95% bound, team-clustered"
+sub_english_experienced_p,2.9635244907913157e-25,4,p-value,p-value
+sub_english_experienced_pct,8.11143945526266,1,%,"Estimated AI effect as % of control mean: English, experienced"
+sub_english_experienced_true_tasks,3.3926133023975247,2,tasks/week,"TRUE average effect (synthetic ground truth): English, experienced"
+sub_non_english_novice_n,165.0,0,people,"Sample size: Non-English, novice"
+sub_non_english_novice_tasks,1.8343097924332037,2,tasks/week,"Estimated AI effect: Non-English, novice"
+sub_non_english_novice_ci_low,0.5983579901179703,2,tasks/week,"Lower 95% bound, team-clustered"
+sub_non_english_novice_ci_high,3.070261594748437,2,tasks/week,"Upper 95% bound, team-clustered"
+sub_non_english_novice_p,0.00493959561392898,4,p-value,p-value
+sub_non_english_novice_pct,4.421459301582516,1,%,"Estimated AI effect as % of control mean: Non-English, novice"
+sub_non_english_novice_true_tasks,1.9274060606060608,2,tasks/week,"TRUE average effect (synthetic ground truth): Non-English, novice"
+sub_non_english_experienced_n,424.0,0,people,"Sample size: Non-English, experienced"
+sub_non_english_experienced_tasks,-0.8837499416783124,2,tasks/week,"Estimated AI effect: Non-English, experienced"
+sub_non_english_experienced_ci_low,-1.8102081841778106,2,tasks/week,"Lower 95% bound, team-clustered"
+sub_non_english_experienced_ci_high,0.04270830082118582,2,tasks/week,"Upper 95% bound, team-clustered"
+sub_non_english_experienced_p,0.06083208641194017,4,p-value,p-value
+sub_non_english_experienced_pct,-2.1302096385383993,1,%,"Estimated AI effect as % of control mean: Non-English, experienced"
+sub_non_english_experienced_true_tasks,-0.212063679245283,2,tasks/week,"TRUE average effect (synthetic ground truth): Non-English, experienced"
+slice_region_americas_diff,0.6843049437608254,2,tasks/week,Naive slicing: AI effect in 'Region: Americas' minus rest
+slice_region_americas_p_raw,0.19888314358745335,4,p-value,Uncorrected p-value
+slice_region_americas_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_region_emea_diff,-0.10829023831611659,2,tasks/week,Naive slicing: AI effect in 'Region: EMEA' minus rest
+slice_region_emea_p_raw,0.8405156897421049,4,p-value,Uncorrected p-value
+slice_region_emea_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_region_apac_diff,-0.15881751017781368,2,tasks/week,Naive slicing: AI effect in 'Region: APAC' minus rest
+slice_region_apac_p_raw,0.7707900978104616,4,p-value,Uncorrected p-value
+slice_region_apac_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_region_latam_diff,-0.7935721151026847,2,tasks/week,Naive slicing: AI effect in 'Region: LATAM' minus rest
+slice_region_latam_p_raw,0.30517191152096285,4,p-value,Uncorrected p-value
+slice_region_latam_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_language_non_english_diff,-4.044467065869367,2,tasks/week,Naive slicing: AI effect in 'Language: non-English' minus rest
+slice_language_non_english_p_raw,3.400570942017422e-18,4,p-value,Uncorrected p-value
+slice_language_non_english_p_holm,4.7607993188243906e-17,4,p-value,Holm-corrected p-value (14 tests)
+slice_tenure_novice__12_mo_diff,2.52356729186946,2,tasks/week,Naive slicing: AI effect in 'Tenure: novice (<12 mo)' minus rest
+slice_tenure_novice__12_mo_p_raw,4.1950766069161506e-07,4,p-value,Uncorrected p-value
+slice_tenure_novice__12_mo_p_holm,5.453599588990996e-06,4,p-value,Holm-corrected p-value (14 tests)
+slice_role_tier_1_support_diff,-0.24329109827799134,2,tasks/week,Naive slicing: AI effect in 'Role: Tier-1 support' minus rest
+slice_role_tier_1_support_p_raw,0.5127195812497203,4,p-value,Uncorrected p-value
+slice_role_tier_1_support_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_role_tier_2_support_diff,0.3703932164096287,2,tasks/week,Naive slicing: AI effect in 'Role: Tier-2 support' minus rest
+slice_role_tier_2_support_p_raw,0.3934729710300469,4,p-value,Uncorrected p-value
+slice_role_tier_2_support_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_role_operations_analyst_diff,-0.17946525041026565,2,tasks/week,Naive slicing: AI effect in 'Role: Operations analyst' minus rest
+slice_role_operations_analyst_p_raw,0.7066193019518033,4,p-value,Uncorrected p-value
+slice_role_operations_analyst_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_role_specialist_diff,0.17734994131299217,2,tasks/week,Naive slicing: AI effect in 'Role: Specialist' minus rest
+slice_role_specialist_p_raw,0.7595811752456555,4,p-value,Uncorrected p-value
+slice_role_specialist_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_shift_day_diff,0.5847029289794343,2,tasks/week,Naive slicing: AI effect in 'Shift: Day' minus rest
+slice_shift_day_p_raw,0.16253651792085524,4,p-value,Uncorrected p-value
+slice_shift_day_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_shift_evening_diff,-0.7322559194545972,2,tasks/week,Naive slicing: AI effect in 'Shift: Evening' minus rest
+slice_shift_evening_p_raw,0.11915767044196501,4,p-value,Uncorrected p-value
+slice_shift_evening_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_shift_night_diff,0.10905096381434722,2,tasks/week,Naive slicing: AI effect in 'Shift: Night' minus rest
+slice_shift_night_p_raw,0.8494749147270952,4,p-value,Uncorrected p-value
+slice_shift_night_p_holm,1.0,4,p-value,Holm-corrected p-value (14 tests)
+slice_remote_worker_diff,-0.9304331386569352,2,tasks/week,Naive slicing: AI effect in 'Remote worker' minus rest
+slice_remote_worker_p_raw,0.006417170183499653,4,p-value,Uncorrected p-value
+slice_remote_worker_p_holm,0.07700604220199583,4,p-value,Holm-corrected p-value (14 tests)
+naive_n_flagged_raw,3.0,0,slices,Slices flagged at p<.05 without correction (of 14)
+naive_n_false_flagged_raw,1.0,0,slices,Flagged slices with NO true moderation
+naive_n_flagged_holm,2.0,0,slices,Slices still flagged after Holm correction
+dr_ate_tasks,3.018007444930744,2,tasks/week,Average of the DR pseudo-outcomes (= doubly robust ATE; identical folds in Python and R)

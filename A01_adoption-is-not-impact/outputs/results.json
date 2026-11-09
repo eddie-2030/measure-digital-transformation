@@ -1,0 +1,1302 @@
+{
+  "topic": "A01 Adoption Is Not Impact: How to Prove a GenAI Rollout Actually Worked",
+  "data": "Synthetic. 60 customer-support teams (6 regions x 10), observed weekly for 24 weeks; AI assistant rolled out in 3 waves of 20 teams (weeks 7, 13, 19). Common trend +0.05/week. True effect ramps to an established ~0.38 tickets per agent-hour over 3 weeks (about 0.29 averaged over the first 6 weeks). True effect on reopen rate = 0. Seed 20261105.",
+  "how_to_reproduce": "python3 data/generate_data.py; Rscript r/analysis.R; python3 python/analysis.py",
+  "python_r_all_headline_match": true,
+  "ci_method": "95% CIs use the normal approximation (1.96) with team-clustered SEs. CR1 for regressions; influence-function SEs for group-time ATTs (group sizes treated as fixed).",
+  "results": [
+    {
+      "name": "n_rows_raw",
+      "value": 1421,
+      "rounding": 0,
+      "unit": "rows",
+      "meaning": "Rows in the raw extract.",
+      "python": 1421,
+      "r": 1421,
+      "python_r_match": true
+    },
+    {
+      "name": "n_duplicates",
+      "value": 4,
+      "rounding": 0,
+      "unit": "rows",
+      "meaning": "Double-loaded team-weeks removed.",
+      "python": 4,
+      "r": 4,
+      "python_r_match": true
+    },
+    {
+      "name": "n_blank_hours",
+      "value": 3,
+      "rounding": 0,
+      "unit": "rows",
+      "meaning": "Team-weeks dropped because agent_hours was blank.",
+      "python": 3,
+      "r": 3,
+      "python_r_match": true
+    },
+    {
+      "name": "n_rows_clean",
+      "value": 1414,
+      "rounding": 0,
+      "unit": "rows",
+      "meaning": "Clean team-weeks analysed (60 teams x 24 weeks minus gaps).",
+      "python": 1414,
+      "r": 1414,
+      "python_r_match": true
+    },
+    {
+      "name": "n_missing_teamweeks",
+      "value": 26,
+      "rounding": 0,
+      "unit": "rows",
+      "meaning": "Team-weeks absent or unusable (holidays, outages, blank hours).",
+      "python": 26,
+      "r": 26,
+      "python_r_match": true
+    },
+    {
+      "name": "wave1_pre_mean",
+      "value": 2.602,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Wave-1 mean, weeks 1-6 (before launch).",
+      "python": 2.602,
+      "r": 2.602,
+      "python_r_match": true
+    },
+    {
+      "name": "wave1_post_mean",
+      "value": 3.203,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Wave-1 mean, weeks 7-12 (after launch).",
+      "python": 3.203,
+      "r": 3.203,
+      "python_r_match": true
+    },
+    {
+      "name": "comparison_pre_mean",
+      "value": 2.56,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Comparison (waves 2-3) mean, weeks 1-6.",
+      "python": 2.56,
+      "r": 2.56,
+      "python_r_match": true
+    },
+    {
+      "name": "comparison_post_mean",
+      "value": 2.859,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Comparison (waves 2-3) mean, weeks 7-12 (still without the assistant).",
+      "python": 2.859,
+      "r": 2.859,
+      "python_r_match": true
+    },
+    {
+      "name": "naive_before_after_wave1",
+      "value": 0.601,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "NAIVE: wave-1 mean after minus before (weeks 7-12 vs 1-6). Overstates the effect about 2x.",
+      "python": 0.601,
+      "r": 0.601,
+      "python_r_match": true
+    },
+    {
+      "name": "naive_before_after_se",
+      "value": 0.017,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Team-clustered SE of the naive gain (precise, but precisely wrong).",
+      "python": 0.017,
+      "r": 0.017,
+      "python_r_match": true
+    },
+    {
+      "name": "comparison_change",
+      "value": 0.299,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Change in comparison teams over the same weeks: what would have happened anyway.",
+      "python": 0.299,
+      "r": 0.299,
+      "python_r_match": true
+    },
+    {
+      "name": "did_2x2",
+      "value": 0.302,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Classic 2x2 DiD: wave 1 vs not-yet-treated teams, weeks 1-12. The article's AI effect.",
+      "python": 0.302,
+      "r": 0.302,
+      "python_r_match": true
+    },
+    {
+      "name": "did_2x2_se",
+      "value": 0.02,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Team-clustered (CR1) standard error of the 2x2 DiD.",
+      "python": 0.02,
+      "r": 0.02,
+      "python_r_match": true
+    },
+    {
+      "name": "did_2x2_ci_low",
+      "value": 0.263,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "95% CI lower bound of the 2x2 DiD (normal approximation).",
+      "python": 0.263,
+      "r": 0.263,
+      "python_r_match": true
+    },
+    {
+      "name": "did_2x2_ci_high",
+      "value": 0.341,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "95% CI upper bound of the 2x2 DiD; excludes the naive +0.60.",
+      "python": 0.341,
+      "r": 0.341,
+      "python_r_match": true
+    },
+    {
+      "name": "naive_to_did_ratio",
+      "value": 1.99,
+      "rounding": 2,
+      "unit": "ratio",
+      "meaning": "Naive gain divided by the DiD effect (about 2: half the gain was not the AI).",
+      "python": 1.99,
+      "r": 1.99,
+      "python_r_match": true
+    },
+    {
+      "name": "did_share_of_naive",
+      "value": 0.502,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Share of the naive gain that the assistant caused.",
+      "python": 0.502,
+      "r": 0.502,
+      "python_r_match": true
+    },
+    {
+      "name": "did_pct_of_baseline",
+      "value": 0.116,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "DiD effect relative to wave-1 pre-launch level.",
+      "python": 0.116,
+      "r": 0.116,
+      "python_r_match": true
+    },
+    {
+      "name": "pretrend_slope_diff",
+      "value": -0.0066,
+      "rounding": 4,
+      "unit": "tickets per agent-hour per week",
+      "meaning": "Parallel-trends check: wave-1 minus comparison weekly slope, weeks 1-6 (should be ~0).",
+      "python": -0.0066,
+      "r": -0.0066,
+      "python_r_match": true
+    },
+    {
+      "name": "pretrend_slope_diff_se",
+      "value": 0.0075,
+      "rounding": 4,
+      "unit": "tickets per agent-hour per week",
+      "meaning": "Team-clustered SE of the pre-trend slope difference.",
+      "python": 0.0075,
+      "r": 0.0075,
+      "python_r_match": true
+    },
+    {
+      "name": "twfe_att",
+      "value": 0.278,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "NAIVE staggered: two-way fixed effects coefficient on 'has assistant', all 24 weeks. Biased low.",
+      "python": 0.278,
+      "r": 0.278,
+      "python_r_match": true
+    },
+    {
+      "name": "twfe_se",
+      "value": 0.013,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Team-clustered SE of the TWFE coefficient (precise but biased).",
+      "python": 0.013,
+      "r": 0.013,
+      "python_r_match": true
+    },
+    {
+      "name": "twfe_ci_low",
+      "value": 0.253,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "95% CI lower bound, TWFE.",
+      "python": 0.253,
+      "r": 0.253,
+      "python_r_match": true
+    },
+    {
+      "name": "twfe_ci_high",
+      "value": 0.304,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "95% CI upper bound, TWFE; excludes the true effect over the group-time cells (0.318) and over all treated team-weeks (0.335).",
+      "python": 0.304,
+      "r": 0.304,
+      "python_r_match": true
+    },
+    {
+      "name": "cs_att_overall",
+      "value": 0.322,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Group-time (Callaway & Sant'Anna style) overall ATT, waves 1-2, weeks up to 18.",
+      "python": 0.322,
+      "r": 0.322,
+      "python_r_match": true
+    },
+    {
+      "name": "cs_att_overall_se",
+      "value": 0.017,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Team-clustered SE (influence function) of the overall group-time ATT.",
+      "python": 0.017,
+      "r": 0.017,
+      "python_r_match": true
+    },
+    {
+      "name": "cs_att_overall_ci_low",
+      "value": 0.289,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "95% CI lower bound, overall group-time ATT.",
+      "python": 0.289,
+      "r": 0.289,
+      "python_r_match": true
+    },
+    {
+      "name": "cs_att_overall_ci_high",
+      "value": 0.356,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "95% CI upper bound, overall group-time ATT.",
+      "python": 0.356,
+      "r": 0.356,
+      "python_r_match": true
+    },
+    {
+      "name": "cs_att_established",
+      "value": 0.378,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Group-time ATT 3+ weeks after launch: the established effect.",
+      "python": 0.378,
+      "r": 0.378,
+      "python_r_match": true
+    },
+    {
+      "name": "cs_att_established_se",
+      "value": 0.02,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the established effect.",
+      "python": 0.02,
+      "r": 0.02,
+      "python_r_match": true
+    },
+    {
+      "name": "cs_att_wave1_weeks7to12",
+      "value": 0.307,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Group-time ATT for wave 1, weeks 7-12 (same target as the 2x2 DiD).",
+      "python": 0.307,
+      "r": 0.307,
+      "python_r_match": true
+    },
+    {
+      "name": "cs_leads_chi2",
+      "value": 3.3,
+      "rounding": 2,
+      "unit": "chi-square",
+      "meaning": "Joint chi-square of placebo leads, event times -6 to -2 (5 df).",
+      "python": 3.3,
+      "r": 3.3,
+      "python_r_match": true
+    },
+    {
+      "name": "cs_leads_p",
+      "value": 0.654,
+      "rounding": 3,
+      "unit": "p-value",
+      "meaning": "p-value of the placebo-lead test (large = no sign of diverging pre-trends).",
+      "python": 0.654,
+      "r": 0.654,
+      "python_r_match": true
+    },
+    {
+      "name": "true_att_wave1_weeks7to12",
+      "value": 0.288,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "TRUTH: average true effect, wave 1, weeks 7-12 (target of naive and 2x2 DiD).",
+      "python": 0.288,
+      "r": 0.288,
+      "python_r_match": true
+    },
+    {
+      "name": "true_att_cs_cells",
+      "value": 0.318,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "TRUTH: average true effect over the cells the group-time ATT covers (target of TWFE and group-time ATT).",
+      "python": 0.318,
+      "r": 0.318,
+      "python_r_match": true
+    },
+    {
+      "name": "true_att_established",
+      "value": 0.382,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "TRUTH: average true effect 3+ weeks after launch (same cells as cs_att_established).",
+      "python": 0.382,
+      "r": 0.382,
+      "python_r_match": true
+    },
+    {
+      "name": "true_att_all_treated",
+      "value": 0.335,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "TRUTH: average true effect over every treated team-week incl. weeks 19-24.",
+      "python": 0.335,
+      "r": 0.335,
+      "python_r_match": true
+    },
+    {
+      "name": "bias_naive",
+      "value": 0.313,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Naive before-after minus truth.",
+      "python": 0.313,
+      "r": 0.313,
+      "python_r_match": true
+    },
+    {
+      "name": "bias_did_2x2",
+      "value": 0.014,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "2x2 DiD minus truth.",
+      "python": 0.014,
+      "r": 0.014,
+      "python_r_match": true
+    },
+    {
+      "name": "bias_twfe_vs_cs_cells",
+      "value": -0.04,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "TWFE minus truth (same cells as the group-time ATT).",
+      "python": -0.04,
+      "r": -0.04,
+      "python_r_match": true
+    },
+    {
+      "name": "bias_twfe_vs_all_treated",
+      "value": -0.056,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "TWFE minus truth over all treated team-weeks.",
+      "python": -0.056,
+      "r": -0.056,
+      "python_r_match": true
+    },
+    {
+      "name": "bias_cs",
+      "value": 0.004,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Group-time ATT minus truth.",
+      "python": 0.004,
+      "r": 0.004,
+      "python_r_match": true
+    },
+    {
+      "name": "did_reopen_rate",
+      "value": 0.0009,
+      "rounding": 4,
+      "unit": "proportion",
+      "meaning": "Quality: 2x2 DiD on reopen rate (true effect 0). Speed rose, quality held.",
+      "python": 0.0009,
+      "r": 0.0009,
+      "python_r_match": true
+    },
+    {
+      "name": "did_reopen_rate_se",
+      "value": 0.0016,
+      "rounding": 4,
+      "unit": "proportion",
+      "meaning": "Team-clustered SE, reopen-rate DiD.",
+      "python": 0.0016,
+      "r": 0.0016,
+      "python_r_match": true
+    },
+    {
+      "name": "did_reopen_rate_ci_low",
+      "value": -0.0022,
+      "rounding": 4,
+      "unit": "proportion",
+      "meaning": "95% CI lower bound, reopen-rate DiD.",
+      "python": -0.0022,
+      "r": -0.0022,
+      "python_r_match": true
+    },
+    {
+      "name": "did_reopen_rate_ci_high",
+      "value": 0.004,
+      "rounding": 4,
+      "unit": "proportion",
+      "meaning": "95% CI upper bound, reopen-rate DiD.",
+      "python": 0.004,
+      "r": 0.004,
+      "python_r_match": true
+    },
+    {
+      "name": "reopen_rate_baseline_wave1",
+      "value": 0.0777,
+      "rounding": 4,
+      "unit": "proportion",
+      "meaning": "Wave-1 reopen rate before launch.",
+      "python": 0.0777,
+      "r": 0.0777,
+      "python_r_match": true
+    },
+    {
+      "name": "usage_share_wave1_weeks7to12",
+      "value": 0.721,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Rung 1: wave-1 weekly active share of agents, weeks 7-12.",
+      "python": 0.721,
+      "r": 0.721,
+      "python_r_match": true
+    },
+    {
+      "name": "usage_share_established",
+      "value": 0.81,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Rung 1: weekly active share 3+ weeks after launch, all launched teams.",
+      "python": 0.81,
+      "r": 0.81,
+      "python_r_match": true
+    },
+    {
+      "name": "agent_hours_per_week_org",
+      "value": 23545,
+      "rounding": 0,
+      "unit": "hours",
+      "meaning": "Org-wide agent-hours per week (60 teams).",
+      "python": 23545,
+      "r": 23545,
+      "python_r_match": true
+    },
+    {
+      "name": "extra_tickets_per_1000_hours_naive",
+      "value": 601,
+      "rounding": 0,
+      "unit": "tickets",
+      "meaning": "What the naive story claims: extra tickets per 1,000 agent-hours.",
+      "python": 601,
+      "r": 601,
+      "python_r_match": true
+    },
+    {
+      "name": "extra_tickets_per_1000_hours_did",
+      "value": 302,
+      "rounding": 0,
+      "unit": "tickets",
+      "meaning": "What the evidence supports: extra tickets per 1,000 agent-hours (DiD).",
+      "python": 302,
+      "r": 302,
+      "python_r_match": true
+    },
+    {
+      "name": "extra_tickets_per_week_org_established",
+      "value": 8906,
+      "rounding": 0,
+      "unit": "tickets",
+      "meaning": "Extra tickets per week org-wide once established (established effect x weekly hours).",
+      "python": 8906,
+      "r": 8906,
+      "python_r_match": true
+    },
+    {
+      "name": "es_em6",
+      "value": 0.009,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, -6 weeks since launch.",
+      "python": 0.009,
+      "r": 0.009,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_em6",
+      "value": 0.019,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at -6.",
+      "python": 0.019,
+      "r": 0.019,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_em6",
+      "value": 0.0,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at -6 weeks since launch (same teams).",
+      "python": 0.0,
+      "r": 0.0,
+      "python_r_match": true
+    },
+    {
+      "name": "es_em5",
+      "value": 0.004,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, -5 weeks since launch.",
+      "python": 0.004,
+      "r": 0.004,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_em5",
+      "value": 0.023,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at -5.",
+      "python": 0.023,
+      "r": 0.023,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_em5",
+      "value": 0.0,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at -5 weeks since launch (same teams).",
+      "python": 0.0,
+      "r": 0.0,
+      "python_r_match": true
+    },
+    {
+      "name": "es_em4",
+      "value": -0.028,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, -4 weeks since launch.",
+      "python": -0.028,
+      "r": -0.028,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_em4",
+      "value": 0.021,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at -4.",
+      "python": 0.021,
+      "r": 0.021,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_em4",
+      "value": 0.0,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at -4 weeks since launch (same teams).",
+      "python": 0.0,
+      "r": 0.0,
+      "python_r_match": true
+    },
+    {
+      "name": "es_em3",
+      "value": 0.029,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, -3 weeks since launch.",
+      "python": 0.029,
+      "r": 0.029,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_em3",
+      "value": 0.022,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at -3.",
+      "python": 0.022,
+      "r": 0.022,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_em3",
+      "value": 0.0,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at -3 weeks since launch (same teams).",
+      "python": 0.0,
+      "r": 0.0,
+      "python_r_match": true
+    },
+    {
+      "name": "es_em2",
+      "value": 0.008,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, -2 weeks since launch.",
+      "python": 0.008,
+      "r": 0.008,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_em2",
+      "value": 0.03,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at -2.",
+      "python": 0.03,
+      "r": 0.03,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_em2",
+      "value": 0.0,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at -2 weeks since launch (same teams).",
+      "python": 0.0,
+      "r": 0.0,
+      "python_r_match": true
+    },
+    {
+      "name": "es_em1",
+      "value": 0.013,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, -1 weeks since launch.",
+      "python": 0.013,
+      "r": 0.013,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_em1",
+      "value": 0.024,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at -1.",
+      "python": 0.024,
+      "r": 0.024,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_em1",
+      "value": 0.0,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at -1 weeks since launch (same teams).",
+      "python": 0.0,
+      "r": 0.0,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e0",
+      "value": 0.087,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 0 weeks since launch.",
+      "python": 0.087,
+      "r": 0.087,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e0",
+      "value": 0.029,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 0.",
+      "python": 0.029,
+      "r": 0.029,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e0",
+      "value": 0.076,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 0 weeks since launch (same teams).",
+      "python": 0.076,
+      "r": 0.076,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e1",
+      "value": 0.2,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 1 weeks since launch.",
+      "python": 0.2,
+      "r": 0.2,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e1",
+      "value": 0.026,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 1.",
+      "python": 0.026,
+      "r": 0.026,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e1",
+      "value": 0.191,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 1 weeks since launch (same teams).",
+      "python": 0.191,
+      "r": 0.191,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e2",
+      "value": 0.344,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 2 weeks since launch.",
+      "python": 0.344,
+      "r": 0.344,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e2",
+      "value": 0.027,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 2.",
+      "python": 0.027,
+      "r": 0.027,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e2",
+      "value": 0.306,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 2 weeks since launch (same teams).",
+      "python": 0.306,
+      "r": 0.306,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e3",
+      "value": 0.37,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 3 weeks since launch.",
+      "python": 0.37,
+      "r": 0.37,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e3",
+      "value": 0.027,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 3.",
+      "python": 0.027,
+      "r": 0.027,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e3",
+      "value": 0.382,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 3 weeks since launch (same teams).",
+      "python": 0.382,
+      "r": 0.382,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e4",
+      "value": 0.387,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 4 weeks since launch.",
+      "python": 0.387,
+      "r": 0.387,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e4",
+      "value": 0.027,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 4.",
+      "python": 0.027,
+      "r": 0.027,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e4",
+      "value": 0.381,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 4 weeks since launch (same teams).",
+      "python": 0.381,
+      "r": 0.381,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e5",
+      "value": 0.377,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 5 weeks since launch.",
+      "python": 0.377,
+      "r": 0.377,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e5",
+      "value": 0.03,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 5.",
+      "python": 0.03,
+      "r": 0.03,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e5",
+      "value": 0.382,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 5 weeks since launch (same teams).",
+      "python": 0.382,
+      "r": 0.382,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e6",
+      "value": 0.388,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 6 weeks since launch.",
+      "python": 0.388,
+      "r": 0.388,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e6",
+      "value": 0.042,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 6.",
+      "python": 0.042,
+      "r": 0.042,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e6",
+      "value": 0.381,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 6 weeks since launch (same teams).",
+      "python": 0.381,
+      "r": 0.381,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e7",
+      "value": 0.382,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 7 weeks since launch.",
+      "python": 0.382,
+      "r": 0.382,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e7",
+      "value": 0.032,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 7.",
+      "python": 0.032,
+      "r": 0.032,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e7",
+      "value": 0.381,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 7 weeks since launch (same teams).",
+      "python": 0.381,
+      "r": 0.381,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e8",
+      "value": 0.421,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 8 weeks since launch.",
+      "python": 0.421,
+      "r": 0.421,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e8",
+      "value": 0.043,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 8.",
+      "python": 0.043,
+      "r": 0.043,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e8",
+      "value": 0.381,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 8 weeks since launch (same teams).",
+      "python": 0.381,
+      "r": 0.381,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e9",
+      "value": 0.373,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 9 weeks since launch.",
+      "python": 0.373,
+      "r": 0.373,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e9",
+      "value": 0.047,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 9.",
+      "python": 0.047,
+      "r": 0.047,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e9",
+      "value": 0.381,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 9 weeks since launch (same teams).",
+      "python": 0.381,
+      "r": 0.381,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e10",
+      "value": 0.363,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 10 weeks since launch.",
+      "python": 0.363,
+      "r": 0.363,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e10",
+      "value": 0.039,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 10.",
+      "python": 0.039,
+      "r": 0.039,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e10",
+      "value": 0.381,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 10 weeks since launch (same teams).",
+      "python": 0.381,
+      "r": 0.381,
+      "python_r_match": true
+    },
+    {
+      "name": "es_e11",
+      "value": 0.345,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Event-study estimate, 11 weeks since launch.",
+      "python": 0.345,
+      "r": 0.345,
+      "python_r_match": true
+    },
+    {
+      "name": "es_se_e11",
+      "value": 0.039,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "SE of the event-study estimate at 11.",
+      "python": 0.039,
+      "r": 0.039,
+      "python_r_match": true
+    },
+    {
+      "name": "es_true_e11",
+      "value": 0.381,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "True effect at 11 weeks since launch (same teams).",
+      "python": 0.381,
+      "r": 0.381,
+      "python_r_match": true
+    },
+    {
+      "name": "mc_naive_mean",
+      "value": 0.587,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Monte Carlo (Python only, 30 seeds): naive mean."
+    },
+    {
+      "name": "mc_did_mean",
+      "value": 0.288,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Monte Carlo (Python only, 30 seeds): did mean."
+    },
+    {
+      "name": "mc_did_bias_mean",
+      "value": 0.003,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Monte Carlo (Python only, 30 seeds): did bias mean."
+    },
+    {
+      "name": "mc_twfe_bias_mean",
+      "value": -0.05,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Monte Carlo (Python only, 30 seeds): twfe bias mean."
+    },
+    {
+      "name": "mc_twfe_bias_min",
+      "value": -0.077,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Monte Carlo (Python only, 30 seeds): twfe bias min."
+    },
+    {
+      "name": "mc_twfe_bias_max",
+      "value": -0.029,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Monte Carlo (Python only, 30 seeds): twfe bias max."
+    },
+    {
+      "name": "mc_twfe_below_truth_share",
+      "value": 1.0,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Monte Carlo (Python only, 30 seeds): twfe below truth share."
+    },
+    {
+      "name": "mc_cs_bias_mean",
+      "value": 0.001,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Monte Carlo (Python only, 30 seeds): cs bias mean."
+    },
+    {
+      "name": "mc_cs_bias_sd",
+      "value": 0.018,
+      "rounding": 3,
+      "unit": "tickets per agent-hour",
+      "meaning": "Monte Carlo (Python only, 30 seeds): cs bias sd."
+    },
+    {
+      "name": "mc_cs_closer_than_twfe_share",
+      "value": 1.0,
+      "rounding": 3,
+      "unit": "proportion",
+      "meaning": "Monte Carlo (Python only, 30 seeds): cs closer than twfe share."
+    }
+  ],
+  "check_against_truth": [
+    {
+      "estimator": "Naive before-after (wave 1)",
+      "estimate": 0.601,
+      "truth": 0.288,
+      "bias": 0.313
+    },
+    {
+      "estimator": "Classic 2x2 DiD (wave 1)",
+      "estimate": 0.302,
+      "truth": 0.288,
+      "bias": 0.014
+    },
+    {
+      "estimator": "Naive TWFE (all 24 weeks)",
+      "estimate": 0.278,
+      "truth": 0.318,
+      "bias": -0.04
+    },
+    {
+      "estimator": "Group-time ATT, overall",
+      "estimate": 0.322,
+      "truth": 0.318,
+      "bias": 0.004
+    },
+    {
+      "estimator": "Group-time ATT, 3+ weeks after launch",
+      "estimate": 0.378,
+      "truth": 0.382,
+      "bias": -0.003
+    }
+  ],
+  "monte_carlo": {
+    "n_seeds": 30,
+    "seeds": "20261101-20261130",
+    "naive_mean": 0.587,
+    "did_mean": 0.288,
+    "did_bias_mean": 0.003,
+    "twfe_bias_mean": -0.05,
+    "twfe_bias_min": -0.077,
+    "twfe_bias_max": -0.029,
+    "twfe_below_truth_share": 1.0,
+    "cs_bias_mean": 0.001,
+    "cs_bias_sd": 0.018,
+    "cs_closer_than_twfe_share": 1.0
+  },
+  "true_parameters": [
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "trend_per_week",
+      "value": 0.05
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "tau_established_design",
+      "value": 0.38
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "tau_established_mean_teams",
+      "value": 0.38304
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "ramp_share_e0",
+      "value": 0.2
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "ramp_share_e1",
+      "value": 0.5
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "ramp_share_e2",
+      "value": 0.8
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "ramp_share_e3plus",
+      "value": 1.0
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "het_novice_slope",
+      "value": 0.6
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "novice_reference",
+      "value": 0.3
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "reopen_rate_true_effect",
+      "value": 0.0
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "base_rate",
+      "value": 2.4
+    },
+    {
+      "level": "global",
+      "id": "all",
+      "parameter": "seed",
+      "value": 20261105.0
+    },
+    {
+      "level": "design_truth",
+      "id": "wave1_weeks7to12",
+      "parameter": "att",
+      "value": 0.286112
+    },
+    {
+      "level": "design_truth",
+      "id": "waves1and2_weeks_upto18",
+      "parameter": "att",
+      "value": 0.318215
+    },
+    {
+      "level": "design_truth",
+      "id": "all_treated_teamweeks",
+      "parameter": "att",
+      "value": 0.33459
+    }
+  ],
+  "figures": [
+    "outputs/fig_1_pilot_vs_comparison.png",
+    "outputs/fig_2_event_study_vs_truth.png"
+  ],
+  "article_chart_data": "outputs/article_chart_data.csv"
+}

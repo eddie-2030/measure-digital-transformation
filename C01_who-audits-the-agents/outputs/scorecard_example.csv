@@ -1,0 +1,28 @@
+dimension,metric_id,site,value,target,red_flag,status
+Consistency,krippendorff_alpha,A,0.568,0.8,0.67,"investigate: sensitivity meets target, low alpha likely reflects rare errors"
+Consistency,krippendorff_alpha,B,0.576,0.8,0.67,"investigate: sensitivity meets target, low alpha likely reflects rare errors"
+Consistency,krippendorff_alpha,C,-0.029,0.8,0.67,investigate: sensitivity also below target
+Consistency,mean_pairwise_kappa,A,0.531,0.6,0.4,watch
+Consistency,mean_pairwise_kappa,B,0.567,0.6,0.4,watch
+Consistency,mean_pairwise_kappa,C,-0.003,0.6,0.4,red flag
+Consistency,percent_agreement,A,0.922,,,context only
+Consistency,percent_agreement,B,0.912,,,context only
+Consistency,percent_agreement,C,0.903,,,context only
+Correctness,sensitivity_vs_gold,A,0.94,0.8,0.6,meets target
+Correctness,sensitivity_vs_gold,B,0.84,0.8,0.6,meets target
+Correctness,sensitivity_vs_gold,C,0.143,0.8,0.6,red flag
+Correctness,specificity_vs_gold,A,0.986,0.9,0.8,meets target
+Correctness,specificity_vs_gold,B,0.98,0.9,0.8,meets target
+Correctness,specificity_vs_gold,C,0.979,0.9,0.8,meets target
+Correctness,missed_by_all_reviewers,A,0.0,0.05,0.2,meets target
+Correctness,missed_by_all_reviewers,B,0.08,0.05,0.2,watch
+Correctness,missed_by_all_reviewers,C,0.708,0.05,0.2,red flag
+Coverage,double_review_rate,A,0.936,0.98,0.95,red flag
+Coverage,double_review_rate,B,0.962,0.98,0.95,watch
+Coverage,double_review_rate,C,0.952,0.98,0.95,watch
+Coverage,high_value_double_review_rate,A,0.939,0.99,0.95,red flag
+Coverage,high_value_double_review_rate,B,0.981,0.99,0.95,watch
+Coverage,high_value_double_review_rate,C,0.959,0.99,0.95,watch
+Coverage,golden_set_true_errors,A,25.0,30.0,15.0,watch
+Coverage,golden_set_true_errors,B,25.0,30.0,15.0,watch
+Coverage,golden_set_true_errors,C,25.0,30.0,15.0,watch

@@ -1,0 +1,6 @@
+segment,defined_by,n_people,n_teams,effect_estimate,ci_low_95,ci_high_95,effect_pct_of_control_mean,min_worthwhile_effect,rule_applied,decision,next_step,owner,review_date
+"EXAMPLE (synthetic B06): English, novice (<12 mo)","work_language = English AND tenure < 12",440,86,6.09,5.06,7.11,14.7,1.0,"lower bound >= MWE","Launch now (wave 1)","Launch with onboarding prompts; monitor quality guardrails","[name]","[date]"
+"EXAMPLE (synthetic B06): English, experienced (12+ mo)","work_language = English AND tenure >= 12",1293,88,3.37,2.91,3.82,8.1,1.0,"lower bound >= MWE","Launch now (wave 1)","Launch; share prompts from high-gain users","[name]","[date]"
+"EXAMPLE (synthetic B06): Non-English, novice (<12 mo)","work_language != English AND tenure < 12",165,32,1.83,0.60,3.07,4.4,1.0,"CI straddles MWE","Targeted re-test (wave 2 candidate)","Re-test after localization with a larger sample","[name]","[date]"
+"EXAMPLE (synthetic B06): Non-English, experienced (12+ mo)","work_language != English AND tenure >= 12",424,32,-0.88,-1.81,0.04,-2.1,1.0,"upper bound < MWE","Hold: fix/localize, then re-test","Focus groups and error review in each language; fix model or prompts; re-randomize","[name]","[date]"
+"[your segment]","[definition]",,,,,,,,"[launch if lower >= MWE; hold if upper < MWE; else re-test]",,,,
