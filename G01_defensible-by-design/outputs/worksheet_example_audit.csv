@@ -1,0 +1,19 @@
+stage,job_family,group_variable,group,reference_group,applicants,selected,rate,reference_rate,impact_ratio,ci_low,ci_high,fisher_p,four_fifths_flag,shortfall,verdict
+ai_screen,Software Engineering,age_band,40+,Under 40,422,114,0.2701,0.4249,0.6357,0.5372,0.7523,0.0000,True,65.3270,Adverse impact: act
+ai_screen,Software Engineering,sex,Woman,Man,571,222,0.3888,0.3910,0.9945,0.8787,1.1255,0.9588,False,1.2379,No evidence of impact
+ai_screen,Customer Operations,age_band,40+,Under 40,1200,669,0.5575,0.6221,0.8961,0.8437,0.9519,0.0003,False,77.5281,Small but real gap: monitor
+ai_screen,Customer Operations,sex,Man,Woman,1882,1121,0.5956,0.5985,0.9952,0.9413,1.0521,0.8879,False,5.4526,No evidence of impact
+ai_screen,Finance,age_band,Under 40,40+,260,70,0.2692,0.3082,0.8736,0.6426,1.1877,0.4348,False,10.1258,No evidence of impact
+ai_screen,Finance,sex,Woman,Man,55,12,0.2182,0.3019,0.7226,0.4278,1.2207,0.2643,True,4.6066,"Inconclusive: four-fifths flag, not significant"
+interview,Software Engineering,age_band,Under 40,40+,553,246,0.4448,0.5000,0.8897,0.7220,1.0963,0.2963,False,30.5000,No evidence of impact
+interview,Software Engineering,sex,Man,Woman,463,213,0.4600,0.4645,0.9905,0.8312,1.1803,0.9337,False,2.0427,No evidence of impact
+interview,Customer Operations,age_band,Under 40,40+,1264,617,0.4881,0.5008,0.9747,0.8855,1.0730,0.6267,False,15.9953,No evidence of impact
+interview,Customer Operations,sex,Woman,Man,857,389,0.4539,0.5139,0.8832,0.8042,0.9699,0.0091,False,51.4470,Small but real gap: monitor
+interview,Finance,age_band,Under 40,40+,66,26,0.3939,0.5532,0.7121,0.4800,1.0564,0.1256,True,10.5106,"Inconclusive: four-fifths flag, not significant"
+interview,Finance,sex,Man,Woman,104,43,0.4135,0.6364,0.6497,0.3933,1.0733,0.2052,True,23.1818,below minimum n: collect more data
+offer,Software Engineering,age_band,Under 40,40+,242,115,0.4752,0.5686,0.8357,0.6359,1.0983,0.2807,False,22.6078,No evidence of impact
+offer,Software Engineering,sex,Man,Woman,207,96,0.4638,0.5521,0.8400,0.6660,1.0596,0.1747,False,18.2813,No evidence of impact
+offer,Customer Operations,age_band,40+,Under 40,304,168,0.5526,0.5891,0.9380,0.8307,1.0593,0.3172,False,11.0968,No evidence of impact
+offer,Customer Operations,sex,Man,Woman,531,296,0.5574,0.5833,0.9556,0.8522,1.0716,0.4533,False,13.7500,No evidence of impact
+offer,Finance,age_band,40+,Under 40,25,10,0.4000,0.5200,0.7692,0.4179,1.4160,0.5709,True,3.0000,below minimum n: collect more data
+offer,Finance,sex,Man,Woman,41,17,0.4146,0.4286,0.9675,0.3819,2.4509,1.0000,False,0.5714,below minimum n: collect more data
