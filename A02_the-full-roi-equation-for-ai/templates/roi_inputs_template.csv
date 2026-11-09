@@ -1,0 +1,19 @@
+parameter,low,most_likely,high,unit,source,owner,notes
+licence_fee_per_month,,,,USD/month,Vendor contract,Procurement,Fixed if contracted; use a range if usage-priced
+build_integration_cost,,,,USD one-off,IT integration estimate,IT / platform lead,Integration; SSO; knowledge-base prep; testing. Overruns usually skew high
+monitoring_cost_per_month,,,,USD/month,Platform team,Platform lead,Prompt and knowledge upkeep; dashboards; incident triage
+loaded_hourly_cost,,,,USD/hour,Finance,Finance partner,Salary + benefits + overhead for the staff whose time the agent replaces
+ticket_volume_per_week,,,,tickets/week,Ticketing system logs,Service-desk manager,Use the logged mean; low/high from the weekly spread
+baseline_human_minutes_per_ticket,,,,minutes,Ticketing system logs (time tracking),Service-desk manager,One row per queue if difficulty differs
+steady_state_routing_share,,,,share of tickets,Product owner + log trend,Product owner,Share routed to the agent once the ramp ends; low = adoption stalls
+resolution_rate,,,,share of agent tickets,Agent logs,Product owner,Resolved and NOT reopened; one row per queue
+escalation_rate,,,,share of agent tickets,Agent logs,Product owner,Handed to a human; one row per queue
+rework_rate,,,,share of agent tickets,Agent logs,Product owner,Closed by the agent then reopened; one row per queue
+extra_minutes_per_escalation,,,,minutes,Ticketing logs (escalated vs human-only),Service-desk manager,Escalations usually take LONGER than a fresh human ticket
+extra_minutes_per_reopen,,,,minutes,Ticketing logs (reopened vs human-only),Service-desk manager,Rework on a ticket the agent closed wrongly
+silent_error_rate,,,,share of resolved tickets,QA sample of resolved tickets,QA lead,Report errors found / tickets sampled; small samples = wide range
+remediation_cost_per_error,,,,USD/error,Ops + HR/IT leads,Risk / compliance owner,Cost to fix a wrong answer; include rare costly cases in the high value
+review_share,,,,share of agent tickets,Oversight policy,Risk / compliance owner,Share of agent output a human checks
+review_minutes,,,,minutes/review,QA time study,QA lead,Minutes per human review
+agent_run_cost_per_ticket,,,,USD/ticket,Vendor or cloud billing,Platform lead,Tokens / compute per ticket
+value_realization_share,,,,share of freed time,Workforce plan,Business owner,Optional: share of freed hours actually redeployed to valuable work (1 = all). Multiply the benefit by it

@@ -1,0 +1,68 @@
+name,value,exact,digits,unit,meaning,headline
+naive_share_routed_last4,0.749,0.7485840925880325,3,share,Share of tickets routed to the agent in the last 4 logged weeks,False
+naive_gross_savings_12m,605000.0,604590.2978833803,-3,USD,Vendor-style gross savings: routed tickets x baseline minutes x labour cost,False
+naive_net_value_12m,509000.0,508590.2978833803,-3,USD,Vendor-style net value: gross savings minus 12 months of licence,True
+naive_roi,5.3,5.297815602951879,2,x,Vendor-style ROI = (gross savings - licence) / licence,True
+p_escalated_access,0.098,0.09823640868678035,3,share,"Estimated escalation rate, access queue",False
+p_reopened_access,0.059,0.059466550065588104,3,share,"Estimated rework (reopen) rate, access queue",False
+p_error_access,0.009,0.008849557522123894,3,share,"Estimated silent-error rate among resolved tickets (QA sample), access queue",False
+base_minutes_access,9.9,9.94915500021565,1,minutes,"Estimated human minutes per ticket, access queue",False
+p_escalated_it_software,0.214,0.2141477547078706,3,share,"Estimated escalation rate, it_software queue",False
+p_reopened_it_software,0.096,0.09608884596813133,3,share,"Estimated rework (reopen) rate, it_software queue",False
+p_error_it_software,0.023,0.023255813953488372,3,share,"Estimated silent-error rate among resolved tickets (QA sample), it_software queue",False
+base_minutes_it_software,21.9,21.91737843863647,1,minutes,"Estimated human minutes per ticket, it_software queue",False
+p_escalated_hr_policy,0.361,0.36137566137566135,3,share,"Estimated escalation rate, hr_policy queue",False
+p_reopened_hr_policy,0.103,0.10317460317460317,3,share,"Estimated rework (reopen) rate, hr_policy queue",False
+p_error_hr_policy,0.032,0.032,3,share,"Estimated silent-error rate among resolved tickets (QA sample), hr_policy queue",False
+base_minutes_hr_policy,32.2,32.21806221182768,1,minutes,"Estimated human minutes per ticket, hr_policy queue",False
+extra_minutes_escalated,5.92,5.922378950136257,2,minutes,Extra human minutes on an escalated ticket vs a human-only ticket,False
+extra_minutes_reopened,7.8,7.804401608419885,2,minutes,Extra human minutes on a reopened ticket vs a human-only ticket,False
+p_resolved_overall,0.748,0.7483130380826806,3,share,"Share of agent tickets truly resolved (not escalated, not reopened), all queues",False
+agent_tickets_12m_point,32200.0,32213.680000000004,-2,tickets,Agent tickets in 12 months: 26 weeks logged + 26 weeks projected at most-likely adoption,False
+h1_share_routed,0.497,0.4970342665004345,3,share,Share of tickets routed to the agent over weeks 1-26 (ramp),False
+bridge_vendor_gross,605000.0,604590.2978833803,-3,USD,"Bridge, point estimate: Vendor gross savings",False
+bridge_adoption_ramp,-112000.0,-111537.62017860357,-3,USD,"Bridge, point estimate: Adoption ramp: fewer agent tickets than 'current share all year'",False
+bridge_not_resolved,-150000.0,-150101.0056084842,-3,USD,"Bridge, point estimate: Escalated/reopened tickets save no human time",False
+bridge_handoff_rework,-47000.0,-47319.443636827804,-3,USD,"Bridge, point estimate: Extra human minutes on escalations and rework",False
+bridge_review,-23000.0,-23193.849600000005,-3,USD,"Bridge, point estimate: Human review (oversight) time",False
+bridge_remediation,-30000.0,-29938.531485604413,-3,USD,"Bridge, point estimate: Fixing silent errors",False
+bridge_run_cost,-11000.0,-10939.979535204602,-3,USD,"Bridge, point estimate: Agent compute cost",False
+bridge_licence,-96000.0,-96000.0,-3,USD,"Bridge, point estimate: Licence, 12 months",False
+bridge_build_monitoring,-40000.0,-40000.0,-3,USD,"Bridge, point estimate: One-off build + 12 months monitoring",False
+full_net_value_12m_point,96000.0,95559.86783865566,-3,USD,Full-model 12-month net value with all inputs at estimate / most likely,True
+full_roi_point,0.39,0.38626933549964515,2,x,Full-model ROI with inputs at estimate / most likely,True
+full_total_cost_12m_point,247000.0,247391.80425763683,-3,USD,Full-model total 12-month cost (point),False
+full_benefit_12m_point,343000.0,342951.6720962925,-3,USD,Full-model 12-month benefit (point),False
+net_per_agent_ticket_point,2.97,2.966437483660844,2,USD,Net value per agent ticket after all costs (point),False
+true_net_value_12m,63000.0,62602.999873558496,-3,USD,Ground-truth 12-month net value (from the DGP),True
+true_roi,0.22,0.2153321491450953,2,x,Ground-truth 12-month ROI (from the DGP),True
+true_inside_80pct_interval,1.0,1.0,0,1=yes,Is the true net value inside the simulated 80% interval?,False
+true_inside_90pct_interval,1.0,1.0,0,1=yes,Is the true net value inside the simulated 90% interval?,False
+true_net_percentile_in_mc,0.74,0.7403,3,share,Where the true net value sits in the simulated distribution (0.5 = median),False
+rates_covered_by_95pct,9.0,9.0,0,of 9,True escalation/rework/error rates inside their 95% posterior interval,False
+naive_overstatement_factor,24.6,24.60299413712766,1,x,Naive ROI divided by true ROI,False
+p_roi_negative,0.107,0.1066,3,probability,Monte Carlo probability that 12-month ROI is below zero (a loss),True
+mc_median_net_value_12m,42000.0,41719.48017050413,-3,USD,Median simulated 12-month net value,True
+mc_mean_net_value_12m,41000.0,41028.37639275053,-3,USD,Mean simulated 12-month net value,False
+mc_net_p10,-1000.0,-1302.6212752205524,-3,USD,10th percentile of net value (lower end of 80% interval),True
+mc_net_p90,83000.0,83349.92032861365,-3,USD,90th percentile of net value (upper end of 80% interval),True
+mc_net_p05,-14000.0,-14337.682017183442,-3,USD,5th percentile of net value (lower end of 90% interval),True
+mc_net_p95,93000.0,92938.85708179741,-3,USD,95th percentile of net value (upper end of 90% interval),True
+mc_median_roi,0.15,0.15092480828181648,2,x,Median simulated 12-month ROI,True
+mc_roi_p10,0.0,-0.004030087205447357,2,x,10th percentile of ROI,True
+mc_roi_p90,0.32,0.3175797534072243,2,x,90th percentile of ROI,True
+mc_roi_p05,-0.05,-0.04749804837876407,2,x,5th percentile of ROI,False
+mc_roi_p95,0.36,0.36475686509249533,2,x,95th percentile of ROI,False
+p_roi_above_0_5,0.003,0.0026,3,probability,Probability ROI exceeds 0.5x,False
+breakeven_steady_state_share,0.217,0.21727275433002208,3,share,Steady-state routing share (months 7-12) at which point-estimate net value is zero,True
+breakeven_remediation_cost,335.0,335.34951274307303,0,USD/error,Remediation cost per error at which point-estimate net value is zero,False
+breakeven_review_share,1.024,1.0240104121280122,3,share,Human review share at which point-estimate net value is zero (above 1 = review alone cannot erase the value),False
+tornado_rank1_swing,54000.0,53862.41557664939,-3,USD,Rank 1 sensitivity driver: Adoption (share routed) (net value swing P10->P90),False
+tornado_rank1_low_case,51000.0,51083.25740899227,-3,USD,Net value with Adoption (share routed) at its 10th percentile,False
+tornado_rank1_high_case,105000.0,104945.67298564166,-3,USD,Net value with Adoption (share routed) at its 90th percentile,False
+tornado_rank2_swing,45000.0,45382.23670046576,-3,USD,Rank 2 sensitivity driver: Remediation cost per error (net value swing P10->P90),False
+tornado_rank2_low_case,100000.0,99682.87010681917,-3,USD,Net value with Remediation cost per error at its 10th percentile,False
+tornado_rank2_high_case,54000.0,54300.633406353416,-3,USD,Net value with Remediation cost per error at its 90th percentile,False
+tornado_rank3_swing,32000.0,32152.29892715899,-3,USD,Rank 3 sensitivity driver: Silent-error rates (net value swing P10->P90),False
+tornado_rank3_low_case,106000.0,105920.83157963236,-3,USD,Net value with Silent-error rates at its 10th percentile,False
+tornado_rank3_high_case,74000.0,73768.53265247337,-3,USD,Net value with Silent-error rates at its 90th percentile,False

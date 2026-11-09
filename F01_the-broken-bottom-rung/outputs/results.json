@@ -1,0 +1,1018 @@
+{
+  "edition": "F01 The Broken Bottom Rung",
+  "note": "All numbers come from SYNTHETIC data generated to illustrate the method (seed 20261105). Cohort differences are descriptive, not causal.",
+  "units": "shares and differences of shares are in percent / percentage points; months are months; tasks are tasks per month",
+  "all_agree": true,
+  "results": [
+    {
+      "name": "n_people",
+      "value": 900,
+      "rounding": "whole number",
+      "meaning": "Synthetic entry-level hires in the dataset (6 half-year cohorts, 2 job families)",
+      "headline": false,
+      "python": 900,
+      "r": 900,
+      "agree": true
+    },
+    {
+      "name": "n_person_months",
+      "value": 19560,
+      "rounding": "whole number",
+      "meaning": "Person-month records in the panel",
+      "headline": false,
+      "python": 19560,
+      "r": 19560,
+      "agree": true
+    },
+    {
+      "name": "n_blank_months_imputed",
+      "value": 352,
+      "rounding": "whole number",
+      "meaning": "Months with a blank state, filled by carrying the previous state forward",
+      "headline": false,
+      "python": 352,
+      "r": 352,
+      "agree": true
+    },
+    {
+      "name": "n_recoded_rows",
+      "value": 61,
+      "rounding": "whole number",
+      "meaning": "Rows with inconsistent state codes (e.g. 'SUP', 'Indep') mapped to R/S/I/X",
+      "headline": false,
+      "python": 61,
+      "r": 61,
+      "agree": true
+    },
+    {
+      "name": "n_active_after_left_fixed",
+      "value": 6,
+      "rounding": "whole number",
+      "meaning": "Rows showing an active state after the person had left, recoded to X",
+      "headline": false,
+      "python": 6,
+      "r": 6,
+      "agree": true
+    },
+    {
+      "name": "n_people_high_pre",
+      "value": 285,
+      "rounding": "whole number",
+      "meaning": "Hires in the HIGH family, pre-AI cohorts",
+      "headline": false,
+      "python": 285,
+      "r": 285,
+      "agree": true
+    },
+    {
+      "name": "n_people_high_post",
+      "value": 225,
+      "rounding": "whole number",
+      "meaning": "Hires in the HIGH family, post-AI cohorts",
+      "headline": false,
+      "python": 225,
+      "r": 225,
+      "agree": true
+    },
+    {
+      "name": "n_people_low_pre",
+      "value": 210,
+      "rounding": "whole number",
+      "meaning": "Hires in the LOW family, pre-AI cohorts",
+      "headline": false,
+      "python": 210,
+      "r": 210,
+      "agree": true
+    },
+    {
+      "name": "n_people_low_post",
+      "value": 180,
+      "rounding": "whole number",
+      "meaning": "Hires in the LOW family, post-AI cohorts",
+      "headline": false,
+      "python": 180,
+      "r": 180,
+      "agree": true
+    },
+    {
+      "name": "naive_tasks_m1_6_high_pre",
+      "value": 33.6,
+      "rounding": "1 decimals",
+      "meaning": "NAIVE: mean tasks closed per month in months 1-6, HIGH family, pre-AI cohorts",
+      "headline": true,
+      "python": 33.6,
+      "r": 33.6,
+      "agree": true
+    },
+    {
+      "name": "naive_tasks_m1_6_high_post",
+      "value": 43.9,
+      "rounding": "1 decimals",
+      "meaning": "NAIVE: mean tasks closed per month in months 1-6, HIGH family, post-AI cohorts",
+      "headline": true,
+      "python": 43.9,
+      "r": 43.9,
+      "agree": true
+    },
+    {
+      "name": "naive_tasks_m1_6_low_pre",
+      "value": 31.2,
+      "rounding": "1 decimals",
+      "meaning": "NAIVE: mean tasks closed per month in months 1-6, LOW family, pre-AI cohorts",
+      "headline": true,
+      "python": 31.2,
+      "r": 31.2,
+      "agree": true
+    },
+    {
+      "name": "naive_tasks_m1_6_low_post",
+      "value": 33.4,
+      "rounding": "1 decimals",
+      "meaning": "NAIVE: mean tasks closed per month in months 1-6, LOW family, post-AI cohorts",
+      "headline": true,
+      "python": 33.4,
+      "r": 33.4,
+      "agree": true
+    },
+    {
+      "name": "naive_tasks_pct_change_high",
+      "value": 31,
+      "rounding": "whole number",
+      "meaning": "NAIVE: % change in early output, post- vs pre-AI cohorts, HIGH family",
+      "headline": true,
+      "python": 31,
+      "r": 31,
+      "agree": true
+    },
+    {
+      "name": "naive_tasks_pct_change_low",
+      "value": 7,
+      "rounding": "whole number",
+      "meaning": "NAIVE: % change in early output, post- vs pre-AI cohorts, LOW family",
+      "headline": true,
+      "python": 7,
+      "r": 7,
+      "agree": true
+    },
+    {
+      "name": "s_months_first12_high_pre",
+      "value": 5.24,
+      "rounding": "2 decimals",
+      "meaning": "Mean months in supervised complex work (S) in months 1-12, HIGH, pre-AI (people observed 12+ months, leavers included)",
+      "headline": true,
+      "python": 5.24,
+      "r": 5.24,
+      "agree": true
+    },
+    {
+      "name": "share_I_m12_high_pre",
+      "value": 20,
+      "rounding": "whole number",
+      "meaning": "% in independent complex work (I) at tenure month 12, HIGH, pre-AI (people observed 12+ months; leavers count as not-I)",
+      "headline": true,
+      "python": 20,
+      "r": 20,
+      "agree": true
+    },
+    {
+      "name": "n_obs12_high_pre",
+      "value": 285,
+      "rounding": "whole number",
+      "meaning": "People observed through month 12, HIGH, pre-AI",
+      "headline": false,
+      "python": 285,
+      "r": 285,
+      "agree": true
+    },
+    {
+      "name": "share_I_m18_high_pre",
+      "value": 62,
+      "rounding": "whole number",
+      "meaning": "% in independent complex work (I) at tenure month 18, HIGH, pre-AI (people observed through month 18; leavers count as not-I)",
+      "headline": true,
+      "python": 62,
+      "r": 62,
+      "agree": true
+    },
+    {
+      "name": "n_obs18_high_pre",
+      "value": 285,
+      "rounding": "whole number",
+      "meaning": "People observed through month 18, HIGH, pre-AI",
+      "headline": false,
+      "python": 285,
+      "r": 285,
+      "agree": true
+    },
+    {
+      "name": "skill_m18_high_pre",
+      "value": 76.7,
+      "rounding": "1 decimals",
+      "meaning": "Mean month-18 skill assessment score (0-100) among those assessed, HIGH, pre-AI",
+      "headline": false,
+      "python": 76.7,
+      "r": 76.7,
+      "agree": true
+    },
+    {
+      "name": "s_months_first12_high_post",
+      "value": 4.23,
+      "rounding": "2 decimals",
+      "meaning": "Mean months in supervised complex work (S) in months 1-12, HIGH, post-AI (people observed 12+ months, leavers included)",
+      "headline": true,
+      "python": 4.23,
+      "r": 4.23,
+      "agree": true
+    },
+    {
+      "name": "share_I_m12_high_post",
+      "value": 29,
+      "rounding": "whole number",
+      "meaning": "% in independent complex work (I) at tenure month 12, HIGH, post-AI (people observed 12+ months; leavers count as not-I)",
+      "headline": true,
+      "python": 29,
+      "r": 29,
+      "agree": true
+    },
+    {
+      "name": "n_obs12_high_post",
+      "value": 212,
+      "rounding": "whole number",
+      "meaning": "People observed through month 12, HIGH, post-AI",
+      "headline": false,
+      "python": 212,
+      "r": 212,
+      "agree": true
+    },
+    {
+      "name": "share_I_m18_high_post",
+      "value": 42,
+      "rounding": "whole number",
+      "meaning": "% in independent complex work (I) at tenure month 18, HIGH, post-AI (people observed through month 18; leavers count as not-I)",
+      "headline": true,
+      "python": 42,
+      "r": 42,
+      "agree": true
+    },
+    {
+      "name": "n_obs18_high_post",
+      "value": 137,
+      "rounding": "whole number",
+      "meaning": "People observed through month 18, HIGH, post-AI",
+      "headline": false,
+      "python": 137,
+      "r": 137,
+      "agree": true
+    },
+    {
+      "name": "skill_m18_high_post",
+      "value": 71.8,
+      "rounding": "1 decimals",
+      "meaning": "Mean month-18 skill assessment score (0-100) among those assessed, HIGH, post-AI",
+      "headline": false,
+      "python": 71.8,
+      "r": 71.8,
+      "agree": true
+    },
+    {
+      "name": "s_months_first12_low_pre",
+      "value": 5.18,
+      "rounding": "2 decimals",
+      "meaning": "Mean months in supervised complex work (S) in months 1-12, LOW, pre-AI (people observed 12+ months, leavers included)",
+      "headline": true,
+      "python": 5.18,
+      "r": 5.18,
+      "agree": true
+    },
+    {
+      "name": "share_I_m12_low_pre",
+      "value": 21,
+      "rounding": "whole number",
+      "meaning": "% in independent complex work (I) at tenure month 12, LOW, pre-AI (people observed 12+ months; leavers count as not-I)",
+      "headline": true,
+      "python": 21,
+      "r": 21,
+      "agree": true
+    },
+    {
+      "name": "n_obs12_low_pre",
+      "value": 210,
+      "rounding": "whole number",
+      "meaning": "People observed through month 12, LOW, pre-AI",
+      "headline": false,
+      "python": 210,
+      "r": 210,
+      "agree": true
+    },
+    {
+      "name": "share_I_m18_low_pre",
+      "value": 61,
+      "rounding": "whole number",
+      "meaning": "% in independent complex work (I) at tenure month 18, LOW, pre-AI (people observed through month 18; leavers count as not-I)",
+      "headline": true,
+      "python": 61,
+      "r": 61,
+      "agree": true
+    },
+    {
+      "name": "n_obs18_low_pre",
+      "value": 210,
+      "rounding": "whole number",
+      "meaning": "People observed through month 18, LOW, pre-AI",
+      "headline": false,
+      "python": 210,
+      "r": 210,
+      "agree": true
+    },
+    {
+      "name": "skill_m18_low_pre",
+      "value": 76.0,
+      "rounding": "1 decimals",
+      "meaning": "Mean month-18 skill assessment score (0-100) among those assessed, LOW, pre-AI",
+      "headline": false,
+      "python": 76.0,
+      "r": 76.0,
+      "agree": true
+    },
+    {
+      "name": "s_months_first12_low_post",
+      "value": 5.07,
+      "rounding": "2 decimals",
+      "meaning": "Mean months in supervised complex work (S) in months 1-12, LOW, post-AI (people observed 12+ months, leavers included)",
+      "headline": true,
+      "python": 5.07,
+      "r": 5.07,
+      "agree": true
+    },
+    {
+      "name": "share_I_m12_low_post",
+      "value": 17,
+      "rounding": "whole number",
+      "meaning": "% in independent complex work (I) at tenure month 12, LOW, post-AI (people observed 12+ months; leavers count as not-I)",
+      "headline": true,
+      "python": 17,
+      "r": 17,
+      "agree": true
+    },
+    {
+      "name": "n_obs12_low_post",
+      "value": 168,
+      "rounding": "whole number",
+      "meaning": "People observed through month 12, LOW, post-AI",
+      "headline": false,
+      "python": 168,
+      "r": 168,
+      "agree": true
+    },
+    {
+      "name": "share_I_m18_low_post",
+      "value": 60,
+      "rounding": "whole number",
+      "meaning": "% in independent complex work (I) at tenure month 18, LOW, post-AI (people observed through month 18; leavers count as not-I)",
+      "headline": true,
+      "python": 60,
+      "r": 60,
+      "agree": true
+    },
+    {
+      "name": "n_obs18_low_post",
+      "value": 107,
+      "rounding": "whole number",
+      "meaning": "People observed through month 18, LOW, post-AI",
+      "headline": false,
+      "python": 107,
+      "r": 107,
+      "agree": true
+    },
+    {
+      "name": "skill_m18_low_post",
+      "value": 76.2,
+      "rounding": "1 decimals",
+      "meaning": "Mean month-18 skill assessment score (0-100) among those assessed, LOW, post-AI",
+      "headline": false,
+      "python": 76.2,
+      "r": 76.2,
+      "agree": true
+    },
+    {
+      "name": "pam_total_distance",
+      "value": 2015,
+      "rounding": "whole number",
+      "meaning": "Sum of Hamming distances from each person to their cluster medoid (identical in Python and R)",
+      "headline": false,
+      "python": 2015,
+      "r": 2015,
+      "agree": true
+    },
+    {
+      "name": "n_clustered",
+      "value": 739,
+      "rounding": "whole number",
+      "meaning": "People clustered (observed through tenure month 18)",
+      "headline": false,
+      "python": 739,
+      "r": 739,
+      "agree": true
+    },
+    {
+      "name": "medoid_early_leaver_I_months",
+      "value": 0,
+      "rounding": "whole number",
+      "meaning": "Months in I (of 18) in the medoid sequence of the 'early_leaver' cluster",
+      "headline": false,
+      "python": 0,
+      "r": 0,
+      "agree": true
+    },
+    {
+      "name": "medoid_early_leaver_S_months",
+      "value": 0,
+      "rounding": "whole number",
+      "meaning": "Months in S (of 18) in the medoid sequence of the 'early_leaver' cluster",
+      "headline": false,
+      "python": 0,
+      "r": 0,
+      "agree": true
+    },
+    {
+      "name": "medoid_climber_I_months",
+      "value": 6,
+      "rounding": "whole number",
+      "meaning": "Months in I (of 18) in the medoid sequence of the 'climber' cluster",
+      "headline": false,
+      "python": 6,
+      "r": 6,
+      "agree": true
+    },
+    {
+      "name": "medoid_climber_S_months",
+      "value": 8,
+      "rounding": "whole number",
+      "meaning": "Months in S (of 18) in the medoid sequence of the 'climber' cluster",
+      "headline": false,
+      "python": 8,
+      "r": 8,
+      "agree": true
+    },
+    {
+      "name": "medoid_plateau_I_months",
+      "value": 0,
+      "rounding": "whole number",
+      "meaning": "Months in I (of 18) in the medoid sequence of the 'plateau' cluster",
+      "headline": false,
+      "python": 0,
+      "r": 0,
+      "agree": true
+    },
+    {
+      "name": "medoid_plateau_S_months",
+      "value": 0,
+      "rounding": "whole number",
+      "meaning": "Months in S (of 18) in the medoid sequence of the 'plateau' cluster",
+      "headline": false,
+      "python": 0,
+      "r": 0,
+      "agree": true
+    },
+    {
+      "name": "share_climber_high_pre",
+      "value": 65,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'climber' trajectory type, HIGH, pre-AI",
+      "headline": true,
+      "python": 65,
+      "r": 65,
+      "agree": true
+    },
+    {
+      "name": "share_plateau_high_pre",
+      "value": 23,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'plateau' trajectory type, HIGH, pre-AI",
+      "headline": true,
+      "python": 23,
+      "r": 23,
+      "agree": true
+    },
+    {
+      "name": "share_early_leaver_high_pre",
+      "value": 12,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'early_leaver' trajectory type, HIGH, pre-AI",
+      "headline": true,
+      "python": 12,
+      "r": 12,
+      "agree": true
+    },
+    {
+      "name": "share_climber_high_post",
+      "value": 45,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'climber' trajectory type, HIGH, post-AI",
+      "headline": true,
+      "python": 45,
+      "r": 45,
+      "agree": true
+    },
+    {
+      "name": "share_plateau_high_post",
+      "value": 45,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'plateau' trajectory type, HIGH, post-AI",
+      "headline": true,
+      "python": 45,
+      "r": 45,
+      "agree": true
+    },
+    {
+      "name": "share_early_leaver_high_post",
+      "value": 10,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'early_leaver' trajectory type, HIGH, post-AI",
+      "headline": true,
+      "python": 10,
+      "r": 10,
+      "agree": true
+    },
+    {
+      "name": "share_climber_low_pre",
+      "value": 63,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'climber' trajectory type, LOW, pre-AI",
+      "headline": true,
+      "python": 63,
+      "r": 63,
+      "agree": true
+    },
+    {
+      "name": "share_plateau_low_pre",
+      "value": 25,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'plateau' trajectory type, LOW, pre-AI",
+      "headline": true,
+      "python": 25,
+      "r": 25,
+      "agree": true
+    },
+    {
+      "name": "share_early_leaver_low_pre",
+      "value": 12,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'early_leaver' trajectory type, LOW, pre-AI",
+      "headline": true,
+      "python": 12,
+      "r": 12,
+      "agree": true
+    },
+    {
+      "name": "share_climber_low_post",
+      "value": 61,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'climber' trajectory type, LOW, post-AI",
+      "headline": true,
+      "python": 61,
+      "r": 61,
+      "agree": true
+    },
+    {
+      "name": "share_plateau_low_post",
+      "value": 23,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'plateau' trajectory type, LOW, post-AI",
+      "headline": true,
+      "python": 23,
+      "r": 23,
+      "agree": true
+    },
+    {
+      "name": "share_early_leaver_low_post",
+      "value": 16,
+      "rounding": "whole number",
+      "meaning": "% of people in the recovered 'early_leaver' trajectory type, LOW, post-AI",
+      "headline": true,
+      "python": 16,
+      "r": 16,
+      "agree": true
+    },
+    {
+      "name": "diff_plateau_high",
+      "value": 22,
+      "rounding": "whole number",
+      "meaning": "Change in % plateau trajectory type, post- minus pre-AI cohorts (percentage points), HIGH family",
+      "headline": true,
+      "python": 22,
+      "r": 22,
+      "agree": true
+    },
+    {
+      "name": "diff_plateau_high_ci_low",
+      "value": 13,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, lower bound: diff_plateau_high",
+      "headline": true,
+      "python": 13,
+      "r": 13,
+      "agree": true
+    },
+    {
+      "name": "diff_plateau_high_ci_high",
+      "value": 32,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, upper bound: diff_plateau_high",
+      "headline": true,
+      "python": 32,
+      "r": 32,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m18_high",
+      "value": -20,
+      "rounding": "whole number",
+      "meaning": "Change in % in independent work at month 18, post- minus pre-AI (percentage points), HIGH family",
+      "headline": true,
+      "python": -20,
+      "r": -20,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m18_high_ci_low",
+      "value": -30,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, lower bound: diff_share_I_m18_high",
+      "headline": true,
+      "python": -30,
+      "r": -30,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m18_high_ci_high",
+      "value": -10,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, upper bound: diff_share_I_m18_high",
+      "headline": true,
+      "python": -10,
+      "r": -10,
+      "agree": true
+    },
+    {
+      "name": "diff_s_months_first12_high",
+      "value": -1.01,
+      "rounding": "2 decimals",
+      "meaning": "Change in mean months in supervised complex work (months 1-12), post- minus pre-AI, HIGH family",
+      "headline": true,
+      "python": -1.01,
+      "r": -1.01,
+      "agree": true
+    },
+    {
+      "name": "diff_s_months_first12_high_ci_low",
+      "value": -1.67,
+      "rounding": "2 decimals",
+      "meaning": "Bootstrap 95% interval, lower bound: diff_s_months_first12_high",
+      "headline": true,
+      "python": -1.67,
+      "r": -1.67,
+      "agree": true
+    },
+    {
+      "name": "diff_s_months_first12_high_ci_high",
+      "value": -0.4,
+      "rounding": "2 decimals",
+      "meaning": "Bootstrap 95% interval, upper bound: diff_s_months_first12_high",
+      "headline": true,
+      "python": -0.4,
+      "r": -0.4,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m12_high",
+      "value": 9,
+      "rounding": "whole number",
+      "meaning": "Change in % in independent work at month 12, post- minus pre-AI (percentage points), HIGH family",
+      "headline": true,
+      "python": 9,
+      "r": 9,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m12_high_ci_low",
+      "value": 1,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, lower bound: diff_share_I_m12_high",
+      "headline": true,
+      "python": 1,
+      "r": 1,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m12_high_ci_high",
+      "value": 17,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, upper bound: diff_share_I_m12_high",
+      "headline": true,
+      "python": 17,
+      "r": 17,
+      "agree": true
+    },
+    {
+      "name": "diff_plateau_low",
+      "value": -1,
+      "rounding": "whole number",
+      "meaning": "Change in % plateau trajectory type, post- minus pre-AI cohorts (percentage points), LOW family",
+      "headline": true,
+      "python": -1,
+      "r": -1,
+      "agree": true
+    },
+    {
+      "name": "diff_plateau_low_ci_low",
+      "value": -11,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, lower bound: diff_plateau_low",
+      "headline": true,
+      "python": -11,
+      "r": -11,
+      "agree": true
+    },
+    {
+      "name": "diff_plateau_low_ci_high",
+      "value": 9,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, upper bound: diff_plateau_low",
+      "headline": true,
+      "python": 9,
+      "r": 9,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m18_low",
+      "value": -1,
+      "rounding": "whole number",
+      "meaning": "Change in % in independent work at month 18, post- minus pre-AI (percentage points), LOW family",
+      "headline": true,
+      "python": -1,
+      "r": -1,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m18_low_ci_low",
+      "value": -12,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, lower bound: diff_share_I_m18_low",
+      "headline": true,
+      "python": -12,
+      "r": -12,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m18_low_ci_high",
+      "value": 10,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, upper bound: diff_share_I_m18_low",
+      "headline": true,
+      "python": 10,
+      "r": 10,
+      "agree": true
+    },
+    {
+      "name": "diff_s_months_first12_low",
+      "value": -0.11,
+      "rounding": "2 decimals",
+      "meaning": "Change in mean months in supervised complex work (months 1-12), post- minus pre-AI, LOW family",
+      "headline": true,
+      "python": -0.11,
+      "r": -0.11,
+      "agree": true
+    },
+    {
+      "name": "diff_s_months_first12_low_ci_low",
+      "value": -0.74,
+      "rounding": "2 decimals",
+      "meaning": "Bootstrap 95% interval, lower bound: diff_s_months_first12_low",
+      "headline": true,
+      "python": -0.74,
+      "r": -0.74,
+      "agree": true
+    },
+    {
+      "name": "diff_s_months_first12_low_ci_high",
+      "value": 0.49,
+      "rounding": "2 decimals",
+      "meaning": "Bootstrap 95% interval, upper bound: diff_s_months_first12_low",
+      "headline": true,
+      "python": 0.49,
+      "r": 0.49,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m12_low",
+      "value": -4,
+      "rounding": "whole number",
+      "meaning": "Change in % in independent work at month 12, post- minus pre-AI (percentage points), LOW family",
+      "headline": true,
+      "python": -4,
+      "r": -4,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m12_low_ci_low",
+      "value": -12,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, lower bound: diff_share_I_m12_low",
+      "headline": true,
+      "python": -12,
+      "r": -12,
+      "agree": true
+    },
+    {
+      "name": "diff_share_I_m12_low_ci_high",
+      "value": 5,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, upper bound: diff_share_I_m12_low",
+      "headline": true,
+      "python": 5,
+      "r": 5,
+      "agree": true
+    },
+    {
+      "name": "contrast_plateau",
+      "value": 24,
+      "rounding": "whole number",
+      "meaning": "HIGH-family change minus LOW-family change (descriptive contrast, not a causal effect) [plateau]",
+      "headline": true,
+      "python": 24,
+      "r": 24,
+      "agree": true
+    },
+    {
+      "name": "contrast_plateau_ci_low",
+      "value": 10,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, lower bound: contrast_plateau",
+      "headline": true,
+      "python": 10,
+      "r": 10,
+      "agree": true
+    },
+    {
+      "name": "contrast_plateau_ci_high",
+      "value": 37,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, upper bound: contrast_plateau",
+      "headline": true,
+      "python": 37,
+      "r": 37,
+      "agree": true
+    },
+    {
+      "name": "contrast_share_I_m18",
+      "value": -19,
+      "rounding": "whole number",
+      "meaning": "HIGH-family change minus LOW-family change (descriptive contrast, not a causal effect) [share_I_m18]",
+      "headline": true,
+      "python": -19,
+      "r": -19,
+      "agree": true
+    },
+    {
+      "name": "contrast_share_I_m18_ci_low",
+      "value": -34,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, lower bound: contrast_share_I_m18",
+      "headline": true,
+      "python": -34,
+      "r": -34,
+      "agree": true
+    },
+    {
+      "name": "contrast_share_I_m18_ci_high",
+      "value": -4,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, upper bound: contrast_share_I_m18",
+      "headline": true,
+      "python": -4,
+      "r": -4,
+      "agree": true
+    },
+    {
+      "name": "contrast_s_months_first12",
+      "value": -0.9,
+      "rounding": "2 decimals",
+      "meaning": "HIGH-family change minus LOW-family change (descriptive contrast, not a causal effect) [s_months_first12]",
+      "headline": true,
+      "python": -0.9,
+      "r": -0.9,
+      "agree": true
+    },
+    {
+      "name": "contrast_s_months_first12_ci_low",
+      "value": -1.74,
+      "rounding": "2 decimals",
+      "meaning": "Bootstrap 95% interval, lower bound: contrast_s_months_first12",
+      "headline": true,
+      "python": -1.74,
+      "r": -1.74,
+      "agree": true
+    },
+    {
+      "name": "contrast_s_months_first12_ci_high",
+      "value": 0.0,
+      "rounding": "2 decimals",
+      "meaning": "Bootstrap 95% interval, upper bound: contrast_s_months_first12",
+      "headline": true,
+      "python": 0.0,
+      "r": 0.0,
+      "agree": true
+    },
+    {
+      "name": "contrast_share_I_m12",
+      "value": 13,
+      "rounding": "whole number",
+      "meaning": "HIGH-family change minus LOW-family change (descriptive contrast, not a causal effect) [share_I_m12]",
+      "headline": true,
+      "python": 13,
+      "r": 13,
+      "agree": true
+    },
+    {
+      "name": "contrast_share_I_m12_ci_low",
+      "value": 2,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, lower bound: contrast_share_I_m12",
+      "headline": true,
+      "python": 2,
+      "r": 2,
+      "agree": true
+    },
+    {
+      "name": "contrast_share_I_m12_ci_high",
+      "value": 24,
+      "rounding": "whole number",
+      "meaning": "Bootstrap 95% interval, upper bound: contrast_share_I_m12",
+      "headline": true,
+      "python": 24,
+      "r": 24,
+      "agree": true
+    },
+    {
+      "name": "ari_recovered_vs_true",
+      "value": 0.98,
+      "rounding": "2 decimals",
+      "meaning": "Adjusted Rand index, recovered vs true trajectory type (1 = perfect, 0 = chance)",
+      "headline": true,
+      "python": 0.98,
+      "r": 0.98,
+      "agree": true
+    },
+    {
+      "name": "pct_correct_type",
+      "value": 99,
+      "rounding": "whole number",
+      "meaning": "% of clustered people whose recovered type equals their true type",
+      "headline": true,
+      "python": 99,
+      "r": 99,
+      "agree": true
+    },
+    {
+      "name": "true_plateau_shift_high",
+      "value": 23,
+      "rounding": "whole number",
+      "meaning": "TRUE change in % plateau type (same clustered people), HIGH family, percentage points",
+      "headline": true,
+      "python": 23,
+      "r": 23,
+      "agree": true
+    },
+    {
+      "name": "true_plateau_shift_low",
+      "value": -3,
+      "rounding": "whole number",
+      "meaning": "TRUE change in % plateau type (same clustered people), LOW family, percentage points",
+      "headline": true,
+      "python": -3,
+      "r": -3,
+      "agree": true
+    },
+    {
+      "name": "design_plateau_shift_high",
+      "value": 20,
+      "rounding": "whole number",
+      "meaning": "Plateau-share shift built into the data generator, HIGH family (20 -> 40%)",
+      "headline": false,
+      "python": 20,
+      "r": 20,
+      "agree": true
+    },
+    {
+      "name": "design_plateau_shift_low",
+      "value": 2,
+      "rounding": "whole number",
+      "meaning": "Plateau-share shift built into the data generator, LOW family (22 -> 24%)",
+      "headline": false,
+      "python": 2,
+      "r": 2,
+      "agree": true
+    }
+  ]
+}

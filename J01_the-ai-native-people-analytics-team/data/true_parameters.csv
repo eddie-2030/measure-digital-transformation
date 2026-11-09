@@ -1,0 +1,25 @@
+name,value,meaning
+true_accuracy_overall,0.7099,"Expected end-to-end accuracy, all questions"
+true_accuracy_policy_lookup,0.8406,"Expected accuracy, policy_lookup"
+true_recall_at5_policy_lookup,0.9237,"Expected recall@5, policy_lookup (answerable)"
+true_hit_rate_policy_lookup,0.9237,"Expected full-retrieval rate, policy_lookup"
+true_mrr_policy_lookup,0.6301,"Expected MRR, policy_lookup"
+true_groundedness_policy_lookup,0.8738,"Expected claim-support rate, policy_lookup"
+true_accuracy_computed_metric,0.6587,"Expected accuracy, computed_metric"
+true_recall_at5_computed_metric,0.8843,"Expected recall@5, computed_metric (answerable)"
+true_hit_rate_computed_metric,0.7832,"Expected full-retrieval rate, computed_metric"
+true_mrr_computed_metric,0.8291,"Expected MRR, computed_metric"
+true_groundedness_computed_metric,0.7729,"Expected claim-support rate, computed_metric"
+true_accuracy_multi_hop,0.4598,"Expected accuracy, multi_hop"
+true_recall_at5_multi_hop,0.777,"Expected recall@5, multi_hop (answerable)"
+true_hit_rate_multi_hop,0.5493,"Expected full-retrieval rate, multi_hop"
+true_mrr_multi_hop,0.8179,"Expected MRR, multi_hop"
+true_groundedness_multi_hop,0.6522,"Expected claim-support rate, multi_hop"
+true_recall_at5_overall,0.8824,"Expected recall@5, answerable questions"
+true_mrr_overall,0.7274,"Expected MRR, answerable questions"
+true_groundedness_overall,0.8009,"Expected claim-support rate, answered"
+true_judge_rate_overall,0.8265,Expected share the judge calls correct
+judge_sensitivity,0.96,True judge sensitivity
+judge_specificity,0.5,True judge specificity
+p_up_correct,0.92,P(thumbs up | correct)
+p_up_wrong,0.8,P(thumbs up | wrong)
