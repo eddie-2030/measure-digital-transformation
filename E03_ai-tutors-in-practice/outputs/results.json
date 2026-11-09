@@ -1,0 +1,562 @@
+{
+  "edition": "E03_ai-tutors-in-practice",
+  "disclaimer": "All data in this folder are synthetic, generated to illustrate the method. They do not come from Meta, any client, or any real organization. The goal is to show how a business question, a measurement strategy, the statistics, and the code connect end to end.",
+  "notes": {
+    "outcome": "gained = post-test minus pre-test >= 10 points",
+    "rounding": "AUC and probabilities 2 decimals; score points 1 decimal; shares whole percent; MAE 3 decimals",
+    "intervals": "95% percentile bootstrap, 1,000 resamples of learners, Park-Miller RNG seed 20261106 shared by Python and R",
+    "split": "train/test by learner, from the 'split' column in data/learners.csv (identical in both languages)"
+  },
+  "agreement": {
+    "all_agree": true,
+    "n_numbers": 48,
+    "mismatches": [],
+    "missing_in_one_language": []
+  },
+  "results": {
+    "n_learners": {
+      "value": 1200,
+      "python": 1200,
+      "r": 1200,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Synthetic learners in the course (60 teams, 3 business units).",
+      "agree": true
+    },
+    "n_events": {
+      "value": 96866,
+      "python": 96866,
+      "r": 96866,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Logged tutor actions (rows in tutor_events.csv), before cleaning.",
+      "agree": true
+    },
+    "n_unreadable_tokens_dropped": {
+      "value": 294,
+      "python": 294,
+      "r": 294,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Unreadable action codes ('?') dropped during cleaning.",
+      "agree": true
+    },
+    "n_missing_post_test": {
+      "value": 18,
+      "python": 18,
+      "r": 18,
+      "rounding": 0,
+      "headline": true,
+      "meaning": "Learners with no post-test: kept in the logs and the style mixture, excluded from gain analyses (not imputed).",
+      "agree": true
+    },
+    "n_short_logs_under_5_actions": {
+      "value": 19,
+      "python": 19,
+      "r": 19,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Learners with fewer than 5 logged actions (very short logs, mostly early drop-outs).",
+      "agree": true
+    },
+    "n_train_with_post": {
+      "value": 824,
+      "python": 824,
+      "r": 824,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Training learners with a post-test (used to fit every model).",
+      "agree": true
+    },
+    "n_test_with_post": {
+      "value": 358,
+      "python": 358,
+      "r": 358,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Held-out learners with a post-test (used only to evaluate).",
+      "agree": true
+    },
+    "share_gained": {
+      "value": 55,
+      "python": 55,
+      "r": 55,
+      "rounding": 0,
+      "headline": true,
+      "meaning": "Percent of learners (with a post-test) who gained 10+ points.",
+      "agree": true
+    },
+    "r_messages_gain": {
+      "value": -0.03,
+      "python": -0.03,
+      "r": -0.03,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "Naive: correlation between number of tutor messages and gain (points).",
+      "agree": true
+    },
+    "r_minutes_gain": {
+      "value": -0.01,
+      "python": -0.01,
+      "r": -0.01,
+      "rounding": 2,
+      "headline": false,
+      "meaning": "Naive: correlation between minutes with the tutor and gain (points).",
+      "agree": true
+    },
+    "mean_messages_gained": {
+      "value": 70.0,
+      "python": 70.0,
+      "r": 70.0,
+      "rounding": 1,
+      "headline": true,
+      "meaning": "Mean messages per learner among those who gained 10+ points.",
+      "agree": true
+    },
+    "mean_messages_not_gained": {
+      "value": 72.3,
+      "python": 72.3,
+      "r": 72.3,
+      "rounding": 1,
+      "headline": true,
+      "meaning": "Mean messages per learner among those who did not gain 10+ points.",
+      "agree": true
+    },
+    "gain_top_quartile_markov": {
+      "value": 16.8,
+      "python": 16.8,
+      "r": 16.8,
+      "rounding": 1,
+      "headline": false,
+      "meaning": "Mean gain (points) of held-out learners in the top quartile of the Markov log-score.",
+      "agree": true
+    },
+    "gain_bottom_quartile_markov": {
+      "value": 5.4,
+      "python": 5.4,
+      "r": 5.4,
+      "rounding": 1,
+      "headline": false,
+      "meaning": "Mean gain (points) of held-out learners in the bottom quartile of the Markov log-score.",
+      "agree": true
+    },
+    "auc_volume": {
+      "value": 0.55,
+      "python": 0.55,
+      "r": 0.55,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "Held-out AUC, rung (a): logistic regression on messages, minutes, sessions (0.50 = coin flip).",
+      "agree": true,
+      "ci95_lo": {
+        "python": 0.49,
+        "r": 0.49
+      },
+      "ci95_hi": {
+        "python": 0.61,
+        "r": 0.61
+      }
+    },
+    "auc_bag": {
+      "value": 0.67,
+      "python": 0.67,
+      "r": 0.67,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "Held-out AUC, rung (b): logistic regression on shares of each action type, order ignored.",
+      "agree": true,
+      "ci95_lo": {
+        "python": 0.61,
+        "r": 0.61
+      },
+      "ci95_hi": {
+        "python": 0.72,
+        "r": 0.72
+      }
+    },
+    "auc_markov1": {
+      "value": 0.78,
+      "python": 0.78,
+      "r": 0.78,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "Held-out AUC, rung (c): first-order Markov log-score (gain chain vs no-gain chain).",
+      "agree": true,
+      "ci95_lo": {
+        "python": 0.74,
+        "r": 0.74
+      },
+      "ci95_hi": {
+        "python": 0.83,
+        "r": 0.83
+      }
+    },
+    "auc_markov2": {
+      "value": 0.79,
+      "python": 0.79,
+      "r": 0.79,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "Held-out AUC, rung (d): second-order Markov log-score (two steps of memory; richer model).",
+      "agree": true,
+      "ci95_lo": {
+        "python": 0.74,
+        "r": 0.74
+      },
+      "ci95_hi": {
+        "python": 0.84,
+        "r": 0.84
+      }
+    },
+    "auc_diff_m1_minus_bag": {
+      "value": 0.12,
+      "python": 0.12,
+      "r": 0.12,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "AUC gain from adding ORDER: first-order Markov minus bag of actions.",
+      "agree": true,
+      "ci95_lo": {
+        "python": 0.07,
+        "r": 0.07
+      },
+      "ci95_hi": {
+        "python": 0.16,
+        "r": 0.16
+      }
+    },
+    "auc_diff_m1_minus_volume": {
+      "value": 0.23,
+      "python": 0.23,
+      "r": 0.23,
+      "rounding": 2,
+      "headline": false,
+      "meaning": "AUC gain of first-order Markov over usage volume.",
+      "agree": true,
+      "ci95_lo": {
+        "python": 0.16,
+        "r": 0.16
+      },
+      "ci95_hi": {
+        "python": 0.3,
+        "r": 0.3
+      }
+    },
+    "auc_diff_m2_minus_m1": {
+      "value": 0.0,
+      "python": 0.0,
+      "r": 0.0,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "AUC gain of the richer second-order chain over the first-order chain (about zero: the true process is first-order).",
+      "agree": true,
+      "ci95_lo": {
+        "python": 0.0,
+        "r": 0.0
+      },
+      "ci95_hi": {
+        "python": 0.01,
+        "r": 0.01
+      }
+    },
+    "gain_diff_top_vs_bottom_quartile": {
+      "value": 11.5,
+      "python": 11.5,
+      "r": 11.5,
+      "rounding": 1,
+      "headline": true,
+      "meaning": "Gain gap (points), top minus bottom quartile of the Markov log-score, held-out learners.",
+      "agree": true,
+      "ci95_lo": {
+        "python": 9.5,
+        "r": 9.5
+      },
+      "ci95_hi": {
+        "python": 13.5,
+        "r": 13.5
+      }
+    },
+    "p_AC_gained": {
+      "value": 0.29,
+      "python": 0.29,
+      "r": 0.29,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "P(copy | full answer) among learners who gained 10+ points.",
+      "agree": true
+    },
+    "p_AC_not": {
+      "value": 0.49,
+      "python": 0.49,
+      "r": 0.49,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "P(copy | full answer) among learners who did not gain.",
+      "agree": true
+    },
+    "p_HT_gained": {
+      "value": 0.48,
+      "python": 0.48,
+      "r": 0.48,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "P(attempt | hint) among learners who gained.",
+      "agree": true
+    },
+    "p_HT_not": {
+      "value": 0.25,
+      "python": 0.25,
+      "r": 0.25,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "P(attempt | hint) among learners who did not gain.",
+      "agree": true
+    },
+    "p_HA_gained": {
+      "value": 0.25,
+      "python": 0.25,
+      "r": 0.25,
+      "rounding": 2,
+      "headline": false,
+      "meaning": "P(full answer | hint) among learners who gained.",
+      "agree": true
+    },
+    "p_HA_not": {
+      "value": 0.47,
+      "python": 0.47,
+      "r": 0.47,
+      "rounding": 2,
+      "headline": false,
+      "meaning": "P(full answer | hint) among learners who did not gain.",
+      "agree": true
+    },
+    "p_AT_gained": {
+      "value": 0.35,
+      "python": 0.35,
+      "r": 0.35,
+      "rounding": 2,
+      "headline": false,
+      "meaning": "P(re-attempt | full answer) among learners who gained.",
+      "agree": true
+    },
+    "p_AT_not": {
+      "value": 0.19,
+      "python": 0.19,
+      "r": 0.19,
+      "rounding": 2,
+      "headline": false,
+      "meaning": "P(re-attempt | full answer) among learners who did not gain.",
+      "agree": true
+    },
+    "p_TV_gained": {
+      "value": 0.3,
+      "python": 0.3,
+      "r": 0.3,
+      "rounding": 2,
+      "headline": false,
+      "meaning": "P(verify | attempt) among learners who gained (similar across groups: verifying alone is not the signal).",
+      "agree": true
+    },
+    "p_TV_not": {
+      "value": 0.34,
+      "python": 0.34,
+      "r": 0.34,
+      "rounding": 2,
+      "headline": false,
+      "meaning": "P(verify | attempt) among learners who did not gain.",
+      "agree": true
+    },
+    "p_AC_not_minus_gained": {
+      "value": 0.2,
+      "python": 0.2,
+      "r": 0.2,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "Answer->copy loop rate, not-gained minus gained (probability points).",
+      "agree": true,
+      "ci95_lo": {
+        "python": 0.18,
+        "r": 0.18
+      },
+      "ci95_hi": {
+        "python": 0.23,
+        "r": 0.23
+      }
+    },
+    "p_HT_gained_minus_not": {
+      "value": 0.24,
+      "python": 0.24,
+      "r": 0.24,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "Hint->attempt rate, gained minus not-gained (probability points).",
+      "agree": true,
+      "ci95_lo": {
+        "python": 0.21,
+        "r": 0.21
+      },
+      "ci95_hi": {
+        "python": 0.27,
+        "r": 0.27
+      }
+    },
+    "p_AC_low_prior_quartile": {
+      "value": 0.49,
+      "python": 0.49,
+      "r": 0.49,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "P(copy | full answer) in the lowest pre-test quartile (confounding: style tracks prior skill).",
+      "agree": true
+    },
+    "p_AC_high_prior_quartile": {
+      "value": 0.27,
+      "python": 0.27,
+      "r": 0.27,
+      "rounding": 2,
+      "headline": true,
+      "meaning": "P(copy | full answer) in the highest pre-test quartile.",
+      "agree": true
+    },
+    "mae_transition_true_labels": {
+      "value": 0.007,
+      "python": 0.007,
+      "r": 0.007,
+      "rounding": 3,
+      "headline": false,
+      "meaning": "Ground truth: mean absolute error of estimated vs true transition probabilities, chains fit with the true style labels.",
+      "agree": true
+    },
+    "mae_transition_em": {
+      "value": 0.007,
+      "python": 0.007,
+      "r": 0.007,
+      "rounding": 3,
+      "headline": true,
+      "meaning": "Ground truth: same error for chains recovered WITHOUT labels by a 3-style mixture of Markov chains (EM).",
+      "agree": true
+    },
+    "style_accuracy_em": {
+      "value": 95,
+      "python": 95,
+      "r": 95,
+      "rounding": 0,
+      "headline": true,
+      "meaning": "Ground truth: percent of learners the unlabeled mixture assigns to their true style.",
+      "agree": true
+    },
+    "style_share_true_scaffolded": {
+      "value": 40,
+      "python": 40,
+      "r": 40,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Ground truth: percent of learners whose true style is scaffolded (realized in this sample).",
+      "agree": true
+    },
+    "style_share_em_scaffolded": {
+      "value": 41,
+      "python": 41,
+      "r": 41,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Percent of learners the unlabeled mixture estimates as scaffolded.",
+      "agree": true
+    },
+    "style_share_true_answer_seeking": {
+      "value": 37,
+      "python": 37,
+      "r": 37,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Ground truth: percent of learners whose true style is answer_seeking (realized in this sample).",
+      "agree": true
+    },
+    "style_share_em_answer_seeking": {
+      "value": 38,
+      "python": 38,
+      "r": 38,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Percent of learners the unlabeled mixture estimates as answer_seeking.",
+      "agree": true
+    },
+    "style_share_true_light_mixed": {
+      "value": 23,
+      "python": 23,
+      "r": 23,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Ground truth: percent of learners whose true style is light_mixed (realized in this sample).",
+      "agree": true
+    },
+    "style_share_em_light_mixed": {
+      "value": 21,
+      "python": 21,
+      "r": 21,
+      "rounding": 0,
+      "headline": false,
+      "meaning": "Percent of learners the unlabeled mixture estimates as light_mixed.",
+      "agree": true
+    },
+    "mean_gain_true_scaffolded": {
+      "value": 16.0,
+      "python": 16.0,
+      "r": 16.0,
+      "rounding": 1,
+      "headline": false,
+      "meaning": "Mean observed gain (points) for learners whose TRUE style is scaffolded.",
+      "agree": true
+    },
+    "mean_gain_true_answer_seeking": {
+      "value": 5.8,
+      "python": 5.8,
+      "r": 5.8,
+      "rounding": 1,
+      "headline": false,
+      "meaning": "Mean observed gain (points) for learners whose TRUE style is answer-seeking.",
+      "agree": true
+    },
+    "mean_gain_true_light_mixed": {
+      "value": 10.3,
+      "python": 10.3,
+      "r": 10.3,
+      "rounding": 1,
+      "headline": false,
+      "meaning": "Mean observed gain (points) for learners whose TRUE style is light/mixed.",
+      "agree": true
+    }
+  },
+  "python_only": {
+    "auc_ngram_mlp": {
+      "value": 0.72,
+      "rounding": 2,
+      "python_only": true,
+      "meaning": "Held-out AUC of a small neural net (MLP, 16 hidden units) on 1-3-gram shares; stand-in for a neural sequence model; Python only."
+    }
+  },
+  "ground_truth": {
+    "style_shares_target": {
+      "scaffolded": 0.4,
+      "answer_seeking": 0.35,
+      "light_mixed": 0.25
+    },
+    "style_shares_realized": {
+      "scaffolded": 0.3983,
+      "answer_seeking": 0.3717,
+      "light_mixed": 0.23
+    },
+    "gain_model": {
+      "formula": "gain = 2 + style_effect + 0.15*(55 - pre) + team_effect + N(0, 6^2)",
+      "style_effect": {
+        "scaffolded": 14.0,
+        "light_mixed": 8.0,
+        "answer_seeking": 3.0
+      },
+      "team_effect_sd": 3.0,
+      "noise_sd": 6.0,
+      "gained_definition": "post - pre >= 10"
+    },
+    "true_transition_matrices": "data/ground_truth_transitions.csv (also data/ground_truth_params.json)"
+  }
+}

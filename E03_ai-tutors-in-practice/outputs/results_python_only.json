@@ -1,0 +1,8 @@
+{
+  "auc_ngram_mlp": {
+    "value": 0.72,
+    "rounding": 2,
+    "python_only": true,
+    "meaning": "Held-out AUC of a small neural net (MLP, 16 hidden units) on 1-3-gram shares; stand-in for a neural sequence model; Python only."
+  }
+}

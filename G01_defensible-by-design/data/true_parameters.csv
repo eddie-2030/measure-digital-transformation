@@ -1,0 +1,33 @@
+stage,pool,comparison,focal_group,reference_group,true_rate_focal,true_rate_reference,true_ir,true_category
+ai_screen,Software Engineering,age,40+,Under 40,0.28,0.4,0.7,real adverse impact
+interview,Software Engineering,age,40+,Under 40,0.5175,0.45,1.15,focal group favored
+offer,Software Engineering,age,40+,Under 40,0.55,0.5,1.1,focal group favored
+cumulative,Software Engineering,age,40+,Under 40,0.0727,0.0821,0.8855,small real gap
+ai_screen,Software Engineering,sex,Woman,Man,0.4,0.4,1.0,parity
+interview,Software Engineering,sex,Woman,Man,0.45,0.45,1.0,parity
+offer,Software Engineering,sex,Woman,Man,0.5,0.5,1.0,parity
+cumulative,Software Engineering,sex,Woman,Man,0.0821,0.0821,1.0,parity
+ai_screen,Customer Operations,age,40+,Under 40,0.546,0.6,0.91,small real gap
+interview,Customer Operations,age,40+,Under 40,0.5,0.5,1.0,parity
+offer,Customer Operations,age,40+,Under 40,0.6,0.6,1.0,parity
+cumulative,Customer Operations,age,40+,Under 40,0.1494,0.1642,0.91,small real gap
+ai_screen,Customer Operations,sex,Woman,Man,0.6,0.6,1.0,parity
+interview,Customer Operations,sex,Woman,Man,0.5,0.5,1.0,parity
+offer,Customer Operations,sex,Woman,Man,0.6,0.6,1.0,parity
+cumulative,Customer Operations,sex,Woman,Man,0.1642,0.1642,1.0,parity
+ai_screen,Finance,age,40+,Under 40,0.3,0.3,1.0,parity
+interview,Finance,age,40+,Under 40,0.4,0.4,1.0,parity
+offer,Finance,age,40+,Under 40,0.55,0.55,1.0,parity
+cumulative,Finance,age,40+,Under 40,0.0602,0.0602,1.0,parity
+ai_screen,Finance,sex,Woman,Man,0.3,0.3,1.0,parity
+interview,Finance,sex,Woman,Man,0.4,0.4,1.0,parity
+offer,Finance,sex,Woman,Man,0.55,0.55,1.0,parity
+cumulative,Finance,sex,Woman,Man,0.0602,0.0602,1.0,parity
+ai_screen,All families,age,40+,Under 40,0.4558,0.5083,0.8966,small real gap
+interview,All families,age,40+,Under 40,0.4966,0.482,1.0303,focal group favored
+offer,All families,age,40+,Under 40,0.5894,0.572,1.0305,focal group favored
+cumulative,All families,age,40+,Under 40,0.1217,0.1278,0.952,small real gap
+ai_screen,All families,sex,Woman,Man,0.5184,0.475,1.0915,focal group favored
+interview,All families,sex,Woman,Man,0.4914,0.4829,1.0177,parity
+offer,All families,sex,Woman,Man,0.5838,0.5729,1.0191,parity
+cumulative,All families,sex,Woman,Man,0.1357,0.1198,1.1321,focal group favored

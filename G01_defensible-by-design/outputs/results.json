@@ -1,0 +1,507 @@
+{
+  "edition": "G01",
+  "title": "Defensible by Design",
+  "seed_data": 20261272,
+  "seed_monte_carlo": 20261272,
+  "monte_carlo_reps": 5000,
+  "ci_method": "Katz log-ratio Wald: log(IR) +/- 1.96*sqrt(1/a-1/n1+1/c-1/n2)",
+  "p_value_method": "Fisher exact, two-sided",
+  "results": {
+    "n_application_rows": {
+      "value": 6072,
+      "rounding": "integer",
+      "meaning": "Rows in the raw file (applications, including duplicates)",
+      "python": 6072,
+      "r": 6072
+    },
+    "n_applicants": {
+      "value": 6000,
+      "rounding": "integer",
+      "meaning": "Unique applicants after keeping each person's latest application",
+      "python": 6000,
+      "r": 6000
+    },
+    "n_duplicates_removed": {
+      "value": 72,
+      "rounding": "integer",
+      "meaning": "Earlier duplicate applications removed",
+      "python": 72,
+      "r": 72
+    },
+    "n_labels_fixed": {
+      "value": 68,
+      "rounding": "integer",
+      "meaning": "Job-family labels typed inconsistently and corrected",
+      "python": 68,
+      "r": 68
+    },
+    "n_sex_not_disclosed": {
+      "value": 363,
+      "rounding": "integer",
+      "meaning": "Applicants excluded from the women-vs-men comparison",
+      "python": 363,
+      "r": 363
+    },
+    "n_age_not_disclosed": {
+      "value": 463,
+      "rounding": "integer",
+      "meaning": "Applicants excluded from the 40+ comparison",
+      "python": 463,
+      "r": 463
+    },
+    "n_withdrew_before_interview": {
+      "value": 145,
+      "rounding": "integer",
+      "meaning": "AI-screen passers who withdrew before interview",
+      "python": 145,
+      "r": 145
+    },
+    "n_withdrew_before_offer": {
+      "value": 53,
+      "rounding": "integer",
+      "meaning": "Interview passers who withdrew before an offer",
+      "python": 53,
+      "r": 53
+    },
+    "naive_offer_ir_age": {
+      "value": 0.92,
+      "rounding": "2 decimals",
+      "meaning": "NAIVE: company-wide applicant-to-offer IR, 40+ vs under 40 (passes)",
+      "python": 0.92,
+      "r": 0.92
+    },
+    "naive_ai_ir_age": {
+      "value": 0.89,
+      "rounding": "2 decimals",
+      "meaning": "NAIVE: AI-screen IR pooled over families, 40+ vs under 40 (passes)",
+      "python": 0.89,
+      "r": 0.89
+    },
+    "naive_ai_ir_sex": {
+      "value": 1.08,
+      "rounding": "2 decimals",
+      "meaning": "AI-screen IR pooled over families, women vs men (women higher: mix of families)",
+      "python": 1.08,
+      "r": 1.08
+    },
+    "swe_ai_age_n_focal": {
+      "value": 422,
+      "rounding": "integer",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: focal-group applicants",
+      "python": 422,
+      "r": 422
+    },
+    "swe_ai_age_n_reference": {
+      "value": 1379,
+      "rounding": "integer",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: reference-group applicants",
+      "python": 1379,
+      "r": 1379
+    },
+    "swe_ai_age_rate_focal": {
+      "value": 0.27,
+      "rounding": "3 decimals",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: focal selection rate",
+      "python": 0.27,
+      "r": 0.27
+    },
+    "swe_ai_age_rate_reference": {
+      "value": 0.425,
+      "rounding": "3 decimals",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: reference selection rate",
+      "python": 0.425,
+      "r": 0.425
+    },
+    "swe_ai_age_ir": {
+      "value": 0.64,
+      "rounding": "2 decimals",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: impact ratio",
+      "python": 0.64,
+      "r": 0.64
+    },
+    "swe_ai_age_ir_lo": {
+      "value": 0.54,
+      "rounding": "2 decimals",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: 95% CI lower bound (Katz log method)",
+      "python": 0.54,
+      "r": 0.54
+    },
+    "swe_ai_age_ir_hi": {
+      "value": 0.75,
+      "rounding": "2 decimals",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: 95% CI upper bound",
+      "python": 0.75,
+      "r": 0.75
+    },
+    "swe_ai_age_fisher_p": {
+      "value": 7.33e-09,
+      "rounding": "3 significant figures",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: Fisher exact two-sided p-value",
+      "python": 7.33e-09,
+      "r": 7.33e-09
+    },
+    "swe_ai_age_shortfall": {
+      "value": 65.0,
+      "rounding": "0 decimals",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: extra focal selections needed to equalize rates",
+      "python": 65.0,
+      "r": 65.0
+    },
+    "swe_ai_age_true_ir": {
+      "value": 0.7,
+      "rounding": "2 decimals",
+      "meaning": "Software Engineering, AI screen, 40+ vs under 40: TRUE impact ratio from the generator",
+      "python": 0.7,
+      "r": 0.7
+    },
+    "co_ai_age_n_focal": {
+      "value": 1200,
+      "rounding": "integer",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: focal-group applicants",
+      "python": 1200,
+      "r": 1200
+    },
+    "co_ai_age_n_reference": {
+      "value": 2117,
+      "rounding": "integer",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: reference-group applicants",
+      "python": 2117,
+      "r": 2117
+    },
+    "co_ai_age_rate_focal": {
+      "value": 0.558,
+      "rounding": "3 decimals",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: focal selection rate",
+      "python": 0.558,
+      "r": 0.558
+    },
+    "co_ai_age_rate_reference": {
+      "value": 0.622,
+      "rounding": "3 decimals",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: reference selection rate",
+      "python": 0.622,
+      "r": 0.622
+    },
+    "co_ai_age_ir": {
+      "value": 0.9,
+      "rounding": "2 decimals",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: impact ratio",
+      "python": 0.9,
+      "r": 0.9
+    },
+    "co_ai_age_ir_lo": {
+      "value": 0.84,
+      "rounding": "2 decimals",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: 95% CI lower bound (Katz log method)",
+      "python": 0.84,
+      "r": 0.84
+    },
+    "co_ai_age_ir_hi": {
+      "value": 0.95,
+      "rounding": "2 decimals",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: 95% CI upper bound",
+      "python": 0.95,
+      "r": 0.95
+    },
+    "co_ai_age_fisher_p": {
+      "value": 0.000302,
+      "rounding": "3 significant figures",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: Fisher exact two-sided p-value",
+      "python": 0.000302,
+      "r": 0.000302
+    },
+    "co_ai_age_shortfall": {
+      "value": 78.0,
+      "rounding": "0 decimals",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: extra focal selections needed to equalize rates",
+      "python": 78.0,
+      "r": 78.0
+    },
+    "co_ai_age_true_ir": {
+      "value": 0.91,
+      "rounding": "2 decimals",
+      "meaning": "Customer Operations, AI screen, 40+ vs under 40: TRUE impact ratio from the generator",
+      "python": 0.91,
+      "r": 0.91
+    },
+    "fin_ai_sex_n_focal": {
+      "value": 55,
+      "rounding": "integer",
+      "meaning": "Finance, AI screen, women vs men: focal-group applicants",
+      "python": 55,
+      "r": 55
+    },
+    "fin_ai_sex_n_reference": {
+      "value": 361,
+      "rounding": "integer",
+      "meaning": "Finance, AI screen, women vs men: reference-group applicants",
+      "python": 361,
+      "r": 361
+    },
+    "fin_ai_sex_rate_focal": {
+      "value": 0.218,
+      "rounding": "3 decimals",
+      "meaning": "Finance, AI screen, women vs men: focal selection rate",
+      "python": 0.218,
+      "r": 0.218
+    },
+    "fin_ai_sex_rate_reference": {
+      "value": 0.302,
+      "rounding": "3 decimals",
+      "meaning": "Finance, AI screen, women vs men: reference selection rate",
+      "python": 0.302,
+      "r": 0.302
+    },
+    "fin_ai_sex_ir": {
+      "value": 0.72,
+      "rounding": "2 decimals",
+      "meaning": "Finance, AI screen, women vs men: impact ratio",
+      "python": 0.72,
+      "r": 0.72
+    },
+    "fin_ai_sex_ir_lo": {
+      "value": 0.43,
+      "rounding": "2 decimals",
+      "meaning": "Finance, AI screen, women vs men: 95% CI lower bound (Katz log method)",
+      "python": 0.43,
+      "r": 0.43
+    },
+    "fin_ai_sex_ir_hi": {
+      "value": 1.22,
+      "rounding": "2 decimals",
+      "meaning": "Finance, AI screen, women vs men: 95% CI upper bound",
+      "python": 1.22,
+      "r": 1.22
+    },
+    "fin_ai_sex_fisher_p": {
+      "value": 0.264,
+      "rounding": "3 significant figures",
+      "meaning": "Finance, AI screen, women vs men: Fisher exact two-sided p-value",
+      "python": 0.264,
+      "r": 0.264
+    },
+    "fin_ai_sex_shortfall": {
+      "value": 5.0,
+      "rounding": "0 decimals",
+      "meaning": "Finance, AI screen, women vs men: extra focal selections needed to equalize rates",
+      "python": 5.0,
+      "r": 5.0
+    },
+    "fin_ai_sex_true_ir": {
+      "value": 1.0,
+      "rounding": "2 decimals",
+      "meaning": "Finance, AI screen, women vs men: TRUE impact ratio from the generator",
+      "python": 1.0,
+      "r": 1.0
+    },
+    "swe_ai_age_shortfall_to_080": {
+      "value": 29.0,
+      "rounding": "0 decimals",
+      "meaning": "SWE AI screen 40+: extra passes needed just to reach IR 0.80",
+      "python": 29.0,
+      "r": 29.0
+    },
+    "swe_cum_age_ir": {
+      "value": 0.82,
+      "rounding": "2 decimals",
+      "meaning": "Software Engineering, applicant-to-offer IR, 40+ (looks acceptable)",
+      "python": 0.82,
+      "r": 0.82
+    },
+    "swe_interview_age_ir": {
+      "value": 1.12,
+      "rounding": "2 decimals",
+      "meaning": "Software Engineering, interview stage IR, 40+ vs under 40 (humans partly offset the AI screen)",
+      "python": 1.12,
+      "r": 1.12
+    },
+    "fin_parity_flag_prob": {
+      "value": 0.32,
+      "rounding": "2 decimals",
+      "meaning": "Finance: exact chance of a four-fifths flag (either group) under true parity at these group sizes",
+      "python": 0.32,
+      "r": 0.32
+    },
+    "fin_parity_flag_prob_women": {
+      "value": 0.18,
+      "rounding": "2 decimals",
+      "meaning": "Finance: exact chance women are flagged under true parity",
+      "python": 0.18,
+      "r": 0.18
+    },
+    "n_cells": {
+      "value": 32,
+      "rounding": "integer",
+      "meaning": "Audit cells: 4 stages x 4 pools (3 families + all) x 2 comparisons",
+      "python": 32,
+      "r": 32
+    },
+    "n_four_fifths_flags": {
+      "value": 6,
+      "rounding": "integer",
+      "meaning": "Cells flagged by the four-fifths rule",
+      "python": 6,
+      "r": 6
+    },
+    "n_significant": {
+      "value": 5,
+      "rounding": "integer",
+      "meaning": "Cells with Fisher p < 0.05",
+      "python": 5,
+      "r": 5
+    },
+    "n_act": {
+      "value": 1,
+      "rounding": "integer",
+      "meaning": "Cells both flagged and significant ('act')",
+      "python": 1,
+      "r": 1
+    },
+    "n_rules_disagree": {
+      "value": 9,
+      "rounding": "integer",
+      "meaning": "Cells where the four-fifths rule and the significance test disagree",
+      "python": 9,
+      "r": 9
+    },
+    "n_true_adverse": {
+      "value": 1,
+      "rounding": "integer",
+      "meaning": "Cells whose TRUE IR is below 0.80",
+      "python": 1,
+      "r": 1
+    },
+    "n_four_fifths_false_alarms": {
+      "value": 5,
+      "rounding": "integer",
+      "meaning": "Four-fifths flags in cells with no true adverse impact",
+      "python": 5,
+      "r": 5
+    },
+    "n_act_false_alarms": {
+      "value": 0,
+      "rounding": "integer",
+      "meaning": "'Act' verdicts in cells with no true adverse impact",
+      "python": 0,
+      "r": 0
+    },
+    "n_ci_cover_truth": {
+      "value": 30,
+      "rounding": "integer",
+      "meaning": "Cells whose 95% CI contains the true IR",
+      "python": 30,
+      "r": 30
+    },
+    "exact_ff_flag_rate_n25": {
+      "value": 0.595,
+      "rounding": "3 decimals",
+      "meaning": "Exact four-fifths false-alarm rate under parity, 25 per group, 30% base rate",
+      "python": 0.595,
+      "r": 0.595
+    },
+    "mc_ff_flag_rate_n25": {
+      "value": 0.593,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo (5000 reps) four-fifths false-alarm rate, 25 per group (RNG-dependent)",
+      "python": 0.593,
+      "r": 0.604
+    },
+    "mc_fisher_sig_rate_n25": {
+      "value": 0.021,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo Fisher p<0.05 rate under parity, 25 per group (RNG-dependent; Fisher is conservative)",
+      "python": 0.021,
+      "r": 0.024
+    },
+    "exact_ff_flag_rate_n50": {
+      "value": 0.457,
+      "rounding": "3 decimals",
+      "meaning": "Exact four-fifths false-alarm rate under parity, 50 per group, 30% base rate",
+      "python": 0.457,
+      "r": 0.457
+    },
+    "mc_ff_flag_rate_n50": {
+      "value": 0.462,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo (5000 reps) four-fifths false-alarm rate, 50 per group (RNG-dependent)",
+      "python": 0.462,
+      "r": 0.458
+    },
+    "mc_fisher_sig_rate_n50": {
+      "value": 0.03,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo Fisher p<0.05 rate under parity, 50 per group (RNG-dependent; Fisher is conservative)",
+      "python": 0.03,
+      "r": 0.03
+    },
+    "exact_ff_flag_rate_n100": {
+      "value": 0.299,
+      "rounding": "3 decimals",
+      "meaning": "Exact four-fifths false-alarm rate under parity, 100 per group, 30% base rate",
+      "python": 0.299,
+      "r": 0.299
+    },
+    "mc_ff_flag_rate_n100": {
+      "value": 0.304,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo (5000 reps) four-fifths false-alarm rate, 100 per group (RNG-dependent)",
+      "python": 0.304,
+      "r": 0.293
+    },
+    "mc_fisher_sig_rate_n100": {
+      "value": 0.034,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo Fisher p<0.05 rate under parity, 100 per group (RNG-dependent; Fisher is conservative)",
+      "python": 0.034,
+      "r": 0.034
+    },
+    "exact_ff_flag_rate_n250": {
+      "value": 0.103,
+      "rounding": "3 decimals",
+      "meaning": "Exact four-fifths false-alarm rate under parity, 250 per group, 30% base rate",
+      "python": 0.103,
+      "r": 0.103
+    },
+    "mc_ff_flag_rate_n250": {
+      "value": 0.103,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo (5000 reps) four-fifths false-alarm rate, 250 per group (RNG-dependent)",
+      "python": 0.103,
+      "r": 0.097
+    },
+    "mc_fisher_sig_rate_n250": {
+      "value": 0.042,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo Fisher p<0.05 rate under parity, 250 per group (RNG-dependent; Fisher is conservative)",
+      "python": 0.042,
+      "r": 0.036
+    },
+    "exact_ff_flag_rate_n1000": {
+      "value": 0.001,
+      "rounding": "3 decimals",
+      "meaning": "Exact four-fifths false-alarm rate under parity, 1000 per group, 30% base rate",
+      "python": 0.001,
+      "r": 0.001
+    },
+    "mc_ff_flag_rate_n1000": {
+      "value": 0.002,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo (5000 reps) four-fifths false-alarm rate, 1000 per group (RNG-dependent)",
+      "python": 0.002,
+      "r": 0.001
+    },
+    "mc_fisher_sig_rate_n1000": {
+      "value": 0.049,
+      "rounding": "3 decimals",
+      "meaning": "Monte Carlo Fisher p<0.05 rate under parity, 1000 per group (RNG-dependent; Fisher is conservative)",
+      "python": 0.049,
+      "r": 0.048
+    }
+  },
+  "agreement": {
+    "cell_table_columns_mismatching": [],
+    "headline_compared": 70,
+    "headline_mismatches": [],
+    "note": "All 60 deterministic headline numbers agree exactly at the stated rounding. The 10 Monte Carlo rates (mc_*) use different RNGs (numpy PCG64 vs R Mersenne-Twister, same seed 20261272); largest Python-R difference 0.011. Exact false-alarm rates (exact_*) are computed by enumeration and agree exactly."
+  }
+}
